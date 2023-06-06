@@ -1,0 +1,11 @@
+﻿body {
+}
+.select2-container--bootstrap .select2-selection {
+    border: 2px solid #A6A6A6;
+    border-radius: 10px;
+    height: calc(1.5em + 0.75rem + 2px);
+}
+
+.select2-container--bootstrap {
+    width: 100%!important;
+}

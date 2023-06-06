@@ -1,0 +1,811 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <CnxPrObtenerRptControlFinancieroObra Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>CnxPrObtenerRptControlFinancieroObra</Alias>
+        <ConnectionString>Integrated Security=False;Data Source=192.168.0.10;Initial Catalog=z_PRODUCCION_sicopDB;Password=d3v3l0p3r$$;User ID=developer</ConnectionString>
+        <Name>CnxPrObtenerRptControlFinancieroObra</Name>
+      </CnxPrObtenerRptControlFinancieroObra>
+    </Databases>
+    <DataSources isList="true" count="4">
+      <FDCnxPrObtenerRptControlFinancieroObra Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>FDCnxPrObtenerRptControlFinancieroObra</Alias>
+        <Columns isList="true" count="12">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>CodigoSupervisor,System.String</value>
+          <value>FechaFinaModificado,System.String</value>
+          <value>MontoModificado,System.Decimal</value>
+          <value>ContratoCodigo,System.String</value>
+          <value>FechaContrato,System.DateTime</value>
+          <value>PeriodoDesde,System.String</value>
+          <value>PeriodoHasta,System.String</value>
+          <value>PeriodoCorrel,System.Byte</value>
+          <value>MontoOriginal,System.Decimal</value>
+          <value>ProyectoDescripcion,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>FDCnxPrObtenerRptControlFinancieroObra</Name>
+        <NameInSource>CnxPrObtenerRptControlFinancieroObra</NameInSource>
+        <Parameters isList="true" count="5">
+          <value>_x0040_AnioID,,8,4</value>
+          <value>_x0040_ProyectoCodigo,,22,10</value>
+          <value>_x0040_PeriodoCorrel,,8,4</value>
+          <value>_x0040_DelegadoResidente,,22,50</value>
+          <value>_x0040_EmpresaContratista,,22,100</value>
+        </Parameters>
+        <SqlCommand>exec PrObtenerRptControlFinancieroObraC1 @AnioID,@ProyectoCodigo,@PeriodoCorrel,@DelegadoResidente</SqlCommand>
+      </FDCnxPrObtenerRptControlFinancieroObra>
+      <FDCnxPrObtenerRptControlFinancieroObraGrafica Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>FDCnxPrObtenerRptControlFinancieroObraGrafica</Alias>
+        <Columns isList="true" count="6">
+          <value>Mes,System.Byte</value>
+          <value>Fecha,System.DateTime</value>
+          <value>Original,System.Decimal</value>
+          <value>Vigente,System.Decimal</value>
+          <value>Ejecutado,System.Decimal</value>
+          <value>EjecutadoPeriodo,System.Decimal</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>FDCnxPrObtenerRptControlFinancieroObraGrafica</Name>
+        <NameInSource>CnxPrObtenerRptControlFinancieroObra</NameInSource>
+        <Parameters isList="true" count="4">
+          <value>_x0040_AnioID,,8,0</value>
+          <value>_x0040_ProyectoCodigo,,22,10</value>
+          <value>_x0040_PeriodoCorrel,,8,5</value>
+          <value>_x0040_DelegadoResidente,,22,50</value>
+        </Parameters>
+        <SqlCommand>exec PrObtenerRptControlFinancieroObraGrafica @AnioID,@ProyectoCodigo,@PeriodoCorrel,@DelegadoResidente</SqlCommand>
+      </FDCnxPrObtenerRptControlFinancieroObraGrafica>
+      <FDCnxPrObtenerRptControlFinancieroObra2 Ref="5" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>FDCnxPrObtenerRptControlFinancieroObra2</Alias>
+        <Columns isList="true" count="10">
+          <value>PeriodoCorrel,System.Byte</value>
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>PeriodoDesde,System.String</value>
+          <value>PeriodoHasta,System.String</value>
+          <value>FechaHasta,System.DateTime</value>
+          <value>PagosEsteMes,System.Decimal</value>
+          <value>PagosAnteriores,System.Decimal</value>
+          <value>EjecucionReal,System.Decimal</value>
+          <value>InversionParcialMensual,System.Decimal</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>FDCnxPrObtenerRptControlFinancieroObra2</Name>
+        <NameInSource>CnxPrObtenerRptControlFinancieroObra</NameInSource>
+        <Parameters isList="true" count="4">
+          <value>_x0040_AnioID,,8,4</value>
+          <value>_x0040_ProyectoCodigo,,22,10</value>
+          <value>_x0040_PeriodoCorrel,,8,5</value>
+          <value>_x0040_DelegadoResidente,,22,10</value>
+        </Parameters>
+        <SqlCommand>exec PrObtenerRptControlFinanciero @AnioID,@ProyectoCodigo,@PeriodoCorrel,@DelegadoResidente</SqlCommand>
+      </FDCnxPrObtenerRptControlFinancieroObra2>
+      <CnxPrObtenerRptControlFinancieroObraPorcentaje Ref="6" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>CnxPrObtenerRptControlFinancieroObraPorcentaje</Alias>
+        <Columns isList="true" count="1">
+          <value>Avance_Real_Ejecutado,System.Decimal</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>CnxPrObtenerRptControlFinancieroObraPorcentaje</Name>
+        <NameInSource>CnxPrObtenerRptControlFinancieroObra</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>_x0040_AnioID,,8,4</value>
+          <value>_x0040_ProyectoCodigo,,22,10</value>
+          <value>_x0040_PeriodoCorrel,,8,10</value>
+        </Parameters>
+        <SqlCommand>exec PrObtenerAvance_Real_Ejecutado @AnioID,@ProyectoCodigo,@PeriodoCorrel</SqlCommand>
+      </CnxPrObtenerRptControlFinancieroObraPorcentaje>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="7" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="5">
+        <PageHeaderBand1 Ref="8" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19.59,4</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text1 Ref="9" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.4,19.6,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,18,Bold| Underline</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="7" />
+              <Parent isRef="8" />
+              <Text>GRAFICA DE AVANCE FISICO DE OBRA SUPERVISADA</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+        </PageHeaderBand1>
+        <Data1 Ref="10" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,5.2,19.59,5</ClientRectangle>
+          <Components isList="true" count="12">
+            <Text4 Ref="11" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,1,7.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="7" />
+              <Parent isRef="10" />
+              <Text>PROYECTO:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text5 Ref="12" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8.4,1,11.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="7" />
+              <Parent isRef="10" />
+              <Text>{FDCnxPrObtenerRptControlFinancieroObra.ProyectoCodigo} - {FDCnxPrObtenerRptControlFinancieroObra.AnioID}: {FDCnxPrObtenerRptControlFinancieroObra.ProyectoDescripcion}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text7 Ref="13" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.4,1.6,11.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="7" />
+              <Parent isRef="10" />
+              <Text>{FDCnxPrObtenerRptControlFinancieroObra.ContratoCodigo}-{FDCnxPrObtenerRptControlFinancieroObra.AnioID}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text10 Ref="14" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,2.2,7.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="7" />
+              <Parent isRef="10" />
+              <Text>PERIODO:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text11 Ref="15" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.4,2.2,11.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="7" />
+              <Parent isRef="10" />
+              <Text>{FDCnxPrObtenerRptControlFinancieroObra.PeriodoDesde} - {FDCnxPrObtenerRptControlFinancieroObra.PeriodoHasta}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+            <Text15 Ref="16" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.4,2.8,3.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="7" />
+              <Parent isRef="10" />
+              <Text>{FDCnxPrObtenerRptControlFinancieroObra.MontoOriginal}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="17" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text15>
+            <Text6 Ref="18" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,1.6,7.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="7" />
+              <Parent isRef="10" />
+              <Text>CONTRATO EN E.P.</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text14 Ref="19" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,2.8,7.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="7" />
+              <Parent isRef="10" />
+              <Text>VALOR DEL CONTRATO ORIGINAL:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <Text24 Ref="20" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,0.4,7.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <Guid>5a59d1318a7f46dea91d023f129f97b8</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="7" />
+              <Parent isRef="10" />
+              <Text>EMPRESA:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+            <Text26 Ref="21" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8.4,0.4,11.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Guid>b2ac9d012b4c49e39ed10e9e09a0d50b</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="7" />
+              <Parent isRef="10" />
+              <Text>{FDCnxPrObtenerRptControlFinancieroObra.Parameters["@EmpresaContratista"].ParameterValue}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+            <Text25 Ref="22" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.4,3.4,3.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="7" />
+              <Parent isRef="10" />
+              <Text>{FDCnxPrObtenerRptControlFinancieroObra.MontoModificado}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="23" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+            <Text27 Ref="24" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,3.4,7.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="7" />
+              <Parent isRef="10" />
+              <Text>VALOR DEL CONTRATO MODIFICADO:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text27>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>FDCnxPrObtenerRptControlFinancieroObra</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>Data1</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+          <Sort isList="true" count="0" />
+        </Data1>
+        <Data4 Ref="25" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,11,19.59,0.8</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text12 Ref="26" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="7" />
+              <Parent isRef="25" />
+              <Text>{FDCnxPrObtenerRptControlFinancieroObra2.PagosAnteriores}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text12>
+            <Text13 Ref="27" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.8,0,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="7" />
+              <Parent isRef="25" />
+              <Text>{FDCnxPrObtenerRptControlFinancieroObra2.EjecucionReal}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text13>
+            <Text19 Ref="28" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="7" />
+              <Parent isRef="25" />
+              <Text>{FDCnxPrObtenerRptControlFinancieroObra2.PagosAnteriores + FDCnxPrObtenerRptControlFinancieroObra2.PagosEsteMes }</Text>
+              <TextBrush>Black</TextBrush>
+            </Text19>
+            <Text20 Ref="29" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.4,0,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="7" />
+              <Parent isRef="25" />
+              <Text>{FDCnxPrObtenerRptControlFinancieroObra2.PagosEsteMes}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text20>
+            <Text3 Ref="30" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.6,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="7" />
+              <Parent isRef="25" />
+              <Text>{FDCnxPrObtenerRptControlFinancieroObra2.InversionParcialMensual}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text3>
+            <Text2 Ref="31" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="7" />
+              <Parent isRef="25" />
+              <Text>{FDCnxPrObtenerRptControlFinancieroObra2.PeriodoDesde} - {FDCnxPrObtenerRptControlFinancieroObra2.PeriodoHasta}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>FDCnxPrObtenerRptControlFinancieroObra2</DataSourceName>
+          <Enabled>False</Enabled>
+          <Filters isList="true" count="0" />
+          <Name>Data4</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+          <Sort isList="true" count="0" />
+        </Data4>
+        <Data2 Ref="32" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,12.6,19.59,11.4</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text22 Ref="33" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.8,0.4,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="7" />
+              <Parent isRef="32" />
+              <Text>PORCENTAJE:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text22>
+            <Text23 Ref="34" type="Text" isKey="true">
+              <Border>None;[255:255:255];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.6,0.4,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="7" />
+              <Parent isRef="32" />
+              <Text>%</Text>
+              <TextBrush>[255:255:255]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text23>
+            <Text21 Ref="35" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16,0.4,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="7" />
+              <Parent isRef="32" />
+              <Text>{CnxPrObtenerRptControlFinancieroObraPorcentaje.Avance_Real_Ejecutado}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="36" type="PercentageFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>%</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+            <Chart1 Ref="37" type="Stimulsoft.Report.Chart.StiChart" isKey="true">
+              <Area Ref="38" type="Stimulsoft.Report.Chart.StiClusteredColumnArea" isKey="true">
+                <BorderColor>88, 86, 75</BorderColor>
+                <Brush>GradientBrush,[255:255:255],[255:255:255],90</Brush>
+                <Chart isRef="37" />
+                <GridLinesHor Ref="39" type="Stimulsoft.Report.Chart.StiGridLinesHor" isKey="true">
+                  <Area isRef="38" />
+                  <Color>100, 88, 86, 75</Color>
+                  <MinorColor>100, 88, 86, 75</MinorColor>
+                </GridLinesHor>
+                <GridLinesHorRight Ref="40" type="Stimulsoft.Report.Chart.StiGridLinesHor" isKey="true">
+                  <Area isRef="38" />
+                  <Color>Silver</Color>
+                  <MinorColor>Gainsboro</MinorColor>
+                  <Visible>False</Visible>
+                </GridLinesHorRight>
+                <GridLinesVert Ref="41" type="Stimulsoft.Report.Chart.StiGridLinesVert" isKey="true">
+                  <Area isRef="38" />
+                  <Color>100, 88, 86, 75</Color>
+                  <MinorColor>100, 88, 86, 75</MinorColor>
+                </GridLinesVert>
+                <InterlacingHor Ref="42" type="Stimulsoft.Report.Chart.StiInterlacingHor" isKey="true">
+                  <Area isRef="38" />
+                  <InterlacedBrush>[10:138:136:125]</InterlacedBrush>
+                </InterlacingHor>
+                <InterlacingVert Ref="43" type="Stimulsoft.Report.Chart.StiInterlacingVert" isKey="true">
+                  <Area isRef="38" />
+                  <InterlacedBrush>[10:138:136:125]</InterlacedBrush>
+                </InterlacingVert>
+                <XAxis Ref="44" type="Stimulsoft.Report.Chart.StiXBottomAxis" isKey="true">
+                  <Area isRef="38" />
+                  <Interaction Ref="45" type="Stimulsoft.Report.Chart.StiAxisInteraction" isKey="true" />
+                  <Labels Ref="46" type="Stimulsoft.Report.Chart.StiAxisLabels" isKey="true">
+                    <Color>88, 86, 75</Color>
+                    <Font>Tahoma,5</Font>
+                  </Labels>
+                  <LineColor>88, 86, 75</LineColor>
+                  <Range Ref="47" type="Stimulsoft.Report.Chart.StiAxisRange" isKey="true" />
+                  <StartFromZero>False</StartFromZero>
+                  <Ticks Ref="48" type="Stimulsoft.Report.Chart.StiAxisTicks" isKey="true" />
+                  <Title Ref="49" type="Stimulsoft.Report.Chart.StiAxisTitle" isKey="true">
+                    <Color>88, 86, 75</Color>
+                    <Direction>LeftToRight</Direction>
+                    <Font>Tahoma,12,Bold</Font>
+                    <Text>FECHA</Text>
+                  </Title>
+                </XAxis>
+                <XTopAxis Ref="50" type="Stimulsoft.Report.Chart.StiXTopAxis" isKey="true">
+                  <Area isRef="38" />
+                  <Interaction Ref="51" type="Stimulsoft.Report.Chart.StiAxisInteraction" isKey="true" />
+                  <Labels Ref="52" type="Stimulsoft.Report.Chart.StiAxisLabels" isKey="true">
+                    <Color>88, 86, 75</Color>
+                    <Font>Tahoma,7</Font>
+                  </Labels>
+                  <LineColor>88, 86, 75</LineColor>
+                  <Ticks Ref="53" type="Stimulsoft.Report.Chart.StiAxisTicks" isKey="true" />
+                  <Title Ref="54" type="Stimulsoft.Report.Chart.StiAxisTitle" isKey="true">
+                    <Color>88, 86, 75</Color>
+                    <Direction>LeftToRight</Direction>
+                    <Font>Tahoma,12,Bold</Font>
+                  </Title>
+                </XTopAxis>
+                <YAxis Ref="55" type="Stimulsoft.Report.Chart.StiYLeftAxis" isKey="true">
+                  <Area isRef="38" />
+                  <Interaction Ref="56" type="Stimulsoft.Report.Chart.StiAxisInteraction" isKey="true" />
+                  <Labels Ref="57" type="Stimulsoft.Report.Chart.StiAxisLabels" isKey="true">
+                    <Color>88, 86, 75</Color>
+                    <Font>Tahoma,7</Font>
+                  </Labels>
+                  <LineColor>88, 86, 75</LineColor>
+                  <Range Ref="58" type="Stimulsoft.Report.Chart.StiAxisRange" isKey="true" />
+                  <StartFromZero>False</StartFromZero>
+                  <Ticks Ref="59" type="Stimulsoft.Report.Chart.StiAxisTicks" isKey="true" />
+                  <Title Ref="60" type="Stimulsoft.Report.Chart.StiAxisTitle" isKey="true">
+                    <Color>88, 86, 75</Color>
+                    <Direction>LeftToRight</Direction>
+                    <Font>Tahoma,12,Bold</Font>
+                  </Title>
+                </YAxis>
+                <YRightAxis Ref="61" type="Stimulsoft.Report.Chart.StiYRightAxis" isKey="true">
+                  <Area isRef="38" />
+                  <Interaction Ref="62" type="Stimulsoft.Report.Chart.StiAxisInteraction" isKey="true" />
+                  <Labels Ref="63" type="Stimulsoft.Report.Chart.StiAxisLabels" isKey="true">
+                    <Color>88, 86, 75</Color>
+                    <Font>Tahoma,7</Font>
+                  </Labels>
+                  <LineColor>88, 86, 75</LineColor>
+                  <Range Ref="64" type="Stimulsoft.Report.Chart.StiAxisRange" isKey="true" />
+                  <Ticks Ref="65" type="Stimulsoft.Report.Chart.StiAxisTicks" isKey="true" />
+                  <Title Ref="66" type="Stimulsoft.Report.Chart.StiAxisTitle" isKey="true">
+                    <Color>88, 86, 75</Color>
+                    <Direction>LeftToRight</Direction>
+                    <Font>Tahoma,12,Bold</Font>
+                  </Title>
+                </YRightAxis>
+              </Area>
+              <Brush>[255:255:255]</Brush>
+              <ClientRectangle>0,1.2,19.68,9.88</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <ConstantLines isList="true" count="0" />
+              <CustomStyleName />
+              <Filters isList="true" count="0" />
+              <Legend Ref="67" type="Stimulsoft.Report.Chart.StiLegend" isKey="true">
+                <BorderColor>88, 86, 75</BorderColor>
+                <Brush>GradientBrush,[255:255:255],[255:255:245],90</Brush>
+                <Chart isRef="37" />
+                <Font>Arial,8</Font>
+                <LabelsColor>88, 86, 75</LabelsColor>
+                <MarkerSize>10, 10</MarkerSize>
+                <TitleColor>88, 86, 75</TitleColor>
+                <TitleFont>Arial,14,Bold</TitleFont>
+              </Legend>
+              <Name>Chart1</Name>
+              <Page isRef="7" />
+              <Parent isRef="32" />
+              <Series isList="true" count="3">
+                <Item34 Ref="68" type="Stimulsoft.Report.Chart.StiLineSeries" isKey="true">
+                  <ArgumentDataColumn>FDCnxPrObtenerRptControlFinancieroObraGrafica.Fecha</ArgumentDataColumn>
+                  <Chart isRef="37" />
+                  <Filters isList="true" count="0" />
+                  <LineColor>79, 129, 189</LineColor>
+                  <LineColorNegative>Firebrick</LineColorNegative>
+                  <LineMarker Ref="69" type="Stimulsoft.Report.Chart.StiLineMarker" isKey="true">
+                    <BorderColor>0, 0, 39</BorderColor>
+                    <Brush>[129:179:239]</Brush>
+                  </LineMarker>
+                  <Marker Ref="70" type="Stimulsoft.Report.Chart.StiMarker" isKey="true">
+                    <BorderColor>0, 29, 89</BorderColor>
+                    <Brush>[179:229:255]</Brush>
+                  </Marker>
+                  <SeriesLabels Ref="71" type="Stimulsoft.Report.Chart.StiCenterAxisLabels" isKey="true">
+                    <BorderColor>88, 86, 75</BorderColor>
+                    <Brush>[238:238:236:225]</Brush>
+                    <Font>Arial,7</Font>
+                    <LabelColor>88, 86, 75</LabelColor>
+                    <MarkerSize>8, 6</MarkerSize>
+                    <ValueTypeSeparator>-</ValueTypeSeparator>
+                  </SeriesLabels>
+                  <Title>VIGENTE</Title>
+                  <ValueDataColumn>FDCnxPrObtenerRptControlFinancieroObraGrafica.Vigente</ValueDataColumn>
+                </Item34>
+                <Item35 Ref="72" type="Stimulsoft.Report.Chart.StiLineSeries" isKey="true">
+                  <ArgumentDataColumn>FDCnxPrObtenerRptControlFinancieroObraGrafica.Fecha</ArgumentDataColumn>
+                  <Chart isRef="37" />
+                  <Filters isList="true" count="0" />
+                  <LineColor>192, 80, 77</LineColor>
+                  <LineColorNegative>Firebrick</LineColorNegative>
+                  <LineMarker Ref="73" type="Stimulsoft.Report.Chart.StiLineMarker" isKey="true">
+                    <BorderColor>42, 0, 0</BorderColor>
+                    <Brush>[242:130:127]</Brush>
+                  </LineMarker>
+                  <Marker Ref="74" type="Stimulsoft.Report.Chart.StiMarker" isKey="true">
+                    <BorderColor>92, 0, 0</BorderColor>
+                    <Brush>[255:180:177]</Brush>
+                  </Marker>
+                  <SeriesLabels Ref="75" type="Stimulsoft.Report.Chart.StiCenterAxisLabels" isKey="true">
+                    <BorderColor>88, 86, 75</BorderColor>
+                    <Brush>[238:238:236:225]</Brush>
+                    <Font>Arial,7</Font>
+                    <LabelColor>88, 86, 75</LabelColor>
+                    <MarkerSize>8, 6</MarkerSize>
+                    <ValueTypeSeparator>-</ValueTypeSeparator>
+                  </SeriesLabels>
+                  <Title>ORIGINAL</Title>
+                  <ValueDataColumn>FDCnxPrObtenerRptControlFinancieroObraGrafica.Original</ValueDataColumn>
+                </Item35>
+                <Item36 Ref="76" type="Stimulsoft.Report.Chart.StiLineSeries" isKey="true">
+                  <ArgumentDataColumn>FDCnxPrObtenerRptControlFinancieroObraGrafica.Fecha</ArgumentDataColumn>
+                  <Chart isRef="37" />
+                  <Filters isList="true" count="0" />
+                  <LineColor>155, 187, 89</LineColor>
+                  <LineColorNegative>Firebrick</LineColorNegative>
+                  <LineMarker Ref="77" type="Stimulsoft.Report.Chart.StiLineMarker" isKey="true">
+                    <BorderColor>5, 37, 0</BorderColor>
+                    <Brush>[205:237:139]</Brush>
+                  </LineMarker>
+                  <Marker Ref="78" type="Stimulsoft.Report.Chart.StiMarker" isKey="true">
+                    <BorderColor>55, 87, 0</BorderColor>
+                    <Brush>[255:255:189]</Brush>
+                  </Marker>
+                  <SeriesLabels Ref="79" type="Stimulsoft.Report.Chart.StiCenterAxisLabels" isKey="true">
+                    <BorderColor>88, 86, 75</BorderColor>
+                    <Brush>[238:238:236:225]</Brush>
+                    <Font>Arial,7</Font>
+                    <LabelColor>88, 86, 75</LabelColor>
+                    <MarkerSize>8, 6</MarkerSize>
+                    <ValueTypeSeparator>-</ValueTypeSeparator>
+                  </SeriesLabels>
+                  <Title>EJECUTADO</Title>
+                  <ValueDataColumn>FDCnxPrObtenerRptControlFinancieroObraGrafica.Ejecutado</ValueDataColumn>
+                </Item36>
+              </Series>
+              <SeriesLabels Ref="80" type="Stimulsoft.Report.Chart.StiOutsideAxisLabels" isKey="true">
+                <BorderColor>88, 86, 75</BorderColor>
+                <Brush>[238:238:236:225]</Brush>
+                <Chart isRef="37" />
+                <Font>Arial,6</Font>
+                <LabelColor>88, 86, 75</LabelColor>
+                <MarkerSize>8, 7</MarkerSize>
+                <ValueTypeSeparator>-</ValueTypeSeparator>
+              </SeriesLabels>
+              <SeriesLabelsConditions isList="true" count="0" />
+              <Sort isList="true" count="0" />
+              <Strips isList="true" count="0" />
+              <Style Ref="81" type="Stimulsoft.Report.Chart.StiStyle09" isKey="true" />
+              <Title Ref="82" type="Stimulsoft.Report.Chart.StiChartTitle" isKey="true">
+                <Brush>[88:86:75]</Brush>
+                <Font>Tahoma,12</Font>
+              </Title>
+            </Chart1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>FDCnxPrObtenerRptControlFinancieroObra</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>Data2</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+          <Sort isList="true" count="0" />
+        </Data2>
+        <Data3 Ref="83" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,24.8,19.59,7.47</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text16 Ref="84" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,4.8,19.6,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="7" />
+              <Parent isRef="83" />
+              <Text>Ing. Rolando Alfredo Gutiérrez Linares
+Gerente Administrativo y Representante Legal
+Consultoría {FDCnxPrObtenerRptControlFinancieroObra.ProyectoCodigo}-{FDCnxPrObtenerRptControlFinancieroObra.AnioID}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text16>
+            <Text18 Ref="85" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.2,4.2,9.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="7" />
+              <Parent isRef="83" />
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text18>
+            <Text8 Ref="86" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.2,6,11.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="7" />
+              <Parent isRef="83" />
+              <Text>{FDCnxPrObtenerRptControlFinancieroObra.Parameters["@EmpresaContratista"].ParameterValue}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>FDCnxPrObtenerRptControlFinancieroObra</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>Data3</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+          <Sort isList="true" count="0" />
+        </Data3>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>0c4b6da0d525412a94fc737fdea3730c</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>35.56</PageHeight>
+      <PageWidth>21.59</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="87" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="88" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>12/22/2015 10:58:10 AM</ReportChanged>
+  <ReportCreated>12/22/2015 9:38:22 AM</ReportCreated>
+  <ReportFile>D:\Luis Mendez\reportes\nuevo\RptControlAvanceFinancieroC1.mrt</ReportFile>
+  <ReportGuid>98b7416aff194d639da3ae48c9ec57f8</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2012.1.1300</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        
+        public Report()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

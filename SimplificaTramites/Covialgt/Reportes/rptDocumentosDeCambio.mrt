@@ -1,0 +1,1340 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <cnxDocumentosDeCambio Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>cnxDocumentosDeCambio</Alias>
+        <ConnectionStringEncrypted>9FaBCcZW89VsW7XJVXSkcsTS2aFnVEKE7BC9+GkIpB+JcMEPxmqj7WhqqHTKPePX0ShlSFVbk3FpGNVEZIjjF4t0q4hhFpOd80ms2OklJOfzePtowkpbzcxYFfRO4WluunDNTN9XWc1tCOjMaXThbp4SzytINZKdRhvZ7O9J96fTVssCS33ZvGII1djumPb/5ELBA08FQ6TsTXnMSHj1Y9/y9WhhXFvF+Ual</ConnectionStringEncrypted>
+        <Key>c4b5eb54171a47ffadb125b6c10325d5</Key>
+        <Name>cnxDocumentosDeCambio</Name>
+      </cnxDocumentosDeCambio>
+    </Databases>
+    <DataSources isList="true" count="2">
+      <DocumentosDeCambio Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DocumentosDeCambio</Alias>
+        <Columns isList="true" count="31">
+          <value>ORIGINAL,SupervisoraAnioID,SupervisoraAnioID,SupervisoraAnioID,System.Int32,c60b94ab46054d6494fd8560260b1078</value>
+          <value>ORIGINAL,ProyectoSupervisionCodigo,ProyectoSupervisionCodigo,ProyectoSupervisionCodigo,System.String,_x0035_038fc4789ba4debbbcefc7130587429</value>
+          <value>ORIGINAL,AnioID,AnioID,AnioID,System.Int32,_x0036_8e79f6cc910402996c2bed7045a9329</value>
+          <value>ORIGINAL,ProyectoCodigo,ProyectoCodigo,ProyectoCodigo,System.String,_x0031_f3a7d1a88534b0ea363d352b9cfbc9a</value>
+          <value>ORIGINAL,DocCambioCorrel,DocCambioCorrel,DocCambioCorrel,System.Int32,_x0033_5154ac265f64928902f88d7d5010326</value>
+          <value>ORIGINAL,Nombre,Nombre,Nombre,System.String,a99a11f09cdb40ba817981b84ac465ec</value>
+          <value>ORIGINAL,DocCambioTipoID,DocCambioTipoID,DocCambioTipoID,System.String,a55befeecf46427b8a9421364388c8f5</value>
+          <value>ORIGINAL,RenglonID,RenglonID,RenglonID,System.Int32,_x0034_15c56e257c34494854fb566307df733</value>
+          <value>ORIGINAL,ProyectoRenglonNombre,ProyectoRenglonNombre,ProyectoRenglonNombre,System.String,b52ce7bf6e534f07a509f1ba78f012ab</value>
+          <value>ORIGINAL,RenglonCodCOVIAL,RenglonCodCOVIAL,RenglonCodCOVIAL,System.String,_x0039_70a49fcd60b4772aa109ba83e34a9c1</value>
+          <value>ORIGINAL,RenglonUni,RenglonUni,RenglonUni,System.String,_x0034_3f72355484a4855b3d655a5ce3f0a3f</value>
+          <value>ORIGINAL,RenglonPrecioUnitario,RenglonPrecioUnitario,RenglonPrecioUnitario,System.Decimal,_x0037_20538b367834652b48981429a1a87b0</value>
+          <value>ORIGINAL,DocCambioJustifica,DocCambioJustifica,DocCambioJustifica,System.String,_x0037_8de961858e042239a54f0696e3b32fa</value>
+          <value>ORIGINAL,ModificaAnexo,ModificaAnexo,ModificaAnexo,System.String,_x0034_75d10edc3aa40d0aac095f00fcadbbc</value>
+          <value>ORIGINAL,MontoOriginal,MontoOriginal,MontoOriginal,System.Decimal,_x0031_f9b595f85f54729a9eca0a02a76d466</value>
+          <value>ORIGINAL,MontoModificado,MontoModificado,MontoModificado,System.Decimal,_x0031_b80bd4ecdc8477385be4a302484078a</value>
+          <value>ORIGINAL,ModificaPlazo,ModificaPlazo,ModificaPlazo,System.String,_x0035_a5446a609d04d35b829dd4c1a46b340</value>
+          <value>ORIGINAL,DocCambioTipoCorrel,DocCambioTipoCorrel,DocCambioTipoCorrel,System.Int32,d3a1d5b5617247049c26f3f379adbaba</value>
+          <value>ORIGINAL,Observaciones,Observaciones,Observaciones,System.String,_x0033_72232e31ccc43f7a26b07c6b0842cd7</value>
+          <value>ORIGINAL,Clausula,Clausula,Clausula,System.String,de6d6129eeb347b3b6af2a3f3900bdac</value>
+          <value>ORIGINAL,RenglonCantidad,RenglonCantidad,RenglonCantidad,System.Decimal,_x0035_e07d46f3ec8440e9e0872f05b2e7c8a</value>
+          <value>ORIGINAL,ContratoCodigo,ContratoCodigo,ContratoCodigo,System.String,_x0035_5f01c0438c149a9980059271f1baae7</value>
+          <value>ORIGINAL,PeriodoCorrel,PeriodoCorrel,PeriodoCorrel,System.Byte,ee19db4c4ee34ae59b49566a9d1d92d4</value>
+          <value>ORIGINAL,PeriodoDesde,PeriodoDesde,PeriodoDesde,System.DateTime,_x0038_e8b3602f63d495dbd6e05783107c4b3</value>
+          <value>ORIGINAL,PeriodoHasta,PeriodoHasta,PeriodoHasta,System.DateTime,_x0030_5f399e48c4c47e691c489293dd03e6f</value>
+          <value>ORIGINAL,FechaEstado,FechaEstado,FechaEstado,System.DateTime,a689ac2d39c3474fa5c8960b63cc2b24</value>
+          <value>ORIGINAL,EstadoDesc,EstadoDesc,EstadoDesc,System.String,_x0038_5b57283daf5491f9fdb241a60e7a569</value>
+          <value>ORIGINAL,NumeroInformeTecnico,NumeroInformeTecnico,NumeroInformeTecnico,System.Int32,_x0035_3b77edd631a49f5bbef9a0d43562be3</value>
+          <value>ORIGINAL,RenglonCantidadXRenglonPrecioUnitario,RenglonCantidadXRenglonPrecioUnitario,RenglonCantidadXRenglonPrecioUnitario,System.String,fdcacd02008b423b8e766112084a0c35</value>
+          <value>ORIGINAL,suma,suma,suma,System.String,_x0030_ed1fca235cd498896612aca3571a471</value>
+          <value>ORIGINAL,MontoxLetras,MontoxLetras,MontoxLetras,System.String,_x0034_4bb51aba79646deaaa144ad8c87a36b</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>4011438d7d0c40059604e17471c2b4b5</Key>
+        <Name>DocumentosDeCambio</Name>
+        <NameInSource>cnxDocumentosDeCambio</NameInSource>
+        <Parameters isList="true" count="4">
+          <value>_x0040_AnioID,,8,4,26cb1f80c0ca4ad88ae25bc497d9cdbf</value>
+          <value>_x0040_ProyectoCodigo,,22,20</value>
+          <value>_x0040_PeriodoCorr,,8,10,7def71aba7994bc6b6ae5f69d8358ab6</value>
+          <value>_x0040_EstadoDoc,,8,2</value>
+        </Parameters>
+        <SqlCommand>exec ObtenerReporte_S_DocumentosDeCambioModNuevo @AnioID,@ProyectoCodigo,@PeriodoCorr,@EstadoDoc</SqlCommand>
+      </DocumentosDeCambio>
+      <DocCorrelativos Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DocCorrelativos</Alias>
+        <Columns isList="true" count="1">
+          <value>ORIGINAL,DocCambioCorrel,DocCambioCorrel,DocCambioCorrel,System.Int32,de54875843eb4cecb46ac1e647b603bb</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>4fed74bf49744d438db85ab61a6489bd</Key>
+        <Name>DocCorrelativos</Name>
+        <NameInSource>cnxDocumentosDeCambio</NameInSource>
+        <Parameters isList="true" count="4">
+          <value>_x0040_AnioID,,8,4,902db16e18744f04ab85cae594410a15</value>
+          <value>_x0040_ProyectoCodigo,,22,10</value>
+          <value>_x0040_PeriodoCorr,,8,5</value>
+          <value>_x0040_EstadoDoc,,8,2</value>
+        </Parameters>
+        <SqlCommand>exec DocCambioCorrel @AnioID,@ProyectoCodigo,@PeriodoCorr,@EstadoDoc</SqlCommand>
+      </DocCorrelativos>
+    </DataSources>
+    <Relations isList="true" count="2">
+      <RelacionP Ref="5" type="DataRelation" isKey="true">
+        <Alias>RelacionP</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>DocCambioCorrel</value>
+        </ChildColumns>
+        <ChildSource isRef="4" />
+        <Dictionary isRef="1" />
+        <Key>fce71c02670b41318f65cb6338c83393</Key>
+        <Name>RelacionP</Name>
+        <NameInSource>RelacionP</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>DocCambioCorrel</value>
+        </ParentColumns>
+        <ParentSource isRef="3" />
+      </RelacionP>
+      <RelaciónP2 Ref="6" type="DataRelation" isKey="true">
+        <Alias>RelaciónP2</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>DocCambioCorrel</value>
+        </ChildColumns>
+        <ChildSource isRef="3" />
+        <Dictionary isRef="1" />
+        <Key>8b8792dd69b44330a17a47136d35fd56</Key>
+        <Name>RelaciónP2</Name>
+        <NameInSource>RelaciónP2</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>DocCambioCorrel</value>
+        </ParentColumns>
+        <ParentSource isRef="4" />
+      </RelaciónP2>
+    </Relations>
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="3">
+      <value>,Bool,Bool,valor_x0020_boleano_x0020_,System.String,_x0022_True_x0022_,False,True,False,False,,_x0038_675971944844e19a71af3d33d0795bb</value>
+      <value>,total1,total1,,System.Int32,DocCorrelativos.DocCambioCorrel,False,True,False,False,,ef34b3e023b04088bfd305ba4436f372</value>
+      <value>,Ttotal,Ttotal,,System.String,,False,False,False,False,,_x0030_cf0279faac84dbbad5d56d5febab3ec</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>9094b0d1af9f403c81d19856816213e3</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page2 Ref="7" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="12">
+        <PageHeaderBand1 Ref="8" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19.6,4.2</ClientRectangle>
+          <Components isList="true" count="8">
+            <Image1 Ref="9" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,2.6,1.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <IconColor>68, 114, 196</IconColor>
+              <ImageBytes>/9j/4AAQSkZJRgABAQEAeAB4AAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/
+2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwM
+BwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM
+DAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAA8AGQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEA
+AAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJx
+FDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNk
+ZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJ
+ytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
+BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMz
+UvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3
+eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBv/BP74hfHb9oX/gvH+0tJqnxm+ME3wt+D
+XjbxKiaAfGGoNo7TS6peWun2JtvP8tYUjSeVEC7B9jRcbTiv1Z/4TjXP+g5rP/gdL/8AFV47+yJ+
+xRqn7OeqfGPVH8Pat/bXxS+Kvinxneyixdi0FzqtwLFQ4XJT7IkMgU/de4l9eex/aA1zxV8Gvgb4
+u8WaP4F8VeLdZ8P6TcXunaJp+jXd5c6vdqh8i2WOFGkIkl2KxUHapZjgKSP82fGbPOKeIeNa9PKY
+V1ShJUKaipxi+V2crqyfNNyal/K462R+m5HQwmGwKlWcbv3ne1/T7j8Sf+C/X/BYL4uf8N33vgT4
+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</ImageBytes>
+              <Margins>0,0,0,0</Margins>
+              <Name>Image1</Name>
+              <Page isRef="7" />
+              <Parent isRef="8" />
+            </Image1>
+            <Text1 Ref="10" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3,0.2,15,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="7" />
+              <Parent isRef="8" />
+              <Text>MINISTERIO DE COMUNICACIONES, INFRAESTRUCTURA Y VIVIENDA
+UNIDAD EJECUTORA DE CONSERVACION VIAL -COVIAL-</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text1>
+            <Text2 Ref="11" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2,6.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="7" />
+              <Parent isRef="8" />
+              <Text>4.DOCUMENTOS DE CAMBIO</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text2>
+            <Text3 Ref="12" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3,6.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="7" />
+              <Parent isRef="8" />
+              <Text>Supervisor/a No. {DocumentosDeCambio.ProyectoSupervisionCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text3>
+            <Text4 Ref="13" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.74,3.01,3.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="7" />
+              <Parent isRef="8" />
+              <Text>Proyecto: {DocumentosDeCambio.ProyectoCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text4>
+            <Text5 Ref="14" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13.54,3.01,6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="7" />
+              <Parent isRef="8" />
+              <Text>Informe tecnico No.{DocumentosDeCambio.NumeroInformeTecnico}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text5>
+            <Text6 Ref="15" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13.54,3.61,6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="7" />
+              <Parent isRef="8" />
+              <Text>{Format("{0:dd}", DocumentosDeCambio.PeriodoDesde)} al {Format("{0:dd}", DocumentosDeCambio.PeriodoHasta)} de {Format("{0:MMMM}", DocumentosDeCambio.PeriodoHasta)} de {Format("{0:yyyy}", DocumentosDeCambio.PeriodoHasta)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text6>
+            <HorizontalLinePrimitive1 Ref="16" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0,1.6,19.6,0.0254</ClientRectangle>
+              <Color>216, 216, 216</Color>
+              <Conditions isList="true" count="0" />
+              <EndCap Ref="17" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Expressions isList="true" count="0" />
+              <Name>HorizontalLinePrimitive1</Name>
+              <Page isRef="7" />
+              <Parent isRef="8" />
+              <Size>2</Size>
+              <StartCap Ref="18" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+        </PageHeaderBand1>
+        <DataBand5 Ref="19" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,5.4,19.6,5</ClientRectangle>
+          <Components isList="true" count="7">
+            <Text51 Ref="20" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,7.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text51</Name>
+              <Page isRef="7" />
+              <Parent isRef="19" />
+              <Text>Documento de Cambio No.{DocCorrelativos.RelacionP.DocCambioCorrel}     </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text51>
+            <Text53 Ref="21" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.2,6.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text53</Name>
+              <Page isRef="7" />
+              <Parent isRef="19" />
+              <Text>Acuerdo de Trabajo Extra No.{IIF(DocCorrelativos.RelacionP.DocCambioTipoID== "ATE",DocCorrelativos.RelacionP.DocCambioTipoCorrel," ")}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text53>
+            <Text54 Ref="22" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.8,6.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text54</Name>
+              <Page isRef="7" />
+              <Parent isRef="19" />
+              <Text>Orden de Cambio No. {IIF(DocCorrelativos.RelacionP.DocCambioTipoID == "OC",DocCorrelativos.RelacionP.DocCambioTipoCorrel," ")}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text54>
+            <Text55 Ref="23" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.6,0,11,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text55</Name>
+              <Page isRef="7" />
+              <Parent isRef="19" />
+              <Text>Fecha de Aprobación: {Format("{0:dddd}", DocCorrelativos.RelacionP.FechaEstado)}, {Format("{0:dd}", DocCorrelativos.RelacionP.FechaEstado)} de {Format("{0:MMMM}", DocCorrelativos.RelacionP.FechaEstado)} de {Format("{0:yyyy}", DocCorrelativos.RelacionP.FechaEstado)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text55>
+            <Text57 Ref="24" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,4.4,5.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text57</Name>
+              <Page isRef="7" />
+              <Parent isRef="19" />
+              <Text>Renglones de trabajo estimados:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text57>
+            <Text52 Ref="25" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.6,6.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text52</Name>
+              <Page isRef="7" />
+              <Parent isRef="19" />
+              <Text>Orden de Trabajo Suplementario No.{IIF(DocCorrelativos.RelacionP.DocCambioTipoID == "OTS",DocCorrelativos.RelacionP.DocCambioTipoCorrel," ")}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text52>
+            <Text56 Ref="26" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.6,19.6,1.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text56</Name>
+              <Page isRef="7" />
+              <Parent isRef="19" />
+              <Text>De Acuerdo a la cláusula {DocCorrelativos.RelacionP.Clausula}del contrato No.{DocCorrelativos.RelacionP.ContratoCodigo} suscrito entre el Fideicomiso del fondo vial y la empresa {DocCorrelativos.RelacionP.Nombre}, se ordena Incrementar / Decrementar / Crear los siguientes trabajos de acuerdo a los precios contratados para el proyecto {DocCorrelativos.RelacionP.ProyectoCodigo}.
+</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text56>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName>RelacionP</DataRelationName>
+          <DataSourceName>DocCorrelativos</DataSourceName>
+          <Expressions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Name>DataBand5</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+          <Sort isList="true" count="0" />
+        </DataBand5>
+        <GroupHeaderBand2 Ref="27" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,11.2,19.6,0.8</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text58 Ref="28" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>3.22,0.02,6.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text58</Name>
+              <Page isRef="7" />
+              <Parent isRef="27" />
+              <Text>Descripcíon de renglones</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text58>
+            <Text59 Ref="29" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>10.02,0.02,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text59</Name>
+              <Page isRef="7" />
+              <Parent isRef="27" />
+              <Text>Unidad</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text59>
+            <Text60 Ref="30" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>12.02,0.02,2.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text60</Name>
+              <Page isRef="7" />
+              <Parent isRef="27" />
+              <Text>Cantidad</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text60>
+            <Text61 Ref="31" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>14.82,0.02,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text61</Name>
+              <Page isRef="7" />
+              <Parent isRef="27" />
+              <Text>Precio Unitario</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text61>
+            <Text62 Ref="32" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>17.22,0.02,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text62</Name>
+              <Page isRef="7" />
+              <Parent isRef="27" />
+              <Text>Costo total
+Estimado</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text62>
+            <Text63 Ref="33" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>0.02,0.02,3.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text63</Name>
+              <Page isRef="7" />
+              <Parent isRef="27" />
+              <Text>Renglón</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text63>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>GroupHeaderBand2</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+        </GroupHeaderBand2>
+        <DataBand6 Ref="34" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,12.8,19.6,0.8</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text64 Ref="35" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>0.02,0.02,3.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text64</Name>
+              <Page isRef="7" />
+              <Parent isRef="34" />
+              <Text>{DocumentosDeCambio.RenglonCodCOVIAL}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text64>
+            <Text65 Ref="36" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>3.22,0.02,6.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text65</Name>
+              <Page isRef="7" />
+              <Parent isRef="34" />
+              <Text>{DocumentosDeCambio.ProyectoRenglonNombre}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text65>
+            <Text66 Ref="37" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>10.02,0.02,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text66</Name>
+              <Page isRef="7" />
+              <Parent isRef="34" />
+              <Text>{DocumentosDeCambio.RenglonUni}
+</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text66>
+            <Text67 Ref="38" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>12.02,0.02,2.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text67</Name>
+              <Page isRef="7" />
+              <Parent isRef="34" />
+              <Text>{IIF(DocumentosDeCambio.RenglonCantidad ==0," ",Format("{0:N6}", DocumentosDeCambio.RenglonCantidad))}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text67>
+            <Text68 Ref="39" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>14.82,0.02,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text68</Name>
+              <Page isRef="7" />
+              <Parent isRef="34" />
+              <Text>{IIF(DocumentosDeCambio.RenglonPrecioUnitario == 0," ","Q")}{IIF(DocumentosDeCambio.RenglonPrecioUnitario == 0," ",Format("{0:N2}", DocumentosDeCambio.RenglonPrecioUnitario))}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text68>
+            <Text69 Ref="40" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>17.22,0.02,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text69</Name>
+              <Page isRef="7" />
+              <Parent isRef="34" />
+              <Text>{IIF((DocumentosDeCambio.RenglonCantidad *  DocumentosDeCambio.RenglonPrecioUnitario) == 0," ","Q")}{IIF((DocumentosDeCambio.RenglonCantidad *  DocumentosDeCambio.RenglonPrecioUnitario) == 0 ," ",Format("{0:N2}", (DocumentosDeCambio.RenglonCantidad *  DocumentosDeCambio.RenglonPrecioUnitario)))}
+</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text69>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName>RelaciónP2</DataRelationName>
+          <DataSourceName>DocumentosDeCambio</DataSourceName>
+          <Expressions isList="true" count="0" />
+          <Filters isList="true" count="1">
+            <value>_x007B_DocumentosDeCambio.DocCambioCorrel_x0020__x003D__x003D__x0020_DocCorrelativos.RelacionP.DocCambioCorrel_x007D_</value>
+          </Filters>
+          <MasterComponent isRef="19" />
+          <Name>DataBand6</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+          <Sort isList="true" count="0" />
+        </DataBand6>
+        <GroupFooterBand2 Ref="41" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <CanShrink>True</CanShrink>
+          <ClientRectangle>0,14.4,19.6,1</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text70 Ref="42" type="Text" isKey="true">
+              <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>17.22,0.02,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text70</Name>
+              <Page isRef="7" />
+              <Parent isRef="41" />
+              <Text>Q{Format("{0:N2}", Sum(DataBand6,(DocumentosDeCambio.RenglonCantidad *  DocumentosDeCambio.RenglonPrecioUnitario)))}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text70>
+            <Text71 Ref="43" type="Text" isKey="true">
+              <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>14.82,0.02,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text71</Name>
+              <Page isRef="7" />
+              <Parent isRef="41" />
+              <Text>Total</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text71>
+            <Text72 Ref="44" type="Text" isKey="true">
+              <Border>Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>12.02,0.02,2.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text72</Name>
+              <Page isRef="7" />
+              <Parent isRef="41" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text72>
+            <Text73 Ref="45" type="Text" isKey="true">
+              <Border>Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>10.02,0.02,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text73</Name>
+              <Page isRef="7" />
+              <Parent isRef="41" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text73>
+            <Text74 Ref="46" type="Text" isKey="true">
+              <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>3.22,0.02,6.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text74</Name>
+              <Page isRef="7" />
+              <Parent isRef="41" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text74>
+            <Text75 Ref="47" type="Text" isKey="true">
+              <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>0.02,0.02,3.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text75</Name>
+              <Page isRef="7" />
+              <Parent isRef="41" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text75>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>GroupFooterBand2</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+        </GroupFooterBand2>
+        <GroupHeaderBand1 Ref="48" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,16.2,19.6,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>GroupHeaderBand1</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+        </GroupHeaderBand1>
+        <DataBand1 Ref="49" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,17,19.6,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <DataRelationName>RelaciónP2</DataRelationName>
+          <DataSourceName>DocumentosDeCambio</DataSourceName>
+          <Expressions isList="true" count="0" />
+          <Filters isList="true" count="1">
+            <value>_x007B_DocumentosDeCambio.DocCambioCorrel_x0020__x003D__x003D__x0020_DocCorrelativos.RelacionP.DocCambioCorrel_x007D_</value>
+          </Filters>
+          <MasterComponent isRef="19" />
+          <Name>DataBand1</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+        <GroupFooterBand1 Ref="50" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <CanShrink>True</CanShrink>
+          <ClientRectangle>0,17.8,19.6,0.6</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text7 Ref="51" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>0,0,19.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="7" />
+              <Parent isRef="50" />
+              <Text>JUSTIFICACIÓN: {DocCorrelativos.RelacionP.DocCambioJustifica}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>GroupFooterBand1</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+        </GroupFooterBand1>
+        <GroupHeaderBand3 Ref="52" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,19.2,19.6,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>GroupHeaderBand3</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+        </GroupHeaderBand3>
+        <DataBand2 Ref="53" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,20,19.6,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <DataRelationName>RelaciónP2</DataRelationName>
+          <DataSourceName>DocumentosDeCambio</DataSourceName>
+          <Expressions isList="true" count="0" />
+          <Filters isList="true" count="1">
+            <value>_x007B_DocumentosDeCambio.DocCambioCorrel_x0020__x003D__x003D__x0020_DocCorrelativos.RelacionP.DocCambioCorrel_x007D_</value>
+          </Filters>
+          <MasterComponent isRef="19" />
+          <Name>DataBand2</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+          <Sort isList="true" count="0" />
+        </DataBand2>
+        <GroupFooterBand3 Ref="54" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <CanBreak>True</CanBreak>
+          <CanShrink>True</CanShrink>
+          <ClientRectangle>0,20.8,19.6,5.2</ClientRectangle>
+          <Components isList="true" count="15">
+            <Text8 Ref="55" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,11.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="7" />
+              <Parent isRef="54" />
+              <Text>Este documento de cambio {IIF(DocCorrelativos.RelacionP.ModificaAnexo == "True" ,"si","no")}   modifica el valor del Contrato.</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text29 Ref="56" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>0,0.8,7,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="7" />
+              <Parent isRef="54" />
+              <Text>VALOR ORIGINAL DEL CONTRATO  </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text29>
+            <Text30 Ref="57" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>7.8,0.8,3,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="7" />
+              <Parent isRef="54" />
+              <Text>Q{Format("{0:N2}", DocCorrelativos.RelacionP.MontoOriginal)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text30>
+            <Text32 Ref="58" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>0,1.4,7,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text32</Name>
+              <Page isRef="7" />
+              <Parent isRef="54" />
+              <Text>VALOR MODIFICADO DEL CONTRATO </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text32>
+            <Text35 Ref="59" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>7.8,1.4,3,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text35</Name>
+              <Page isRef="7" />
+              <Parent isRef="54" />
+              <Text>Q{Format("{0:N2}", DocCorrelativos.RelacionP.MontoModificado)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text35>
+            <Text31 Ref="60" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>11.6,0.8,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="7" />
+              <Parent isRef="54" />
+              <Text>100%</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text31>
+            <Text38 Ref="61" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>11.6,1.4,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text38</Name>
+              <Page isRef="7" />
+              <Parent isRef="54" />
+              <Text>{Format("{0:N2}", ((DocCorrelativos.RelacionP.MontoModificado/DocCorrelativos.RelacionP.MontoOriginal)*100))}%</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text38>
+            <Text33 Ref="62" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>0,2,7,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text33</Name>
+              <Page isRef="7" />
+              <Parent isRef="54" />
+              <Text>VALOR ESTE DOCUMENTO</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text33>
+            <Text36 Ref="63" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>7.8,2,3,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text36</Name>
+              <Page isRef="7" />
+              <Parent isRef="54" />
+              <Text>Q{Format("{0:N2}", Sum(DataBand2,(DocumentosDeCambio.RenglonCantidad *  DocumentosDeCambio.RenglonPrecioUnitario)))}
+</Text>
+              <TextBrush>Black</TextBrush>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+            </Text36>
+            <Text39 Ref="64" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>11.6,2,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text39</Name>
+              <Page isRef="7" />
+              <Parent isRef="54" />
+              <Text>{Replace(Format("{0:N2}", (Sum(DataBand2,(DocumentosDeCambio.RenglonCantidad *  DocumentosDeCambio.RenglonPrecioUnitario)) / DocumentosDeCambio.MontoOriginal)*100),"-"," ")}%</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text39>
+            <Text34 Ref="65" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>0,2.6,7,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text34</Name>
+              <Page isRef="7" />
+              <Parent isRef="54" />
+              <Text>VALOR DEL CONTRATO AJUSTADO</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text34>
+            <Text37 Ref="66" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>7.8,2.6,3,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text37</Name>
+              <Page isRef="7" />
+              <Parent isRef="54" />
+              <Text>Q{Format("{0:N2}", (DocumentosDeCambio.MontoModificado) + Sum(DataBand2,(DocumentosDeCambio.RenglonCantidad *  DocumentosDeCambio.RenglonPrecioUnitario)))}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text37>
+            <Text40 Ref="67" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>11.6,2.6,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text40</Name>
+              <Page isRef="7" />
+              <Parent isRef="54" />
+              <Text>{Format("{0:N2}", ((DocumentosDeCambio.MontoModificado + Sum(DataBand2,(DocumentosDeCambio.RenglonCantidad *  DocumentosDeCambio.RenglonPrecioUnitario)))/DocumentosDeCambio.MontoOriginal)*100 )}%</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text40>
+            <Text42 Ref="68" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>0,3.2,13.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text42</Name>
+              <Page isRef="7" />
+              <Parent isRef="54" />
+              <Text>Este Documento de Cambio {IIF(DocCorrelativos.RelacionP.ModificaPlazo == "True" ,"si","no")} modifica el tiempo contractual. </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text42>
+            <Text9 Ref="69" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,3.8,19.6,1.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="7" />
+              <Parent isRef="54" />
+              <Text>Esta modificación representa un  {Replace(Format("{0:N2}", (Sum(DataBand2,(DocumentosDeCambio.RenglonCantidad *  DocumentosDeCambio.RenglonPrecioUnitario)) / DocumentosDeCambio.MontoOriginal)*100),"-"," ")}% de {IIF( (Sum(DataBand2,(DocumentosDeCambio.RenglonCantidad *  DocumentosDeCambio.RenglonPrecioUnitario)) / DocumentosDeCambio.MontoOriginal)*100 &lt; 0,"decremento","incremento")} al valor original del contrato, por una cantidad de {DocumentosDeCambio.MontoxLetras}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text9>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <KeepGroupFooterTogether>False</KeepGroupFooterTogether>
+          <Name>GroupFooterBand3</Name>
+          <NewPageAfter>True</NewPageAfter>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+        </GroupFooterBand3>
+        <FooterBand1 Ref="70" type="FooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,26.8,19.6,1.2</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text27 Ref="71" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,7.2,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="7" />
+              <Parent isRef="70" />
+              <Text>Hora y Fecha: {Format("{0:MM/dd/yyyy}", Today)} {Format("{0:HH:mm:ss}", Time)}
+Reporte: S_DocumentosDeCambio</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text27>
+            <Text41 Ref="72" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.6,0,4,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text41</Name>
+              <Page isRef="7" />
+              <Parent isRef="70" />
+              <Text>Pagina:{PageNumber} de {TotalPageCount}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text41>
+            <HorizontalLinePrimitive2 Ref="73" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0,0,19.6,0.0254</ClientRectangle>
+              <Color>216, 216, 216</Color>
+              <Conditions isList="true" count="0" />
+              <EndCap Ref="74" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Expressions isList="true" count="0" />
+              <Name>HorizontalLinePrimitive2</Name>
+              <Page isRef="7" />
+              <Parent isRef="70" />
+              <Size>2</Size>
+              <StartCap Ref="75" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>FooterBand1</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+          <PrintAtBottom>True</PrintAtBottom>
+          <PrintIfEmpty>True</PrintIfEmpty>
+          <PrintOnAllPages>True</PrintOnAllPages>
+          <SkipFirst>False</SkipFirst>
+        </FooterBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Expressions isList="true" count="0" />
+      <Guid>129cea20cb844952a318ba5095a2cf1c</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page2</Name>
+      <PageHeight>27.9</PageHeight>
+      <PageWidth>21.6</PageWidth>
+      <PaperSize>Letter</PaperSize>
+      <Report isRef="0" />
+    </Page2>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>S_DocumentosDeCambio</ReportAlias>
+  <ReportChanged>3/6/2023 10:51:41 AM</ReportChanged>
+  <ReportCreated>2/13/2023 4:38:15 PM</ReportCreated>
+  <ReportFile>C:\Users\tony\Documents\GitHub\SICOP-Web\Covialgt\Covialgt\Reportes\rptDocumentosDeCambio.mrt</ReportFile>
+  <ReportGuid>3907f170ad124dd28fa17c911156d73e</ReportGuid>
+  <ReportName>S_DocumentosDeCambio</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2023.1.1.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class S_DocumentosDeCambio : Stimulsoft.Report.StiReport
+    {
+        public S_DocumentosDeCambio()        {
+            this.InitializeComponent();
+        }
+		
+	
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

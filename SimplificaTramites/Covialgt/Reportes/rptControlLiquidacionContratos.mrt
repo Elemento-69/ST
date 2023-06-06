@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.0" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <Connection1 Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>Connection1</Alias>
+        <ConnectionString>Data Source=192.168.1.23\covialapp; Pooling=True; Max Pool Size=75; Connection Timeout=300; Initial Catalog=z_PRODUCCION_sicopDB;user id=ebaquiax;password=fam1411</ConnectionString>
+        <Name>Connection1</Name>
+        <PromptUserNameAndPassword>False</PromptUserNameAndPassword>
+      </Connection1>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <DataSource1 Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DataSource1</Alias>
+        <Columns isList="true" count="12">
+          <value>AnioID,System.String</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>ProyectoEstatusID,System.String</value>
+          <value>ProyectoEstatusDesc,System.String</value>
+          <value>ReparoNo,System.String</value>
+          <value>Contrato,System.String</value>
+          <value>EstadoLiquidacion,System.String</value>
+          <value>NombreEmpresa,System.String</value>
+          <value>numeroacta,System.String</value>
+          <value>numeroinforme,System.String</value>
+          <value>revisor,System.String</value>
+          <value>empresanit,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DataSource1</Name>
+        <NameInSource>Connection1</NameInSource>
+        <Parameters isList="true" count="1">
+          <value>AnioID,,8,4</value>
+        </Parameters>
+        <SqlCommand>execute ObtenerRptContrldeLiquidacionContratos @AnioID</SqlCommand>
+      </DataSource1>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <ReportTitleBand1 Ref="5" type="ReportTitleBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,42.5,4.4</ClientRectangle>
+          <Components isList="true" count="5">
+            <Text11 Ref="6" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.8,42.52,0.71</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14,Bold</Font>
+              <Guid>f63a5b49956d42aa9d09652762ede7b7</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>UNIDAD EJECUTORA DE CONSERVACIÓN VIAL-COVIAL-</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+            <Text1 Ref="7" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.2,42.52,0.71</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14,Bold</Font>
+              <Guid>0de298cc5df447968738197dd609bcde</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>CONTROL DE LIQUIDACION CONTRATOS EJECUTADOS DEL AÑO  {DataSource1.AnioID}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text2 Ref="8" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.5,42.52,0.71</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14</Font>
+              <Guid>17b72be5f0904d3b89264f69f4b42354</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>DEPARTAMENTO TECNICO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text3 Ref="9" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.9,42.52,0.71</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14,Bold</Font>
+              <Guid>a77a26a4b92444d7acc3591b27b3ce2e</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>COMISION RECEPTORA Y LIQUIDADORA DE CONTRATOS</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+            <Image1 Ref="10" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,0.6,6,3.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Guid>3d822cdcd4484ed8a7c30cbf2993784d</Guid>
+              <Image>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</Image>
+              <Name>Image1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Stretch>True</Stretch>
+            </Image1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportTitleBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </ReportTitleBand1>
+        <DataBand1 Ref="11" type="DataBand" isKey="true">
+          <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,5.6,42.5,1.2</ClientRectangle>
+          <Components isList="true" count="15">
+            <Text5 Ref="12" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>0,0,2.2,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>784202762a3d48f1aca2216d6e3c8cbd</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>NÚMERO 
+DE REPARO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text6 Ref="13" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>2.2,0,2.4,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>b767195d97944e0584b48ef2d81cea07</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>FECHA INGRESO</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text7 Ref="14" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>6,0,2.4,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>2e97d0bdd28045b484969147ae278a82</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>PROYECTO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text8 Ref="15" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>8.4,0,3,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>9ee4a523d52d4d79add9d5e3e5a5dd7e</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>NÚMERO
+DE CONTRATO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text9 Ref="16" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>13.8,0,8,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>e67bc75649b042c39fbbf3c80feafaa0</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>EMPRESA</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <Text10 Ref="17" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>21.8,0,2.6,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>d48293d4dccf4bb19f7317418b633468</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>FECHA
+DE REPARO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text12 Ref="18" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>24.4,0,2.4,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>f7ae5ef1922e48598b7ab2ca2edddcf1</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>STATUS</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text13 Ref="19" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>26.8,0,2.4,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>7235c708a67c40848570f0ed1b37f673</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>FECHA
+REGRESO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text13>
+            <Text14 Ref="20" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>29.2,0,2.6,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>8a5b705191ff46478462e05b3d2cf19f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>NÚMERO
+DE LIBRO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <Text15 Ref="21" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>31.8,0,2.4,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>2b269aba57784dccb8ab03cb25aa855d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>NÚMERO 
+DE ACTA</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text15>
+            <Text16 Ref="22" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>34.2,0,1.8,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>21643340effb4d9d977f4c789d760ed2</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>FOLLIO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text16>
+            <Text17 Ref="23" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>36,0,3,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>f5c1d9ca5e9d4efeb993d6e9e42ffe4a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>NÚMERO
+DE INFORME</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text17>
+            <Text18 Ref="24" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>39,0,3.5,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>0e773631df9846c5b193848bd9dacac2</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>REVISOR</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text18>
+            <Text4 Ref="25" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>11.4,0,2.4,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>22d751d4af3247478033f0863042fb8d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>EMPRESA NIT</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text33 Ref="26" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>4.6,0,1.4,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>513fc3581a3948308bcf8db54c4b90ba</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text33</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>AÑO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text33>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+        <DataBand2 Ref="27" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,7.6,42.5,0.6</ClientRectangle>
+          <Components isList="true" count="15">
+            <Text19 Ref="28" type="Text" isKey="true">
+              <Border>All;SkyBlue;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Editable>True</Editable>
+              <Font>Arial,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="4" />
+              <Parent isRef="27" />
+              <Text>{DataSource1.ReparoNo}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text19>
+            <Text20 Ref="29" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.2,0,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Guid>54dba3b04fc74e51b2536f500d99bfca</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="4" />
+              <Parent isRef="27" />
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text20>
+            <Text21 Ref="30" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,0,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="4" />
+              <Parent isRef="27" />
+              <Text>{DataSource1.ProyectoCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+            <Text22 Ref="31" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.4,0,3,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="4" />
+              <Parent isRef="27" />
+              <Text>{DataSource1.Contrato}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text22>
+            <Text23 Ref="32" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13.8,0,8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="4" />
+              <Parent isRef="27" />
+              <Text>{DataSource1.NombreEmpresa}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text23>
+            <Text24 Ref="33" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>21.8,0,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Guid>24f6bcf28a4841dc93c76cc24bd67373</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="4" />
+              <Parent isRef="27" />
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+            <Text25 Ref="34" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>24.4,0,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="4" />
+              <Parent isRef="27" />
+              <Text>{DataSource1.EstadoLiquidacion}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+            <Text26 Ref="35" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>26.8,0,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Guid>d71b041467564602b2270e758c564d46</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="4" />
+              <Parent isRef="27" />
+              <TextBrush>Black</TextBrush>
+            </Text26>
+            <Text27 Ref="36" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>29.2,0,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Guid>d4f3fb2ee2374fe199b8729250340ac9</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="4" />
+              <Parent isRef="27" />
+              <TextBrush>Black</TextBrush>
+            </Text27>
+            <Text28 Ref="37" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>31.8,0,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="4" />
+              <Parent isRef="27" />
+              <Text>{DataSource1.numeroacta}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text28>
+            <Text29 Ref="38" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>34.2,0,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Guid>12538fe8c5a8456c8b3d3bb57386611d</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="4" />
+              <Parent isRef="27" />
+              <TextBrush>Black</TextBrush>
+            </Text29>
+            <Text30 Ref="39" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>36,0,3,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="4" />
+              <Parent isRef="27" />
+              <Text>{DataSource1.numeroinforme}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text30>
+            <Text31 Ref="40" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>39,0,3.5,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="4" />
+              <Parent isRef="27" />
+              <Text>{DataSource1.revisor}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text31>
+            <Text32 Ref="41" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.4,0,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Guid>ea238a963cb846b1a90a1622b4dc1a98</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text32</Name>
+              <Page isRef="4" />
+              <Parent isRef="27" />
+              <Text>{DataSource1.empresanit}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text32>
+            <Text34 Ref="42" type="Text" isKey="true">
+              <Border>All;LightBlue;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,0,1.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Guid>df8d1aae074d41d8881201c6e5420715</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text34</Name>
+              <Page isRef="4" />
+              <Parent isRef="27" />
+              <Text>{DataSource1.AnioID}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text34>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>DataSource1</DataSourceName>
+          <Filters isList="true" count="0" />
+          <MasterComponent isRef="11" />
+          <Name>DataBand2</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </DataBand2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>f01cac73c4524c48b04e648057953fac</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>32.2</PageHeight>
+      <PageWidth>44.5</PageWidth>
+      <PaperSize>A3ExtraTransverse</PaperSize>
+      <Report isRef="0" />
+      <StretchToPrintArea>True</StretchToPrintArea>
+      <Watermark Ref="43" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="44" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Informe</ReportAlias>
+  <ReportChanged>6/18/2018 3:30:27 PM</ReportChanged>
+  <ReportCreated>6/8/2017 10:44:40 AM</ReportCreated>
+  <ReportFile>C:\Users\etzic\Documents\Sys Project\Reportes SICOP\rptControlLiquidacionContratos.mrt</ReportFile>
+  <ReportGuid>201b78e4ceae4c769780ac58ae0d3448</ReportGuid>
+  <ReportName>Informe</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2010.1.700</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Informe : Stimulsoft.Report.StiReport
+    {
+        
+        public Informe()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

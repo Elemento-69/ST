@@ -1,0 +1,672 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="es-GT">
+  <Title Text="Dashboard Gerencial Covial" />
+  <DataSources>
+    <SqlDataSource Name="dashboardConsultaGerencial" ComponentName="sqlDataSource1">
+      <Connection Name="SICOPDATA" FromAppConfig="true" />
+      <Query Type="StoredProcQuery" Name="dashboardConsultaGerencial">
+        <Parameter Name="@pAnioId" Type="DevExpress.DataAccess.Expression">(System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)(?AnioID)</Parameter>
+        <Parameter Name="@pProgramaCodigo" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)(?ProgramaCodigo)</Parameter>
+        <ProcName>dashboardConsultaGerencial</ProcName>
+      </Query>
+      <Query Type="StoredProcQuery" Name="prObtenerDashboardEstimacionesDC">
+        <Parameter Name="@pAnioId" Type="DevExpress.DataAccess.Expression">(System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)(?AnioID)</Parameter>
+        <Parameter Name="@pProgramaCodigo" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)(?ProgramaCodigo)</Parameter>
+        <ProcName>prObtenerDashboardEstimacionesDC</ProcName>
+      </Query>
+      <Query Type="StoredProcQuery" Name="prObtenerDashboarDC">
+        <Parameter Name="@pAnioId" Type="DevExpress.DataAccess.Expression">(System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)(?AnioID)</Parameter>
+        <Parameter Name="@pProgramaCodigo" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)(?ProgramaCodigo)</Parameter>
+        <ProcName>prObtenerDashboarDC</ProcName>
+      </Query>
+      <Query Type="StoredProcQuery" Name="dashboardPlanificadoVsEjecutado">
+        <Parameter Name="@pAnioId" Type="DevExpress.DataAccess.Expression">(System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)(?AnioID)</Parameter>
+        <Parameter Name="@pProgramaCodigo" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)(?ProgramaCodigo)</Parameter>
+        <ProcName>dashboardPlanificadoVsEjecutado</ProcName>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="AnioID" Type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Parameter Name="ProgramaCodigo" />
+  </Parameters>
+  <Items>
+    <ComboBox ComponentName="comboBoxDashboardItem2" Name="Combo Box 1" DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial" />
+    <ListBox ComponentName="listBoxDashboardItem1" Name="Proyectos" ParentContainer="dashboardTabPage1" DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial">
+      <DataItems>
+        <Dimension DataMember="ProyectoCodigo" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <Pie ComponentName="pieDashboardItem1" Name="Avance Físico" ParentContainer="dashboardTabPage1" DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial" TooltipContentType="Value" ShowPieCaptions="false">
+      <DataItems>
+        <Measure DataMember="MontoEjecutado" Name="Ejecutado" DefaultId="DataItem0">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="es-GT" />
+        </Measure>
+        <Measure DataMember="MontoPendienteEjecutar" Name="Pendiente Ejecutar" DefaultId="DataItem1">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="es-GT" />
+        </Measure>
+      </DataItems>
+      <Values>
+        <Value DefaultId="DataItem0" />
+        <Value DefaultId="DataItem1" />
+      </Values>
+    </Pie>
+    <Pie ComponentName="pieDashboardItem2" Name="Avance Financiero" ParentContainer="dashboardTabPage1" DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial" TooltipContentType="Value">
+      <DataItems>
+        <Measure DataMember="MontoPagado" Name="Pagado" DefaultId="DataItem0">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="es-GT" />
+        </Measure>
+        <Measure DataMember="MontoPendientePago" Name="Pendiente de pago" DefaultId="DataItem1">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="es-GT" />
+        </Measure>
+      </DataItems>
+      <Values>
+        <Value DefaultId="DataItem0" />
+        <Value DefaultId="DataItem1" />
+      </Values>
+    </Pie>
+    <Chart ComponentName="chartDashboardItem2" Name="Gráfico 2" DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial">
+      <Panes>
+        <Pane Name="Panel 1" />
+      </Panes>
+    </Chart>
+    <TabContainer ComponentName="tabContainerDashboardItem1" Name="Tab Container 1">
+      <Pages>
+        <Page ComponentName="dashboardTabPage1" Name="Gerencial Covial" />
+        <Page ComponentName="dashboardTabPage2" Name="Analítico Financiero" />
+        <Page ComponentName="dashboardTabPage3" Name="Documentos de cambio" />
+        <Page ComponentName="dashboardTabPage4" Name="Planificado vs Ejecutado por período" />
+      </Pages>
+    </TabContainer>
+    <Pie ComponentName="pieDashboardItem3" Name="Avance Tiempo" ParentContainer="dashboardTabPage1" DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial" TooltipContentType="Value">
+      <DataItems>
+        <Measure DataMember="DiasAvance" Name="Diás Transcurridos" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" />
+        </Measure>
+        <Measure DataMember="DiasPendientes" Name="Días pendientes" DefaultId="DataItem1">
+          <NumericFormat FormatType="Number" />
+        </Measure>
+      </DataItems>
+      <Values>
+        <Value DefaultId="DataItem0" />
+        <Value DefaultId="DataItem1" />
+      </Values>
+    </Pie>
+    <Grid ComponentName="gridDashboardItem1" Name="Estimaciones" ParentContainer="dashboardTabPage2" DataSource="sqlDataSource1" DataMember="prObtenerDashboardEstimacionesDC">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Dimension DataMember="FechaRecepcion" DateTimeGroupInterval="None" DefaultId="DataItem0">
+          <DateTimeFormat YearFormat="Abbreviated" />
+        </Dimension>
+        <Dimension DataMember="ProyectoCodigo" DefaultId="DataItem2" />
+        <Dimension DataMember="MontoaRecibir" DefaultId="DataItem3">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="es-GT" />
+        </Dimension>
+        <Dimension DataMember="EstadoDesc" DefaultId="DataItem1" />
+        <Measure DataMember="EstimacionCorr" DefaultId="DataItem4" />
+        <Dimension DataMember="Periodo" DefaultId="DataItem5" />
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="Regla de formato 2" ApplyToRow="true">
+          <FormatConditionValue Condition="Greater">
+            <AppearanceSettings AppearanceType="PaleRed" />
+            <Value1 Type="System.Decimal" Value="0" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridDimensionColumn Name="Proyecto">
+          <Dimension DefaultId="DataItem2" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="No. de Estimación">
+          <Measure DefaultId="DataItem4" />
+        </GridMeasureColumn>
+        <GridDimensionColumn Name="Período">
+          <Dimension DefaultId="DataItem5" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="Fecha">
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="Monto">
+          <Dimension DefaultId="DataItem3" />
+          <Totals>
+            <Total Type="Sum" />
+          </Totals>
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="Estado">
+          <Dimension DefaultId="DataItem1" />
+        </GridDimensionColumn>
+      </GridColumns>
+      <GridOptions ColumnWidthMode="AutoFitToContents" WordWrap="true" />
+    </Grid>
+    <Chart ComponentName="chartDashboardItem3" Name="Estimaciones por estatus" ParentContainer="dashboardTabPage2" DataSource="sqlDataSource1" DataMember="prObtenerDashboardEstimacionesDC">
+      <DataItems>
+        <Measure DataMember="MontoaRecibir" DefaultId="DataItem1">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="es-GT" />
+        </Measure>
+        <Dimension DataMember="EstadoDesc" DefaultId="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Panes>
+        <Pane Name="Panel 1">
+          <Series>
+            <Simple Name="Monto estimaciones">
+              <Value DefaultId="DataItem1" />
+              <PointLabelOptions ShowForZeroValues="true" ContentType="Value" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Grid ComponentName="gridDashboardItem3" Name="Porcentaje de avances del proyecto" ShowCaption="false" ParentContainer="dashboardTabPage1" DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial">
+      <DataItems>
+        <Measure DataMember="PorcentajeFinancieroMO" SummaryType="Average" DefaultId="DataItem2">
+          <NumericFormat FormatType="Percent" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="PorcentajeAvanceFisicoMO" SummaryType="Average" Expression="Avg([PorcentajeAvanceFisicoMO])" DefaultId="DataItem0">
+          <NumericFormat FormatType="Percent" IncludeGroupSeparator="true" />
+          <WindowDefinition>
+            <GridWindowDefinition DefinitionMode="RowsAndSparklineArgument" />
+          </WindowDefinition>
+        </Measure>
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="Regla de formato 1">
+          <FormatConditionValue Condition="Greater">
+            <AppearanceSettings AppearanceType="Green" />
+            <Value1 Type="System.Decimal" Value="0" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="Regla de formato 2" DataItem="DataItem2">
+          <FormatConditionValue Condition="Greater">
+            <AppearanceSettings AppearanceType="Blue" />
+            <Value1 Type="System.Decimal" Value="0" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="Regla de formato 3" DataItem="DataItem0" DataItemApplyTo="DataItem0">
+          <FormatConditionValue Condition="GreaterOrEqual">
+            <AppearanceSettings AppearanceType="Green" />
+            <Value1 Type="System.Decimal" Value="0" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridMeasureColumn Name="Avance Físico" Weight="85.756385068762313">
+          <Measure DefaultId="DataItem0" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Avance financiero" Weight="85.756385068762313">
+          <Measure DefaultId="DataItem2" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ShowHorizontalLines="false" ColumnWidthMode="Manual" WordWrap="true" />
+    </Grid>
+    <Pie ComponentName="pieDashboardItem4" Name="No. de estimaciones por estatus" ParentContainer="dashboardTabPage2" DataSource="sqlDataSource1" DataMember="prObtenerDashboardEstimacionesDC" PieType="Donut" ShowPieCaptions="false">
+      <DataItems>
+        <Dimension DataMember="EstadoDesc" Name="Estados estimaciones" ColoringMode="Hue" DefaultId="DataItem1" />
+        <Measure DataMember="EstadoDesc" SummaryType="Count" DefaultId="DataItem0" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Values>
+        <Value DefaultId="DataItem0" />
+      </Values>
+    </Pie>
+    <ComboBox ComponentName="comboBoxDashboardItem4" Name="Filtrar Proyecto" ParentContainer="dashboardTabPage2" DataSource="sqlDataSource1" DataMember="prObtenerDashboardEstimacionesDC" EnableSearch="true">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+      <DataItems>
+        <Dimension DataMember="ProyectoCodigo" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ComboBox>
+    <Chart ComponentName="chartDashboardItem4" Name="Documentos de cambio" ParentContainer="dashboardTabPage3" DataSource="sqlDataSource1" DataMember="prObtenerDashboarDC">
+      <DataItems>
+        <Measure DataMember="MontoDocCambio" DefaultId="DataItem0">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="es-GT" />
+        </Measure>
+        <Dimension DataMember="DocCambioTipoID" DefaultId="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Panes>
+        <Pane Name="Panel 1">
+          <Series>
+            <Simple Name="Monto">
+              <Value DefaultId="DataItem0" />
+              <PointLabelOptions OverlappingMode="None" ContentType="Value" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Pie ComponentName="pieDashboardItem5" Name="No. de documentos de cambio por tipo" ParentContainer="dashboardTabPage3" DataSource="sqlDataSource1" DataMember="prObtenerDashboarDC" PieType="Donut" TooltipContentType="ArgumentAndValue" ShowPieCaptions="false">
+      <DataItems>
+        <Measure DataMember="DocCambioTipoID" SummaryType="Count" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" />
+        </Measure>
+        <Dimension DataMember="DocCambioTipoID" DefaultId="DataItem2" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem2" />
+      </Arguments>
+      <Values>
+        <Value DefaultId="DataItem0" />
+      </Values>
+    </Pie>
+    <ComboBox ComponentName="comboBoxDashboardItem5" Name="Proyecto" ParentContainer="dashboardTabPage3" DataSource="sqlDataSource1" DataMember="prObtenerDashboarDC" EnableSearch="true">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+      <DataItems>
+        <Dimension DataMember="ProyectoCodigo" Name="Proyecto" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ComboBox>
+    <Grid ComponentName="gridDashboardItem2" Name="Documentos de cambio" ParentContainer="dashboardTabPage3" DataSource="sqlDataSource1" DataMember="prObtenerDashboarDC">
+      <DataItems>
+        <Dimension DataMember="DocCambioTipoID" DefaultId="DataItem0" />
+        <Dimension DataMember="ProyectoCodigo" DefaultId="DataItem1" />
+        <Measure DataMember="MontoDocCambio" DefaultId="DataItem2">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="es-GT" />
+        </Measure>
+        <Measure DataMember="DocCambioCorrel" DefaultId="DataItem3" />
+        <Measure DataMember="DiasDocCambio" DefaultId="DataItem4" />
+        <Dimension DataMember="EstadoDesc" DefaultId="DataItem5" />
+        <Dimension DataMember="FechaEstado" DefaultId="DataItem6" />
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="Regla de formato 1" DataItem="DataItem2" DataItemApplyTo="DataItem2">
+          <FormatConditionValue Condition="Less">
+            <AppearanceSettings AppearanceType="FontRed" />
+            <Value1 Type="System.Decimal" Value="0" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridDimensionColumn Name="Tipo">
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="Proyecto">
+          <Dimension DefaultId="DataItem1" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="Correlativo">
+          <Measure DefaultId="DataItem3" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Días">
+          <Measure DefaultId="DataItem4" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Monto (Q.)">
+          <Measure DefaultId="DataItem2" />
+          <Totals>
+            <Total Type="Sum" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridDimensionColumn Name="Estado">
+          <Dimension DefaultId="DataItem5" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="Fecha del estado">
+          <Dimension DefaultId="DataItem6" />
+        </GridDimensionColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+    <Chart ComponentName="chartDashboardItem1" Name="Planificado vs Ejecutado" ParentContainer="dashboardTabPage4" DataSource="sqlDataSource1" DataMember="dashboardPlanificadoVsEjecutado">
+      <DataItems>
+        <Measure DataMember="FisicoVigenteMonto" DefaultId="DataItem0">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="es-GT" />
+        </Measure>
+        <Measure DataMember="FisicoRealMonto" DefaultId="DataItem1">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="es-GT" />
+        </Measure>
+        <Dimension DataMember="PeriodoHasta" DateTimeGroupInterval="MonthYear" DefaultId="DataItem3" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem3" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Panel 1">
+          <AxisY Title="Monto">
+            <NumericFormat FormatType="Currency" Unit="Millions" />
+          </AxisY>
+          <Series>
+            <Simple Name="Planificado">
+              <Value DefaultId="DataItem0" />
+              <PointLabelOptions Orientation="RotateLeft" ContentType="Value" />
+            </Simple>
+            <Simple Name="Ejecutado">
+              <Value DefaultId="DataItem1" />
+              <PointLabelOptions Orientation="RotateLeft" ContentType="Value" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <ComboBox ComponentName="comboBoxDashboardItem6" Name="Proyectos" ParentContainer="dashboardTabPage4" DataSource="sqlDataSource1" DataMember="dashboardPlanificadoVsEjecutado" EnableSearch="true">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+      <DataItems>
+        <Dimension DataMember="ProyectoCodigo" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ComboBox>
+    <Grid ComponentName="gridDashboardItem4" Name="Montos físico" ShowCaption="false" ParentContainer="dashboardTabPage1" DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial">
+      <DataItems>
+        <Measure DataMember="MontoEjecutado" DefaultId="DataItem0">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="es-GT" />
+        </Measure>
+        <Measure DataMember="MontoPendienteEjecutar" DefaultId="DataItem1">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="es-GT" />
+        </Measure>
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="Regla de formato 1" DataItem="DataItem0" DataItemApplyTo="DataItem0">
+          <FormatConditionValue Condition="GreaterOrEqual">
+            <AppearanceSettings AppearanceType="Green" />
+            <Value1 Type="System.Decimal" Value="0" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="Regla de formato 2" DataItem="DataItem1" DataItemApplyTo="DataItem1">
+          <FormatConditionValue Condition="GreaterOrEqual">
+            <AppearanceSettings AppearanceType="Blue" />
+            <Value1 Type="System.Decimal" Value="0" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridMeasureColumn Name="Ejecutado" Weight="73.9961759082218">
+          <Measure DefaultId="DataItem0" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Pendiente de ejecutar" Weight="76.0038240917782">
+          <Measure DefaultId="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ColumnWidthMode="Manual" />
+    </Grid>
+    <Grid ComponentName="gridDashboardItem5" Name="Montos financiero" ShowCaption="false" ParentContainer="dashboardTabPage1" DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial">
+      <DataItems>
+        <Measure DataMember="MontoPagado" DefaultId="DataItem0">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="es-GT" />
+        </Measure>
+        <Measure DataMember="MontoPendientePago" DefaultId="DataItem1">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="es-GT" />
+        </Measure>
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="Regla de formato 1" DataItem="DataItem0" DataItemApplyTo="DataItem0">
+          <FormatConditionValue Condition="Greater">
+            <AppearanceSettings AppearanceType="Green" />
+            <Value1 Type="System.Decimal" Value="0" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="Regla de formato 2" DataItem="DataItem1" DataItemApplyTo="DataItem1">
+          <FormatConditionValue Condition="GreaterOrEqual">
+            <AppearanceSettings AppearanceType="Blue" />
+            <Value1 Type="System.Decimal" Value="0" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridMeasureColumn Name="Pagado" Weight="73.4225621414914">
+          <Measure DefaultId="DataItem0" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Pendiente de pago" Weight="76.5774378585086">
+          <Measure DefaultId="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ColumnWidthMode="Manual" />
+    </Grid>
+  </Items>
+  <ColorScheme>
+    <Entry DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial" Color="-16011336">
+      <MeasureKey>
+        <Definition DataMember="RenglonCantidadEjecutada" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial" Color="-1866206">
+      <MeasureKey>
+        <Definition DataMember="RenglonCantidadPendiente" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial" Color="-13481649">
+      <MeasureKey>
+        <Definition DataMember="MontoPagado" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial" Color="-16402516">
+      <MeasureKey>
+        <Definition DataMember="MontoPendientePago" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial" Color="-14497948">
+      <MeasureKey>
+        <Definition DataMember="FisicoRealMonto" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial" Color="-1031317">
+      <MeasureKey>
+        <Definition DataMember="FisicoVigenteMonto" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial" Color="-14006309">
+      <MeasureKey>
+        <Definition DataMember="Planificado" SummaryType="Max" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial" Color="-1234420">
+      <MeasureKey>
+        <Definition DataMember="Ejecutado" SummaryType="Max" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial" Color="-15756242">
+      <MeasureKey>
+        <Definition DataMember="PorcentajeTiempoTranscurrido" SummaryType="Max" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial" Color="-1003223">
+      <MeasureKey>
+        <Definition DataMember="PorcentajeTiempoPendiente" SummaryType="Max" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="dashboardPlanificadoVsEjecutado" Color="-1031317">
+      <MeasureKey>
+        <Definition DataMember="FisicoRealMonto" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="dashboardPlanificadoVsEjecutado" Color="-14497948">
+      <MeasureKey>
+        <Definition DataMember="FisicoVigenteMonto" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial" Color="-666051">
+      <MeasureKey>
+        <Definition DataMember="DiasAvance" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial" Color="-12225595">
+      <MeasureKey>
+        <Definition DataMember="DiasPendientes" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial" Color="-1031317">
+      <MeasureKey>
+        <Definition DataMember="MontoEjecutado" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="dashboardConsultaGerencial" Color="-14497948">
+      <MeasureKey>
+        <Definition DataMember="MontoPendienteEjecutar" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="prObtenerDashboarDC" Color="-22758">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="DocCambioTipoID" />
+          <Value Type="System.String" Value="OC" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="prObtenerDashboarDC" Color="-15222828">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="DocCambioTipoID" />
+          <Value Type="System.String" Value="OTS" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="prObtenerDashboarDC" Color="-903876">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="DocCambioTipoID" />
+          <Value Type="System.String" Value="CO" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="prObtenerDashboarDC" Color="-11396878">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="DocCambioTipoID" />
+          <Value Type="System.String" Value="ATE" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="prObtenerDashboardEstimacionesDC" Color="-1456356">
+      <MeasureKey>
+        <Definition DataMember="MontoPagado" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="prObtenerDashboardEstimacionesDC" Color="-15051592">
+      <MeasureKey>
+        <Definition DataMember="MontoPendientePago" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="prObtenerDashboardEstimacionesDC" Color="-12455323">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="EstadoDesc" />
+          <Value Type="System.String" Value="Asignado a Visor" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="prObtenerDashboardEstimacionesDC" Color="-14084232">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="EstadoDesc" />
+          <Value Type="System.String" Value="No Estimación" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="prObtenerDashboardEstimacionesDC" Color="-200428">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="EstadoDesc" />
+          <Value Type="System.String" Value="No Presentado" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="prObtenerDashboardEstimacionesDC" Color="-33744">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="EstadoDesc" />
+          <Value Type="System.String" Value="Pagado" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="prObtenerDashboardEstimacionesDC" Color="-12335904">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="EstadoDesc" />
+          <Value Type="System.String" Value="Pagado Parcialmente" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="prObtenerDashboardEstimacionesDC" Color="-2085587">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="EstadoDesc" />
+          <Value Type="System.String" Value="Reparado con Contratista" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="prObtenerDashboardEstimacionesDC" Color="-9873422">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="EstadoDesc" />
+          <Value Type="System.String" Value="Reparado en Visa no Retirado" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="prObtenerDashboardEstimacionesDC" Color="-16460637">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="EstadoDesc" />
+          <Value Type="System.String" Value="Trasladado a Auxiliar Sub. Técnica" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="sqlDataSource1" DataMember="prObtenerDashboardEstimacionesDC" Color="-15092931">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="EstadoDesc" />
+          <Value Type="System.String" Value="Trasladado a Depto. Financiero" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+  </ColorScheme>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutTabContainer DashboardItem="tabContainerDashboardItem1" Weight="1.6527777777777777">
+        <LayoutTabPage Orientation="Vertical" DashboardItem="dashboardTabPage1">
+          <LayoutGroup>
+            <LayoutGroup Weight="0.39701257861635203">
+              <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="0.34722222222222221" />
+            </LayoutGroup>
+            <LayoutGroup Orientation="Vertical" Weight="1.2539308176100625">
+              <LayoutItem DashboardItem="gridDashboardItem3" Weight="0.88698559638448837" />
+              <LayoutItem DashboardItem="gridDashboardItem4" Weight="0.86059021806594416" />
+              <LayoutItem DashboardItem="gridDashboardItem5" Weight="0.83670909837275842" />
+              <LayoutItem DashboardItem="pieDashboardItem3" Weight="3.2541640209251943" />
+            </LayoutGroup>
+            <LayoutGroup Orientation="Vertical" Weight="1.3490566037735854">
+              <LayoutItem DashboardItem="pieDashboardItem1" Weight="2.223514580239792" />
+              <LayoutItem DashboardItem="pieDashboardItem2" Weight="2.4249620094343056" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutTabPage>
+        <LayoutTabPage DashboardItem="dashboardTabPage4">
+          <LayoutGroup Orientation="Vertical">
+            <LayoutItem DashboardItem="comboBoxDashboardItem6" Weight="0.311178247734139" />
+            <LayoutItem DashboardItem="chartDashboardItem1" Weight="1.6888217522658611" />
+          </LayoutGroup>
+        </LayoutTabPage>
+        <LayoutTabPage DashboardItem="dashboardTabPage2">
+          <LayoutGroup Orientation="Vertical">
+            <LayoutItem DashboardItem="comboBoxDashboardItem4" />
+            <LayoutGroup Weight="1.438738921638109">
+              <LayoutItem DashboardItem="chartDashboardItem3" Weight="1.0495891632934866" />
+              <LayoutItem DashboardItem="pieDashboardItem4" Weight="0.93499276872118231" />
+            </LayoutGroup>
+            <LayoutItem DashboardItem="gridDashboardItem1" Weight="0.32740551764215842" />
+          </LayoutGroup>
+        </LayoutTabPage>
+        <LayoutTabPage Orientation="Vertical" DashboardItem="dashboardTabPage3">
+          <LayoutItem DashboardItem="comboBoxDashboardItem5" />
+          <LayoutGroup Weight="1.5333651532952892">
+            <LayoutItem DashboardItem="chartDashboardItem4" Weight="1.0542234451432564" />
+            <LayoutItem DashboardItem="pieDashboardItem5" Weight="1.5985543326345213" />
+          </LayoutGroup>
+          <LayoutItem DashboardItem="gridDashboardItem2" Weight="0.56389564917384627" />
+        </LayoutTabPage>
+      </LayoutTabContainer>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

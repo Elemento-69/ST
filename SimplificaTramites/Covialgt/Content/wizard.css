@@ -1,0 +1,97 @@
+﻿#msform {
+    position: relative;
+    margin-top: 20px
+}
+
+.card {
+    z-index: 0;
+    position: relative;
+    border: none;
+    background-color: #FAFAFA;    
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#progressbar {
+    text-align: center;
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey;
+    padding-left: 0;
+}
+
+    #progressbar .active {
+        color: #000000
+    }
+
+    #progressbar li {
+        list-style-type: none;
+        font-size: 12px;
+        width: 25%;
+        float: left;
+        position: relative
+    }
+
+    #progressbar.cinco li {
+        width: 20%;
+    }
+
+    #progressbar li .number {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        display: block;
+        font-size: 18px;
+        color: #ffffff;
+        background: #D9D9D9;
+        border-radius: 50%;
+        margin: 10px auto 10px auto;
+        padding: 0 2px;
+    }
+
+        #progressbar li .icon {
+            text-align: center;
+            padding-top: 0.5rem;
+            background-color: #FFFFFF;
+            border: 2px solid #D9D9D9;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            margin: 0 auto;
+        }
+
+    #progressbar li:after, #progressbar li:before {
+        content: '';        
+        height: 2px;
+        background: #D9D9D9;
+        position: absolute;        
+        top: 80px;
+        z-index: -1
+    }
+
+        #progressbar li:not(:last-of-type):after {
+            left: 50%;
+            width: 50%;
+        }
+
+            #progressbar li:not(:first-of-type):before {
+                left: 0;
+                width: 50%;
+            }
+
+    #progressbar li.active:before,
+    #progressbar li.active:after,
+    #progressbar li.active .number {
+        background: #285DCE;
+    }
+
+    #progressbar li.active .icon {
+        border-color: #285DCE;
+        color: #285DCE;
+    }
+
+    .solid-line {
+        border-top: 2px solid #000;
+    }

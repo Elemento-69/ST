@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <CnxPrObtenerConstancia Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>CnxPrObtenerConstancia</Alias>
+        <ConnectionStringEncrypted />
+        <Name>CnxPrObtenerConstancia</Name>
+      </CnxPrObtenerConstancia>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <FDCnxPrObtenerConstancia Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>FDCnxPrObtenerConstancia</Alias>
+        <Columns isList="true" count="12">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoSupervisionCodigo,System.String</value>
+          <value>Nombre,System.String</value>
+          <value>Proyectos,System.String</value>
+          <value>Fechacarta,System.DateTime</value>
+          <value>EstimacionCorr,System.Int32</value>
+          <value>FechaDesde,System.String</value>
+          <value>FechaHasta,System.String</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>FechaHastaAnio,System.Int32</value>
+          <value>SupRegional,System.String</value>
+          <value>ProyectoDescripcion,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>FDCnxPrObtenerConstancia</Name>
+        <NameInSource>CnxPrObtenerConstancia</NameInSource>
+        <Parameters isList="true" count="6">
+          <value>_x0040_AnioID,,8,4</value>
+          <value>_x0040_CodigoSupervisor,,22,10</value>
+          <value>_x0040_CodigoProyecto,,22,10</value>
+          <value>_x0040_EstimacionCorr,,8,5</value>
+          <value>_x0040_FechaCarta,,4,10</value>
+          <value>_x0040_SubDirector,,22,100</value>
+        </Parameters>
+        <SqlCommand>exec PrObtenerConstancia @AnioID,@CodigoSupervisor,@CodigoProyecto ,@EstimacionCorr,@FechaCarta,@SubDirector</SqlCommand>
+      </FDCnxPrObtenerConstancia>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="4">
+        <PageHeaderBand1 Ref="5" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,4.6</ClientRectangle>
+          <Components isList="true" count="4">
+            <Image1 Ref="6" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.2,2.6,1.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Image>iVBORw0KGgoAAAANSUhEUgAAAEYAAAAmCAYAAAB52u3eAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALggAACEoBv58BugAAFFFJREFUaEOFWnd8VVW2jsM4OrZnGcf3FHJver25Nx1SCSH03iwgHemD8EBGH+gICCKMMyoioIKAbYTBB5YnCmIHFJBm6DUEEEgl5ZbcrPnW2nvfnFzCmz/Wb5+yzz5rfftba5e1Q3p0KKT0uCjKgHRpG0G1x39DjedDqPEC5KIuS1GaZ+dC6M9j21BydAy5oqJFkqNZYqRMgWTERtPz0/6TGlH3ulISQlf23Ui5zlhKi42ndAiXIjFxuI/DdRz0iqNdH91KjagvEtwm64Zn61/9A7WNxzdx+J4F7aTGxFMK2kqJiRX98pKjqfJQK2q02mPsYnu1bFw9gEJ6tG9P6TFhMCaMlj17l/rIfMgfmXutUMnOmyk9Opyc9jBKYrHZRZxh4eSCpISHUxbaOvntjf8WmGVz7qWUiCh8E6lKq+hnw7q1If8ZDUowOBoU36kbaECHMEqLiqTk8CgRF0tYJPSC2MNF10Uz7lY6BdtowEF5btfvaOroIRTSsyCfMmLslJ9ko8v7gKb50AqKVoB7bOGM+/DDMHLaNCihGhj8OBnApEWG0fSh9zX18HV6uu5oKypKCwMYMAbKJzMQIhqosAhKDY+gzatuo8az1wFGd9bWd+6ADRFoK0IBE6bBQbsutMPApEXaqXTnb5tYZzo/iAR/e+pemjQcwPQqyANbbDR/yj3N0TRgmBJKlB+8kbITAQpAEMYwU4QxNrlmtmRGh9HuTTdfC4xxA24P1+uX3CX1U6A8SzIMaAKH78OpV5aNvCdvuH5bDAxAG9M3FIaHB9owQDNjDDBPjr5XAWxc0bDGUlYWt6LCVDtNHDaYQvoU5lN2gl1RPxhFCyhszBsL7hG2uNADTrtiigHHCXBSI+w0qtf9TQq0FBOgmO/0DdS/vQ2GMMsAiJEAa9D7AOa9F++4li2Ggbr8+eNbqW0Mu3AE9IKgLRFcM1NY15TwMCr+/HdNellBscSstxbeTW3jwmjCMDCmT8c8mj7sj81diN3IiP6w/hion2GD7wIYKC2sEabYhDXJYTbKiLbTltUIlP8m6H75zu0wHKBo92N2KIlAnEAAh5GFThvVHMJAYHXFIFCYATOG3y/u6wL7WKcAONJ5DEwYje0H1z6t2CW6tRA73Sd+Qz2yQ+GSYTSegelXlEe7PwL1DYqW6CzPtDIbXrsrAAr3iGKLciGnXbGlf35r8p2wUN9KW3MN5Ub2bi2gsNJWUJIBCMeZVMSKpbMxEHDQNfHFCjbrhOcnv72Z2qGH2SWZGYrJahBQ9wr879b9vjkw1gCs2920AnEKIYUHonGPAphZEzLJb1C0Dl18zc+hRANTv5BHHrBERh8GBjFGAi9YBLakgy0fvBRE/RYU2Pt/tyKoKoVZcWMEs0WNTpGUHR9Ol3/GQGBliLUt7jAAM//x+8AwxTbTDgOjRLU9qLA1NTDABtgW3Lvh7A30cOc2AMVGKVF2emwIgDm4Lbb5nIUZY3UjKLF3cwQNKOpMfQuKRPq0L6LeeYXUK7dApG/7DjSsZxbVHkPPlN4EJSCl8OlSjlssGA1Kef7QihbPTKOeOfmgbT51z8qjbu1YcqkrS1uWHHpxpu2aaUJw0Cw/eAuCczJ1cCVTe0cKtU9KoXxHMuUmOCknniUJ4qCPX0dnmY7neZlxIwsDt2+4k3IToykrLhrxKpomDB1OIX5fBTX6rlCjl+US+T1B4r5EDe6r5Kv3krfeRz53g5QB4XuIz+2jBo8b39drqcN3tfiuRr73e2ogtajDbfjIgzY8aJPFrUuv+Qd/46lEfZYKfF8GuUIN9ZfR3mVcs1Tiv7qdugZy1/movtZLdTVeqtfixn1D3Tny158iv/sk7DuB9o7j/hieHyFf7WFqqD1Cntor+M5NdVfdVFvNpRfA+BupUQtf+xsgviZp8PqhJAz3+GEQrr2Nza75vsED4VKuUU8LAyag4XtpR4t5Hyjx3PqM27DW52t+39Se0sP814f/s3jdRrguC55DuJ4f9Y1dygbU1d/wtWnPtBXS2AhgWBgUIwwOpMEIgBJFuZRrXep7n7nXPwwoCmM8bBADpYFj5UQxLdyejw037Us9bbj+hutKGwxA0LeB9rSh8t5ca8D4f9YOV/9U4tF1g20KafT7mwCxACOgGCA0UAKWeWYBxSijAFEGeNBjDAr/OGBM4L0xUgHis4Aj9xpIAxiDYsR0ggHadJQC71pp1iEWnb0MjAEoyCa2XRhjXIgfcOXqqho6eLCYtn+/g/b+vJ/OnTtPbo4hGhhpEMKKuOEqly+V08H9xbRn1146c/oc1cG3+TmLMAbGVlfXUmXFVUi1lHW1bs0kxSY2nJ9xvassV+uoFn5fX+elmqv1VFPDAv+v9WiQ1P8NO7gj6hBn6lBflYg5iD1Sx8JwYQnquoM7zgoOA2PAYMV2/bSHJo8dRxmJDlk1p/KqN8FBmQ4nzZo+AwZCGaGfn8rLq2jF0teoX/fulBIbi/pYXUfFYnUdR51y8mjR/AV0/vxFDZCPZv7p8cCqNz0ugRbOmSvvGDQPYhAH4JlTplJ6fCJlxCdQRkIizZ/9DK17+33KTMSzhATKxLP+XbpQPQduNsxIvZ82f7KZ8tLSKSc1LSAds3Oo7EpVAEDDqsljxlERdCzKy6NOefn0wTv/UHUYHPYOeE4IG1lf30BLX34VRsViFRoJwXQa64xUGJmBYS8jIYmmoDHFAj8VHzxMXfMLUCdKr15VfSe+lWfhmL1GxlLn7Dzat2ev9PJnGz9Rq11dZ0CXbuhVjzDRDUNLzpzDBCsxsCLOjE2gU8dP0trXV8mzJF4h2yJoSO++0p4bOntYH5S1NR56uFc/dEwMJckcCwIbWD784J+is3EzD4LxkL4PotMTsBURJ535z/fWoy0Ls5gxjP6mDZsoOSJGG8pLdoznAGTC0FE0+79n0tghI2jyyDFC6yuXK6gb5i0ChCzSojC5i6fHHh5KowYOxgQN7YjxWAhGRFPPgkIqL6uk8iuVlIu5hlPWMJGUBqVOHjspTKkHQK8sejEACgMx78lZGII99NayNxQwNgYmnCYOH4lhmYFhQNUw/enGT9GJ8fJPh67Hdfl6Atdnl9IjlhvserB7X+zVJJALOrgiY+hzsI2BMW7HzAmphV/3KuwsYDA43NODuvai08fPyE+lVyAcNxiYVcvfDLAjOTyGcjGp2rNjN97Br6HwN1u+ofTIOKyfFDtS0d6m9RvQq/U0a+oT6jl6NBn/e3fVagGlAm5ZmNFO6jMI7eIcdPrEafzfS6+/skyeK2Ai6Em4ZL3MfRRbajD3GNitF7nQCY7QcCrKzKLJwx9T36AT0rBZVVpyEfMlji2IiXV+6t+5hwDpAlsYmO+//qE5MAgXIScAAMeFZBiQgsppoNhPP+wUQNiHeT4gwQpKMLumjBkfYENaVDy98Jd5+CnqiqIAB7SeNHyMYg0US4mMpsXznpPA+s3Wr4Vh/JzLyaNGE3fM+2ve0QxUz+fPekZAYXnp+cVSX5YgcKe5T4FJmi3cGR9+sEH0Zxdihix/aQlteHe9AMVunQSg1775Ftpi/RA2UHbJbi+2GmD27T6AdxbGMDB7du3D+gDbfxDeCsxOSqaqypoAMCrAGX/20bD+D2lgYtAbCfT+6rcVMBo8Zs3MydOaMWPxnOeEGVer66hTRrYwho3NQVC/crmc+hZ1CbhYu7gkOnuS2apc7Pln5ipgQhUwizhoa2BYz96FnWS3jt9xuy/MnU+L5i4QN2bX4pg5pN8AdAxcD2ypqfZgOzVN7HWCLS54yYmjYCdAkzijR7GQw4eOq71R0IrLdKwvDuxjBNGQZo0EXdyzK00aCZqiJ7hHODg/88Sf5bl5X4ZYUtQuJ8AYdqX33lqjjfHSwqfnqr0ScacoWvLXv+mgDLbgfuHTc1R7MsX30KxpcD9hDG9PRtCSxS/Ke2bL6hUrRW9mhXqv4oqDS9SVEv9xYcv08MEjwporlyqxj+zAd4hJYLMLwq7GoAlrdKwJqYO/ds7KF+RcMIKjdJ/OXWnL519g/nKBTp06Q19t+4p2/rBDevDtN1YHRiPulXS43opXX6OzGFV+OXCIxo8YFRh9OF7kOVOo9GypAhnM2r1jl2w9OmEAG5yOzpCAjLrZiU46h3YUW3jd46ap7LoWYFa8vERi2YXSX6kDxyVLYBZwQtEWC49MIgrQFxcslHXUqeNnhemKMRg9Ye9pzL0uY1C59Gs5/XqxHGUFhfA8Yj37JNORf8KCayeMTubdeplXONDra0XZyvKrNLBTDyjLQ7UawZzoEf6JE9sGMtRzDMH7NAC99vWVwhbjkmxUD6zIFTAKHBVzImnxs/OEJdwBXI/j0piHH5W6bCCXb7yyVABbAGZxAFfDeDiNGPAg7fx2p8iOb3bQmmWr5L0Jwp2ycqi6opb27PxZ4ksyA8MBm0dXDPMuZBGcHIzhBeMxAofwxI4D65oVqygzLlH9iIV31OCD6TLZctDO77aruQOk9OwFGjnwkQAzzDdiqHaR7EQXrVq6QuYqHsxVzJSeV9WLnn1Ou5MChl0r1+Gi8yWYYcuIo+Y2PPoM6tpTg6eAXL18Bf2CWTbrqnb/8RyBd9vmLWoU5VgBqQIIhWltA7GGmcXD8heffC7zHRZnJJNBuVwi9m8cHOBx/8SfpuqZL69pQPUzJ0to9bI3acaEKTS03yAaPuAh7H+OhJ/PoDJM+7nX1SoXYEKJ7V9vR0yYJ/OXQZ170iPd+yD1MI5WvrqcSkBPE3uaj3ANVLzvF5qN2DHr8ekYwmfQ09Nn0vq33xOmqNimgcH9gtl/oRnjJ4tMHzdJAHh31RqaNnYiPY5/TRk9Vr6vxbDNgJj5Cuu6/O9LMf8aCxtGy5xsJTpq2+YvsUM3UuZmjw0eRqMfepRGPjiYRgx6hEags0cOGkJrMKmUbQezMORFG/esGYW4NMO16nEVtc0WA4OkekhNtET0/EJKPZqplbFeCMp+jgrmZuQxLLH+V4Gj2MMsM2VgaiBrIRWkjW6yzaD1a9qGMDqq0huQpi0KDsr1tRCUXIe/FWACWwx6rWCW5U3bA5YlP//YbD0029domvNw4wYUNRdSACtRezRWEK65xtqppfemHes6yXRWYHVthlzdiWYLhPdl5NqAZzrYuuLWQzVvZYQEbyOYRZSspDWD1DaAWgUHtgT0FkKgt4RpKl4Zd+DY0pLIzpsWYUbQtUwPeGGpXcrs8MmuX+BbXrmr1bvZ8zHsNhNTsxHVtIHVAjB65S0LSL0NwYQIOY71yuFDR+jw4SN09MhRqi77EVt+32Lr7zts+32L6++0fI/yB/LW7KCKS/uJvzsB4TJYTmDxd+bUUfJWf6ykiuWTa8RT9SkCeTG2Kk5DzkDOYtgvoZKz56ikpBTThVIqxZZHxeUD5Knaiu8h1V+S9+o2LV+h/Jo8kPqqnZgslslaruxyJVbVWJ+VVVMFhEfSyooaBOSr5K6GXjX7yVdzAPYchPwCW4uxVXoIcph8dYfJW3sBKdqOHbEdgIVgfBR1zIikKmTjrsm9BCXenpqA9Ick8jFBgjijMFxDTFI/PTaK5k5GUt/s8nMKxJoG0emPMiT1s5PMoQBzMIBHDDXx4jIV7f/44S0q/WFNp1gzCGh73St3YzmjdDCHDWQrhBP6kFRsjUhS/6BO6gdnIk0CAM8/WtMfSf0O7THhsUtS/+X/sSS9TfrEpC30rnrpTzdhZYy0CWciRTDMoXRIYh9pkXA7dtrtdGybzvwZUILzz7hfNudulQe3tNX8sICNBnf6L/Kf0qBcBxjOZfVFTssVboMeShJDUUI3Pu3gwD9Yzxemwz6TdLMeVrCAVIqk/rTHOHddWIDZpx3zCBtd3G1Bs4VsHTNp8cw/qkQb/xhi0rQOnWNKBTBTH0HmzxhhALECg+u6w62oQ0qoAkWnelVpDgtwhtNGn72BzKa1LSvQfI13W1bfhiSdyooyICJtVGna46T+ue1I47SUwLMA8/IsJPVHcIq2qABssdOciX9ociHLsQjrMZDK4t9STqJSgEHhnhFjNEguO1KcSFj99L/IbAYzJQiYdS//B0AJbZbRtObC+R89Mu8n73FkNq3A8LX1Hi42vOf9mCS2gU5tAEioiIMl0Hk2enIU7GsJFEsirwpnZzqm2RUw/Tp1oKx4Ox39EtS35nWDGQOfXvn8PTpfrdOzYAnnrVkB7t2UsFAa0QPUN+dZrLHFAowPJxj65LXGN2BM4MSEaqtJbPTu4tuvZYsBhkuAsnvjLZQWwe0oQKyiOiwUoIVS8RfatYMzkZaDDGv/ehdlgiSTRwylkP4AZupgUN+apg3O1qExN05adcrgHjYs0S6gQUlG/jo90kZfrAL1g9hhTbX6ke7duvY2cgko6kCAVVxwJReeFThaU00x2NJCbBLGsCD2TB2C8zrCFgtTAqxRLj+uH46AGJZZc+CWoy4eHD7qnctpWhwDGQ5gBnYpoJ82IbVqkvkmOvO95cDQxhV3gvrKjZpTng1DUh+Br3/eA+Q9po1pKbYAYGbTsB4PYAWsWMagMBAGHJWIt9Nrs+9seRQy7aKd49tuguu2EbYwMOI+QcL/2L4Orm3NX7dwRubTlXdQJnLXPLCMHwpXmj2xLfkZhF8h1pMOllGJk94DO0KBADBWcPicC9gSZaN1LwVRv4UE+m6cp+P61iMkzRgDULJw6uCKNanfwkkHdqO5k+5FW2AxQGERcESYKerZw0VwbesRkBYY44eej3Z/QJL6qbBjrCT1v46hxksaGE56M0AGJB2Y9m/FEY+OOqFf0FEn9ztS7/xCSAfcd6ChPTKpFsfHxG2sQS7okM7CGUjq5+ZTr7wClO2pOxL8nNzvnpWL5H6OyN+fbHP9pL4+gVG27xYcAEiivCQH5WD1n42tkSysuJUkUDukfrIgn72Jo2qs0/8zb/lx4+34JpzaxkbijE+UJPX/Be2cPn+8haWOAAAAAElFTkSuQmCC</Image>
+              <Name>Image1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Stretch>True</Stretch>
+            </Image1>
+            <Text1 Ref="7" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2,19,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>UNIDAD EJECUTORA DE CONSERVACION VIAL</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text2 Ref="8" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.8,19,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Ministerio de Comunicaciones</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text3 Ref="9" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3.4,19,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Infraestructura y Vivienda</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageHeaderBand1>
+        <Data1 Ref="10" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,5.8,19,3.27</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text4 Ref="11" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.2,19,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14,Bold| Underline</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="4" />
+              <Parent isRef="10" />
+              <Text>CONSTANCIA</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text5 Ref="12" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.4,2.4,8.52,0.51</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="4" />
+              <Parent isRef="10" />
+              <Text>Guatemala, {Format("{0:dd MMMM  yyyy}",FDCnxPrObtenerConstancia.Fechacarta)}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text5>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>FDCnxPrObtenerConstancia</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>Data1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </Data1>
+        <Data2 Ref="13" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,9.87,19,6.07</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text6 Ref="14" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.6,0.33,13.4,1.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="4" />
+              <Parent isRef="13" />
+              <Text>EL DIRECTOR DE LA UNIDAD EJECUTORA DE CONSERVACIÓN VIAL, COVIAL;</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text7 Ref="15" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.6,1.93,13.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="4" />
+              <Parent isRef="13" />
+              <Text>HACE CONSTAR:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text8 Ref="16" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.6,2.33,13.4,3.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="4" />
+              <Parent isRef="13" />
+              <Text>QUE Evelyn Xiomara Gonzalez Tanchez Administradora Única y Representante Legal de la empresa: {FDCnxPrObtenerConstancia.Nombre}, realizó los trabajos de Servicios de consultoría en la ejecución del proyecto {FDCnxPrObtenerConstancia.ProyectoCodigo}-{FDCnxPrObtenerConstancia.AnioID}: {FDCnxPrObtenerConstancia.ProyectoDescripcion}, durante el periodo comprendido del {FDCnxPrObtenerConstancia.FechaDesde} hasta {FDCnxPrObtenerConstancia.FechaHasta}.
+
+Habiendo cumplido con los trabajos de ejecución del Programa, se recomienda para el pago el presente informe No. {FDCnxPrObtenerConstancia.EstimacionCorr}.</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>FDCnxPrObtenerConstancia</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>Data2</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </Data2>
+        <Data3 Ref="17" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,16.74,19,5.27</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text10 Ref="18" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.26,19,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="4" />
+              <Parent isRef="17" />
+              <Text>DIRECTOR</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text12 Ref="19" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.86,19,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="4" />
+              <Parent isRef="17" />
+              <Text>UNIDAD EJECUTORA DE CONSERVACIÓN VIAL</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text13 Ref="20" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3.46,19,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="4" />
+              <Parent isRef="17" />
+              <Text>COVIAL</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text13>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>FDCnxPrObtenerConstancia</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>Data3</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </Data3>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>1d68203eee324424b9e87af09dd50a32</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="21" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="22" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>9/24/2013 2:40:56 PM</ReportChanged>
+  <ReportCreated>9/24/2013 2:40:44 PM</ReportCreated>
+  <ReportFile>C:\Users\Usuario\Desktop\PAGINAS GISYSTEMS\SICOP\Reportes\ConstanciaDeProyectosC2.mrt</ReportFile>
+  <ReportGuid>2fe80be8b81f49138610c76cdaa3eb5e</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2013.1.1600</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        
+        public Report()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

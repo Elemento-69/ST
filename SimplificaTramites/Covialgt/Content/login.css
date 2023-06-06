@@ -1,0 +1,51 @@
+﻿@import "bootstrap-custom.css";
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #333333;
+    min-height: 100vh;
+}
+
+.container, .container-fluid {
+    min-height: 100vh;
+}
+
+.line {
+    border-top: 2px solid #999;
+}
+
+.login-bg-1 {
+    background-image: url("../Images/road-login.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #FFD733;
+}
+
+.login-bg-2 {
+    background-image: url("../Images/truck-login.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.login-bg-3 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #000000;
+}
+
+.card-login {
+    background: #FFFFFF;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+
+    .card-login .btn.btn-primary {
+        text-transform: uppercase;
+        min-width: 125px;
+    }
+
+    .card-login .form-control {
+        border: 2px solid #A6A6A6;
+        border-radius: 10px;
+    }

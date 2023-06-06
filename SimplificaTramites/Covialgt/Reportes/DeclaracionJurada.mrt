@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.0" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <cnDeclaracionJurada Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>cnDeclaracionJurada</Alias>
+        <ConnectionString>Integrated Security=False;Data Source=192.168.1.90\covialapp;Initial Catalog=z_PRODUCCION_sicopDB;Password=HrGs05052010**;User ID=hgarcia</ConnectionString>
+        <Name>cnDeclaracionJurada</Name>
+        <PromptUserNameAndPassword>False</PromptUserNameAndPassword>
+      </cnDeclaracionJurada>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <DataSource1 Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DataSource1</Alias>
+        <Columns isList="true" count="24">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>EstimacionCorr,System.Int32</value>
+          <value>DeclaracionJuradaCorrel,System.Int32</value>
+          <value>FechaActa,System.DateTime</value>
+          <value>HoraEnLetras,System.String</value>
+          <value>Direccion,System.String</value>
+          <value>Notario,System.String</value>
+          <value>RequeridoPor,System.String</value>
+          <value>EnCalidadDe,System.String</value>
+          <value>Empresa,System.String</value>
+          <value>DelegadoResidente,System.String</value>
+          <value>EstimacionesContratista,System.String</value>
+          <value>MinutosActa,System.String</value>
+          <value>EsEmpresa,System.Boolean</value>
+          <value>Dia,System.String</value>
+          <value>Mes,System.String</value>
+          <value>Anio,System.String</value>
+          <value>ProgramaCodigo,System.String</value>
+          <value>CorrelativoProyecto,System.Int32</value>
+          <value>SupLetras,System.String</value>
+          <value>Lugar,System.String</value>
+          <value>EmpresaEstado,System.Boolean</value>
+          <value>anioespecificacion,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DataSource1</Name>
+        <NameInSource>cnDeclaracionJurada</NameInSource>
+        <Parameters isList="true" count="7">
+          <value>_x0040_AnioID,,8,4</value>
+          <value>_x0040_ProyectoCodigo,,22,10</value>
+          <value>_x0040_EstimacionCorr,,8,2</value>
+          <value>DeclaracionJuradaCorrel,,8,2</value>
+          <value>_x0040_Empresa,,2,2</value>
+          <value>_x0040_Delegado,,22,200</value>
+          <value>_x0040_NombreEmpresa,,22,200</value>
+        </Parameters>
+        <SqlCommand>exec prObtenerDeclaracionJuradaXProyectoYEst @AnioID,@ProyectoCodigo,@EstimacionCorr,@DeclaracionJuradaCorrel, @Empresa</SqlCommand>
+      </DataSource1>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <PageHeaderBand1 Ref="5" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19.59,0.8</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text4 Ref="6" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,19.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>DECLARACION JURADA</Text>
+              <TextBrush>Black</TextBrush>
+            </Text4>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <PrintOn>OnlyFirstPage</PrintOn>
+        </PageHeaderBand1>
+        <DataBand4 Ref="7" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <CanBreak>True</CanBreak>
+          <ClientRectangle>0,2,19.59,0.6</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text6 Ref="8" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <CanBreak>True</CanBreak>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.4,0,18.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Guid>a792471fb1f9431aaa7e6aee22b51a75</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>{DataSource1.Lugar} siendo las {DataSource1.HoraEnLetras}, del dia {DataSource1.Dia} de {DataSource1.Mes} del año {DataSource1.Anio}, constituido en  {DataSource1.Direccion}. Yo {DataSource1.Notario}  Notario/a soy requerido/a por el Ingeniero/a Civil {IIF(DataSource1.EmpresaEstado==true,DataSource1.Parameters["@Delegado"].ParameterValue, DataSource1.RequeridoPor) } persona de mi anterior conocimiento, en su calidad de 
+{IIF(DataSource1.EmpresaEstado==true, " delegado residente de la empresa " + DataSource1.Parameters["@NombreEmpresa"].ParameterValue+ " "
+, "")}supervisor/a  {DataSource1.SupLetras} ({DataSource1.ProyectoCodigo}-{DataSource1.AnioID})  para hacer constar lo siguiente &lt;b&gt;PRIMERO:&lt;/b&gt; Se le advierte al requiriente sobre las penas relativas del delito de perjurio, manifestando bajo juramento, decir la verdad de lo que declare. &lt;b&gt;SEGUNDO:&lt;/b&gt; El requiriente manifiesta lo siguiente:&lt;p align="justify"&gt; {DataSource1.EstimacionesContratista}&lt;/p&gt;, Continua manifestando bajo juramento el requiriente que los trabajos efectuados y los que constan en la(s) estimacion(es) antes descrita fueron debidamente supervisados llevando a cabo el control de calidad y ejecutados de conformidad con las especificaciones de COVIAL {DataSource1.anioespecificacion}. &lt;b&gt;TERCERO:&lt;/b&gt; No habiendo nada mas que hacer constar se finaliza la presente acta {DataSource1.MinutosActa} minutos despues de su inicio, contenida en una hoja de papel bond tamaño oficio, y el requiriente bien enterado de su contenido y efectos legales acepta, ratifica y firma con el/la insfranscrito/a Notario/a.</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <Filters isList="true" count="0" />
+          <Name>DataBand4</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </DataBand4>
+        <ReportSummaryBand1 Ref="9" type="ReportSummaryBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,3.4,19.59,3.6</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text2 Ref="10" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.8,2,14.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>{DataSource1.RequeridoPor}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Text2>
+            <Text3 Ref="11" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,1.2,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>F.</Text>
+              <TextBrush>Black</TextBrush>
+            </Text3>
+            <Text5 Ref="12" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.8,3,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>ANTE MI:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text5>
+            <HorizontalLinePrimitive1 Ref="13" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>1,1.86,6.6,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="14" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>6870FEDB38308D7B8EF586498FD9AB15</Guid>
+              <Name>HorizontalLinePrimitive1</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <StartCap Ref="15" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportSummaryBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </ReportSummaryBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>4f09961dec674fb08ec70fbaeb5641e8</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>35.56</PageHeight>
+      <PageWidth>21.59</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="16" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="17" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>1/12/2021 2:28:50 PM</ReportChanged>
+  <ReportCreated>6/6/2014 11:34:58 AM</ReportCreated>
+  <ReportFile>C:\Users\psantiago\Documents\Repositorios\Reportes\DeclaracionJurada.mrt</ReportFile>
+  <ReportGuid>b9f480e0a838415f933ec57c6ee2d357</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2010.1.700</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        
+        public Report()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

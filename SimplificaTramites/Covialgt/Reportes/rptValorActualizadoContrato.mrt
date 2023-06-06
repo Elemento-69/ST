@@ -1,0 +1,1635 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.0" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <Connection1 Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>Connection1</Alias>
+        <ConnectionString>User ID=etzic;Data Source=10.0.10.206\covial2;Initial Catalog=z_PRODUCCION_sicopDB;Integrated Security=False;Password=Covial2016</ConnectionString>
+        <Name>Connection1</Name>
+        <PromptUserNameAndPassword>False</PromptUserNameAndPassword>
+      </Connection1>
+    </Databases>
+    <DataSources isList="true" count="3">
+      <DtProyecto Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DtProyecto</Alias>
+        <Columns isList="true" count="12">
+          <value>Proyecto,System.String</value>
+          <value>Contrato,System.String</value>
+          <value>Acuerdo,System.String</value>
+          <value>EmpresaContratista,System.String</value>
+          <value>MontoOriginal,System.Decimal</value>
+          <value>MontoModificado,System.Decimal</value>
+          <value>FechaInicio,System.String</value>
+          <value>FechaOriginalFinalizacion,System.String</value>
+          <value>FechaIContractual,System.String</value>
+          <value>FechaFContractual,System.String</value>
+          <value>Supervisora,System.String</value>
+          <value>Contrato1,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DtProyecto</Name>
+        <NameInSource>Connection1</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>ANIOID,,8,0</value>
+          <value>PROYECTO,,12,75</value>
+        </Parameters>
+        <SqlCommand>exec SPCuadrosLiquidacion @ANIOID,@PROYECTO,0</SqlCommand>
+      </DtProyecto>
+      <valoractualizado Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>valoractualizado</Alias>
+        <Columns isList="true" count="24">
+          <value>renglon,System.String</value>
+          <value>descripcion,System.String</value>
+          <value>unidadMedida,System.String</value>
+          <value>preciounitario,System.Decimal</value>
+          <value>Cantidad_Variable,System.String</value>
+          <value>RenglonId,System.String</value>
+          <value>CANTIDADTRAMOCO,System.String</value>
+          <value>CANTIDADTRAMOOC,System.String</value>
+          <value>CANTIDADTRAMO_OTS_ATE,System.String</value>
+          <value>CONTRATOORIGINAL,System.Decimal</value>
+          <value>OC,System.Decimal</value>
+          <value>OTS_ATE,System.Decimal</value>
+          <value>CostosTotales,System.Decimal</value>
+          <value>CantidadesTotales,System.String</value>
+          <value>CostoEjecutadas,System.Decimal</value>
+          <value>CantidadEjecutadas,System.String</value>
+          <value>CantidadInformes,System.String</value>
+          <value>CostoInformes,System.String</value>
+          <value>CantidadPenContratista,System.String</value>
+          <value>CostoPenContratista,System.Decimal</value>
+          <value>MontoPagadoE,System.Decimal</value>
+          <value>MontoPendienteE,System.Decimal</value>
+          <value>CantidadPagadaE,System.String</value>
+          <value>CantidadPendienteE,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>valoractualizado</Name>
+        <NameInSource>Connection1</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>ANIOID,,8,0</value>
+          <value>PROYECTO,,12,75</value>
+        </Parameters>
+        <SqlCommand>exec SPCuadrosLiquidacion @anioid,@proyecto,7</SqlCommand>
+      </valoractualizado>
+      <dtTotales Ref="5" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>dtTotales</Alias>
+        <Columns isList="true" count="2">
+          <value>Pendiente,System.String</value>
+          <value>Pagado,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>dtTotales</Name>
+        <NameInSource>Connection1</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>ANIOID,,8,0</value>
+          <value>PROYECTO,,12,75</value>
+        </Parameters>
+        <SqlCommand>exec SPCuadrosLiquidacion @anioid,@proyecto,3</SqlCommand>
+      </dtTotales>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="6" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="4">
+        <PageHeaderBand1 Ref="7" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,40,2.6</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text1 Ref="8" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,39.9,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,18,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>MINISTERIO DE COMUNICACIONES, INFRAESTRUCTURA Y VIVIENDA</Text>
+              <TextBrush>Black</TextBrush>
+            </Text1>
+            <Text3 Ref="9" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.6,39.9,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14</Font>
+              <Guid>ef39538b8d60444d872965aa817f16b4</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>CALCULO Y VALORES FINALES</Text>
+              <TextBrush>Black</TextBrush>
+            </Text3>
+            <Text2 Ref="10" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1,39.9,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>UNIDAD EJECUTORA DE CONSERVACIÓN VIAL  -COVIAL-</Text>
+              <TextBrush>Black</TextBrush>
+            </Text2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="6" />
+          <Parent isRef="6" />
+        </PageHeaderBand1>
+        <DataBand1 Ref="11" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,3.8,40,8.4</ClientRectangle>
+          <Components isList="true" count="33">
+            <Text4 Ref="12" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.8,0.4,7.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>{DtProyecto.Proyecto}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text4>
+            <Text5 Ref="13" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.2,0.4,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>Proyecto</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text24 Ref="14" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>0,7.4,2,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>f0e41a3f36704e01a8a1db61e41243d5</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>RENGLÓN</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+            <Text26 Ref="15" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>2,7.4,4,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>c1c13b6bdf7d4f499681412b4b79e7f8</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>DESCRIPCIÓN</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+            <Text28 Ref="16" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>8,5.4,6,2</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>f15a3d1691f44bc999128fd283ac7f98</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>CONTRATO No. {DtProyecto.Contrato1}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text28>
+            <Text30 Ref="17" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>14,6.4,3.6,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>c90f5d93e4b64960a7532ab8441d79e0</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>OC.</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text30>
+            <Text32 Ref="18" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>17.6,6.4,3.4,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>1b33a57ce99646119e5131f66ab91af4</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text32</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>OTS. + ATE.</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text32>
+            <Text34 Ref="19" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>21,5.4,4,2</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>f20be75559df46dbbd810cd08cc36839</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text34</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>RESUMEN DE LAS ORDENES DE CAMBIO</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text34>
+            <Text63 Ref="20" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>14,5.4,7,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>e14c106d05d249808ad89cd6f74fb355</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text63</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>ORDENES DE CAMBIO</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text63>
+            <Text64 Ref="21" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>6,7.4,2,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>3ed31e449ed14b658c8c18902f6a953b</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text64</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>UNIDAD DE MEDIDA</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text64>
+            <Text65 Ref="22" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>8,7.4,2,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>456f90a5c3734723b6222dbda5d7a86a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text65</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>CANTIDAD CONTRATADA</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text65>
+            <Text66 Ref="23" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>12,7.4,2,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>a33716098cee4eaabdf3a9db22fe2635</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text66</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>COSTO TOTAL</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text66>
+            <Text67 Ref="24" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>10,7.4,2,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>cbce230e75d340f9b14b8d2de7b18bad</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text67</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>PRECIO UNITARIO CON IVA</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text67>
+            <Text68 Ref="25" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>14,7.4,1.6,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>84d0b9fbd2ca409bae934a5f1d7b88c9</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text68</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>CANTIDAD</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text68>
+            <Text69 Ref="26" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>15.6,7.4,2,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>1bd8cb6007e443d298c28b161cdf41cc</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text69</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>COSTO TOTAL</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text69>
+            <Text70 Ref="27" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>17.6,7.4,1.6,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>2e47f54bf95749e5b0e7ff69ba9470ad</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text70</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>CANTIDAD</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text70>
+            <Text71 Ref="28" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>19.2,7.4,1.8,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>d2993d5c95bd47dfb0623d6c31404dd0</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text71</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>COSTO TOTAL</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text71>
+            <Text72 Ref="29" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>21,7.4,2,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>97217d8888244e93bc1df86665395583</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text72</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>CANTIDADES</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text72>
+            <Text73 Ref="30" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>23,7.4,2,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>53460491099247e3a3f04c006e4ede47</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text73</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>COSTOS TOTALES</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text73>
+            <Text74 Ref="31" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>25,7.4,2,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>f584f0cbfdb248ff83d3bb334d50a255</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text74</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>CANTIDAD</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text74>
+            <Text75 Ref="32" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>27,7.4,2,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>2dcfd67d66814c8c8a75ee2beea648f4</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text75</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>TOTAL</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text75>
+            <Text76 Ref="33" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>30.6,7.4,1.8,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>6c716f87a4214e1590edf357812626ac</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text76</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>COSTO TOTAL</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text76>
+            <Text77 Ref="34" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>29,7.4,1.6,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>aa601bb5d93d4bd78f0f19b14fb99c58</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text77</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>CANTIDAD</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text77>
+            <Text78 Ref="35" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>32.4,7.4,1.6,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>ded02183e13140158bef9d6d9d277050</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text78</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>CANTIDAD</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text78>
+            <Text79 Ref="36" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>34,7.4,2,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>a45503eb5c084c618bfd395584005932</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text79</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>COSTO TOTAL</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text79>
+            <Text80 Ref="37" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>36,7.4,2,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>e0ccf95a3900487d875d9f5c37eb8adb</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text80</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>COSTO TOTAL</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text80>
+            <Text81 Ref="38" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>38,7.4,2,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>7a8a2e22a1884c8dbe3f31e7cf6f4e83</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text81</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>COSTO TOTAL</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text81>
+            <Text82 Ref="39" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>25,5.4,4,2</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>efeaee628fdc4a8098f0ed9c71b6437c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text82</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>VALOR ACTUALIZADO DEL CONTRATO</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text82>
+            <Text83 Ref="40" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>29,5.4,3.4,2</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>3e02365ab51947c18e288a42e59439d9</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text83</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>CANTIDADES DE TRABJO NO EJECUTADAS</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text83>
+            <Text84 Ref="41" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>32.4,5.4,3.6,2</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>7ac0597fad7e4d2b8287f399daabccaa</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text84</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>TOTAL PAGADO EN INFORMES</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text84>
+            <Text85 Ref="42" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>36,5.4,4,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>57ee921f98c5437fad441443048fcca9</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text85</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>SALDO A FAVOR DE:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text85>
+            <Text86 Ref="43" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>36,6.4,2,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>fd88578c8c614aba8796259e3ba43ebc</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text86</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>COVIAL</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text86>
+            <Text87 Ref="44" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SkyBlue</Brush>
+              <ClientRectangle>38,6.4,2,1</ClientRectangle>
+              <ComponentStyle>Style1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>136cbc6f70cb4f9ebbac82924719ba05</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text87</Name>
+              <Page isRef="6" />
+              <Parent isRef="11" />
+              <Text>CONTRATISTA</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text87>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <Page isRef="6" />
+          <Parent isRef="6" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+        <Table1 Ref="45" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+          <AutoWidthType>LastColumns</AutoWidthType>
+          <Border>All;Black;1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,13,40,0.8</ClientRectangle>
+          <ColumnCount>20</ColumnCount>
+          <Components isList="true" count="20">
+            <Table1_Cell1 Ref="46" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>0</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell1</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{valoractualizado.renglon}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell1>
+            <Table1_Cell2 Ref="47" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,0,4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <ID>44</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell2</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{valoractualizado.descripcion}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell2>
+            <Table1_Cell3 Ref="48" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>45</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell3</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{valoractualizado.unidadMedida}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell3>
+            <Table1_Cell4 Ref="49" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>46</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell4</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{valoractualizado.CANTIDADTRAMOCO}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell4>
+            <Table1_Cell5 Ref="50" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>47</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell5</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{valoractualizado.preciounitario}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="51" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell5>
+            <Table1_Cell6 Ref="52" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>48</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell6</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{valoractualizado.CONTRATOORIGINAL}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="53" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell6>
+            <Table1_Cell7 Ref="54" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14,0,1.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>49</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell7</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{valoractualizado.CANTIDADTRAMOOC}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell7>
+            <Table1_Cell8 Ref="55" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.6,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>50</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell8</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{valoractualizado.OC}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell8>
+            <Table1_Cell9 Ref="56" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.6,0,1.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>51</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell9</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{valoractualizado.CANTIDADTRAMO_OTS_ATE}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell9>
+            <Table1_Cell10 Ref="57" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>19.2,0,1.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>52</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell10</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{valoractualizado.OTS_ATE}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell10>
+            <Table1_Cell11 Ref="58" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>21,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>53</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell11</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{valoractualizado.CantidadesTotales}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell11>
+            <Table1_Cell12 Ref="59" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>23,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>54</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell12</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{valoractualizado.CostosTotales}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="60" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell12>
+            <Table1_Cell13 Ref="61" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>25,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>55</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell13</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{valoractualizado.CantidadEjecutadas}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell13>
+            <Table1_Cell14 Ref="62" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>27,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>56</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell14</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{valoractualizado.CostoEjecutadas}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="63" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell14>
+            <Table1_Cell15 Ref="64" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>29,0,1.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>57</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell15</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell15>
+            <Table1_Cell16 Ref="65" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>30.6,0,1.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>58</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell16</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell16>
+            <Table1_Cell17 Ref="66" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>32.4,0,1.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>59</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell17</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{valoractualizado.CantidadPagadaE}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell17>
+            <Table1_Cell18 Ref="67" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>34,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>60</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell18</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{valoractualizado.MontoPagadoE}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="68" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell18>
+            <Table1_Cell19 Ref="69" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>36,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>61</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell19</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell19>
+            <Table1_Cell20 Ref="70" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;Black;1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>38,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>63</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell20</Name>
+              <Page isRef="6" />
+              <Parent isRef="45" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{valoractualizado.MontoPendienteE}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="71" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell20>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>valoractualizado</DataSourceName>
+          <Filters isList="true" count="0" />
+          <MinHeight>0.2</MinHeight>
+          <Name>Table1</Name>
+          <NumberID>64</NumberID>
+          <Page isRef="6" />
+          <Parent isRef="6" />
+          <RowCount>1</RowCount>
+          <Sort isList="true" count="0" />
+        </Table1>
+        <DataBand3 Ref="72" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,14.6,40,3.4</ClientRectangle>
+          <Components isList="true" count="21">
+            <Text25 Ref="73" type="Text" isKey="true">
+              <Border>Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>28b4bc3d8c2348dc9dfffbdfbc94c1ac</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+            <Text27 Ref="74" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,0,4,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>3250a500d527407aada1b17c83ab79e1</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <Text>TOTAL</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text27>
+            <Text29 Ref="75" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,0,2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>8cd50b60c1fc49c995bb3ad2989bed84</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text29>
+            <Text31 Ref="76" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8,0,2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>82aa8b2cb2b6495e96949c93aab76f6f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text31>
+            <Text33 Ref="77" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,0,2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>13bbcae4f76040a783f98c992aaf8899</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text33</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <Text>{SumRunning(Table1,valoractualizado.CONTRATOORIGINAL)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="78" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text33>
+            <Text35 Ref="79" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,0,2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>bdd4b925dd9947bc8520d970f9132707</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text35</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="80" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text35>
+            <Text36 Ref="81" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14,0,1.6,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>ae4d6f53bcc542a482d8bca9705f88d9</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text36</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text36>
+            <Text39 Ref="82" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.6,0,2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>a8b54209051d45d69aefc3dcffdb17b3</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text39</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <Text>{SumRunning(Table1,valoractualizado.OC)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="83" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text39>
+            <Text40 Ref="84" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.6,0,1.6,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>ee25156266fb44da85a0b836e475e127</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text40</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text40>
+            <Text41 Ref="85" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>19.2,0,1.8,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>f8c2776ba3584bd4a80cc69c49db10f1</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text41</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <Text>{SumRunning(Table1,valoractualizado.OTS_ATE)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="86" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text41>
+            <Text42 Ref="87" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>21,0,2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>d572c961a8b4448482512b773cfd9d5c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text42</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text42>
+            <Text43 Ref="88" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>23,0,2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>1fd2b83706eb44618cc6aab6a4610a4d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text43</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <Text>{SumRunning(Table1,valoractualizado.CostosTotales)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="89" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text43>
+            <Text44 Ref="90" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>25,0,2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>1c134549827f4e2b843da3281f322b54</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text44</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text44>
+            <Text45 Ref="91" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>27,0,2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>0397f7896fd3469fa487018399daf711</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text45</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <Text>{SumRunning(Table1,valoractualizado.CostoEjecutadas)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="92" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text45>
+            <Text46 Ref="93" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>30.6,0,1.8,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>70a665ba3fe3411c94217488f5dbdef5</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text46</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text46>
+            <Text47 Ref="94" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>29,0,1.6,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>9bc78b377e83491abf18cceebfb3aae7</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text47</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text47>
+            <Text48 Ref="95" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>32.4,0,1.6,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>aed2b9f536964bd0b253ade318b5a716</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text48</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text48>
+            <Text49 Ref="96" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>34,0,2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>efe7782983e04f66a33cb878ff36dead</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text49</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <Text>{SumRunning(Table1,valoractualizado.MontoPagadoE)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="97" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text49>
+            <Text50 Ref="98" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>36,0,2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Guid>2d0486640cc34764bcefc9e5bbaa22b4</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text50</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text50>
+            <Text51 Ref="99" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>38,0,2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>ebbd67f6fd014536b47292c47cb4a593</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text51</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <Text>{SumRunning(Table1,valoractualizado.MontoPendienteE)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="100" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text51>
+            <Text52 Ref="101" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2,40,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,18,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text52</Name>
+              <Page isRef="6" />
+              <Parent isRef="72" />
+              <Text> COMISION RECEPTORA LIQUIDADORA</Text>
+              <TextBrush>Black</TextBrush>
+            </Text52>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <Filters isList="true" count="0" />
+          <Name>DataBand3</Name>
+          <Page isRef="6" />
+          <Parent isRef="6" />
+          <Sort isList="true" count="0" />
+        </DataBand3>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>68583f4580d14f9fb8b4f215f34adb69</Guid>
+      <Margins>1,1,3,1</Margins>
+      <Name>Page1</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>42</PageWidth>
+      <PaperSize>A3</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="102" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="103" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>VALOR ACTUALIZADO DEL CONTRATO</ReportAlias>
+  <ReportChanged>10/9/2018 10:38:17 AM</ReportChanged>
+  <ReportCreated>11/24/2017 4:20:15 PM</ReportCreated>
+  <ReportFile>\\192.168.1.90\g$\SRV2\wwwroot\SICOP\Reportes\rptValorActualizadoContrato.mrt</ReportFile>
+  <ReportGuid>4414e6730e7642dc9027fd5d3da98b10</ReportGuid>
+  <ReportName>VALOR ACTUALIZADO DEL CONTRATO</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2010.1.700</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Resume_de_Facturas : Stimulsoft.Report.StiReport
+    {
+        
+        public Resume_de_Facturas()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="1">
+    <Style1 Ref="104" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>All;Black;1;Solid;False;4;Black</Border>
+      <Brush>SkyBlue</Brush>
+      <Font>Arial,8</Font>
+      <Name>Style1</Name>
+      <TextBrush>Black</TextBrush>
+    </Style1>
+  </Styles>
+</StiSerializer>

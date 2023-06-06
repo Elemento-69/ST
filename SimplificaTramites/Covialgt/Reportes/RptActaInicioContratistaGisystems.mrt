@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer type="Flex" application="StiReport" version="1.02">
+  <Dictionary isKey="true" type="Dictionary" Ref="1">
+    <BusinessObjects isList="true" count="0"/>
+    <Databases isList="true" count="1">
+      <cnactacontratista isKey="true" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" Ref="2">
+        <Alias>cnactacontratista</Alias>
+        <ConnectionStringEncrypted/>
+        <Name>cnactacontratista</Name>
+      </cnactacontratista>
+    </Databases>
+    <DataSources isList="true" count="4">
+      <PrObtenerDatosActaInicioContratist isKey="true" type="Stimulsoft.Report.Dictionary.StiSqlSource" Ref="3">
+        <Alias>PrObtenerDatosActaInicioContratist</Alias>
+        <Columns isList="true" count="48">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>ProyectoCodigoLetras,System.String</value>
+          <value>Departamento,System.String</value>
+          <value>Municipio,System.String</value>
+          <value>HoraActa,System.String</value>
+          <value>FechaActa,System.DateTime</value>
+          <value>FechaActaLetras,System.String</value>
+          <value>NotarioActa,System.String</value>
+          <value>DireccionNotario,System.String</value>
+          <value>DireccionSupervisor,System.String</value>
+          <value>NombreIngenieroRequerimiento,System.String</value>
+          <value>CargoIngenieroRequerimiento,System.String</value>
+          <value>NombreDelegadoResidente,System.String</value>
+          <value>CertificacionFideicomisoNumero,System.String</value>
+          <value>CertificacionFideicomisoLetras,System.String</value>
+          <value>FechaCertifiFideicomiso,System.DateTime</value>
+          <value>FechaCertifiFideicomisoLetras,System.String</value>
+          <value>FechaInicioEjecucion,System.DateTime</value>
+          <value>FechaInicioEjecucionLetras,System.String</value>
+          <value>NumContratoEscrituraPublicaLetras,System.String</value>
+          <value>NumContratoEscrituraPublicaNum,System.String</value>
+          <value>FechaContratoEscrituraPLetras,System.String</value>
+          <value>FechaContratoEscrituraPNum,System.DateTime</value>
+          <value>NotarioEscrituraPublica,System.String</value>
+          <value>NombreMandatarioEspecial,System.String</value>
+          <value>NumeroClausulaLetras,System.String</value>
+          <value>LiteralLetras,System.String</value>
+          <value>FechaInicioContratoLetras,System.String</value>
+          <value>FechaInicioContratoNum,System.DateTime</value>
+          <value>FechaFinalContratoLetras,System.String</value>
+          <value>FechaFinalContratoNum,System.DateTime</value>
+          <value>NumeroDiasContractualesLetras,System.String</value>
+          <value>NumeroDiasContractualesNum,System.Int32</value>
+          <value>FinalizacionMinutosLetras,System.String</value>
+          <value>UsuarioCreo,System.String</value>
+          <value>UsuarrioModifico,System.String</value>
+          <value>FechaCreo,System.DateTime</value>
+          <value>FechaModifico,System.DateTime</value>
+          <value>EmpresaNombre,System.String</value>
+          <value>EsPropietario,System.Boolean</value>
+          <value>RepresentantePropietario,System.String</value>
+          <value>EsEmpresa,System.Boolean</value>
+          <value>ClausulaCertificacionFideicomiso,System.String</value>
+          <value>LiteralCertificacionFideicomiso,System.String</value>
+          <value>NombreIngenieroSupervisor,System.String</value>
+          <value>ProyectoAño,System.String</value>
+          <value>NumeroEscrituraLetras,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1"/>
+        <Name>PrObtenerDatosActaInicioContratist</Name>
+        <NameInSource>cnactacontratista</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>_x0040_AnioID,,8,10</value>
+          <value>_x0040_ProyectoCodigo,,22,20</value>
+          <value>_x0040_CertificacionFideicomisoNumero,,22,10</value>
+        </Parameters>
+        <SqlCommand>exec PrObtenerDatosActaInicioContratista @AnioID, @ProyectoCodigo, @CertificacionFideicomisoNumero</SqlCommand>
+      </PrObtenerDatosActaInicioContratist>
+      <PrObtieneSupervisoraActaInicioContractual isKey="true" type="Stimulsoft.Report.Dictionary.StiSqlSource" Ref="4">
+        <Alias>PrObtieneSupervisoraActaInicioContractual</Alias>
+        <Columns isList="true" count="9">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>ProyectoEstatusID,System.Int32</value>
+          <value>ProgramaCodigo,System.String</value>
+          <value>EmpresaNIT,System.String</value>
+          <value>SupervisoraAnioID,System.Int32</value>
+          <value>ProyectoSupervisionCodigo,System.String</value>
+          <value>ProyectoDescripcion,System.String</value>
+          <value>ProyectoSupervisorCodigoAnio,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1"/>
+        <Name>PrObtieneSupervisoraActaInicioContractual</Name>
+        <NameInSource>cnactacontratista</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_AnioID,,8,10</value>
+          <value>_x0040_ProyectoCodigo,,22,20</value>
+        </Parameters>
+        <SqlCommand>exec PrObtieneSupervisoraActaInicioContractual @AnioID, @ProyectoCodigo</SqlCommand>
+      </PrObtieneSupervisoraActaInicioContractual>
+      <PrObtieneTramosActaInicioContratista isKey="true" type="Stimulsoft.Report.Dictionary.StiSqlSource" Ref="5">
+        <Alias>PrObtieneTramosActaInicioContratista</Alias>
+        <Columns isList="true" count="12">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>ProgramaCodigo,System.String</value>
+          <value>Tramos,System.String</value>
+          <value>NitProyecto,System.String</value>
+          <value>SupervisoraAnioID,System.Int32</value>
+          <value>ProyectoSupervisionCodigo,System.String</value>
+          <value>NitSupervisor,System.String</value>
+          <value>NombreSupervisor,System.String</value>
+          <value>RepresentanteSupervisor,System.String</value>
+          <value>NombreEmpresa,System.String</value>
+          <value>ContratoCodigo,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1"/>
+        <Name>PrObtieneTramosActaInicioContratista</Name>
+        <NameInSource>cnactacontratista</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_AnioID,,8,10</value>
+          <value>_x0040_ProyectoCodigo,,22,20</value>
+        </Parameters>
+        <SqlCommand>exec PrObtieneTramosActaInicioContratista @AnioID, @ProyectoCodigo</SqlCommand>
+      </PrObtieneTramosActaInicioContratista>
+      <prObtenerinforptactanotarialcontratista isKey="true" type="Stimulsoft.Report.Dictionary.StiSqlSource" Ref="6">
+        <Alias>prObtenerinforptactanotarialcontratista</Alias>
+        <Columns isList="true" count="47">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>ProgramaCodigo,System.String</value>
+          <value>Tramos,System.String</value>
+          <value>NitProyecto,System.String</value>
+          <value>SupervisoraAnioID,System.Int32</value>
+          <value>ProyectoSupervisionCodigo,System.String</value>
+          <value>NitSupervisor,System.String</value>
+          <value>NombreSupervisor,System.String</value>
+          <value>RepresentanteSupervisor,System.String</value>
+          <value>NombreEmpresa,System.String</value>
+          <value>RepresentanteEmpresa,System.String</value>
+          <value>ContratoCodigo,System.String</value>
+          <value>FechaContrato,System.DateTime</value>
+          <value>Acta,System.String</value>
+          <value>Departamento,System.String</value>
+          <value>Municipio,System.String</value>
+          <value>HoraActa,System.String</value>
+          <value>FechaActa,System.DateTime</value>
+          <value>DireccionSupervisor,System.String</value>
+          <value>NotarioActa,System.String</value>
+          <value>Superintendente,System.String</value>
+          <value>NotarioProyecto,System.String</value>
+          <value>SupervisorRegional,System.String</value>
+          <value>NumeralRomano,System.String</value>
+          <value>DescripcionProyecto,System.String</value>
+          <value>FechaInspeccion,System.DateTime</value>
+          <value>FechaInicio,System.DateTime</value>
+          <value>FechaFinal,System.DateTime</value>
+          <value>Clase,System.String</value>
+          <value>Poliza,System.String</value>
+          <value>Aseguradora,System.String</value>
+          <value>ValorActa,System.Decimal</value>
+          <value>JustificacionCuarto,System.String</value>
+          <value>justificacionQuinto,System.String</value>
+          <value>Delegado,System.String</value>
+          <value>EsEmpresa,System.Boolean</value>
+          <value>ValorActaComa,System.String</value>
+          <value>AplicaPoliza2,System.Boolean</value>
+          <value>Clase2,System.String</value>
+          <value>Poliza2,System.String</value>
+          <value>Aseguradora2,System.String</value>
+          <value>Valorpoliza2,System.Decimal</value>
+          <value>ValorpolizaComa2,System.String</value>
+          <value>EmpresaNombre,System.String</value>
+          <value>esPropietario,System.Boolean</value>
+          <value>RepresentantePropietario,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1"/>
+        <Name>prObtenerinforptactanotarialcontratista</Name>
+        <NameInSource>cnactacontratista</NameInSource>
+        <Parameters isList="true" count="0"/>
+        <SqlCommand>exec [prObtenerinforptactanotarialcontratista] 2013, 'B-002'</SqlCommand>
+      </prObtenerinforptactanotarialcontratista>
+    </DataSources>
+    <Relations isList="true" count="0"/>
+    <Report isRef="0"/>
+    <Variables isList="true" count="0"/>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0"/>
+  <MetaTags isList="true" count="0"/>
+  <Pages isList="true" count="1">
+    <Page1 isKey="true" type="Page" Ref="7">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <DataBand1 isKey="true" type="DataBand" Ref="8">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19.6,1.6</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text9 isKey="true" type="Text" Ref="9">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.7,19.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0"/>
+              <Font>Arial,11,Bold</Font>
+              <Guid>d9dcf3f8d6ea44b290c7b5ee8bb49608</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="7"/>
+              <Parent isRef="8"/>
+              <Text>ACTA DE INICIO FISICO Y CONTRACTUAL</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+          </Components>
+          <Conditions isList="true" count="0"/>
+          <DataRelationName isNull="true"/>
+          <Filters isList="true" count="0"/>
+          <Name>DataBand1</Name>
+          <Page isRef="7"/>
+          <Parent isRef="7"/>
+          <Sort isList="true" count="0"/>
+        </DataBand1>
+        <DataBand2 isKey="true" type="DataBand" Ref="10">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.8,19.6,2</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text2 isKey="true" type="Text" Ref="11">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.4,0,15,1.6</ClientRectangle>
+              <Conditions isList="true" count="0"/>
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="7"/>
+              <Parent isRef="10"/>
+              <Text>&lt;line-height="1.5"&gt;En el Municipio de {PrObtenerDatosActaInicioContratist.Municipio}, Departamento de {PrObtenerDatosActaInicioContratist.Departamento}, siendo las {PrObtenerDatosActaInicioContratist.HoraActa} horas del día  {PrObtenerDatosActaInicioContratist.FechaActaLetras}, Yo {PrObtenerDatosActaInicioContratist.NotarioActa} Notario, me encuentro constituido en {PrObtenerDatosActaInicioContratist.DireccionNotario}, a requerimiento del Ingeniero &lt;b&gt;{PrObtenerDatosActaInicioContratist.NombreIngenieroRequerimiento},&lt;/b&gt; {PrObtenerDatosActaInicioContratist.CargoIngenieroRequerimiento}  de la entidad &lt;b&gt;{PrObtieneTramosActaInicioContratista.NombreEmpresa},&lt;/b&gt; consultora número C guión cero cero uno guión dos mil quince ({PrObtenerDatosActaInicioContratist.ProyectoAño}), que tiene a su cargo el proyecto de Consultoría C guión cero cero uno guión dos mil quince ({PrObtenerDatosActaInicioContratist.ProyectoAño}), denominado &lt;b&gt;Gerenciamiento y Asistencia Tecnica al Programa de Mantenimiento de la Infraestructura Vial; &lt;/b&gt; y asi mismo el ingeniero &lt;b&gt;Erwin Armando Quan Galindo,&lt;/b&gt; Director de la Unidad Ejecutora de Conservación Vial -COVIAL-, para hacer constar lo siguiente: &lt;b&gt;PRIMERO: El Ingeniero {PrObtenerDatosActaInicioContratist.NombreIngenieroRequerimiento}&lt;/b&gt;, {PrObtenerDatosActaInicioContratist.CargoIngenieroRequerimiento}  de la entidad &lt;b&gt;{PrObtieneTramosActaInicioContratista.NombreEmpresa},&lt;/b&gt;  pone a la vista al infrascrito Notario, la certificación &lt;b&gt;CERTI. FIDEICOMISO  {PrObtenerDatosActaInicioContratist.CertificacionFideicomisoLetras} ({PrObtenerDatosActaInicioContratist.CertificacionFideicomisoNumero})&lt;/b&gt;, de fecha {PrObtenerDatosActaInicioContratist.FechaCertifiFideicomisoLetras}, mediante el cual el Director y Secretario del Comité Técnico de la Unidad Ejecutora de Conservación Vial -COVIAL-, autoriza a la consultoría  C guión cero cero uno guión dos mil quince ({PrObtenerDatosActaInicioContratist.ProyectoAño}) a dar inicio a los servicios de consultoría a partir del  {PrObtenerDatosActaInicioContratist.FechaInicioEjecucionLetras}. &lt;b&gt;SEGUNDA:&lt;/b&gt; Se tiene a la vista el contrato en Escritura Pública número {PrObtenerDatosActaInicioContratist.NumeroEscrituraLetras} ({PrObtenerDatosActaInicioContratist.NumContratoEscrituraPublicaNum}) de fecha {PrObtenerDatosActaInicioContratist.FechaContratoEscrituraPLetras}, legalizada ante el Notario {PrObtenerDatosActaInicioContratist.NotarioEscrituraPublica}, por medio del cual se legaliza el plazo contractual entre la entidad &lt;b&gt;{PrObtieneTramosActaInicioContratista.NombreEmpresa},&lt;/b&gt; y el señor(a) {PrObtenerDatosActaInicioContratist.NombreMandatarioEspecial}, quién actúa en  carácter de Mandatario Especial con Representación del Banco Industrial Sociedad Anónima, entidad bancaria que actúa como Fiduciario del Fideicomiso del Fondo Vial, en base a la Cláusula {PrObtenerDatosActaInicioContratist.NumeroClausulaLetras}, {IIF((PrObtenerDatosActaInicioContratist.LiteralLetras ==""),"" , "literal "+ PrObtenerDatosActaInicioContratist.LiteralLetras )} del contrato en mención, dio inicio &lt;b&gt;EL PLAZO CONTRACTUAL&lt;/b&gt; el día {PrObtenerDatosActaInicioContratist.FechaInicioContratoLetras}  y finaliza el {PrObtenerDatosActaInicioContratist.FechaFinalContratoLetras} para hacer un total de {PrObtenerDatosActaInicioContratist.NumeroDiasContractualesLetras}  ({PrObtenerDatosActaInicioContratist.NumeroDiasContractualesNum}) días contractuales, fue suscrito dicho contrato para la ejecución de los trabajos de consultoría del Proyecto: C guión cero cero uno guión dos mil quince ({PrObtenerDatosActaInicioContratist.ProyectoAño}).&lt;b&gt; TERCERO: &lt;/b&gt;El  Ingeniero Erwin Armando Quan Galindo, Director de la &lt;b&gt;Unidad Ejecutora de Conservación Vial -COVIAL-, &lt;/b&gt; confirma el inicio físico de fecha {PrObtenerDatosActaInicioContratist.FechaInicioEjecucionLetras}. según la certificación &lt;b&gt;CERT. FIDEICOMISO {PrObtenerDatosActaInicioContratist.CertificacionFideicomisoLetras} ({PrObtenerDatosActaInicioContratist.CertificacionFideicomisoNumero}),&lt;/b&gt; de fecha {PrObtenerDatosActaInicioContratist.FechaCertifiFideicomisoLetras}. &lt;b&gt;CUARTO: &lt;/b&gt;&lt;b&gt;El Ingeniero {PrObtenerDatosActaInicioContratist.NombreIngenieroRequerimiento},&lt;/b&gt; {PrObtenerDatosActaInicioContratist.CargoIngenieroRequerimiento} de la entidad &lt;b&gt;{PrObtieneTramosActaInicioContratista.NombreEmpresa}&lt;/b&gt;, manifiesta su aceptación a lo anterior estipulado en la presente acta. No habiendo nada más que hacer constar se da por finalizada la presente en el mismo lugar y fecha, {PrObtenerDatosActaInicioContratist.FinalizacionMinutosLetras} después de su inicio en una hoja de papel bond tamaño oficio, la que leída por cada una de las partes, y quedando bien enterados de la misma, de su objeto, validez y demás alcances  y efectos legales, la ratifican, aceptan y firman con el infrascrito Notario autorizante que de todo lo actuado &lt;b&gt;DA FE.&lt;/b&gt;&lt;/line-height&gt;</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+          </Components>
+          <Conditions isList="true" count="0"/>
+          <Filters isList="true" count="0"/>
+          <Name>DataBand2</Name>
+          <Page isRef="7"/>
+          <Parent isRef="7"/>
+          <Sort isList="true" count="0"/>
+        </DataBand2>
+        <ReportSummaryBand1 isKey="true" type="ReportSummaryBand" Ref="12">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,5.6,19.6,7.6</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text3 isKey="true" type="Text" Ref="13">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2,0.8,7.4,1.6</ClientRectangle>
+              <Conditions isList="true" count="0"/>
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>5f252e71acc6486f93144684f001f420</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="7"/>
+              <Parent isRef="12"/>
+              <Text>Erwin Armando Quan Galindo</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+            <Text4 isKey="true" type="Text" Ref="14">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>10.4,0.8,6.6,2.2</ClientRectangle>
+              <Conditions isList="true" count="0"/>
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>070c7108b00b478f9e53702af46b1bc7</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="7"/>
+              <Parent isRef="12"/>
+              <Text>{PrObtenerDatosActaInicioContratist.NombreIngenieroRequerimiento}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+          </Components>
+          <Conditions isList="true" count="0"/>
+          <Name>ReportSummaryBand1</Name>
+          <Page isRef="7"/>
+          <Parent isRef="7"/>
+        </ReportSummaryBand1>
+      </Components>
+      <Conditions isList="true" count="0"/>
+      <Guid>3d3e980fba974b548b0148a102b01525</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>35.6</PageHeight>
+      <PageWidth>21.6</PageWidth>
+      <PaperSize>Legal</PaperSize>
+      <Report isRef="0"/>
+      <Watermark isKey="true" type="Stimulsoft.Report.Components.StiWatermark" Ref="15">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings isKey="true" type="Stimulsoft.Report.Print.StiPrinterSettings" Ref="16"/>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>05/18/2015 11:49:08 AM</ReportChanged>
+  <ReportCreated>05/22/2014 11:18:37 AM</ReportCreated>
+  <ReportFile>C:\Users\Cristian\Desktop\Cindy\SICOP\Reportes\RptActaInicioContratistaGisystems.mrt</ReportFile>
+  <ReportGuid>cbe811383852de3ef4ea6824becdbd90</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2015.1</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0"/>
+</StiSerializer>

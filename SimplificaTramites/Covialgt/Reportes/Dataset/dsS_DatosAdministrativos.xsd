@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsS_DatosAdministrativos" targetNamespace="http://tempuri.org/dsS_DatosAdministrativos.xsd" xmlns:mstns="http://tempuri.org/dsS_DatosAdministrativos.xsd" xmlns="http://tempuri.org/dsS_DatosAdministrativos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="DAO.My.MySettings.ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="DAO.My.MySettings.ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.DAO.My.MySettings.ConnectionString.ConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsS_DatosAdministrativos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsS_DatosAdministrativos" msprop:Generator_DataSetName="dsS_DatosAdministrativos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ObtenerReporte_S_DatosAdministrativos" msprop:Generator_UserTableName="ObtenerReporte_S_DatosAdministrativos" msprop:Generator_RowDeletedName="ObtenerReporte_S_DatosAdministrativosRowDeleted" msprop:Generator_TableClassName="ObtenerReporte_S_DatosAdministrativosDataTable" msprop:Generator_RowChangedName="ObtenerReporte_S_DatosAdministrativosRowChanged" msprop:Generator_RowClassName="ObtenerReporte_S_DatosAdministrativosRow" msprop:Generator_RowChangingName="ObtenerReporte_S_DatosAdministrativosRowChanging" msprop:Generator_RowEvArgName="ObtenerReporte_S_DatosAdministrativosRowChangeEvent" msprop:Generator_RowEvHandlerName="ObtenerReporte_S_DatosAdministrativosRowChangeEventHandler" msprop:Generator_TablePropName="ObtenerReporte_S_DatosAdministrativos" msprop:Generator_TableVarName="tableObtenerReporte_S_DatosAdministrativos" msprop:Generator_RowDeletingName="ObtenerReporte_S_DatosAdministrativosRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SupervisoraAnioID" msprop:Generator_UserColumnName="SupervisoraAnioID" msprop:Generator_ColumnPropNameInRow="SupervisoraAnioID" msprop:Generator_ColumnVarNameInTable="columnSupervisoraAnioID" msprop:Generator_ColumnPropNameInTable="SupervisoraAnioIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ProyectoSupervisionCodigo" msprop:Generator_UserColumnName="ProyectoSupervisionCodigo" msprop:Generator_ColumnPropNameInRow="ProyectoSupervisionCodigo" msprop:Generator_ColumnVarNameInTable="columnProyectoSupervisionCodigo" msprop:Generator_ColumnPropNameInTable="ProyectoSupervisionCodigoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AnioID" msprop:Generator_UserColumnName="AnioID" msprop:Generator_ColumnPropNameInRow="AnioID" msprop:Generator_ColumnVarNameInTable="columnAnioID" msprop:Generator_ColumnPropNameInTable="AnioIDColumn" type="xs:int" />
+              <xs:element name="ProyectoCodigo" msprop:Generator_UserColumnName="ProyectoCodigo" msprop:Generator_ColumnPropNameInRow="ProyectoCodigo" msprop:Generator_ColumnVarNameInTable="columnProyectoCodigo" msprop:Generator_ColumnPropNameInTable="ProyectoCodigoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PeriodoCorrel" msdata:ReadOnly="true" msprop:Generator_UserColumnName="PeriodoCorrel" msprop:Generator_ColumnPropNameInRow="PeriodoCorrel" msprop:Generator_ColumnVarNameInTable="columnPeriodoCorrel" msprop:Generator_ColumnPropNameInTable="PeriodoCorrelColumn" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="PeriodoDesde" msdata:ReadOnly="true" msprop:Generator_UserColumnName="PeriodoDesde" msprop:Generator_ColumnPropNameInRow="PeriodoDesde" msprop:Generator_ColumnVarNameInTable="columnPeriodoDesde" msprop:Generator_ColumnPropNameInTable="PeriodoDesdeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PeriodoHasta" msdata:ReadOnly="true" msprop:Generator_UserColumnName="PeriodoHasta" msprop:Generator_ColumnPropNameInRow="PeriodoHasta" msprop:Generator_ColumnVarNameInTable="columnPeriodoHasta" msprop:Generator_ColumnPropNameInTable="PeriodoHastaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AcumuladoMensual" msdata:ReadOnly="true" msprop:Generator_UserColumnName="AcumuladoMensual" msprop:Generator_ColumnPropNameInRow="AcumuladoMensual" msprop:Generator_ColumnVarNameInTable="columnAcumuladoMensual" msprop:Generator_ColumnPropNameInTable="AcumuladoMensualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NombreEmpresa" msprop:Generator_UserColumnName="NombreEmpresa" msprop:Generator_ColumnPropNameInRow="NombreEmpresa" msprop:Generator_ColumnVarNameInTable="columnNombreEmpresa" msprop:Generator_ColumnPropNameInTable="NombreEmpresaColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RepresentanteLegal" msprop:Generator_UserColumnName="RepresentanteLegal" msprop:Generator_ColumnPropNameInRow="RepresentanteLegal" msprop:Generator_ColumnVarNameInTable="columnRepresentanteLegal" msprop:Generator_ColumnPropNameInTable="RepresentanteLegalColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ContratoCodigo" msprop:Generator_UserColumnName="ContratoCodigo" msprop:Generator_ColumnPropNameInRow="ContratoCodigo" msprop:Generator_ColumnVarNameInTable="columnContratoCodigo" msprop:Generator_ColumnPropNameInTable="ContratoCodigoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FechaContrato" msprop:Generator_UserColumnName="FechaContrato" msprop:Generator_ColumnPropNameInRow="FechaContrato" msprop:Generator_ColumnVarNameInTable="columnFechaContrato" msprop:Generator_ColumnPropNameInTable="FechaContratoColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MontoOriginal" msprop:Generator_UserColumnName="MontoOriginal" msprop:Generator_ColumnPropNameInRow="MontoOriginal" msprop:Generator_ColumnVarNameInTable="columnMontoOriginal" msprop:Generator_ColumnPropNameInTable="MontoOriginalColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MontoModificado" msprop:Generator_UserColumnName="MontoModificado" msprop:Generator_ColumnPropNameInRow="MontoModificado" msprop:Generator_ColumnVarNameInTable="columnMontoModificado" msprop:Generator_ColumnPropNameInTable="MontoModificadoColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TramoCodigo" msprop:Generator_UserColumnName="TramoCodigo" msprop:Generator_ColumnPropNameInRow="TramoCodigo" msprop:Generator_ColumnVarNameInTable="columnTramoCodigo" msprop:Generator_ColumnPropNameInTable="TramoCodigoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DepartamentoNombre" msprop:Generator_UserColumnName="DepartamentoNombre" msprop:Generator_ColumnPropNameInRow="DepartamentoNombre" msprop:Generator_ColumnVarNameInTable="columnDepartamentoNombre" msprop:Generator_ColumnPropNameInTable="DepartamentoNombreColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TramoDesc" msprop:Generator_UserColumnName="TramoDesc" msprop:Generator_ColumnPropNameInRow="TramoDesc" msprop:Generator_ColumnVarNameInTable="columnTramoDesc" msprop:Generator_ColumnPropNameInTable="TramoDescColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TramoLong" msprop:Generator_UserColumnName="TramoLong" msprop:Generator_ColumnPropNameInRow="TramoLong" msprop:Generator_ColumnVarNameInTable="columnTramoLong" msprop:Generator_ColumnPropNameInTable="TramoLongColumn" type="xs:decimal" />
+              <xs:element name="MontoVigente" msdata:ReadOnly="true" msprop:Generator_UserColumnName="MontoVigente" msprop:Generator_ColumnPropNameInRow="MontoVigente" msprop:Generator_ColumnVarNameInTable="columnMontoVigente" msprop:Generator_ColumnPropNameInTable="MontoVigenteColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MontoAcumulado" msdata:ReadOnly="true" msprop:Generator_UserColumnName="MontoAcumulado" msprop:Generator_ColumnPropNameInRow="MontoAcumulado" msprop:Generator_ColumnVarNameInTable="columnMontoAcumulado" msprop:Generator_ColumnPropNameInTable="MontoAcumuladoColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NumeroInformeTecnico" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NumeroInformeTecnico" msprop:Generator_ColumnPropNameInRow="NumeroInformeTecnico" msprop:Generator_ColumnVarNameInTable="columnNumeroInformeTecnico" msprop:Generator_ColumnPropNameInTable="NumeroInformeTecnicoColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ObtenerReporte_S_DatosAdministrativos" />
+      <xs:field xpath="mstns:AnioID" />
+      <xs:field xpath="mstns:ProyectoCodigo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

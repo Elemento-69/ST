@@ -1,0 +1,1394 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <cnxCantidadesTotales Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>cnxCantidadesTotales</Alias>
+        <ConnectionStringEncrypted>9FaBCcZW89VsW7XJVXSkcsTS2aFnVEKE7BC9+GkIpB+JcMEPxmqj7WhqqHTKPePX0ShlSFVbk3FpGNVEZIjjF4t0q4hhFpOd80ms2OklJOfzePtowkpbzcxYFfRO4WluunDNTN9XWc1tCOjMaXThbp4SzytINZKdRhvZ7O9J96fTVssCS33ZvGII1djumPb/5ELBA08FQ6TsTXnMSHj1Y9/y9WhhXFvF+Ual</ConnectionStringEncrypted>
+        <Key>fdbc1ecf95c64afca6a2c3201995d583</Key>
+        <Name>cnxCantidadesTotales</Name>
+      </cnxCantidadesTotales>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <CantidadesTotales Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>CantidadesTotales</Alias>
+        <Columns isList="true" count="28">
+          <value>ORIGINAL,SupervisoraAnioID,SupervisoraAnioID,SupervisoraAnioID,System.Int32,_x0036_3a52fe0d9614d1ca5f87e291a5a4dd2</value>
+          <value>ORIGINAL,ProyectoSupervisionCodigo,ProyectoSupervisionCodigo,ProyectoSupervisionCodigo,System.String,_x0035_122369255fa4b23a096cae87adf9843</value>
+          <value>ORIGINAL,AnioID,AnioID,AnioID,System.Int32,_x0034_326fb41bc6d47df8b56f049aab52d9b</value>
+          <value>ORIGINAL,ProyectoCodigo,ProyectoCodigo,ProyectoCodigo,System.String,_x0032_6b740fa745c4024ba71d287e13ccbbc</value>
+          <value>ORIGINAL,RenglonCodCOVIAL,RenglonCodCOVIAL,RenglonCodCOVIAL,System.String,a27c61ce6af740edab6a71d5bff53dcc</value>
+          <value>ORIGINAL,ProyectoRenglonNombre,ProyectoRenglonNombre,ProyectoRenglonNombre,System.String,_x0034_3b167c13372479e8986b60e3afd7259</value>
+          <value>ORIGINAL,RenglonDesc,RenglonDesc,RenglonDesc,System.String,_x0039_6a244a56ac245ea8e57968e8bafef2f</value>
+          <value>ORIGINAL,RenglonUni,RenglonUni,RenglonUni,System.String,b13432282adf4a2593ca177ce41bee8c</value>
+          <value>ORIGINAL,RenglonPrecioUnitario,RenglonPrecioUnitario,RenglonPrecioUnitario,System.Decimal,_x0039_72a6c8824e849fe81b205ba4b639c0b</value>
+          <value>ORIGINAL,ComponenteDesc,ComponenteDesc,ComponenteDesc,System.String,c2a3939d302e45369c802219b69c19bd</value>
+          <value>ORIGINAL,ComponenteCorrel,ComponenteCorrel,ComponenteCorrel,System.Byte,bc318d1d36584571acd23ca05ba609a9</value>
+          <value>ORIGINAL,Originales,Originales,Originales,System.Decimal,_x0033_47ef7c1722d415f917416c73679666f</value>
+          <value>ORIGINAL,OTS,OTS,OTS,System.Decimal,_x0035_468c5f686f74133b73859119268a9a2</value>
+          <value>ORIGINAL,ATE,ATE,ATE,System.Decimal,_x0033_0243c972721435fa21bf78ceca50849</value>
+          <value>ORIGINAL,OC,OC,OC,System.Decimal,_x0033_4a235c2ea1e4b26a3ed7075a0c1cb2c</value>
+          <value>ORIGINAL,EjecutadoEnElMes,EjecutadoEnElMes,EjecutadoEnElMes,System.Decimal,_x0033_9307fe2475c4878810f2991349036cd</value>
+          <value>ORIGINAL,AcumuladoAnteriorTOT,AcumuladoAnteriorTOT,AcumuladoAnteriorTOT,System.Decimal,_x0031_96297a5f8e5454caec75ae0b0050ca4</value>
+          <value>ORIGINAL,AcumuladoAnterior,AcumuladoAnterior,AcumuladoAnterior,System.Decimal,dea76b9d5d134833bdf66127a09cab15</value>
+          <value>ORIGINAL,PeriodoCorrel,PeriodoCorrel,PeriodoCorrel,System.Byte,_x0036_0c5617719c04da596daa9c164cd537a</value>
+          <value>ORIGINAL,PeriodoDesde,PeriodoDesde,PeriodoDesde,System.DateTime,fd44199004ab482495eabd5873d1d112</value>
+          <value>ORIGINAL,PeriodoHasta,PeriodoHasta,PeriodoHasta,System.DateTime,a269527de4c04ddb8730ed4348bd1314</value>
+          <value>ORIGINAL,NombreEmpresa,NombreEmpresa,NombreEmpresa,System.String,_x0032_ec4c75621cf4bfbbfb26168fc8515cf</value>
+          <value>ORIGINAL,NumeroInformeTecnico,NumeroInformeTecnico,NumeroInformeTecnico,System.Int32,be6650074a7d4d29a39c73cd2d8048d4</value>
+          <value>ORIGINAL,EjecutadoEnElMesDinero,EjecutadoEnElMesDinero,EjecutadoEnElMesDinero,System.Decimal,_x0034_cdaaaf35e8c43649ac419f86d3e966a</value>
+          <value>ORIGINAL,AcumuladoAnteriorTOTDinero,AcumuladoAnteriorTOTDinero,AcumuladoAnteriorTOTDinero,System.Decimal,_x0037_84c9ecb40b14bdd9b3caaf733d54778</value>
+          <value>ORIGINAL,SubTotalOriginal,SubTotalOriginal,SubTotalOriginal,System.Decimal,f58dd630592744468ed6a634c85abee3</value>
+          <value>ORIGINAL,SubTotalAjustado,SubTotalAjustado,SubTotalAjustado,System.Decimal,_x0030_c924258590c4cd9a06062b258d0797d</value>
+          <value>ORIGINAL,ORP,ORP,ORP,System.Decimal,c63da4f032d7495cabac4179d28f000d</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>408df08a64c143859840e20569dc3259</Key>
+        <Name>CantidadesTotales</Name>
+        <NameInSource>cnxCantidadesTotales</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>_x0040_AnioID,,8,4</value>
+          <value>_x0040_ProyectoCodigo,,22,15</value>
+          <value>_x0040_PeriodoCorrel,,8,4</value>
+        </Parameters>
+        <SqlCommand>exec CW_CantidadesTotales2013 @AnioID, @ProyectoCodigo, @PeriodoCorrel</SqlCommand>
+      </CantidadesTotales>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="2">
+      <value>,suma,suma,suma_x0020_original_x002B__x0020_OTS_x002B_ATE_x002B_OC,System.Object,IIF_x0028__x0020_SumaOriginalOTSATEOC_x003D__x003D__x0020_0_x002C_1_x002C_SumaOriginalOTSATEOC_x0029_,False,True,False,False,,f05162694690431eb432e011e5fe6381</value>
+      <value>,SumaOriginalOTSATEOC,SumaOriginalOTSATEOC,,System.Decimal,_x0028__x0028_CantidadesTotales.Originales_x0029__x0020__x002B__x0020__x0028_CantidadesTotales.OTS_x0029__x0020__x002B__x0020__x0028_CantidadesTotales.ATE_x0029__x0020__x002B__x0020__x0028_CantidadesTotales.OC_x0029__x0029_,False,True,False,False,,_x0033_8d583512de84bbbaf7848f722219aca</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>912e7bc62cca4d7189e3e6494a733f94</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="5">
+        <PageHeaderBand1 Ref="5" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,33.6,4</ClientRectangle>
+          <Components isList="true" count="8">
+            <Image1 Ref="6" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,2.6,1.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <IconColor>68, 114, 196</IconColor>
+              <ImageBytes>/9j/4AAQSkZJRgABAQEAeAB4AAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/
+2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwM
+BwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM
+DAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAA8AGQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEA
+AAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJx
+FDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNk
+ZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJ
+ytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
+BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMz
+UvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3
+eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBv/BP74hfHb9oX/gvH+0tJqnxm+ME3wt+D
+XjbxKiaAfGGoNo7TS6peWun2JtvP8tYUjSeVEC7B9jRcbTiv1Z/4TjXP+g5rP/gdL/8AFV47+yJ+
+xRqn7OeqfGPVH8Pat/bXxS+Kvinxneyixdi0FzqtwLFQ4XJT7IkMgU/de4l9eex/aA1zxV8Gvgb4
+u8WaP4F8VeLdZ8P6TcXunaJp+jXd5c6vdqh8i2WOFGkIkl2KxUHapZjgKSP82fGbPOKeIeNa9PKY
+V1ShJUKaipxi+V2crqyfNNyal/K462R+m5HQwmGwKlWcbv3ne1/T7j8Sf+C/X/BYL4uf8N33vgT4
+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</ImageBytes>
+              <Margins>0,0,0,0</Margins>
+              <Name>Image1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+            </Image1>
+            <Text1 Ref="7" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.4,0,14.8,1.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>MINISTERIO DE COMUNICACIONES INFRAESTRUCTURA Y VIVIENDA
+UNIDAD EJECUTORA DE CONSERVACIÓN VIAL</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text2 Ref="8" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2,7,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Supervisor/a: {CantidadesTotales.ProyectoSupervisionCodigo}-{CantidadesTotales.SupervisoraAnioID}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text2>
+            <Text3 Ref="9" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.6,7,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{CantidadesTotales.NombreEmpresa}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text3>
+            <Text4 Ref="10" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13.6,2.4,6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Proyecto: {CantidadesTotales.ProyectoCodigo}-{CantidadesTotales.AnioID}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text4>
+            <Text5 Ref="11" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>27.6,2.6,6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Informe Técnico No.{CantidadesTotales.NumeroInformeTecnico}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text5>
+            <Text6 Ref="12" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>22.4,3.2,11.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Periodo:{Format("{0:dd}", CantidadesTotales.PeriodoDesde)} al {Format("{0:dd}", CantidadesTotales.PeriodoHasta)} de {Format("{0:MMMM}", CantidadesTotales.PeriodoHasta)} de {Format("{0:yyyy}", CantidadesTotales.PeriodoHasta)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text6>
+            <Text7 Ref="13" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3.2,9,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>3. CANTIDADES TOTALES POR RENGLON</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text7>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <PrintOn>OnlyFirstPage</PrintOn>
+        </PageHeaderBand1>
+        <GroupHeaderBand1 Ref="14" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,5.2,33.6,1.2</ClientRectangle>
+          <Components isList="true" count="24">
+            <Text8 Ref="15" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>0,0,1.6,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>Comp.</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text9 Ref="16" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>1.6,0,1.8,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>Renglón</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <Text10 Ref="17" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>3.4,0,2.6,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>Descripción</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text11 Ref="18" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>6,0,1,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>Unidad</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+            <Text12 Ref="19" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>7,0,1.6,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>Precio
+Unitario</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text13 Ref="20" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>8.6,0,8.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>CANTIDADES</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text13>
+            <Text14 Ref="21" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>8.6,0.4,1.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>Cantidad 
+Original</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text14>
+            <Text15 Ref="22" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>10.4,0.4,4.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>DOCUMENTOS DE CAMBIO</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text15>
+            <Text16 Ref="23" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>15.2,0.4,1.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>Cantidad 
+Ajustada</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text16>
+            <Text17 Ref="24" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>10.4,0.8,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>OTS</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text17>
+            <Text18 Ref="25" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>12,0.8,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>ATE</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text18>
+            <Text19 Ref="26" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>13.6,0.8,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>OC</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text19>
+            <Text20 Ref="27" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>17,0,1.8,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>Monto
+Original</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text20>
+            <Text21 Ref="28" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>18.8,0,2,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>Monto
+Ajustado</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+            <Text22 Ref="29" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>20.8,0,4.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>CANTIDADES EJECUTADAS</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text22>
+            <Text23 Ref="30" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>20.8,0.4,1.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>En este
+periodo</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text23>
+            <Text24 Ref="31" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>22.2,0.4,1.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>Acumulado
+Anterior</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+            <Text25 Ref="32" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>23.6,0.4,1.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>Total
+Acomulado</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+            <Text26 Ref="33" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>25,0,1.8,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>SALDO
+TOTAL</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+            <Text27 Ref="34" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>26.8,0.4,1.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>Ejecutado
+en mes</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text27>
+            <Text28 Ref="35" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>28.2,0.4,1.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>Acumulado</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text28>
+            <Text29 Ref="36" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>26.8,0,2.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>PORCENTAJE</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text29>
+            <Text30 Ref="37" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>29.6,0,2,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>MONTO
+EJECUTADO
+EN EL MES</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text30>
+            <Text31 Ref="38" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>31.6,0,2,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>MONTO
+ACUMULADO</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text31>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>GroupHeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </GroupHeaderBand1>
+        <DataBand1 Ref="39" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,7.2,33.6,0.4</ClientRectangle>
+          <Components isList="true" count="20">
+            <Text32 Ref="40" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>0,0,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text32</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{CantidadesTotales.ComponenteDesc}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text32>
+            <Text33 Ref="41" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>1.6,0,1.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text33</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>&lt;text-align="center"&gt;{CantidadesTotales.RenglonCodCOVIAL}&lt;/text-align&gt;</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text33>
+            <Text34 Ref="42" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>3.4,0,2.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text34</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{CantidadesTotales.ProyectoRenglonNombre}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text34>
+            <Text35 Ref="43" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>6,0,1,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text35</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{CantidadesTotales.RenglonUni}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text35>
+            <Text36 Ref="44" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>7,0,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text36</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>Q{Format("{0:N2}", CantidadesTotales.RenglonPrecioUnitario)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text36>
+            <Text37 Ref="45" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>8.6,0,1.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text37</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Format("{0:N2}", CantidadesTotales.Originales)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text37>
+            <Text38 Ref="46" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>10.4,0,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text38</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{IIF(CantidadesTotales.OTS == 0," ", Format("{0:N6}", CantidadesTotales.OTS))}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text38>
+            <Text39 Ref="47" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>12,0,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text39</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{IIF(CantidadesTotales.ATE == 0," ",Format("{0:N6}", CantidadesTotales.ATE))}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text39>
+            <Text40 Ref="48" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>13.6,0,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text40</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{IIF(CantidadesTotales.OC == 0," ",Format("{0:N6}", CantidadesTotales.OC))}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text40>
+            <Text41 Ref="49" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>15.2,0,1.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text41</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Format("{0:N6}", ((CantidadesTotales.Originales) + (CantidadesTotales.OTS) + (CantidadesTotales.ATE) + (CantidadesTotales.OC)))}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text41>
+            <Text42 Ref="50" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>17,0,1.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text42</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>Q{Format("{0:N2}", CantidadesTotales.SubTotalOriginal)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text42>
+            <Text43 Ref="51" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>18.8,0,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text43</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{IIF(CantidadesTotales.SubTotalAjustado == 0," ","Q.")} {IIF(CantidadesTotales.SubTotalAjustado == 0," ",Format("{0:N2}", CantidadesTotales.SubTotalAjustado))}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text43>
+            <Text44 Ref="52" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>20.8,0,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text44</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{IIF(CantidadesTotales.EjecutadoEnElMes == 0," ",CantidadesTotales.EjecutadoEnElMes)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text44>
+            <Text45 Ref="53" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>22.2,0,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text45</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{IIF(CantidadesTotales.AcumuladoAnterior == 0," ",CantidadesTotales.AcumuladoAnterior)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text45>
+            <Text46 Ref="54" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>23.6,0,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text46</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{IIF(CantidadesTotales.EjecutadoEnElMes + CantidadesTotales.AcumuladoAnterior == 0," ",CantidadesTotales.EjecutadoEnElMes + CantidadesTotales.AcumuladoAnterior)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text46>
+            <Text47 Ref="55" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>25,0,1.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text47</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{IIF((CantidadesTotales.Originales + CantidadesTotales.OTS + CantidadesTotales.ATE + CantidadesTotales.OC )-(CantidadesTotales.EjecutadoEnElMes + CantidadesTotales.AcumuladoAnterior) == 0," ",
+	 Format("{0:N2}", (CantidadesTotales.Originales + CantidadesTotales.OTS + CantidadesTotales.ATE + CantidadesTotales.OC )-(CantidadesTotales.EjecutadoEnElMes + CantidadesTotales.AcumuladoAnterior)))}
+</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text47>
+            <Text48 Ref="56" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>26.8,0,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text48</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{IIF(CantidadesTotales.EjecutadoEnElMes / decimal.Parse(Format("{0}", 
+ IIF((CantidadesTotales.Originales+CantidadesTotales.OTS+CantidadesTotales.ATE+CantidadesTotales.OC)==0,1,(CantidadesTotales.Originales+CantidadesTotales.OTS+CantidadesTotales.ATE+CantidadesTotales.OC))))==0," ",
+ Format("{0:N2}", (CantidadesTotales.EjecutadoEnElMes /decimal.Parse(Format("{0}", IIF((CantidadesTotales.Originales+CantidadesTotales.OTS+CantidadesTotales.ATE+CantidadesTotales.OC)==0,1,(CantidadesTotales.Originales+CantidadesTotales.OTS+CantidadesTotales.ATE+CantidadesTotales.OC))))) * 100))} {IIF(CantidadesTotales.EjecutadoEnElMes / decimal.Parse(Format("{0}",IIF((CantidadesTotales.Originales+CantidadesTotales.OTS+CantidadesTotales.ATE+CantidadesTotales.OC)==0,1,(CantidadesTotales.Originales+CantidadesTotales.OTS+CantidadesTotales.ATE+CantidadesTotales.OC))))== 0," ","%")}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text48>
+            <Text49 Ref="57" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>28.2,0,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text49</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{IIF((CantidadesTotales.EjecutadoEnElMes + CantidadesTotales.AcumuladoAnterior) / decimal.Parse(Format("{0}", 
+ IIF((CantidadesTotales.Originales+CantidadesTotales.OTS+CantidadesTotales.ATE+CantidadesTotales.OC)==0,1,(CantidadesTotales.Originales+CantidadesTotales.OTS+CantidadesTotales.ATE+CantidadesTotales.OC))))==0," ",
+ Format("{0:N2}", ((CantidadesTotales.EjecutadoEnElMes + CantidadesTotales.AcumuladoAnterior ) /decimal.Parse(Format("{0}", IIF((CantidadesTotales.Originales+CantidadesTotales.OTS+CantidadesTotales.ATE+CantidadesTotales.OC)==0,1,(CantidadesTotales.Originales+CantidadesTotales.OTS+CantidadesTotales.ATE+CantidadesTotales.OC))))) * 100))} {IIF(CantidadesTotales.EjecutadoEnElMes / decimal.Parse(Format("{0}",IIF((CantidadesTotales.Originales+CantidadesTotales.OTS+CantidadesTotales.ATE+CantidadesTotales.OC)==0,1,(CantidadesTotales.Originales+CantidadesTotales.OTS+CantidadesTotales.ATE+CantidadesTotales.OC))))== 0," ","%")}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text49>
+            <Text50 Ref="58" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>29.6,0,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text50</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Format("{0:N2}", CantidadesTotales.EjecutadoEnElMesDinero)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text50>
+            <Text51 Ref="59" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>31.6,0,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text51</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Format("{0:N2}", CantidadesTotales.AcumuladoAnteriorTOTDinero)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text51>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>CantidadesTotales</DataSourceName>
+          <Expressions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+        <GroupFooterBand1 Ref="60" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,8.4,33.6,0.4</ClientRectangle>
+          <Components isList="true" count="5">
+            <Text52 Ref="61" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>17,0,1.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text52</Name>
+              <Page isRef="4" />
+              <Parent isRef="60" />
+              <Text>Q.{Format("{0:N2}",Sum(DataBand1,Format("{0:N2}", CantidadesTotales.SubTotalOriginal)))}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text52>
+            <Text53 Ref="62" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>15.2,0,1.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text53</Name>
+              <Page isRef="4" />
+              <Parent isRef="60" />
+              <Text>TOTAL:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text53>
+            <Text54 Ref="63" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>18.8,0,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text54</Name>
+              <Page isRef="4" />
+              <Parent isRef="60" />
+              <Text>Q.{Format("{0:N2}",Sum(DataBand1,CantidadesTotales.SubTotalAjustado))}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text54>
+            <Text55 Ref="64" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>31.6,0,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text55</Name>
+              <Page isRef="4" />
+              <Parent isRef="60" />
+              <Text>{Format("{0:N2}", Sum(DataBand1,CantidadesTotales.AcumuladoAnteriorTOTDinero))}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text55>
+            <Text56 Ref="65" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>29.6,0,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text56</Name>
+              <Page isRef="4" />
+              <Parent isRef="60" />
+              <Text>{Format("{0:N2}",Sum(DataBand1,CantidadesTotales.EjecutadoEnElMesDinero))}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text56>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>GroupFooterBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </GroupFooterBand1>
+        <FooterBand1 Ref="66" type="FooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <CanShrink>True</CanShrink>
+          <ClientRectangle>0,9.6,33.6,1.4</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text57 Ref="67" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,7.2,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text57</Name>
+              <Page isRef="4" />
+              <Parent isRef="66" />
+              <Text>Hora y Fecha: {Format("{0:MM/dd/yyyy}", Today)} {Format("{0:HH:mm:ss}", Time)}
+</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text57>
+            <Text58 Ref="68" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.6,0,4,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text58</Name>
+              <Page isRef="4" />
+              <Parent isRef="66" />
+              <Text>Pagina:{PageNumber} de {TotalPageCount}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text58>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>FooterBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <PrintOnAllPages>True</PrintOnAllPages>
+        </FooterBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Expressions isList="true" count="0" />
+      <Guid>4e5c8385c1ca42adb2b702274bcb9eeb</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>21.6</PageHeight>
+      <PageWidth>35.6</PageWidth>
+      <PaperSize>Legal</PaperSize>
+      <Report isRef="0" />
+    </Page1>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>CantidadesTotales.</ReportAlias>
+  <ReportChanged>3/21/2023 10:25:48 AM</ReportChanged>
+  <ReportCreated>2/10/2023 3:18:16 PM</ReportCreated>
+  <ReportFile>C:\Users\tony\Documents\GitHub\SICOP-Web\Covialgt\Covialgt\Reportes\rptCantidadesTotales2013.mrt</ReportFile>
+  <ReportGuid>e05246645fb04fafadc987d3e2545b4e</ReportGuid>
+  <ReportName>CantidadesTotales.</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2023.1.1.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class CantidadesTotales_ : Stimulsoft.Report.StiReport
+    {
+        public CantidadesTotales_()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

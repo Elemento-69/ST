@@ -1,0 +1,127 @@
+﻿#sidebarMenu {
+    background: #FAFAFA;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 25px 25px 0px;
+    width: 225px;
+    height: calc(100vh - 70px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 70px;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+#main {
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-left: 200px;
+}
+
+#container.collapsed #sidebarMenu {
+    width: 80px;
+}
+
+@media(max-width: 768px){
+    #main {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+    #container.collapsed #sidebarMenu .nav-link-text {
+        display: none;
+    }
+
+    #container.collapsed #sidebarMenu .nav-title.collapsed.active {
+        width: 46px;
+        padding: 0.5rem;
+        border-radius: 50%;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+#container.collapsed #main {
+    margin-left: 80px;
+}
+
+
+#container #sidebarMenu #toggler-wrapper {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+@media(min-width: 992px) {
+    #container #sidebarMenu #toggler-wrapper {
+        margin-bottom: 3rem;
+    }
+}
+
+#sidebarMenu .collapsed-list {
+    background-color: #FFFFFF;
+    margin: 0 9px 9px 9px;
+    padding-top: 3px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+#sidebarMenu .collapsed-item .nav-link {
+    color: #434343;
+    height: auto;
+    padding: 3px;
+    margin: 5px 7px;
+}
+
+#sidebarMenu .collapsed-item.active .nav-link {
+    color: #285DCE;    
+}
+
+#sidebarMenu .collapsed-item.active {
+    border-left: solid 3px #FFD733;
+}
+
+#sidebarMenu .nav-title {
+    color: #434343;
+    font-size: 1.125rem;
+    margin: 9px 9px 0 9px;
+    height: 46px;
+}
+
+    #sidebarMenu .nav-title.collapsed.active {
+        background: #FFD733;
+        border-radius: 10px;
+    }
+
+    #sidebarMenu .nav-title.active {
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+        background: #FFD733;
+        border-radius: 10px 10px 0 0;
+    }
+
+#sidebarMenu .nav-title {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    background: #E6E6E6;
+    border-radius: 10px 10px 0 0;
+}
+
+    #sidebarMenu .nav-title.collapsed {
+        box-shadow: none;
+        background: #FAFAFA;
+        border-radius: 0;
+    }
+
+#sidebarMenu .nav-link-text {
+    margin-left: 10px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+#sidebarMenu #toggler {
+    color: #434343;
+}
+
+#sidebarMenu .nav-item {
+    color: #434343;
+    font-size: 0.875rem;
+}

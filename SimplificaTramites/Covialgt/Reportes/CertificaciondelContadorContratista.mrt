@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <CNspcontador Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>CNspcontador</Alias>
+        <ConnectionString>Data Source=192.168.0.10; Initial Catalog=z_PRODUCCION_sicopDB; User=jmarin; Password=jmarin2012</ConnectionString>
+        <Name>CNspcontador</Name>
+      </CNspcontador>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <DataSource1 Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DataSource1</Alias>
+        <Columns isList="true" count="13">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>ProgramaCodigo,System.String</value>
+          <value>fechacontrato,System.DateTime</value>
+          <value>Nombre,System.String</value>
+          <value>Representante,System.String</value>
+          <value>ContratoCodigo,System.String</value>
+          <value>EstimacionCorr,System.Int32</value>
+          <value>FechaDesde,System.DateTime</value>
+          <value>FechaHasta,System.DateTime</value>
+          <value>Fecha,System.DateTime</value>
+          <value>Titulado,System.String</value>
+          <value>NoSAT,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DataSource1</Name>
+        <NameInSource>CNspcontador</NameInSource>
+        <Parameters isList="true" count="6">
+          <value>_x0040_AnioID,,8,0</value>
+          <value>_x0040_ProyectoCodigo,,22,10</value>
+          <value>_x0040_EstimacionCorr,,8,0</value>
+          <value>_x0040_Fecha,,4,0</value>
+          <value>_x0040_Titulado,,22,100</value>
+          <value>_x0040_NoSAT,,8,0</value>
+        </Parameters>
+        <SqlCommand>EXEC [dbo].[prObtenerProyectosSupervisionContratista]  @AnioID, @ProyectoCodigo, @EstimacionCorr, @Fecha, @Titulado, @NoSAT</SqlCommand>
+      </DataSource1>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="8">
+        <Text2 Ref="5" type="Text" isKey="true">
+          <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <CanGrow>True</CanGrow>
+          <ClientRectangle>1.2,1.2,17.2,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,10</Font>
+          <HorAlignment>Width</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text2</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Text>El infrascrito Perito Contador titulado, {DataSource1.Titulado}, registrado y autorizado ante la Superintendencia de Administracion Tributaria SAT, bajo el número {DataSource1.NoSAT},</Text>
+          <TextBrush>[0:0:0]</TextBrush>
+          <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+          <Type>Expression</Type>
+        </Text2>
+        <Text1 Ref="6" type="Text" isKey="true">
+          <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <CanGrow>True</CanGrow>
+          <ClientRectangle>1.2,2.2,17.2,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12,Bold</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Text>CERTIFICA:</Text>
+          <TextBrush>[0:0:0]</TextBrush>
+          <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+          <Type>Expression</Type>
+        </Text1>
+        <Text3 Ref="7" type="Text" isKey="true">
+          <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <CanGrow>True</CanGrow>
+          <ClientRectangle>1.2,3.2,17.2,0.4</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,10</Font>
+          <HorAlignment>Width</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text3</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Text>Haber examinado los registros contables de la empresa {DataSource1.Nombre}, cuyo representante es el/la señor(a) {DataSource1.Representante}, y que, en relacion directa con el contrato en Escritura Pública No. {DataSource1.ContratoCodigo}-{DataSource1.AnioID}, de fecha {Day(DataSource1.fechacontrato)} de {Format("{0:MMMM}", DataSource1.fechacontrato)} del {Year(DataSource1.fechacontrato)}, suscrito con el Fideicomiso del Fondo Vial, actuando como fiduciario el Banco Industrial, S.A., para la ejecucion de los trabajos de mantenimiento de carreteras {IIF(DataSource1.ProgramaCodigo=="T", "no pavimentadas", "pavimentadas")} a cargo de COVIAL, del proyecto {DataSource1.ProyectoCodigo}-{DataSource1.AnioID}, durante el periodo del {Format("{0:dd MMMM }", DataSource1.FechaDesde)} al {Format("{0:dd MMMM }", DataSource1.FechaHasta)} del {Year(DataSource1.FechaHasta)}, se ha determinado que han sido cancelados en su totalidad los gastos inherentes al mismo, asi:</Text>
+          <TextBrush>[0:0:0]</TextBrush>
+          <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+          <Type>Expression</Type>
+        </Text3>
+        <Text4 Ref="8" type="Text" isKey="true">
+          <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <CanGrow>True</CanGrow>
+          <ClientRectangle>2.6,4,15.8,0.4</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,10</Font>
+          <HorAlignment>Width</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text4</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Text>a)	Sueldos del personal administrativo
+b)	Sueldos del personal de campo
+c)	Combustibles y lubricantes, viaticos, alquiler de oficina y todos los demas gastos administrativos del proyecto y
+d)	Pago de las cuotas patronales y laborales del IGSS.</Text>
+          <TextBrush>[0:0:0]</TextBrush>
+          <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+          <Type>Expression</Type>
+        </Text4>
+        <Text5 Ref="9" type="Text" isKey="true">
+          <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <CanGrow>True</CanGrow>
+          <ClientRectangle>1.2,4.8,17.2,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,10</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text5</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Text>Y para los usos legales que corresponda, se extiende la presente en la cuidad de Guatemala a los {Day(DataSource1.Fecha)} dias del mes de {Format("{0:MMMM}", DataSource1.Fecha)} del año {Year(DataSource1.Fecha)}.</Text>
+          <TextBrush>[0:0:0]</TextBrush>
+          <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+          <Type>Expression</Type>
+        </Text5>
+        <Text6 Ref="10" type="Text" isKey="true">
+          <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>1.2,7.8,17.2,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,10,Bold</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text6</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Text>{DataSource1.Titulado}</Text>
+          <TextBrush>[0:0:0]</TextBrush>
+          <Type>Expression</Type>
+        </Text6>
+        <Text7 Ref="11" type="Text" isKey="true">
+          <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>1.2,8.4,17.2,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,10,Bold</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text7</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Text>Registro No. {DataSource1.NoSAT}</Text>
+          <TextBrush>[0:0:0]</TextBrush>
+          <Type>Expression</Type>
+        </Text7>
+        <Text8 Ref="12" type="Text" isKey="true">
+          <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>1.2,7.2,17.2,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,10,Bold</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text8</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Text>P.C.</Text>
+          <TextBrush>[0:0:0]</TextBrush>
+          <Type>Expression</Type>
+        </Text8>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>8338dec0375245799f71d7c3978d2634</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>35.6</PageHeight>
+      <PageWidth>21.6</PageWidth>
+      <PaperSize>Legal</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="13" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="14" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>4/4/2013 11:25:41 AM</ReportChanged>
+  <ReportCreated>3/20/2013 4:03:02 PM</ReportCreated>
+  <ReportFile>C:\Users\Usuario\Desktop\PAGINAS GISYSTEMS\SICOP\Reportes\CertificaciondelContadorContratista.mrt</ReportFile>
+  <ReportGuid>3da9b6ed49834a5e8a58bcbb0ba38106</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2012.1.1300</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

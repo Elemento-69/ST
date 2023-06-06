@@ -1,0 +1,678 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <CnxEstadoProyectos Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>CnxEstadoProyectos</Alias>
+        <ConnectionString>Pooling=False;Integrated Security=False;Password=d3v3l0p3r$$;Initial Catalog=z_PRODUCCION_sicopDB;User ID=developer;Data Source=192.168.0.10;Max Pool Size=75</ConnectionString>
+        <Name>CnxEstadoProyectos</Name>
+      </CnxEstadoProyectos>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <FDCnxEstadoProyectos Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>FDCnxEstadoProyectos</Alias>
+        <Columns isList="true" count="16">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>ProyectoCodigoFinanciero,System.String</value>
+          <value>ProgramaNombre,System.String</value>
+          <value>MontoOriginal,System.Decimal</value>
+          <value>MontoModificado,System.Decimal</value>
+          <value>MontoaRecibir,System.Decimal</value>
+          <value>EstimacionCorr,System.Int32</value>
+          <value>PagoCorre,System.Int32</value>
+          <value>Pagos,System.Decimal</value>
+          <value>NominaCorrel,System.Int32</value>
+          <value>NoCur,System.String</value>
+          <value>Departamento,System.String</value>
+          <value>pagado,System.Decimal</value>
+          <value>saldo,System.Decimal</value>
+          <value>CorrelativoEst,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>FDCnxEstadoProyectos</Name>
+        <NameInSource>CnxEstadoProyectos</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>SELECT *  FROM [z_PRODUCCION_sicopDB].[dbo].[ViEstadoProyectos]</SqlCommand>
+      </FDCnxEstadoProyectos>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="5">
+        <PageHeaderBand1 Ref="5" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,33.6,1.19</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text1 Ref="6" type="Text" isKey="true">
+              <Border>None;[0:0:0];1;Solid;False;4;Black</Border>
+              <Brush>[255:255:255]</Brush>
+              <ClientRectangle>10.1,0.35,11.98,0.51</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>ESTADO DE PROYECTOS {Format("{0:dd/MM/yyyy}", Today)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+            </Text1>
+            <Image1 Ref="7" type="Image" isKey="true">
+              <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+              <Brush>[255:255:255]</Brush>
+              <ClientRectangle>0.19,0.17,1.79,0.88</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Image>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</Image>
+              <Name>Image1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+            </Image1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageHeaderBand1>
+        <PageHeaderBand2 Ref="8" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.39,33.6,0</ClientRectangle>
+          <Components isList="true" count="1">
+            <CrossGroupHeaderBand1 Ref="9" type="CrossGroupHeaderBand" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,27.69,0</ClientRectangle>
+              <Components isList="true" count="0" />
+              <Condition>{FDCnxEstadoProyectos.ProyectoCodigo}</Condition>
+              <Conditions isList="true" count="0" />
+              <Name>CrossGroupHeaderBand1</Name>
+              <Page isRef="4" />
+              <Parent isRef="8" />
+            </CrossGroupHeaderBand1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand2</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageHeaderBand2>
+        <PageFooterBand1 Ref="10" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,18.84,33.6,0.76</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text2 Ref="11" type="Text" isKey="true">
+              <Border>None;[0:0:0];1;Solid;False;4;Black</Border>
+              <Brush>[255:255:255]</Brush>
+              <ClientRectangle>13.95,0.11,6.46,0.51</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="10" />
+              <Text>Pagina {PageNumber} De {TotalPageCount}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text3 Ref="12" type="Text" isKey="true">
+              <Border>None;[0:0:0];1;Solid;False;4;Black</Border>
+              <Brush>[255:255:255]</Brush>
+              <ClientRectangle>27.46,0.14,5.84,0.51</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4" />
+              <Parent isRef="10" />
+              <Text>{Format("{0:dd/MM/yyyy}", Today)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageFooterBand1>
+        <DataBand1 Ref="13" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,3.19,33.6,4.17</ClientRectangle>
+          <Components isList="true" count="1">
+            <CrossDataBand1 Ref="14" type="CrossDataBand" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,33.52,4.17</ClientRectangle>
+              <Components isList="true" count="1">
+                <CrossTab1 Ref="15" type="Stimulsoft.Report.CrossTab.StiCrossTab" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0.02,0.02,33.5,4.09</ClientRectangle>
+                  <Components isList="true" count="23">
+                    <CrossTab1_Row1_Title Ref="16" type="CrossTitle" isKey="true">
+                      <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                      <Brush>White</Brush>
+                      <ClientRectangle>0,0.45,4.4,0.6</ClientRectangle>
+                      <Font>Arial,9</Font>
+                      <Guid>e26beeebc6e34976b909d54d1ef41030</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_Row1_Title</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <Text>PROYECTO</Text>
+                      <TextBrush>[0:0:0]</TextBrush>
+                      <TypeOfComponent>Row:CrossTab1_Row1</TypeOfComponent>
+                    </CrossTab1_Row1_Title>
+                    <CrossTab1_RowTotal1 Ref="17" type="CrossRowTotal" isKey="true">
+                      <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                      <Brush>[255:255:255]</Brush>
+                      <ClientRectangle>1.8,1.7,0,0</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Enabled>False</Enabled>
+                      <Font>Arial,9</Font>
+                      <Guid>10308758ca12410cb4c77f2614f227fe</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_RowTotal1</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <Text>Total</Text>
+                      <TextBrush>Black</TextBrush>
+                    </CrossTab1_RowTotal1>
+                    <CrossTab1_Row2_Title Ref="18" type="CrossTitle" isKey="true">
+                      <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                      <Brush>White</Brush>
+                      <ClientRectangle>4.4,0.45,3.4,0.6</ClientRectangle>
+                      <Font>Arial,9</Font>
+                      <Guid>37b36c59df2849e1a49de2d994cb0fd7</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_Row2_Title</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <Text>SALDO PROYECTO</Text>
+                      <TextBrush>[0:0:0]</TextBrush>
+                      <TypeOfComponent>Row:CrossTab1_Row2</TypeOfComponent>
+                    </CrossTab1_Row2_Title>
+                    <CrossTab1_RowTotal2 Ref="19" type="CrossRowTotal" isKey="true">
+                      <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                      <Brush>[255:255:255]</Brush>
+                      <ClientRectangle>4.4,1.7,11.6,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>8dd053f3124e49e58e2a8e9505b588a9</Guid>
+                      <HorAlignment>Left</HorAlignment>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_RowTotal2</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <Text>Total</Text>
+                      <TextBrush>Black</TextBrush>
+                    </CrossTab1_RowTotal2>
+                    <CrossTab1_RowTotal3 Ref="20" type="CrossRowTotal" isKey="true">
+                      <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                      <Brush>[255:255:255]</Brush>
+                      <ClientRectangle>7.8,1.7,0,0</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Enabled>False</Enabled>
+                      <Font>Arial,9</Font>
+                      <Guid>cded41bd6cd0486582a3ca19f990f194</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_RowTotal3</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <Text>Total</Text>
+                      <TextBrush>Black</TextBrush>
+                    </CrossTab1_RowTotal3>
+                    <CrossTab1_Row3_Title Ref="21" type="CrossTitle" isKey="true">
+                      <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                      <Brush>White</Brush>
+                      <ClientRectangle>7.8,0.45,2.4,0.6</ClientRectangle>
+                      <Font>Arial,9</Font>
+                      <Guid>fdb40712b4664aa39bf7ee1faf5b59c2</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_Row3_Title</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <Text>NOMINA</Text>
+                      <TextBrush>[0:0:0]</TextBrush>
+                      <TypeOfComponent>Row:CrossTab1_Row3</TypeOfComponent>
+                    </CrossTab1_Row3_Title>
+                    <CrossTab1_RowTotal4 Ref="22" type="CrossRowTotal" isKey="true">
+                      <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                      <Brush>[255:255:255]</Brush>
+                      <ClientRectangle>10.2,1.7,0,0</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Enabled>False</Enabled>
+                      <Font>Arial,9</Font>
+                      <Guid>1f1fdd23bf5f4dcc9e9c8bd4231a4712</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_RowTotal4</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <Text>Total</Text>
+                      <TextBrush>Black</TextBrush>
+                    </CrossTab1_RowTotal4>
+                    <CrossTab1_Row4_Title Ref="23" type="CrossTitle" isKey="true">
+                      <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                      <Brush>White</Brush>
+                      <ClientRectangle>10.2,0.45,1.2,0.6</ClientRectangle>
+                      <Font>Arial,9</Font>
+                      <Guid>9e717d26bc984e0799ceddffda063116</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_Row4_Title</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <Text>CUR</Text>
+                      <TextBrush>[0:0:0]</TextBrush>
+                      <TypeOfComponent>Row:CrossTab1_Row4</TypeOfComponent>
+                    </CrossTab1_Row4_Title>
+                    <CrossTab1_RowTotal5 Ref="24" type="CrossRowTotal" isKey="true">
+                      <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                      <Brush>[255:255:255]</Brush>
+                      <ClientRectangle>11.4,1.7,0,0</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Enabled>False</Enabled>
+                      <Font>Arial,9</Font>
+                      <Guid>7001ddea8dc94540b89fd8df66cbde76</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_RowTotal5</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <Text>Total</Text>
+                      <TextBrush>Black</TextBrush>
+                    </CrossTab1_RowTotal5>
+                    <CrossTab1_Row5_Title Ref="25" type="CrossTitle" isKey="true">
+                      <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                      <Brush>White</Brush>
+                      <ClientRectangle>11.4,0.45,1.4,0.6</ClientRectangle>
+                      <Font>Arial,9</Font>
+                      <Guid>14f4820230ea44f4acfe8021db7a1e83</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_Row5_Title</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <Text>PAGOS</Text>
+                      <TextBrush>[0:0:0]</TextBrush>
+                      <TypeOfComponent>Row:CrossTab1_Row5</TypeOfComponent>
+                    </CrossTab1_Row5_Title>
+                    <CrossTab1_RowTotal6 Ref="26" type="CrossRowTotal" isKey="true">
+                      <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                      <Brush>[255:255:255]</Brush>
+                      <ClientRectangle>12.8,1.7,0,0</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Enabled>False</Enabled>
+                      <Font>Arial,9</Font>
+                      <Guid>caa87208482d47b48636e3e24b77ba79</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_RowTotal6</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <Text>Total</Text>
+                      <TextBrush>Black</TextBrush>
+                    </CrossTab1_RowTotal6>
+                    <CrossTab1_Row6_Title Ref="27" type="CrossTitle" isKey="true">
+                      <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                      <Brush>White</Brush>
+                      <ClientRectangle>12.8,0.45,3.2,0.6</ClientRectangle>
+                      <Font>Arial,9</Font>
+                      <Guid>6df5794566524e88a2073a03f563f058</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_Row6_Title</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <Text>DEPARTAMENTO</Text>
+                      <TextBrush>[0:0:0]</TextBrush>
+                      <TypeOfComponent>Row:CrossTab1_Row6</TypeOfComponent>
+                    </CrossTab1_Row6_Title>
+                    <CrossTab1_ColTotal1 Ref="28" type="CrossColumnTotal" isKey="true">
+                      <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                      <Brush>[255:255:255]</Brush>
+                      <ClientRectangle>18.05,0.45,1.2,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>89de218e9be042db9d63b7adc6512dcc</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_ColTotal1</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <Text>Total</Text>
+                      <TextBrush>Black</TextBrush>
+                    </CrossTab1_ColTotal1>
+                    <CrossTab1_LeftTitle Ref="29" type="CrossTitle" isKey="true">
+                      <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                      <Brush>White</Brush>
+                      <ClientRectangle>0,0,16,0.4</ClientRectangle>
+                      <Font>Arial,9</Font>
+                      <Guid>b2411e9c51544a8cb193134ff7a24574</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_LeftTitle</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <TextBrush>[105:105:105]</TextBrush>
+                      <TypeOfComponent>LeftTitle</TypeOfComponent>
+                    </CrossTab1_LeftTitle>
+                    <CrossTab1_Row1 Ref="30" type="CrossRow" isKey="true">
+                      <Alias>ProyectoCodigoFinanciero</Alias>
+                      <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                      <Brush>White</Brush>
+                      <ClientRectangle>0,1.1,4.4,1.2</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <DisplayValue>{FDCnxEstadoProyectos.ProyectoCodigoFinanciero}</DisplayValue>
+                      <Font>Arial,9</Font>
+                      <Guid>9d593d01a5d24d09bf1835f282449eb1</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_Row1</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <ShowTotal>False</ShowTotal>
+                      <Text>ProyectoCodigoFinanciero</Text>
+                      <TextBrush>[0:0:0]</TextBrush>
+                      <TotalGuid>10308758ca12410cb4c77f2614f227fe</TotalGuid>
+                      <Value>{FDCnxEstadoProyectos.ProyectoCodigoFinanciero}</Value>
+                    </CrossTab1_Row1>
+                    <CrossTab1_Row2 Ref="31" type="CrossRow" isKey="true">
+                      <Alias>saldo</Alias>
+                      <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                      <Brush>White</Brush>
+                      <ClientRectangle>4.4,1.1,3.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <DisplayValue>{FDCnxEstadoProyectos.saldo}</DisplayValue>
+                      <Font>Arial,9</Font>
+                      <Guid>bc397e0911ac4c07ba730a24ea88f7a0</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_Row2</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <Text>saldo</Text>
+                      <TextBrush>[0:0:0]</TextBrush>
+                      <TextFormat Ref="32" type="CurrencyFormat" isKey="true">
+                        <GroupSeparator>,</GroupSeparator>
+                        <NegativePattern>0</NegativePattern>
+                        <PositivePattern>0</PositivePattern>
+                        <Symbol>Q</Symbol>
+                      </TextFormat>
+                      <TotalGuid>8dd053f3124e49e58e2a8e9505b588a9</TotalGuid>
+                      <Value>{FDCnxEstadoProyectos.saldo}</Value>
+                    </CrossTab1_Row2>
+                    <CrossTab1_Row3 Ref="33" type="CrossRow" isKey="true">
+                      <Alias>NominaCorrel</Alias>
+                      <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                      <Brush>White</Brush>
+                      <ClientRectangle>7.8,1.1,2.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <DisplayValue>{FDCnxEstadoProyectos.NominaCorrel}</DisplayValue>
+                      <Font>Arial,9</Font>
+                      <Guid>a7d40c110d7f434abce844b3dbd947a2</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_Row3</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <ShowTotal>False</ShowTotal>
+                      <Text>NominaCorrel</Text>
+                      <TextBrush>[0:0:0]</TextBrush>
+                      <TotalGuid>cded41bd6cd0486582a3ca19f990f194</TotalGuid>
+                      <Value>{FDCnxEstadoProyectos.NominaCorrel}</Value>
+                    </CrossTab1_Row3>
+                    <CrossTab1_Row4 Ref="34" type="CrossRow" isKey="true">
+                      <Alias>NoCur</Alias>
+                      <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                      <Brush>White</Brush>
+                      <ClientRectangle>10.2,1.1,1.2,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <DisplayValue>{FDCnxEstadoProyectos.NoCur}</DisplayValue>
+                      <Font>Arial,9</Font>
+                      <Guid>88e14dc9120c426b8330dd9a7731182c</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_Row4</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <ShowTotal>False</ShowTotal>
+                      <Text>NoCur</Text>
+                      <TextBrush>[0:0:0]</TextBrush>
+                      <TotalGuid>1f1fdd23bf5f4dcc9e9c8bd4231a4712</TotalGuid>
+                      <Value>{FDCnxEstadoProyectos.NoCur}</Value>
+                    </CrossTab1_Row4>
+                    <CrossTab1_Row5 Ref="35" type="CrossRow" isKey="true">
+                      <Alias>Pagos</Alias>
+                      <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                      <Brush>White</Brush>
+                      <ClientRectangle>11.4,1.1,1.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <DisplayValue>{FDCnxEstadoProyectos.Pagos}</DisplayValue>
+                      <Font>Arial,9</Font>
+                      <Guid>21f619eef1ff4b05ba07b81637105dfe</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_Row5</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <ShowTotal>False</ShowTotal>
+                      <Text>Pagos</Text>
+                      <TextBrush>[0:0:0]</TextBrush>
+                      <TextFormat Ref="36" type="CurrencyFormat" isKey="true">
+                        <GroupSeparator>,</GroupSeparator>
+                        <NegativePattern>0</NegativePattern>
+                        <PositivePattern>0</PositivePattern>
+                        <Symbol>Q</Symbol>
+                      </TextFormat>
+                      <TotalGuid>7001ddea8dc94540b89fd8df66cbde76</TotalGuid>
+                      <Value>{FDCnxEstadoProyectos.Pagos}</Value>
+                    </CrossTab1_Row5>
+                    <CrossTab1_Row6 Ref="37" type="CrossRow" isKey="true">
+                      <Alias>Departamento</Alias>
+                      <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                      <Brush>White</Brush>
+                      <ClientRectangle>12.8,1.1,3.2,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <DisplayValue>{FDCnxEstadoProyectos.Departamento}</DisplayValue>
+                      <Font>Arial,9</Font>
+                      <Guid>2aa64859ea914bf99f105bebb05224d9</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_Row6</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <ShowTotal>False</ShowTotal>
+                      <Text>Departamento</Text>
+                      <TextBrush>[0:0:0]</TextBrush>
+                      <TotalGuid>caa87208482d47b48636e3e24b77ba79</TotalGuid>
+                      <Value>{FDCnxEstadoProyectos.Departamento}</Value>
+                    </CrossTab1_Row6>
+                    <CrossTab1_Column1 Ref="38" type="CrossColumn" isKey="true">
+                      <Alias>CorrelativoEst</Alias>
+                      <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                      <Brush>White</Brush>
+                      <ClientRectangle>16.05,0.45,2,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <DisplayValue>{FDCnxEstadoProyectos.CorrelativoEst}</DisplayValue>
+                      <Font>Arial,9</Font>
+                      <Guid>874bcb146c6040cab4858e014ef98773</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_Column1</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <Text>CorrelativoEst</Text>
+                      <TextBrush>[0:0:0]</TextBrush>
+                      <TotalGuid>89de218e9be042db9d63b7adc6512dcc</TotalGuid>
+                      <Value>{FDCnxEstadoProyectos.CorrelativoEst}</Value>
+                    </CrossTab1_Column1>
+                    <CrossTab1_Sum1 Ref="39" type="CrossSummary" isKey="true">
+                      <Alias>Pagos</Alias>
+                      <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                      <Brush>[255:255:255]</Brush>
+                      <ClientRectangle>16.05,1.1,2,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>86a8e9209b1b4f28bbaacc12a194491c</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_Sum1</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <SummaryValues>SkipZerosAndNulls</SummaryValues>
+                      <Text>0</Text>
+                      <TextBrush>Black</TextBrush>
+                      <TextFormat Ref="40" type="CurrencyFormat" isKey="true">
+                        <GroupSeparator>,</GroupSeparator>
+                        <NegativePattern>0</NegativePattern>
+                        <PositivePattern>0</PositivePattern>
+                        <Symbol>Q</Symbol>
+                      </TextFormat>
+                      <Value>{FDCnxEstadoProyectos.Pagos}</Value>
+                    </CrossTab1_Sum1>
+                    <CrossTab1_RightTitle Ref="41" type="CrossTitle" isKey="true">
+                      <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                      <Brush>White</Brush>
+                      <ClientRectangle>16.05,0,3.2,0.4</ClientRectangle>
+                      <Font>Arial,9</Font>
+                      <Guid>51b58366050848dbae962cbe07708a54</Guid>
+                      <HorAlignment>Left</HorAlignment>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>CrossTab1_RightTitle</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="15" />
+                      <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                      <Text>CORRELATIVO</Text>
+                      <TextBrush>[0:0:0]</TextBrush>
+                      <TypeOfComponent>RightTitle</TypeOfComponent>
+                    </CrossTab1_RightTitle>
+                  </Components>
+                  <Conditions isList="true" count="0" />
+                  <DataRelationName />
+                  <DataSourceName>FDCnxEstadoProyectos</DataSourceName>
+                  <EmptyValue />
+                  <Filters isList="true" count="0" />
+                  <Name>CrossTab1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="14" />
+                  <Sort isList="true" count="0" />
+                </CrossTab1>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <DataRelationName isNull="true" />
+              <Filters isList="true" count="0" />
+              <MasterComponent isRef="13" />
+              <Name>CrossDataBand1</Name>
+              <Page isRef="4" />
+              <Parent isRef="13" />
+              <Sort isList="true" count="0" />
+            </CrossDataBand1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>FDCnxEstadoProyectos</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+        <GroupFooterBand1 Ref="42" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,8.16,33.6,0.25</ClientRectangle>
+          <Components isList="true" count="1">
+            <CrossGroupFooterBand1 Ref="43" type="CrossGroupFooterBand" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,33.48,0.25</ClientRectangle>
+              <Components isList="true" count="0" />
+              <Conditions isList="true" count="0" />
+              <Name>CrossGroupFooterBand1</Name>
+              <Page isRef="4" />
+              <Parent isRef="42" />
+            </CrossGroupFooterBand1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </GroupFooterBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>0d9e9d4fbf6f463f8574a6ed0856bc11</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>21.6</PageHeight>
+      <PageWidth>35.6</PageWidth>
+      <PaperSize>Legal</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="44" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="45" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Informe</ReportAlias>
+  <ReportChanged>9/5/2012 12:36:44 PM</ReportChanged>
+  <ReportCreated>9/5/2012 9:17:40 AM</ReportCreated>
+  <ReportFile>C:\Users\Usuario\Documents\Visual Studio 2005\WebSites\SICOP 23042012\Reportes\FINAL INFORME ESTADO PROYECTOS3.mrt</ReportFile>
+  <ReportGuid>dc5350fcfd3a402f98acfed04213aeb9</ReportGuid>
+  <ReportName>Informe</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2012.1.1300</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Informe : Stimulsoft.Report.StiReport
+    {
+        
+        public Informe()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

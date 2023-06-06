@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <cnfideicomiso Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>cnfideicomiso</Alias>
+        <ConnectionStringEncrypted>+SDLK2dIax3JRKHw8USlJ95ay+PNaKnN402hzPJcpCrGyNEJRXfTqHJBtQDDXOunw3T3KFZbAVlsYYT4TbTjD8TI98LNS0EJ7VEZzGLQ4T+eeMHLT197hfxb1cRjCGlqgdr/y09nopj5Xe0c7tixF8LA8yvnClGkb0eczGDE9ReGyHGh6A==</ConnectionStringEncrypted>
+        <Name>cnfideicomiso</Name>
+      </cnfideicomiso>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <PrObtenerRptControlFinancieroObraGrafica Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>PrObtenerRptControlFinancieroObraGrafica</Alias>
+        <Columns isList="true" count="25">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>CertCorrel,System.Int32</value>
+          <value>EmpresaNIT,System.String</value>
+          <value>Nombre,System.String</value>
+          <value>CodigoCert,System.String</value>
+          <value>Punto,System.String</value>
+          <value>NumeralRomano,System.String</value>
+          <value>Numero,System.String</value>
+          <value>Acta,System.Int32</value>
+          <value>AnioCertificacion,System.Int32</value>
+          <value>Fecha,System.DateTime</value>
+          <value>DocCambioCorrel,System.String</value>
+          <value>Monto,System.Decimal</value>
+          <value>Descripcion,System.String</value>
+          <value>Resolucion,System.String</value>
+          <value>Resuelve,System.String</value>
+          <value>Director,System.String</value>
+          <value>Asesoria,System.String</value>
+          <value>EstadoID,System.Int32</value>
+          <value>ActaLetras,System.String</value>
+          <value>FechaLetras,System.String</value>
+          <value>FechaExtension,System.DateTime</value>
+          <value>FechaExtensionLetras,System.String</value>
+          <value>Solicitante,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>PrObtenerRptControlFinancieroObraGrafica</Name>
+        <NameInSource>cnfideicomiso</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>_x0040_AnioID,,8,6</value>
+          <value>_x0040_ProyectoCodigo,,22,12</value>
+          <value>_x0040_CertCorrel,,8,6</value>
+        </Parameters>
+        <SqlCommand>execute prObtenerInfoFideicomisoVial @AnioID, @ProyectoCodigo, @CertCorrel</SqlCommand>
+      </PrObtenerRptControlFinancieroObraGrafica>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="5">
+        <PageHeaderBand1 Ref="5" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19.6,2.91</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text1 Ref="6" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.67,1.91,11.53,0.51</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>&lt;B&gt;CERT. FIDEICOMISO / {PrObtenerRptControlFinancieroObraGrafica.CodigoCert}&lt;/B&gt;</Text>
+              <TextBrush>Black</TextBrush>
+              <TextQuality>Wysiwyg</TextQuality>
+            </Text1>
+            <Image1 Ref="7" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.37,0.04,3.7,2.54</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Image>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</Image>
+              <Name>Image1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Stretch>True</Stretch>
+            </Image1>
+            <Text7 Ref="8" type="Text" isKey="true">
+              <Brush>[191:191:191]</Brush>
+              <ClientRectangle>4.14,0.45,15.06,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <TextBrush>Black</TextBrush>
+            </Text7>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageHeaderBand1>
+        <PageFooterBand1 Ref="9" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,24.15,19.6,1.75</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text6 Ref="10" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.08,0.51,18.83,1.1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>Finca Nacional La Aurora Salón No. 7 Zona 13
+PBX: 2475-4230</Text>
+              <TextBrush>Black</TextBrush>
+            </Text6>
+            <Text8 Ref="11" type="Text" isKey="true">
+              <Brush>[191:191:191]</Brush>
+              <ClientRectangle>0.12,0.07,18.81,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <TextBrush>Black</TextBrush>
+            </Text8>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageFooterBand1>
+        <DataBand1 Ref="12" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,4.11,19.6,1.86</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text2 Ref="13" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.4,0.15,18.8,0.51</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,11</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <Text>A continuación hago constar lo resuelto en el punto &lt;B&gt;{PrObtenerRptControlFinancieroObraGrafica.Punto}, NUMERAL ROMANO {PrObtenerRptControlFinancieroObraGrafica.NumeralRomano}, NUMERO {PrObtenerRptControlFinancieroObraGrafica.Numero}&lt;/B&gt; del acta &lt;B&gt;{ToUpperCase(PrObtenerRptControlFinancieroObraGrafica.ActaLetras)} ({PrObtenerRptControlFinancieroObraGrafica.Acta}-{PrObtenerRptControlFinancieroObraGrafica.AnioCertificacion})&lt;/B&gt;, correspondiente a la sesión ordinaria celebrada por el Comité Técnico del Fideicomiso del Fondo Vial, el dia {PrObtenerRptControlFinancieroObraGrafica.FechaLetras} .</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+            </Text2>
+            <Text9 Ref="14" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>[0:255:255:255]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.47,1.17,18.73,0.51</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,12</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <Text>&lt;B&gt;":..{PrObtenerRptControlFinancieroObraGrafica.Punto}:    ASPECTOS TÉCNICOS: I. DOCUMENTOS DE CAMBIO Y SOLICITUDES. &lt;/B&gt;{PrObtenerRptControlFinancieroObraGrafica.Solicitante}:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+            </Text9>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+        <Table1 Ref="15" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,6.77,19.6,1.36</ClientRectangle>
+          <ColumnCount>7</ColumnCount>
+          <Components isList="true" count="14">
+            <Table1_Cell1 Ref="16" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>Right;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,0.78,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,10</Font>
+              <ID>30</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell1</Name>
+              <Page isRef="4" />
+              <Parent isRef="15" />
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell1>
+            <Table1_Cell2 Ref="17" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.78,0,1.14,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,10,Bold</Font>
+              <Guid>9c9cc8d386e34122abf8feefbb47b030</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>0</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell2</Name>
+              <Page isRef="4" />
+              <Parent isRef="15" />
+              <Text>NO.</Text>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell2>
+            <Table1_Cell3 Ref="18" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.92,0,2.46,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,10,Bold</Font>
+              <Guid>892a41cc0eeb40718ad17c97617ca44c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>1</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell3</Name>
+              <Page isRef="4" />
+              <Parent isRef="15" />
+              <Text>PROYECTO</Text>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell3>
+            <Table1_Cell4 Ref="19" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.38,0,4.05,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,10,Bold</Font>
+              <Guid>35dd8fc0077d4439ac2787d6192ec616</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>2</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell4</Name>
+              <Page isRef="4" />
+              <Parent isRef="15" />
+              <Text>CONTRATISTA</Text>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell4>
+            <Table1_Cell5 Ref="20" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.43,0,2.02,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,10,Bold</Font>
+              <Guid>177ddb886cbd4554b9ed7a5636b25b27</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>3</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell5</Name>
+              <Page isRef="4" />
+              <Parent isRef="15" />
+              <Text>NO DOC DE 
+CAMBIO</Text>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell5>
+            <Table1_Cell6 Ref="21" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.45,0,2.06,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,10,Bold</Font>
+              <Guid>1bd77f3a0a2f4c128cc0b5892cb2e53c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>4</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell6</Name>
+              <Page isRef="4" />
+              <Parent isRef="15" />
+              <Text>MONTO</Text>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell6>
+            <Table1_Cell7 Ref="22" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.51,0,6.49,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,10,Bold</Font>
+              <Guid>a82e94b23dd24af2bb8c667cf98b9534</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>25</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell7</Name>
+              <Page isRef="4" />
+              <Parent isRef="15" />
+              <Text>DESCRIPCION</Text>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell7>
+            <Table1_Cell8 Ref="23" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>Right;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.6,0.78,0.76</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <ID>31</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell8</Name>
+              <Page isRef="4" />
+              <Parent isRef="15" />
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell8>
+            <Table1_Cell9 Ref="24" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.78,0.6,1.14,0.76</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,8</Font>
+              <Guid>4db2f9b1770242b588f153555588c789</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>5</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell9</Name>
+              <Page isRef="4" />
+              <Parent isRef="15" />
+              <Text>{PrObtenerRptControlFinancieroObraGrafica.Numero}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Table1_Cell9>
+            <Table1_Cell10 Ref="25" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1.92,0.6,2.46,0.76</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,8</Font>
+              <Guid>f18562a7a3af4dd5a91090c1b9a355c0</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>6</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell10</Name>
+              <Page isRef="4" />
+              <Parent isRef="15" />
+              <Text>{PrObtenerRptControlFinancieroObraGrafica.ProyectoCodigo}-{PrObtenerRptControlFinancieroObraGrafica.AnioID}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Table1_Cell10>
+            <Table1_Cell11 Ref="26" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.38,0.6,4.05,0.76</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,8</Font>
+              <Guid>01abc968fc4649a0907e488b2229888c</Guid>
+              <ID>7</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell11</Name>
+              <Page isRef="4" />
+              <Parent isRef="15" />
+              <Text>{PrObtenerRptControlFinancieroObraGrafica.Nombre}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Table1_Cell11>
+            <Table1_Cell12 Ref="27" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8.43,0.6,2.02,0.76</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,8</Font>
+              <Guid>e1a959747941463387a47517a5648d48</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>8</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell12</Name>
+              <Page isRef="4" />
+              <Parent isRef="15" />
+              <Text>{PrObtenerRptControlFinancieroObraGrafica.DocCambioCorrel}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Table1_Cell12>
+            <Table1_Cell13 Ref="28" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>10.45,0.6,2.06,0.76</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,8</Font>
+              <Guid>83c701fcf34347cebfced3e733c41c9b</Guid>
+              <ID>9</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell13</Name>
+              <Page isRef="4" />
+              <Parent isRef="15" />
+              <Text>{PrObtenerRptControlFinancieroObraGrafica.Monto}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="29" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Table1_Cell13>
+            <Table1_Cell14 Ref="30" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>12.51,0.6,6.49,0.76</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,8</Font>
+              <Guid>88ef0181ded247ff96d433a72c58fc7b</Guid>
+              <ID>26</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell14</Name>
+              <Page isRef="4" />
+              <Parent isRef="15" />
+              <Text>{PrObtenerRptControlFinancieroObraGrafica.Descripcion}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Table1_Cell14>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>PrObtenerRptControlFinancieroObraGrafica</DataSourceName>
+          <Filters isList="true" count="0" />
+          <FooterPrintOnAllPages>True</FooterPrintOnAllPages>
+          <Guid>6ca80b6db0c543ea8484d741521ae427</Guid>
+          <Name>Table1</Name>
+          <NumberID>32</NumberID>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <RowCount>2</RowCount>
+          <Sort isList="true" count="0" />
+        </Table1>
+        <DataBand2 Ref="31" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,8.93,19.6,6.1</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text3 Ref="32" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.46,0.15,18.71,0.51</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,11</Font>
+              <Guid>b6241c356e8e469bb98e8733bb92701c</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4" />
+              <Parent isRef="31" />
+              <Text>&lt;B&gt;RESOLUCION: &lt;/B&gt;{PrObtenerRptControlFinancieroObraGrafica.Resolucion}  &lt;B&gt;RESUELVE &lt;/B&gt;{PrObtenerRptControlFinancieroObraGrafica.Resuelve}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+            </Text3>
+            <Text4 Ref="33" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.68,4.29,7.66,1.46</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,11,Bold</Font>
+              <Guid>edba536196a34c5e9df3a01f62b1a41e</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="4" />
+              <Parent isRef="31" />
+              <Text>Ing. {PrObtenerRptControlFinancieroObraGrafica.Director}
+Director de COVIAL y Secretario
+del Comité Técnico</Text>
+              <TextBrush>Black</TextBrush>
+            </Text4>
+            <Text5 Ref="34" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.5,4.29,7.58,1.01</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,11,Bold</Font>
+              <Guid>2b2835dedb0a4993a958bbbfd9e9d5fc</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="4" />
+              <Parent isRef="31" />
+              <Text>Elaboró: Lic. {PrObtenerRptControlFinancieroObraGrafica.Asesoria}
+Asesoría Jurídica, COVIAL</Text>
+              <TextBrush>Black</TextBrush>
+            </Text5>
+            <Text10 Ref="35" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>[0:255:255:255]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.42,1.45,18.75,0.51</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,12,Italic</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="4" />
+              <Parent isRef="31" />
+              <Text>Y para los usos legales que se consideren convenientes, se extiende la presente certificación de la parte conducente del acta {PrObtenerRptControlFinancieroObraGrafica.Acta}-{PrObtenerRptControlFinancieroObraGrafica.AnioCertificacion}. En la Ciudad de Guatemala, a los {PrObtenerRptControlFinancieroObraGrafica.FechaExtensionLetras}.</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+            </Text10>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Guid>7929fa5c04924a3197857eca80b33ddd</Guid>
+          <Name>DataBand2</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </DataBand2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>b2224de00f994938a35a0abf26f5ea7d</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>27.9</PageHeight>
+      <PageWidth>21.6</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="36" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="37" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>1/30/2014 3:38:16 PM</ReportChanged>
+  <ReportCreated>1/28/2014 4:05:35 PM</ReportCreated>
+  <ReportFile>C:\Users\USUARIO\Downloads\Back-up Server Covial 2014\Back-Up Certificacion Fideicomiso\RptFideicomiso.mrt</ReportFile>
+  <ReportGuid>0e2aa984312b4a39b35ffb69c53db8e7</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2013.1.1600</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

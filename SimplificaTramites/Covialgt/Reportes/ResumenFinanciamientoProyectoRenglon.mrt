@@ -1,0 +1,2086 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.0" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <Databases isList="true" count="1">
+      <SICOP_RPT Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Name>SICOP_RPT</Name>
+        <ConnectionString>Data Source=192.168.1.23; Pooling=True; Max Pool Size=75; Connection Timeout=300; Initial Catalog=z_PRODUCCION_sicopDB;user id=SICOP_APP;password=5160p60v14l</ConnectionString>
+        <Alias>SICOP_RPT</Alias>
+        <PromptUserNameAndPassword>False</PromptUserNameAndPassword>
+      </SICOP_RPT>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <ResumenFinanciamientoProyectoRenglon Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Columns isList="true" count="17">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoSupervisionCodigo,System.String</value>
+          <value>Representante,System.String</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>ContratoCodigo,System.String</value>
+          <value>MontoContrato,System.Decimal</value>
+          <value>FechaInicioFisico,System.String</value>
+          <value>FechaFinalOriginal,System.String</value>
+          <value>FechaFinModificado,System.String</value>
+          <value>RenglonCodCOVIAL,System.String</value>
+          <value>RenglonDesc,System.String</value>
+          <value>RenglonPrecioUnitario,System.Decimal</value>
+          <value>CantidadOriginal,System.Decimal</value>
+          <value>MontoOriginal,System.Decimal</value>
+          <value>CantidadACtual,System.Decimal</value>
+          <value>MontoACtual,System.Decimal</value>
+          <value>CantModificada,System.Decimal</value>
+        </Columns>
+        <NameInSource>SICOP_RPT</NameInSource>
+        <SqlCommand>Exec  "dbo"."ResumenFinanciamientoProyectoRenglon" @anioid,@proyectocodigo</SqlCommand>
+        <Alias>ResumenFinanciamientoProyectoRenglon</Alias>
+        <Name>ResumenFinanciamientoProyectoRenglon</Name>
+        <Dictionary isRef="1"/>
+        <Parameters isList="true" count="2">
+          <value>_x0040_anioid,,8,0</value>
+          <value>_x0040_proyectocodigo,,22,10</value>
+        </Parameters>
+      </ResumenFinanciamientoProyectoRenglon>
+    </DataSources>
+    <Relations isList="true" count="0"/>
+    <Variables isList="true" count="0"/>
+    <Report isRef="0"/>
+  </Dictionary>
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Name>Page1</Name>
+      <PageWidth>27.94</PageWidth>
+      <Brush>Transparent</Brush>
+      <PageHeight>21.59</PageHeight>
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Conditions isList="true" count="0"/>
+      <Watermark Ref="5" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100,Regular,Point</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+      <Margins>1,1,1,1</Margins>
+      <Interaction Ref="6" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+        <DrillDownParameter1 Ref="7" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+        <DrillDownParameter2 Ref="8" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+        <DrillDownParameter3 Ref="9" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+      </Interaction>
+      <Components isList="true" count="5">
+        <PageHeaderBand1 Ref="10" type="PageHeaderBand" isKey="true">
+          <Name>PageHeaderBand1</Name>
+          <Brush>Transparent</Brush>
+          <Border>None;Black;1;Solid;False;4;Black</Border>
+          <Conditions isList="true" count="0"/>
+          <Interaction Ref="11" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+            <DrillDownParameter1 Ref="12" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+            <DrillDownParameter2 Ref="13" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+            <DrillDownParameter3 Ref="14" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+          </Interaction>
+          <PrintOn>OnlyFirstPage</PrintOn>
+          <MinHeight>0</MinHeight>
+          <MaxHeight>0</MaxHeight>
+          <Parent isRef="4"/>
+          <Components isList="true" count="23">
+            <Text3 Ref="15" type="Text" isKey="true">
+              <Text>BALANCE GENERAL</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>3.19</Left>
+              <Name>Text3</Name>
+              <Top>1.6</Top>
+              <Font>Arial,11,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat Ref="16" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="17" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="18" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="19" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="20" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>3.1899999999999995,1.6000000000000023,20.85000000000001,0.4099999999999997</ClientRectangle>
+              <Page isRef="4"/>
+            </Text3>
+            <Text2 Ref="21" type="Text" isKey="true">
+              <Text>UNIDAD EJECUTORA DE CONSERVACION VIAL</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>3.19</Left>
+              <Name>Text2</Name>
+              <Top>0.81</Top>
+              <Font>Arial,11,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat Ref="22" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="23" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="24" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="25" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="26" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>3.1899999999999995,0.81,20.85000000000001,0.5800000000000018</ClientRectangle>
+              <Page isRef="4"/>
+            </Text2>
+            <Text1 Ref="27" type="Text" isKey="true">
+              <Text>MINISTERIO DE COMUNICACIONES INFRAESTRUCTURA Y VIVIENDA</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>3.19</Left>
+              <Name>Text1</Name>
+              <Top>0</Top>
+              <Font>Arial,11,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat Ref="28" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="29" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="30" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="31" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="32" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>3.1899999999999995,-1.1102230246251565e-15,20.85000000000001,0.6100000000000005</ClientRectangle>
+              <Page isRef="4"/>
+            </Text1>
+            <Image1 Ref="33" type="Image" isKey="true">
+              <Name>Image1</Name>
+              <Left>0</Left>
+              <Image>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</Image>
+              <Top>0</Top>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <Stretch>True</Stretch>
+              <Interaction Ref="34" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="35" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="36" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="37" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>0,-1.1102230246251565e-15,3.1400000000000015,1.940000000000002</ClientRectangle>
+              <Page isRef="4"/>
+              <Parent isRef="10"/>
+            </Image1>
+            <Text50 Ref="38" type="Text" isKey="true">
+              <Text>SUPERVISORA</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>1.2</Left>
+              <Name>Text50</Name>
+              <Top>4.8</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="39" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="40" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="41" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="42" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="43" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>1.2000000000000002,4.800000000000001,2.7239999999999958,0.5</ClientRectangle>
+              <Page isRef="4"/>
+            </Text50>
+            <Text49 Ref="44" type="Text" isKey="true">
+              <Text>CONTRATISTA:</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>1.2</Left>
+              <Name>Text49</Name>
+              <Top>3.8</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="45" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="46" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="47" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="48" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="49" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>1.1999999999999993,3.8000000000000003,2.724000000000001,0.899999999999999</ClientRectangle>
+              <Page isRef="4"/>
+            </Text49>
+            <Text48 Ref="50" type="Text" isKey="true">
+              <Text>MONTO ORIGINAL DEL CONTRATO:</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>1.2</Left>
+              <Name>Text48</Name>
+              <Top>5.4</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="51" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="52" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="53" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="54" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="55" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>1.2000000000000002,5.4,4.324,0.4999999999999991</ClientRectangle>
+              <Page isRef="4"/>
+            </Text48>
+            <Text47 Ref="56" type="Text" isKey="true">
+              <Text>CONTRATO:</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>1.2</Left>
+              <Name>Text47</Name>
+              <Top>3.2</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="57" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="58" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="59" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="60" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="61" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>1.2000000000000002,3.1999999999999997,2.724000000000001,0.4999999999999991</ClientRectangle>
+              <Page isRef="4"/>
+            </Text47>
+            <Text46 Ref="62" type="Text" isKey="true">
+              <Text>{ResumenFinanciamientoProyectoRenglon.ProyectoCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>6</Left>
+              <Name>Text46</Name>
+              <Top>2.6</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="63" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="64" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="65" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="66" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="67" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>6,2.6,2.724,0.5</ClientRectangle>
+              <Page isRef="4"/>
+            </Text46>
+            <Text45 Ref="68" type="Text" isKey="true">
+              <Text>PROYECTO</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>1.2</Left>
+              <Name>Text45</Name>
+              <Top>2.6</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="69" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="70" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="71" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="72" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="73" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>1.200000000000001,2.6,2.724,0.5</ClientRectangle>
+              <Page isRef="4"/>
+            </Text45>
+            <Text53 Ref="74" type="Text" isKey="true">
+              <Text>{Sum(ResumenFinanciamientoProyectoRenglon.MontoACtual)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>6</Left>
+              <Name>Text53</Name>
+              <Top>6</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="75" type="CurrencyFormat" isKey="true">
+                <PositivePattern>3</PositivePattern>
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator/>
+                <GroupSize>3</GroupSize>
+                <UseLocalSetting>True</UseLocalSetting>
+                <NegativePattern>15</NegativePattern>
+                <Symbol>p.</Symbol>
+                <DecimalSeparator>,</DecimalSeparator>
+                <UseGroupSeparator>True</UseGroupSeparator>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="76" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="77" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="78" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="79" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>6.000000000000003,6.000000000000002,2.7239999999999993,0.4999999999999991</ClientRectangle>
+              <Page isRef="4"/>
+            </Text53>
+            <Text52 Ref="80" type="Text" isKey="true">
+              <Text>{ResumenFinanciamientoProyectoRenglon.MontoContrato}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>6</Left>
+              <Name>Text52</Name>
+              <Top>5.4</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="81" type="CurrencyFormat" isKey="true">
+                <PositivePattern>3</PositivePattern>
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator/>
+                <GroupSize>3</GroupSize>
+                <UseLocalSetting>True</UseLocalSetting>
+                <NegativePattern>15</NegativePattern>
+                <Symbol>p.</Symbol>
+                <DecimalSeparator>,</DecimalSeparator>
+                <UseGroupSeparator>True</UseGroupSeparator>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="82" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="83" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="84" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="85" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>6,5.4,2.724,0.4999999999999991</ClientRectangle>
+              <Page isRef="4"/>
+            </Text52>
+            <Text51 Ref="86" type="Text" isKey="true">
+              <Text>MONTO AJUSTADO DEL CONTRATO:</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>1.2</Left>
+              <Name>Text51</Name>
+              <Top>6</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="87" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="88" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="89" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="90" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="91" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>1.2000000000000002,6,4.323999999999995,0.4999999999999982</ClientRectangle>
+              <Page isRef="4"/>
+            </Text51>
+            <HorizontalLinePrimitive2 Ref="92" type="Stimulsoft.Report.Components.StiHorizontalLinePrimitive" isKey="true">
+              <Name>HorizontalLinePrimitive2</Name>
+              <Color>Black</Color>
+              <Left>0</Left>
+              <Size>2</Size>
+              <Top>2.2</Top>
+              <Interaction Ref="93" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="94" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="95" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="96" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>0,2.200000000000005,25.92000000000001,0.02540000000000031</ClientRectangle>
+              <Page isRef="4"/>
+              <Guid>398A376DF524ECD7E7D44672D0383753</Guid>
+            </HorizontalLinePrimitive2>
+            <Text62 Ref="97" type="Text" isKey="true">
+              <Text>{ResumenFinanciamientoProyectoRenglon.ContratoCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>6</Left>
+              <Name>Text62</Name>
+              <Top>3.2</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="98" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="99" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="100" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="101" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="102" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,2</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>6.000000000000003,3.1999999999999997,2.7239999999999993,0.4999999999999991</ClientRectangle>
+              <Page isRef="4"/>
+            </Text62>
+            <Text61 Ref="103" type="Text" isKey="true">
+              <Text>{ResumenFinanciamientoProyectoRenglon.ProyectoSupervisionCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>6</Left>
+              <Name>Text61</Name>
+              <Top>4.8</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="104" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="105" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="106" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="107" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="108" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>6.000000000000003,4.800000000000001,2.7239999999999993,0.5</ClientRectangle>
+              <Page isRef="4"/>
+            </Text61>
+            <Text60 Ref="109" type="Text" isKey="true">
+              <Text>{ResumenFinanciamientoProyectoRenglon.Representante}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>6</Left>
+              <Name>Text60</Name>
+              <Top>3.8</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="110" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="111" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="112" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="113" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="114" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <WordWrap>True</WordWrap>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,2</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>6.000000000000003,3.8000000000000003,7.124,1.0000000000000004</ClientRectangle>
+              <Page isRef="4"/>
+            </Text60>
+            <Text59 Ref="115" type="Text" isKey="true">
+              <Text>{ResumenFinanciamientoProyectoRenglon.FechaFinModificado}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>22.4</Left>
+              <Name>Text59</Name>
+              <Top>3.8</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="116" type="DateFormat" isKey="true">
+                <StringFormat>dd/MM/yyyy</StringFormat>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="117" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="118" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="119" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="120" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>22.400000000000006,3.8000000000000003,2.7239999999999895,0.5000000000000004</ClientRectangle>
+              <Page isRef="4"/>
+            </Text59>
+            <Text58 Ref="121" type="Text" isKey="true">
+              <Text>{ResumenFinanciamientoProyectoRenglon.FechaFinalOriginal}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>22.4</Left>
+              <Name>Text58</Name>
+              <Top>3.2</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="122" type="DateFormat" isKey="true">
+                <StringFormat>dd/MM/yyyy</StringFormat>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="123" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="124" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="125" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="126" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>22.400000000000006,3.1999999999999997,2.7239999999999895,0.4999999999999991</ClientRectangle>
+              <Page isRef="4"/>
+            </Text58>
+            <Text57 Ref="127" type="Text" isKey="true">
+              <Text>{ResumenFinanciamientoProyectoRenglon.FechaInicioFisico}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>22.4</Left>
+              <Name>Text57</Name>
+              <Top>2.6</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="128" type="DateFormat" isKey="true">
+                <StringFormat>dd/MM/yyyy</StringFormat>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="129" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="130" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="131" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="132" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>22.400000000000006,2.6,2.7239999999999895,0.5</ClientRectangle>
+              <Page isRef="4"/>
+            </Text57>
+            <Text56 Ref="133" type="Text" isKey="true">
+              <Text>FECHA DE FINALIZACION POR MODIFICACION CONTRACTUAL:</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>14.6</Left>
+              <Name>Text56</Name>
+              <Top>3.8</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="134" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="135" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="136" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="137" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="138" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>14.600000000000005,3.8000000000000003,7.3239999999999945,0.49999999999999867</ClientRectangle>
+              <Page isRef="4"/>
+            </Text56>
+            <Text55 Ref="139" type="Text" isKey="true">
+              <Text>FECHA ORIGINAL DE FINALIZACIÓN CONTRACTUAL:</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>14.6</Left>
+              <Name>Text55</Name>
+              <Top>3.2</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="140" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="141" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="142" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="143" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="144" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>14.600000000000005,3.1999999999999997,6.523999999999997,0.4999999999999991</ClientRectangle>
+              <Page isRef="4"/>
+            </Text55>
+            <Text54 Ref="145" type="Text" isKey="true">
+              <Text>FECHA DE INICIO CONTRACTUAL:</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>14.6</Left>
+              <Name>Text54</Name>
+              <Top>2.6</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="146" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="147" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="148" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="149" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="150" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="10"/>
+              <ClientRectangle>14.600000000000005,2.6,4.723999999999997,0.5</ClientRectangle>
+              <Page isRef="4"/>
+            </Text54>
+          </Components>
+          <ClientRectangle>0,0.3999999999999999,25.940000000000005,7.000000000000002</ClientRectangle>
+          <Page isRef="4"/>
+        </PageHeaderBand1>
+        <HeaderBand1 Ref="151" type="HeaderBand" isKey="true">
+          <Name>HeaderBand1</Name>
+          <Brush>Transparent</Brush>
+          <Border>None;Black;1;Solid;False;4;Black</Border>
+          <Conditions isList="true" count="0"/>
+          <Interaction Ref="152" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+            <DrillDownParameter1 Ref="153" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+            <DrillDownParameter2 Ref="154" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+            <DrillDownParameter3 Ref="155" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+          </Interaction>
+          <MinHeight>0</MinHeight>
+          <MaxHeight>0</MaxHeight>
+          <Components isList="true" count="15">
+            <Text22 Ref="156" type="Text" isKey="true">
+              <Text>VALOR</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>23.2</Left>
+              <Name>Text22</Name>
+              <Top>0.4</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat Ref="157" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="158" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="159" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="160" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="161" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="151"/>
+              <ClientRectangle>23.2,0.3999999999999968,1.9999999999999964,0.8000000000000007</ClientRectangle>
+              <Page isRef="4"/>
+            </Text22>
+            <Text21 Ref="162" type="Text" isKey="true">
+              <Text>CANTIDAD</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>21.2</Left>
+              <Name>Text21</Name>
+              <Top>0.4</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat Ref="163" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="164" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="165" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="166" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="167" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="151"/>
+              <ClientRectangle>21.2,0.3999999999999968,2,0.8000000000000007</ClientRectangle>
+              <Page isRef="4"/>
+            </Text21>
+            <Text20 Ref="168" type="Text" isKey="true">
+              <Text>VALOR</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>19.2</Left>
+              <Name>Text20</Name>
+              <Top>0.4</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat Ref="169" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="170" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="171" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="172" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="173" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="151"/>
+              <ClientRectangle>19.200000000000003,0.3999999999999968,1.9999999999999964,0.8000000000000007</ClientRectangle>
+              <Page isRef="4"/>
+            </Text20>
+            <Text18 Ref="174" type="Text" isKey="true">
+              <Text>CANTIDAD</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>17.2</Left>
+              <Name>Text18</Name>
+              <Top>0.4</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat Ref="175" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="176" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="177" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="178" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="179" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="151"/>
+              <ClientRectangle>17.2,0.3999999999999968,2.0000000000000036,0.8000000000000007</ClientRectangle>
+              <Page isRef="4"/>
+            </Text18>
+            <Text16 Ref="180" type="Text" isKey="true">
+              <Text>VALOR</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>15.2</Left>
+              <Name>Text16</Name>
+              <Top>0.4</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat Ref="181" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="182" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="183" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="184" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="185" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="151"/>
+              <ClientRectangle>15.200000000000003,0.3999999999999968,2,0.8000000000000007</ClientRectangle>
+              <Page isRef="4"/>
+            </Text16>
+            <Text26 Ref="186" type="Text" isKey="true">
+              <TextBrush>Black</TextBrush>
+              <Left>9.2</Left>
+              <Name>Text26</Name>
+              <Top>0</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>Top, Left, Right;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat Ref="187" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="188" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="189" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="190" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="191" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="151"/>
+              <ClientRectangle>9.199999999999996,0,4.0000000000000036,0.3999999999999968</ClientRectangle>
+              <Page isRef="4"/>
+            </Text26>
+            <Text25 Ref="192" type="Text" isKey="true">
+              <TextBrush>Black</TextBrush>
+              <Left>0.4</Left>
+              <Name>Text25</Name>
+              <Top>0</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>Top, Left, Right;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat Ref="193" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="194" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="195" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="196" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="197" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="151"/>
+              <ClientRectangle>0.3999999999999999,0,8.800000000000002,0.3999999999999968</ClientRectangle>
+              <Page isRef="4"/>
+            </Text25>
+            <Text24 Ref="198" type="Text" isKey="true">
+              <Text>TOTAL ACUMULADO</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>21.2</Left>
+              <Name>Text24</Name>
+              <Top>0</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>Top, Left, Right;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat Ref="199" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="200" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="201" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="202" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="203" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="151"/>
+              <ClientRectangle>21.2,0,3.9999999999999964,0.3999999999999968</ClientRectangle>
+              <Page isRef="4"/>
+            </Text24>
+            <Text23 Ref="204" type="Text" isKey="true">
+              <Text>DECREMENTOS</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>17.2</Left>
+              <Name>Text23</Name>
+              <Top>0</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>Top, Left, Right;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat Ref="205" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="206" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="207" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="208" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="209" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="151"/>
+              <ClientRectangle>17.2,0,4,0.3999999999999968</ClientRectangle>
+              <Page isRef="4"/>
+            </Text23>
+            <Text10 Ref="210" type="Text" isKey="true">
+              <Text>INCREMENTOS</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>13.2</Left>
+              <Name>Text10</Name>
+              <Top>0</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>Top, Left, Right;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat Ref="211" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="212" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="213" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="214" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="215" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="151"/>
+              <ClientRectangle>13.2,0,4,0.3999999999999968</ClientRectangle>
+              <Page isRef="4"/>
+            </Text10>
+            <Text13 Ref="216" type="Text" isKey="true">
+              <Text>CANTIDAD</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>13.2</Left>
+              <Name>Text13</Name>
+              <Top>0.4</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat Ref="217" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="218" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="219" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="220" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="221" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="151"/>
+              <ClientRectangle>13.2,0.3999999999999968,2.0000000000000036,0.8000000000000007</ClientRectangle>
+              <Page isRef="4"/>
+            </Text13>
+            <Text12 Ref="222" type="Text" isKey="true">
+              <Text>MONTO TOTAL
+AJUSTADO</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>11.2</Left>
+              <Name>Text12</Name>
+              <Top>0.4</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat Ref="223" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="224" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="225" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="226" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="227" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="151"/>
+              <ClientRectangle>11.200000000000003,0.3999999999999968,1.9999999999999964,0.8000000000000007</ClientRectangle>
+              <Page isRef="4"/>
+            </Text12>
+            <Text19 Ref="228" type="Text" isKey="true">
+              <Text>MONTO
+TOTAL</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>9.2</Left>
+              <Name>Text19</Name>
+              <Top>0.4</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat Ref="229" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="230" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="231" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="232" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="233" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="151"/>
+              <ClientRectangle>9.199999999999996,0.3999999999999968,2.0000000000000036,0.8000000000000007</ClientRectangle>
+              <Page isRef="4"/>
+            </Text19>
+            <Text11 Ref="234" type="Text" isKey="true">
+              <Text>DESCRIPCIÓN</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>3.6</Left>
+              <Name>Text11</Name>
+              <Top>0.4</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat Ref="235" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="236" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="237" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="238" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="239" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,3</MaxSize>
+              <Parent isRef="151"/>
+              <ClientRectangle>3.5999999999999996,0.3999999999999968,5.599999999999996,0.8000000000000007</ClientRectangle>
+              <Page isRef="4"/>
+            </Text11>
+            <Text14 Ref="240" type="Text" isKey="true">
+              <Text>RENGLÓN</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>0.4</Left>
+              <Name>Text14</Name>
+              <Top>0.4</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat Ref="241" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="242" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="243" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="244" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="245" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="151"/>
+              <ClientRectangle>0.3999999999999999,0.3999999999999968,3.1999999999999997,0.8000000000000007</ClientRectangle>
+              <Page isRef="4"/>
+            </Text14>
+          </Components>
+          <ClientRectangle>0,8.200000000000003,25.940000000000005,1.1999999999999975</ClientRectangle>
+          <Parent isRef="4"/>
+          <Page isRef="4"/>
+        </HeaderBand1>
+        <Data1 Ref="246" type="DataBand" isKey="true">
+          <Name>Data1</Name>
+          <Brush>Transparent</Brush>
+          <Border>None;Black;1;Solid;False;4;Black</Border>
+          <Conditions isList="true" count="0"/>
+          <СolumnDirection>AcrossThenDown</СolumnDirection>
+          <Filters isList="true" count="0"/>
+          <Sort isList="true" count="0"/>
+          <Interaction Ref="247" type="Stimulsoft.Report.Components.StiBandInteraction" isKey="true">
+            <DrillDownParameter1 Ref="248" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+            <DrillDownParameter2 Ref="249" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+            <DrillDownParameter3 Ref="250" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+          </Interaction>
+          <MinHeight>0</MinHeight>
+          <MaxHeight>3</MaxHeight>
+          <Components isList="true" count="10">
+            <Text34 Ref="251" type="Text" isKey="true">
+              <Text>{ResumenFinanciamientoProyectoRenglon.MontoACtual}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>23.2</Left>
+              <Name>Text34</Name>
+              <Top>0</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Right</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Bottom</VertAlignment>
+              <TextFormat Ref="252" type="CurrencyFormat" isKey="true">
+                <PositivePattern>3</PositivePattern>
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <GroupSize>3</GroupSize>
+                <UseLocalSetting>True</UseLocalSetting>
+                <NegativePattern>15</NegativePattern>
+                <Symbol>p.</Symbol>
+                <DecimalSeparator>.</DecimalSeparator>
+                <UseGroupSeparator>True</UseGroupSeparator>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="253" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="254" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="255" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="256" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="246"/>
+              <ClientRectangle>23.2,-1.7763568394002505e-15,1.9999999999999964,0.9999999999999982</ClientRectangle>
+              <Page isRef="4"/>
+            </Text34>
+            <Text33 Ref="257" type="Text" isKey="true">
+              <TextBrush>Black</TextBrush>
+              <Left>21.2</Left>
+              <Name>Text33</Name>
+              <Top>0</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Right</HorAlignment>
+              <Conditions isList="true" count="2">
+                <value>ResumenFinanciamientoProyectoRenglon_x002e_CantidadACtual,EqualTo,_x0030_,,Numeric,[0:0:0],Transparent,Arial_x002c_7_x002c_Regular_x002c_Point,True,True,ResumenFinanciamientoProyectoRenglon_x002e_CantidadOriginal</value>
+                <value>ResumenFinanciamientoProyectoRenglon_x002e_CantidadACtual,GreaterThan,_x0030_,,Numeric,[0:0:0],Transparent,Arial_x002c_7_x002c_Regular_x002c_Point,True,True,ResumenFinanciamientoProyectoRenglon_x002e_CantidadACtual</value>
+              </Conditions>
+              <VertAlignment>Bottom</VertAlignment>
+              <TextFormat Ref="258" type="NumberFormat" isKey="true">
+                <GroupSize>3</GroupSize>
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator/>
+                <UseLocalSetting>True</UseLocalSetting>
+                <NegativePattern>1</NegativePattern>
+                <DecimalSeparator>.</DecimalSeparator>
+                <UseGroupSeparator>True</UseGroupSeparator>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="259" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="260" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="261" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="262" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="246"/>
+              <ClientRectangle>21.2,-1.7763568394002505e-15,2,0.9999999999999982</ClientRectangle>
+              <Page isRef="4"/>
+            </Text33>
+            <Text31 Ref="263" type="Text" isKey="true">
+              <Text>0.00</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>19.2</Left>
+              <Name>Text31</Name>
+              <Top>0</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Right</HorAlignment>
+              <Conditions isList="true" count="1">
+                <value>ResumenFinanciamientoProyectoRenglon_x002e_CantModificada,LessThan,_x0030_,,Numeric,[0:0:0],Transparent,Arial_x002c_7_x002c_Regular_x002c_Point,True,True,Abs_x0028_Round_x0028_ResumenFinanciamientoProyectoRenglon_x002e_CantModificada_x0020__x002a__x0020_ResumenFinanciamientoProyectoRenglon_x002e_RenglonPrecioUnitario_x0020__x002a__x0020__x002d_1_x002c_2_x0029__x0029_</value>
+              </Conditions>
+              <VertAlignment>Bottom</VertAlignment>
+              <TextFormat Ref="264" type="CurrencyFormat" isKey="true">
+                <PositivePattern>3</PositivePattern>
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <GroupSize>3</GroupSize>
+                <UseLocalSetting>True</UseLocalSetting>
+                <NegativePattern>15</NegativePattern>
+                <Symbol>p.</Symbol>
+                <DecimalSeparator>.</DecimalSeparator>
+                <UseGroupSeparator>True</UseGroupSeparator>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="265" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="266" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="267" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="268" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="246"/>
+              <ClientRectangle>19.200000000000003,-1.7763568394002505e-15,1.9999999999999964,0.9999999999999982</ClientRectangle>
+              <Page isRef="4"/>
+            </Text31>
+            <Text30 Ref="269" type="Text" isKey="true">
+              <Text>0</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>17.2</Left>
+              <Name>Text30</Name>
+              <Top>0</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Right</HorAlignment>
+              <Conditions isList="true" count="1">
+                <value>ResumenFinanciamientoProyectoRenglon_x002e_CantModificada,LessThan,_x0030_,,Numeric,[0:0:0],Transparent,Arial_x002c_7_x002c_Regular_x002c_Point,True,True,ResumenFinanciamientoProyectoRenglon_x002e_CantModificada_x002a__x002d_1</value>
+              </Conditions>
+              <VertAlignment>Bottom</VertAlignment>
+              <TextFormat Ref="270" type="NumberFormat" isKey="true">
+                <GroupSize>3</GroupSize>
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator/>
+                <UseLocalSetting>True</UseLocalSetting>
+                <NegativePattern>1</NegativePattern>
+                <DecimalSeparator>.</DecimalSeparator>
+                <UseGroupSeparator>True</UseGroupSeparator>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="271" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="272" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="273" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="274" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="246"/>
+              <ClientRectangle>17.2,-1.7763568394002505e-15,2.0000000000000036,0.9999999999999982</ClientRectangle>
+              <Page isRef="4"/>
+            </Text30>
+            <Text29 Ref="275" type="Text" isKey="true">
+              <Text>0.00</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>15.2</Left>
+              <Name>Text29</Name>
+              <Top>0</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Right</HorAlignment>
+              <Conditions isList="true" count="1">
+                <value>ResumenFinanciamientoProyectoRenglon_x002e_CantModificada,GreaterThan,_x0030_,,Numeric,[0:0:0],Transparent,Arial_x002c_7_x002c_Regular_x002c_Point,True,True,Abs_x0028_Round_x0028_ResumenFinanciamientoProyectoRenglon_x002e_CantModificada_x0020__x002a__x0020_ResumenFinanciamientoProyectoRenglon_x002e_RenglonPrecioUnitario_x002c_2_x0029__x0029__x000d__x000d__x000d__x000d_</value>
+              </Conditions>
+              <VertAlignment>Bottom</VertAlignment>
+              <TextFormat Ref="276" type="CurrencyFormat" isKey="true">
+                <PositivePattern>3</PositivePattern>
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <GroupSize>3</GroupSize>
+                <UseLocalSetting>True</UseLocalSetting>
+                <NegativePattern>15</NegativePattern>
+                <Symbol>p.</Symbol>
+                <DecimalSeparator>.</DecimalSeparator>
+                <UseGroupSeparator>True</UseGroupSeparator>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="277" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="278" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="279" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="280" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="246"/>
+              <ClientRectangle>15.200000000000003,-1.7763568394002505e-15,2,0.9999999999999982</ClientRectangle>
+              <Page isRef="4"/>
+            </Text29>
+            <Text28 Ref="281" type="Text" isKey="true">
+              <Text>0</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>13.2</Left>
+              <Name>Text28</Name>
+              <Top>0</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Right</HorAlignment>
+              <Conditions isList="true" count="1">
+                <value>ResumenFinanciamientoProyectoRenglon_x002e_CantModificada,GreaterThan,_x0030_,,Numeric,[0:0:0],Transparent,Arial_x002c_7_x002c_Regular_x002c_Point,True,True,ResumenFinanciamientoProyectoRenglon_x002e_CantModificada</value>
+              </Conditions>
+              <VertAlignment>Bottom</VertAlignment>
+              <TextFormat Ref="282" type="NumberFormat" isKey="true">
+                <GroupSize>3</GroupSize>
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator/>
+                <UseLocalSetting>True</UseLocalSetting>
+                <NegativePattern>1</NegativePattern>
+                <DecimalSeparator>.</DecimalSeparator>
+                <UseGroupSeparator>True</UseGroupSeparator>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="283" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="284" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="285" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="286" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="246"/>
+              <ClientRectangle>13.2,-1.7763568394002505e-15,2.0000000000000036,0.9999999999999982</ClientRectangle>
+              <Page isRef="4"/>
+            </Text28>
+            <Text15 Ref="287" type="Text" isKey="true">
+              <Text>{ResumenFinanciamientoProyectoRenglon.MontoACtual}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>11.2</Left>
+              <Name>Text15</Name>
+              <Top>0</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Right</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Bottom</VertAlignment>
+              <TextFormat Ref="288" type="CurrencyFormat" isKey="true">
+                <PositivePattern>3</PositivePattern>
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator/>
+                <GroupSize>3</GroupSize>
+                <UseLocalSetting>True</UseLocalSetting>
+                <NegativePattern>15</NegativePattern>
+                <Symbol>p.</Symbol>
+                <DecimalSeparator>,</DecimalSeparator>
+                <UseGroupSeparator>True</UseGroupSeparator>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="289" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="290" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="291" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="292" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="246"/>
+              <ClientRectangle>11.200000000000003,-1.7763568394002505e-15,1.9999999999999964,0.9999999999999982</ClientRectangle>
+              <Page isRef="4"/>
+            </Text15>
+            <Text32 Ref="293" type="Text" isKey="true">
+              <Text>{ResumenFinanciamientoProyectoRenglon.RenglonDesc}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>3.6</Left>
+              <Name>Text32</Name>
+              <Top>0</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Bottom</VertAlignment>
+              <TextFormat Ref="294" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <MaxNumberOfLines>3</MaxNumberOfLines>
+              <Interaction Ref="295" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="296" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="297" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="298" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <WordWrap>True</WordWrap>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,3</MaxSize>
+              <Parent isRef="246"/>
+              <ClientRectangle>3.5999999999999996,-1.7763568394002505e-15,5.599999999999996,0.9999999999999982</ClientRectangle>
+              <Page isRef="4"/>
+            </Text32>
+            <Text27 Ref="299" type="Text" isKey="true">
+              <Text>{ResumenFinanciamientoProyectoRenglon.MontoOriginal}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>9.2</Left>
+              <Name>Text27</Name>
+              <Top>0</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Right</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Bottom</VertAlignment>
+              <TextFormat Ref="300" type="CurrencyFormat" isKey="true">
+                <PositivePattern>3</PositivePattern>
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator/>
+                <GroupSize>3</GroupSize>
+                <UseLocalSetting>True</UseLocalSetting>
+                <NegativePattern>15</NegativePattern>
+                <Symbol>p.</Symbol>
+                <DecimalSeparator>,</DecimalSeparator>
+                <UseGroupSeparator>True</UseGroupSeparator>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="301" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="302" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="303" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="304" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="246"/>
+              <ClientRectangle>9.199999999999996,-1.7763568394002505e-15,2.0000000000000036,0.9999999999999982</ClientRectangle>
+              <Page isRef="4"/>
+            </Text27>
+            <Text17 Ref="305" type="Text" isKey="true">
+              <Text>{ResumenFinanciamientoProyectoRenglon.RenglonCodCOVIAL}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>0.4</Left>
+              <Name>Text17</Name>
+              <Top>0</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Bottom</VertAlignment>
+              <TextFormat Ref="306" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <MaxNumberOfLines>3</MaxNumberOfLines>
+              <Interaction Ref="307" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="308" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="309" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="310" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <WordWrap>True</WordWrap>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,3</MaxSize>
+              <Parent isRef="246"/>
+              <ClientRectangle>0.3999999999999999,-1.7763568394002505e-15,3.1999999999999997,0.9999999999999982</ClientRectangle>
+              <Page isRef="4"/>
+            </Text17>
+          </Components>
+          <DataSourceName>ResumenFinanciamientoProyectoRenglon</DataSourceName>
+          <FilterMode>And</FilterMode>
+          <Parent isRef="4"/>
+          <ClientRectangle>0,10.200000000000001,25.940000000000005,0.9999999999999964</ClientRectangle>
+          <Page isRef="4"/>
+        </Data1>
+        <FooterBand1 Ref="311" type="FooterBand" isKey="true">
+          <Name>FooterBand1</Name>
+          <Brush>Transparent</Brush>
+          <Border>None;Black;1;Solid;False;4;Black</Border>
+          <Conditions isList="true" count="0"/>
+          <Interaction Ref="312" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+            <DrillDownParameter1 Ref="313" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+            <DrillDownParameter2 Ref="314" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+            <DrillDownParameter3 Ref="315" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+          </Interaction>
+          <MinHeight>0</MinHeight>
+          <MaxHeight>0</MaxHeight>
+          <Components isList="true" count="10">
+            <Text35 Ref="316" type="Text" isKey="true">
+              <TextBrush>Black</TextBrush>
+              <Left>0.4</Left>
+              <Name>Text35</Name>
+              <Top>0.2</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;2;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="317" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <MaxNumberOfLines>3</MaxNumberOfLines>
+              <Interaction Ref="318" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="319" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="320" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="321" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <WordWrap>True</WordWrap>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,3</MaxSize>
+              <Parent isRef="311"/>
+              <ClientRectangle>0.4000000000000008,0.20000000000000462,3.199999999999999,1</ClientRectangle>
+              <Page isRef="4"/>
+            </Text35>
+            <Text36 Ref="322" type="Text" isKey="true">
+              <Text>TOTAL</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>3.6</Left>
+              <Name>Text36</Name>
+              <Top>0.2</Top>
+              <Font>Arial,7,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;2;Solid;False;4;Black</Border>
+              <HorAlignment>Right</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Bottom</VertAlignment>
+              <TextFormat Ref="323" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <MaxNumberOfLines>3</MaxNumberOfLines>
+              <Interaction Ref="324" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="325" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="326" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="327" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <WordWrap>True</WordWrap>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,3</MaxSize>
+              <Parent isRef="311"/>
+              <ClientRectangle>3.5999999999999996,0.20000000000000462,5.6,1.0000000000000018</ClientRectangle>
+              <Page isRef="4"/>
+            </Text36>
+            <Text37 Ref="328" type="Text" isKey="true">
+              <Text>{Sum(ResumenFinanciamientoProyectoRenglon.MontoOriginal)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>9.2</Left>
+              <Name>Text37</Name>
+              <Top>0.2</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;2;Solid;False;4;Black</Border>
+              <HorAlignment>Right</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Bottom</VertAlignment>
+              <TextFormat Ref="329" type="CurrencyFormat" isKey="true">
+                <PositivePattern>3</PositivePattern>
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator/>
+                <GroupSize>3</GroupSize>
+                <UseLocalSetting>True</UseLocalSetting>
+                <NegativePattern>15</NegativePattern>
+                <Symbol>p.</Symbol>
+                <DecimalSeparator>,</DecimalSeparator>
+                <UseGroupSeparator>True</UseGroupSeparator>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="330" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="331" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="332" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="333" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="311"/>
+              <ClientRectangle>9.2,0.20000000000000462,2.0000000000000053,1</ClientRectangle>
+              <Page isRef="4"/>
+            </Text37>
+            <Text38 Ref="334" type="Text" isKey="true">
+              <Text>{Sum(ResumenFinanciamientoProyectoRenglon.MontoACtual)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>11.2</Left>
+              <Name>Text38</Name>
+              <Top>0.2</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;2;Solid;False;4;Black</Border>
+              <HorAlignment>Right</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Bottom</VertAlignment>
+              <TextFormat Ref="335" type="CurrencyFormat" isKey="true">
+                <PositivePattern>3</PositivePattern>
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator/>
+                <GroupSize>3</GroupSize>
+                <UseLocalSetting>True</UseLocalSetting>
+                <NegativePattern>15</NegativePattern>
+                <Symbol>p.</Symbol>
+                <DecimalSeparator>,</DecimalSeparator>
+                <UseGroupSeparator>True</UseGroupSeparator>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="336" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="337" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="338" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="339" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="311"/>
+              <ClientRectangle>11.199999999999998,0.20000000000000462,2.0000000000000018,1</ClientRectangle>
+              <Page isRef="4"/>
+            </Text38>
+            <Text39 Ref="340" type="Text" isKey="true">
+              <Text>{SumIf(ResumenFinanciamientoProyectoRenglon.CantModificada, ResumenFinanciamientoProyectoRenglon.CantModificada &gt; 0 )}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>13.2</Left>
+              <Name>Text39</Name>
+              <Top>0.2</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;1.5;Solid;False;4;Black</Border>
+              <HorAlignment>Right</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Bottom</VertAlignment>
+              <TextFormat Ref="341" type="NumberFormat" isKey="true">
+                <GroupSize>3</GroupSize>
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator/>
+                <UseLocalSetting>True</UseLocalSetting>
+                <NegativePattern>1</NegativePattern>
+                <DecimalSeparator>.</DecimalSeparator>
+                <UseGroupSeparator>True</UseGroupSeparator>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="342" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="343" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="344" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="345" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="311"/>
+              <ClientRectangle>13.200000000000005,0.20000000000000462,1.9999999999999982,1</ClientRectangle>
+              <Page isRef="4"/>
+            </Text39>
+            <Text40 Ref="346" type="Text" isKey="true">
+              <Text>{SumIf(ResumenFinanciamientoProyectoRenglon.CantModificada*-1, ResumenFinanciamientoProyectoRenglon.CantModificada &lt;0)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>17.2</Left>
+              <Name>Text40</Name>
+              <Top>0.2</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;2;Solid;False;4;Black</Border>
+              <HorAlignment>Right</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Bottom</VertAlignment>
+              <TextFormat Ref="347" type="NumberFormat" isKey="true">
+                <GroupSize>3</GroupSize>
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator/>
+                <UseLocalSetting>True</UseLocalSetting>
+                <NegativePattern>1</NegativePattern>
+                <DecimalSeparator>.</DecimalSeparator>
+                <UseGroupSeparator>True</UseGroupSeparator>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="348" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="349" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="350" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="351" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="311"/>
+              <ClientRectangle>17.2,0.20000000000000462,2.0000000000000036,1</ClientRectangle>
+              <Page isRef="4"/>
+            </Text40>
+            <Text41 Ref="352" type="Text" isKey="true">
+              <Text>{SumIf(ResumenFinanciamientoProyectoRenglon.CantModificada*ResumenFinanciamientoProyectoRenglon.RenglonPrecioUnitario, ResumenFinanciamientoProyectoRenglon.CantModificada &gt; 0 )}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>15.2</Left>
+              <Name>Text41</Name>
+              <Top>0.2</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;2;Solid;False;4;Black</Border>
+              <HorAlignment>Right</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Bottom</VertAlignment>
+              <TextFormat Ref="353" type="CurrencyFormat" isKey="true">
+                <PositivePattern>3</PositivePattern>
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator/>
+                <GroupSize>3</GroupSize>
+                <UseLocalSetting>True</UseLocalSetting>
+                <NegativePattern>15</NegativePattern>
+                <Symbol>p.</Symbol>
+                <DecimalSeparator>,</DecimalSeparator>
+                <UseGroupSeparator>True</UseGroupSeparator>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="354" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="355" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="356" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="357" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="311"/>
+              <ClientRectangle>15.200000000000003,0.20000000000000462,2,1</ClientRectangle>
+              <Page isRef="4"/>
+            </Text41>
+            <Text42 Ref="358" type="Text" isKey="true">
+              <Text>{SumIf(ResumenFinanciamientoProyectoRenglon.CantModificada*ResumenFinanciamientoProyectoRenglon.RenglonPrecioUnitario*-1, ResumenFinanciamientoProyectoRenglon.CantModificada &lt;0)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>19.2</Left>
+              <Name>Text42</Name>
+              <Top>0.2</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;2;Solid;False;4;Black</Border>
+              <HorAlignment>Right</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Bottom</VertAlignment>
+              <TextFormat Ref="359" type="CurrencyFormat" isKey="true">
+                <PositivePattern>3</PositivePattern>
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator/>
+                <GroupSize>3</GroupSize>
+                <UseLocalSetting>True</UseLocalSetting>
+                <NegativePattern>15</NegativePattern>
+                <Symbol>p.</Symbol>
+                <DecimalSeparator>,</DecimalSeparator>
+                <UseGroupSeparator>True</UseGroupSeparator>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="360" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="361" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="362" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="363" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="311"/>
+              <ClientRectangle>19.200000000000003,0.20000000000000462,2,1</ClientRectangle>
+              <Page isRef="4"/>
+            </Text42>
+            <Text43 Ref="364" type="Text" isKey="true">
+              <Text>{Sum(ResumenFinanciamientoProyectoRenglon.CantidadACtual) + Sum(ResumenFinanciamientoProyectoRenglon.CantidadOriginal)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>21.2</Left>
+              <Name>Text43</Name>
+              <Top>0.2</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;2;Solid;False;4;Black</Border>
+              <HorAlignment>Right</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Bottom</VertAlignment>
+              <TextFormat Ref="365" type="NumberFormat" isKey="true">
+                <GroupSize>3</GroupSize>
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator/>
+                <UseLocalSetting>True</UseLocalSetting>
+                <NegativePattern>1</NegativePattern>
+                <DecimalSeparator>.</DecimalSeparator>
+                <UseGroupSeparator>True</UseGroupSeparator>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="366" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="367" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="368" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="369" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="311"/>
+              <ClientRectangle>21.2,0.20000000000000462,2,1</ClientRectangle>
+              <Page isRef="4"/>
+            </Text43>
+            <Text44 Ref="370" type="Text" isKey="true">
+              <Text>{Sum(ResumenFinanciamientoProyectoRenglon.MontoACtual)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>23.2</Left>
+              <Name>Text44</Name>
+              <Top>0.2</Top>
+              <Font>Arial,7,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>All;Black;2;Double;False;4;Black</Border>
+              <HorAlignment>Right</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Bottom</VertAlignment>
+              <TextFormat Ref="371" type="CurrencyFormat" isKey="true">
+                <PositivePattern>3</PositivePattern>
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator/>
+                <GroupSize>3</GroupSize>
+                <UseLocalSetting>True</UseLocalSetting>
+                <NegativePattern>15</NegativePattern>
+                <Symbol>p.</Symbol>
+                <DecimalSeparator>,</DecimalSeparator>
+                <UseGroupSeparator>True</UseGroupSeparator>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="372" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="373" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="374" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="375" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="311"/>
+              <ClientRectangle>23.2,0.20000000000000462,2.0000000000000036,1</ClientRectangle>
+              <Page isRef="4"/>
+            </Text44>
+          </Components>
+          <Parent isRef="4"/>
+          <ClientRectangle>0,11.999999999999998,25.940000000000005,1.5000000000000018</ClientRectangle>
+          <Page isRef="4"/>
+        </FooterBand1>
+        <PageFooterBand1 Ref="376" type="PageFooterBand" isKey="true">
+          <Name>PageFooterBand1</Name>
+          <Brush>Transparent</Brush>
+          <Border>None;Black;1;Solid;False;4;Black</Border>
+          <Conditions isList="true" count="0"/>
+          <Interaction Ref="377" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+            <DrillDownParameter1 Ref="378" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+            <DrillDownParameter2 Ref="379" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+            <DrillDownParameter3 Ref="380" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+          </Interaction>
+          <MinHeight>0</MinHeight>
+          <MaxHeight>0</MaxHeight>
+          <Parent isRef="4"/>
+          <Components isList="true" count="7">
+            <HorizontalLinePrimitive1 Ref="381" type="Stimulsoft.Report.Components.StiHorizontalLinePrimitive" isKey="true">
+              <Name>HorizontalLinePrimitive1</Name>
+              <Color>Black</Color>
+              <Left>0</Left>
+              <Top>0.13</Top>
+              <Interaction Ref="382" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="383" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="384" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="385" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="376"/>
+              <ClientRectangle>0,0.13000000000000256,25.6,0.0254000000000012</ClientRectangle>
+              <Page isRef="4"/>
+              <Guid>C44C06B3C095C98409CE0F4D6D386574</Guid>
+            </HorizontalLinePrimitive1>
+            <Text4 Ref="386" type="Text" isKey="true">
+              <Text>Fecha:</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>0</Left>
+              <Name>Text4</Name>
+              <Top>0.13</Top>
+              <Font>Arial,10,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="387" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="388" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="389" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="390" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="391" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="376"/>
+              <ClientRectangle>0,0.13000000000000256,1.200000000000001,0.6000000000000014</ClientRectangle>
+              <Page isRef="4"/>
+            </Text4>
+            <Text9 Ref="392" type="Text" isKey="true">
+              <Text>{TotalPageCount}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>24.8</Left>
+              <Name>Text9</Name>
+              <Top>0.13</Top>
+              <Font>Arial,10,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="393" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="394" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="395" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="396" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="397" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="376"/>
+              <ClientRectangle>24.8,0.13000000000000256,0.600000000000005,0.6000000000000014</ClientRectangle>
+              <Page isRef="4"/>
+            </Text9>
+            <Text8 Ref="398" type="Text" isKey="true">
+              <Text>De</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>24.2</Left>
+              <Name>Text8</Name>
+              <Top>0.13</Top>
+              <Font>Arial,10,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="399" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="400" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="401" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="402" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="403" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="376"/>
+              <ClientRectangle>24.2,0.13000000000000256,0.6000000000000014,0.6000000000000014</ClientRectangle>
+              <Page isRef="4"/>
+            </Text8>
+            <Text7 Ref="404" type="Text" isKey="true">
+              <Text>{PageNumber}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>23.6</Left>
+              <Name>Text7</Name>
+              <Top>0.13</Top>
+              <Font>Arial,10,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="405" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="406" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="407" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="408" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="409" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="376"/>
+              <ClientRectangle>23.6,0.13000000000000256,0.6000000000000014,0.6000000000000014</ClientRectangle>
+              <Page isRef="4"/>
+            </Text7>
+            <Text6 Ref="410" type="Text" isKey="true">
+              <Text>Página:</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>22.4</Left>
+              <Name>Text6</Name>
+              <Top>0.13</Top>
+              <Font>Arial,10,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="411" type="GeneralFormat" isKey="true"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="412" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="413" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="414" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="415" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="376"/>
+              <ClientRectangle>22.4,0.13000000000000256,1.2000000000000028,0.6000000000000014</ClientRectangle>
+              <Page isRef="4"/>
+            </Text6>
+            <Text5 Ref="416" type="Text" isKey="true">
+              <Text>{Today}</Text>
+              <TextBrush>Black</TextBrush>
+              <Left>1.2</Left>
+              <Name>Text5</Name>
+              <Top>0.13</Top>
+              <Font>Arial,10,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat Ref="417" type="DateFormat" isKey="true">
+                <StringFormat>dd/MM/yyyy</StringFormat>
+              </TextFormat>
+              <Margins>0,0,0,0</Margins>
+              <Interaction Ref="418" type="Stimulsoft.Report.Components.StiInteraction" isKey="true">
+                <DrillDownParameter1 Ref="419" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter2 Ref="420" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+                <DrillDownParameter3 Ref="421" type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Parent isRef="376"/>
+              <ClientRectangle>1.200000000000001,0.13000000000000256,1.799999999999999,0.6000000000000014</ClientRectangle>
+              <Page isRef="4"/>
+            </Text5>
+          </Components>
+          <ClientRectangle>0,18.72,25.940000000000005,0.870000000000001</ClientRectangle>
+          <Page isRef="4"/>
+        </PageFooterBand1>
+      </Components>
+      <Report isRef="0"/>
+      <Guid>ef9998433af44273946864f1e60ccccc</Guid>
+    </Page1>
+  </Pages>
+  <ReportName>Report</ReportName>
+  <ReportAlias>Report</ReportAlias>
+  <EngineVersion>EngineV2</EngineVersion>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0"/>
+  <PrinterSettings Ref="422" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true"/>
+  <ReportGuid>8bad915da4d94025a085fbd84bdefafb</ReportGuid>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        
+        public Report()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ReportFile>ResumenFinanciamientoProyectoRenglon.mrt</ReportFile>
+</StiSerializer>

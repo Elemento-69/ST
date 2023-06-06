@@ -1,0 +1,1949 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <CnxProgramacionFisica Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>CnxProgramacionFisica</Alias>
+        <ConnectionString>User ID=UsuarioExterno1;Data Source=192.168.1.9\covialapp;Initial Catalog=z_PRODUCCION_sicopDB;Integrated Security=False;Password=Us3r00@dm1n</ConnectionString>
+        <Name>CnxProgramacionFisica</Name>
+      </CnxProgramacionFisica>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <FDCnxProgramacionFisica Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>FDCnxProgramacionFisica</Alias>
+        <Columns isList="true" count="41">
+          <value>SupervisoraAnioID,System.Int32</value>
+          <value>ProgramaCodigo,System.String</value>
+          <value>ProyectoSupervisionCodigo,System.String</value>
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>ContratoCodigo,System.String</value>
+          <value>Supervisora,System.String</value>
+          <value>Longitud,System.Decimal</value>
+          <value>CadenaTramos,System.String</value>
+          <value>FechaInicioFisico,System.DateTime</value>
+          <value>FechaContrato,System.DateTime</value>
+          <value>FechaFinaModificado,System.DateTime</value>
+          <value>FechaFinalOriginal,System.DateTime</value>
+          <value>ComponenteCorrel,System.Byte</value>
+          <value>ComponenteDesc,System.String</value>
+          <value>RenglonCodCOVIAL,System.String</value>
+          <value>RenglonID,System.Int32</value>
+          <value>ProyectoRenglonNombre,System.String</value>
+          <value>RenglonUni,System.String</value>
+          <value>RenglonCantidadTotal,System.Decimal</value>
+          <value>RenglonPrecioUnitario,System.Decimal</value>
+          <value>FisicoVigente,System.Decimal</value>
+          <value>FisicoVigenteMonto,System.Decimal</value>
+          <value>SUMA,System.Decimal</value>
+          <value>AcumuladoMensual,System.Decimal</value>
+          <value>MontoOriginal,System.Decimal</value>
+          <value>Montomod,System.Decimal</value>
+          <value>PeriodoDesde,System.DateTime</value>
+          <value>PeriodoHasta,System.DateTime</value>
+          <value>NombreEmpresa,System.String</value>
+          <value>CantidadAjustada,System.Decimal</value>
+          <value>MontoAjustado,System.Decimal</value>
+          <value>ContratoAmpliatorio,System.String</value>
+          <value>FechaContratoAmpliatorio,System.DateTime</value>
+          <value>ContratoModificado,System.String</value>
+          <value>PeriodoCorrelImpresion,System.Int32</value>
+          <value>FechaModificado,System.DateTime</value>
+          <value>MontoMod1,System.Decimal</value>
+          <value>ContratoTerminacionAnticipada,System.String</value>
+          <value>FechaContratoTerminacionAnticipada,System.String</value>
+          <value>AnioContrato,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>FDCnxProgramacionFisica</Name>
+        <NameInSource>CnxProgramacionFisica</NameInSource>
+        <Parameters isList="true" count="6">
+          <value>_x0040_AnioID,,8,4</value>
+          <value>_x0040_ProyectoCodigo,,22,30</value>
+          <value>_x0040_PeriodoCorr,,8,1</value>
+          <value>_x0040_PeriodoCorrImpresion,,8,4</value>
+          <value>_x0040_pFechaFiltro,,4,0</value>
+          <value>_x0040_pProgramaVersionID,,8,4</value>
+        </Parameters>
+        <SqlCommand>exec [dbo].[ObtenerReporte_S_ProgramacionFisicaMod2022]   @AnioID,@ProyectoCodigo,@PeriodoCorr,@PeriodoCorrImpresion,@pFechaFiltro,@pProgramaVersionID</SqlCommand>
+      </FDCnxProgramacionFisica>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="11">
+        <PageHeaderBand1 Ref="5" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,41.18,6</ClientRectangle>
+          <Components isList="true" count="33">
+            <Image1 Ref="6" type="Image" isKey="true">
+              <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0.2,0,2.2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Image>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</Image>
+              <Name>Image1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Stretch>True</Stretch>
+            </Image1>
+            <Text1 Ref="7" type="Text" isKey="true">
+              <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>2.8,0,27.94,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>MINISTERIO DE COMUNICACIONES INFRAESTRUCTURA Y VIVIENDA
+UNIDAD EJECUTORA DE CONSERVACIÓN VIAL</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text2 Ref="8" type="Text" isKey="true">
+              <Border>None;[0:0:0];1;Solid;False;4;Black</Border>
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0,1.4,18,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>5. PROGRAMACIÓN FISICA No. {FDCnxProgramacionFisica.Parameters["@PeriodoCorrImpresion"].ParameterValue}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text3 Ref="9" type="Text" isKey="true">
+              <Border>None;[0:0:0];1;Solid;False;4;Black</Border>
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0,1,9.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>46e82db0d9bc4d0fa62272009d262445</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>SUPERVISOR/A No. {FDCnxProgramacionFisica.Supervisora}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+            <Text4 Ref="10" type="Text" isKey="true">
+              <Border>None;[0:0:0];1;Solid;False;4;Black</Border>
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0,2,9.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>3f873aa57df244268ac73c43093ce43e</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{FDCnxProgramacionFisica.NombreEmpresa}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text5 Ref="11" type="Text" isKey="true">
+              <Border>None;[0:0:0];1;Solid;False;4;Black</Border>
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>3.4,2.4,3.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>55f9cd9bd3474e29b195e109c339d653</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{FDCnxProgramacionFisica.ContratoCodigo}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text6 Ref="12" type="Text" isKey="true">
+              <Border>None;[0:0:0];1;Solid;False;4;Black</Border>
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0,2.8,3.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>ebe5831a83bb4201803faf92a36d2d88</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Contrato Ampliatorio:</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text7 Ref="13" type="Text" isKey="true">
+              <Border>None;[0:0:0];1;Solid;False;4;Black</Border>
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0,3.2,3.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>952383b56c794d0fb656fdc5420f4a6f</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Contrato Modificado:</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text8 Ref="14" type="Text" isKey="true">
+              <Border>None;[0:0:0];1;Solid;False;4;Black</Border>
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0,4.2,9.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>8b15e04ec04a46968bd88cdcdf4d6a46</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Longitud: {FDCnxProgramacionFisica.Longitud} Kms</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text11 Ref="15" type="Text" isKey="true">
+              <Border>None;[0:0:0];1;Solid;False;4;Black</Border>
+              <Brush>[0:255:255:255]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,4.8,33.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>e43cb98b1ed24d4c9cadd12697285053</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{FDCnxProgramacionFisica.CadenaTramos}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Text11>
+            <Text15 Ref="16" type="Text" isKey="true">
+              <Border>None;[0:0:0];1;Solid;False;4;Black</Border>
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0,5.6,9.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>c3e70ca099234eaeb65c89b1ef287550</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Proyecto: {FDCnxProgramacionFisica.ProyectoCodigo} - {FDCnxProgramacionFisica.AnioID}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+            </Text15>
+            <Text9 Ref="17" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>17.8,2.4,4.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{FDCnxProgramacionFisica.Montomod}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextFormat Ref="18" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <Text10 Ref="19" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>14.4,2,3.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Monto del Contrato:</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text24 Ref="20" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>14.4,2.4,3.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Monto Ajustado:</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+            <Text28 Ref="21" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>17.8,2,4.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{FDCnxProgramacionFisica.MontoOriginal}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextFormat Ref="22" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text28>
+            <Text29 Ref="23" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>3.4,2.8,3.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{FDCnxProgramacionFisica.ContratoAmpliatorio}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text29>
+            <Text30 Ref="24" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>3.4,3.2,3.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{FDCnxProgramacionFisica.ContratoModificado}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text30>
+            <Text31 Ref="25" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>6.6,2.4,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Fecha Contrato:</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text31>
+            <Text32 Ref="26" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>6.6,2.8,4.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text32</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Fecha Contrato Ampliatorio:</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text32>
+            <Text35 Ref="27" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>6.6,3.2,4.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text35</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Fecha Contrato Modificado:</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text35>
+            <Text42 Ref="28" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>10.8,2.8,3.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text42</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{Format("{0: dd/MM/yyyy}", FDCnxProgramacionFisica.FechaContratoAmpliatorio)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text42>
+            <Text43 Ref="29" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>10.8,3.2,3.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text43</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{Format("{0: dd/MM/yyyy}", FDCnxProgramacionFisica.FechaModificado)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text43>
+            <Text44 Ref="30" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>10.6,2.4,3.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text44</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{Format("{0: dd/MM/yyyy}", FDCnxProgramacionFisica.FechaContrato)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text44>
+            <Text41 Ref="31" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0,2.4,3.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text41</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Contrato:</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text41>
+            <Text45 Ref="32" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5,3.6,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text45</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{FDCnxProgramacionFisica.ContratoTerminacionAnticipada}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text45>
+            <Text46 Ref="33" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3.6,4.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text46</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Contrato Terminacion Anticipada</Text>
+              <TextBrush>Black</TextBrush>
+            </Text46>
+            <Text47 Ref="34" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.8,3.6,3.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text47</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{Format("{0: dd/MM/yyyy}", FDCnxProgramacionFisica.FechaContratoTerminacionAnticipada)}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text47>
+            <Text48 Ref="35" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.6,3.6,4.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text48</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Fecha Terminacion Anticipada:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text48>
+            <Text12 Ref="36" type="Text" isKey="true">
+              <Border>None;[0:0:0];1;Solid;False;4;Black</Border>
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>25,2,7.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>121e1c32575a4d1095e134b939ceaa2c</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Fecha Inicio Fisico: {Format("{0: dd/MM/yyyy}", FDCnxProgramacionFisica.FechaInicioFisico)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text13 Ref="37" type="Text" isKey="true">
+              <Border>None;[0:0:0];1;Solid;False;4;Black</Border>
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>25,2.4,7.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>50c2db1923e14d8da77dfc6901f691c6</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Fecha de Finalización Original: {Format("{0: dd/MM/yyyy}", FDCnxProgramacionFisica.FechaFinalOriginal)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text13>
+            <Text14 Ref="38" type="Text" isKey="true">
+              <Border>None;[0:0:0];1;Solid;False;4;Black</Border>
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>25,2.8,7.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>bb29ed1fd8164825820da6f70bbf9a26</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Fecha de Finalización Modificada: {Format("{0: dd/MM/yyyy}", FDCnxProgramacionFisica.FechaFinaModificado)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <Text36 Ref="39" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>25,1.6,2.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text36</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Monto Original :</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text36>
+            <Text37 Ref="40" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>27.4,1.6,5,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text37</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{FDCnxProgramacionFisica.MontoOriginal}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="41" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text37>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageHeaderBand1>
+        <PageFooterBand1 Ref="42" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,19.69,41.18,0.2</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text16 Ref="43" type="Text" isKey="true">
+              <Border>None;[0:0:0];1;Solid;False;4;Black</Border>
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>32.4,-0.09,7.2,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6</Font>
+              <Guid>eb5291320745409aa23bb2a0e75aae50</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="4" />
+              <Parent isRef="42" />
+              <Text>Página: {PageNumber} / {TotalPageCount}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text16>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageFooterBand1>
+        <CrossTab1_ColTotal1 Ref="44" type="CrossColumnTotal" isKey="true">
+          <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+          <Brush>WhiteSmoke</Brush>
+          <ClientRectangle>50.48,229.83,0,1</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Enabled>False</Enabled>
+          <Font>Arial,6</Font>
+          <Guid>3cefa476cae1594a412e86867e29fe15</Guid>
+          <Margins>0,0,0,0</Margins>
+          <Name>CrossTab1_ColTotal1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+          <Text>Total</Text>
+          <TextBrush>Black</TextBrush>
+        </CrossTab1_ColTotal1>
+        <CrossTab2_ColTotal1 Ref="45" type="CrossColumnTotal" isKey="true">
+          <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+          <Brush>WhiteSmoke</Brush>
+          <ClientRectangle>1235.61,1333.69,0.8,0.4</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,8</Font>
+          <Guid>e3a0d18532bfab3fc3ebac5da5d50c38</Guid>
+          <Margins>0,0,0,0</Margins>
+          <Name>CrossTab2_ColTotal1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+          <Text>Total</Text>
+          <TextBrush>Black</TextBrush>
+        </CrossTab2_ColTotal1>
+        <CrossSummaryHeader5 Ref="46" type="Stimulsoft.Report.CrossTab.StiCrossSummaryHeader" isKey="true">
+          <Border>All;Black;1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>103.11,137.71,2.6,0.4</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,7</Font>
+          <Guid>8492e74caf30619bdf06ac5da5dcbca1</Guid>
+          <HorAlignment>Left</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>CrossSummaryHeader5</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+          <Text>EJECUCION MENSUAL</Text>
+          <TextBrush>Black</TextBrush>
+        </CrossSummaryHeader5>
+        <CrossSummaryHeader1 Ref="47" type="Stimulsoft.Report.CrossTab.StiCrossSummaryHeader" isKey="true">
+          <Border>All;Black;1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>105.71,137.71,2.8,0.4</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,7</Font>
+          <Guid>953da041ba0914b564e2ac5da5dff84e</Guid>
+          <HorAlignment>Left</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>CrossSummaryHeader1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+          <Text>ACUMULADO MENSUAL</Text>
+          <TextBrush>Black</TextBrush>
+        </CrossSummaryHeader1>
+        <CrossSummaryHeader2 Ref="48" type="Stimulsoft.Report.CrossTab.StiCrossSummaryHeader" isKey="true">
+          <Border>All;Black;1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>108.51,137.71,3,0.4</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,7</Font>
+          <Guid>ff7ab7a91dd0946961a4ac5da5e34f81</Guid>
+          <HorAlignment>Left</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>CrossSummaryHeader2</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+          <Text>PORCENTAJE MENSUAL %</Text>
+          <TextBrush>Black</TextBrush>
+        </CrossSummaryHeader2>
+        <CrossSummaryHeader3 Ref="49" type="Stimulsoft.Report.CrossTab.StiCrossSummaryHeader" isKey="true">
+          <Border>All;Black;1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>111.51,137.71,3.4,0.4</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,7</Font>
+          <Guid>548970b3c4963cf95846ac5da5e8b5fb</Guid>
+          <HorAlignment>Left</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>CrossSummaryHeader3</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+          <Text>PORCENTAJE ACUMULADO %</Text>
+          <TextBrush>Black</TextBrush>
+        </CrossSummaryHeader3>
+        <Text40 Ref="50" type="Text" isKey="true">
+          <Brush>[0:255:255:255]</Brush>
+          <ClientRectangle>-1.2,18,7.2,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,6</Font>
+          <Guid>1e4dec575c5e428c850d2286f2afb661</Guid>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text40</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Text>{Time}</Text>
+          <TextBrush>White</TextBrush>
+          <VertAlignment>Center</VertAlignment>
+        </Text40>
+        <DataBand1 Ref="51" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,7.2,41.18,2.4</ClientRectangle>
+          <Components isList="true" count="1">
+            <CrossTab1 Ref="52" type="Stimulsoft.Report.CrossTab.StiCrossTab" isKey="true">
+              <Border>None;[255:255:255];1;Solid;False;4;Black</Border>
+              <Brush>[255:255:255]</Brush>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>0,0.2,31.62,2.74</ClientRectangle>
+              <Components isList="true" count="31">
+                <CrossTab1_RowTotal2 Ref="53" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>WhiteSmoke</Brush>
+                  <ClientRectangle>2.4,2.5,0,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,6</Font>
+                  <Guid>60b88060c4ec6794c31086867df991bb</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal2</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal2>
+                <CrossTab1_RowTotal3 Ref="54" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>WhiteSmoke</Brush>
+                  <ClientRectangle>4.4,2.5,0,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,6</Font>
+                  <Guid>04e7d354280054be66d086867e1370ad</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal3</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal3>
+                <CrossTab1_RowTotal4 Ref="55" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>WhiteSmoke</Brush>
+                  <ClientRectangle>6.4,2.5,0,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,6</Font>
+                  <Guid>0789fba4f89a69b5c4da86867e4574da</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal4</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal4>
+                <CrossTab1_RowTotal5 Ref="56" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>WhiteSmoke</Brush>
+                  <ClientRectangle>7.8,2.5,0,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,6</Font>
+                  <Guid>182e28752c490eb7305a86867e675a20</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal5</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal5>
+                <CrossTab1_RowTotal6 Ref="57" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>WhiteSmoke</Brush>
+                  <ClientRectangle>10.4,2.5,0,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,6</Font>
+                  <Guid>18dee2c6242587a22c8d86867e8085e5</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2.8,0</MaxSize>
+                  <Name>CrossTab1_RowTotal6</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                </CrossTab1_RowTotal6>
+                <CrossTab1_RowTotal7 Ref="58" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>WhiteSmoke</Brush>
+                  <ClientRectangle>12.6,2.5,0,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,6</Font>
+                  <Guid>04f8a689c986f839418286867e9400bf</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2.8,0</MaxSize>
+                  <Name>CrossTab1_RowTotal7</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                </CrossTab1_RowTotal7>
+                <CrossTab1_RowTotal8 Ref="59" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>WhiteSmoke</Brush>
+                  <ClientRectangle>14.6,2.5,0,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,6</Font>
+                  <Guid>5cd6f6d6ad2e338a98bf86867ea92f44</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal8</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal8>
+                <CrossTab1_RowTotal9 Ref="60" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>WhiteSmoke</Brush>
+                  <ClientRectangle>17.2,2.5,0,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,6</Font>
+                  <Guid>5abf8d2163b3f8ba8e3386867ebfbc12</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal9</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal9>
+                <CrossTab1_RowTotal1 Ref="61" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>16.6,1.9,2.4,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,6</Font>
+                  <Guid>9797155125634ea89328f182ff374abe</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal1>
+                <CrossTab1_Row1 Ref="62" type="CrossRow" isKey="true">
+                  <Alias>ComponenteDesc</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,1.5,2,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{FDCnxProgramacionFisica.ComponenteDesc}</DisplayValue>
+                  <Font>Arial,6</Font>
+                  <Guid>0d1ef191507d487195f0f66cf1a71255</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <MinSize>0,1</MinSize>
+                  <Name>CrossTab1_Row1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>ComponenteDesc</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TotalGuid>9797155125634ea89328f182ff374abe</TotalGuid>
+                  <Value>{FDCnxProgramacionFisica.ComponenteDesc}</Value>
+                </CrossTab1_Row1>
+                <CrossTab1_Row2 Ref="63" type="CrossRow" isKey="true">
+                  <Alias>RenglonCodCOVIAL</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>2,1.5,2,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{FDCnxProgramacionFisica.RenglonCodCOVIAL}</DisplayValue>
+                  <Font>Arial,6</Font>
+                  <Guid>aa23d57013cc2b950d0486867ee0d0c0</Guid>
+                  <HorAlignment>Left</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <MinSize>0,1</MinSize>
+                  <Name>CrossTab1_Row2</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>RenglonCodCOVIAL</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TotalGuid>60b88060c4ec6794c31086867df991bb</TotalGuid>
+                  <Value>{FDCnxProgramacionFisica.RenglonCodCOVIAL}</Value>
+                </CrossTab1_Row2>
+                <CrossTab1_Row3 Ref="64" type="CrossRow" isKey="true">
+                  <Alias>ProyectoRenglonNombre</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>4,1.5,2,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{FDCnxProgramacionFisica.ProyectoRenglonNombre}</DisplayValue>
+                  <Font>Arial,6</Font>
+                  <Guid>97f7846f70c197f2cb2586867eeca9d8</Guid>
+                  <HorAlignment>Left</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <MinSize>0,1</MinSize>
+                  <Name>CrossTab1_Row3</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>ProyectoRenglonNombre</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TotalGuid>04e7d354280054be66d086867e1370ad</TotalGuid>
+                  <Value>{FDCnxProgramacionFisica.ProyectoRenglonNombre}</Value>
+                </CrossTab1_Row3>
+                <CrossTab1_Row4 Ref="65" type="CrossRow" isKey="true">
+                  <Alias>RenglonUni</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>6,1.5,1.4,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{FDCnxProgramacionFisica.RenglonUni}</DisplayValue>
+                  <Font>Arial,6</Font>
+                  <Guid>34eaa7d0e4d13420914e86867ef7fd73</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>1.5,0</MaxSize>
+                  <MinSize>0,1</MinSize>
+                  <Name>CrossTab1_Row4</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>RenglonUni</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TotalGuid>0789fba4f89a69b5c4da86867e4574da</TotalGuid>
+                  <Value>{FDCnxProgramacionFisica.RenglonUni}</Value>
+                </CrossTab1_Row4>
+                <CrossTab1_Row5 Ref="66" type="CrossRow" isKey="true">
+                  <Alias>RenglonCantidadTotal</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>7.4,1.5,2.6,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{FDCnxProgramacionFisica.RenglonCantidadTotal}</DisplayValue>
+                  <Font>Arial,6</Font>
+                  <Guid>3ce971cd996963e32c1b86867f030290</Guid>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>3.2,0</MaxSize>
+                  <MinSize>0,1</MinSize>
+                  <Name>CrossTab1_Row5</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>RenglonCantidadTotal</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TotalGuid>182e28752c490eb7305a86867e675a20</TotalGuid>
+                  <Value>{FDCnxProgramacionFisica.RenglonCantidadTotal}</Value>
+                </CrossTab1_Row5>
+                <CrossTab1_Row6 Ref="67" type="CrossRow" isKey="true">
+                  <Alias>CantidadAjustada</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>10,1.5,1,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{FDCnxProgramacionFisica.CantidadAjustada}</DisplayValue>
+                  <Font>Arial,6</Font>
+                  <Guid>1dbcdaa0a7926470006886867f10a9d9</Guid>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>3.4,0</MaxSize>
+                  <MinSize>0,1</MinSize>
+                  <Name>CrossTab1_Row6</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>CantidadAjustada</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TotalGuid>18dee2c6242587a22c8d86867e8085e5</TotalGuid>
+                  <Value>{FDCnxProgramacionFisica.CantidadAjustada}</Value>
+                </CrossTab1_Row6>
+                <CrossTab1_Row7 Ref="68" type="CrossRow" isKey="true">
+                  <Alias>RenglonPrecioUnitario</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>11,1.5,2,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{FDCnxProgramacionFisica.RenglonPrecioUnitario}</DisplayValue>
+                  <Font>Arial,6</Font>
+                  <Guid>675280c988a408563bb186867f1c79c0</Guid>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <MinSize>0,1</MinSize>
+                  <Name>CrossTab1_Row7</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>RenglonPrecioUnitario</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextFormat Ref="69" type="CurrencyFormat" isKey="true">
+                    <DecimalSeparator>,</DecimalSeparator>
+                    <GroupSeparator />
+                    <NegativePattern>5</NegativePattern>
+                    <PositivePattern>1</PositivePattern>
+                    <Symbol>p.</Symbol>
+                  </TextFormat>
+                  <TotalGuid>04f8a689c986f839418286867e9400bf</TotalGuid>
+                  <Value>{FDCnxProgramacionFisica.RenglonPrecioUnitario}</Value>
+                </CrossTab1_Row7>
+                <CrossTab1_Row8 Ref="70" type="CrossRow" isKey="true">
+                  <Alias>RenglonCantidadTotal</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>13,1.5,2.6,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{FDCnxProgramacionFisica.RenglonCantidadTotal * FDCnxProgramacionFisica.RenglonPrecioUnitario}</DisplayValue>
+                  <Font>Arial,6</Font>
+                  <Guid>11ac5d1d09d84f75509986867f2aa1d7</Guid>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2.8,0</MaxSize>
+                  <MinSize>0,1</MinSize>
+                  <Name>CrossTab1_Row8</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>RenglonCantidadTotal</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextFormat Ref="71" type="CurrencyFormat" isKey="true">
+                    <DecimalSeparator>,</DecimalSeparator>
+                    <GroupSeparator>,</GroupSeparator>
+                    <NegativePattern>0</NegativePattern>
+                    <PositivePattern>0</PositivePattern>
+                    <Symbol>Q</Symbol>
+                  </TextFormat>
+                  <TotalGuid>5cd6f6d6ad2e338a98bf86867ea92f44</TotalGuid>
+                  <Value>{FDCnxProgramacionFisica.RenglonCantidadTotal * FDCnxProgramacionFisica.RenglonPrecioUnitario}</Value>
+                </CrossTab1_Row8>
+                <CrossTab1_Row9 Ref="72" type="CrossRow" isKey="true">
+                  <Alias>MontoAjustado</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>15.6,1.5,1.8,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{FDCnxProgramacionFisica.MontoAjustado}</DisplayValue>
+                  <Font>Arial,6</Font>
+                  <Guid>33bc3733e8d4ae0a0ab586867f36a866</Guid>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2.4,0</MaxSize>
+                  <MinSize>0,1</MinSize>
+                  <Name>CrossTab1_Row9</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>MontoAjustado</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextFormat Ref="73" type="CurrencyFormat" isKey="true">
+                    <DecimalSeparator>,</DecimalSeparator>
+                    <GroupSeparator />
+                    <NegativePattern>5</NegativePattern>
+                    <PositivePattern>1</PositivePattern>
+                    <Symbol>p.</Symbol>
+                  </TextFormat>
+                  <TotalGuid>5abf8d2163b3f8ba8e3386867ebfbc12</TotalGuid>
+                  <Value>{FDCnxProgramacionFisica.MontoAjustado}</Value>
+                </CrossTab1_Row9>
+                <CrossTab1_Sum1 Ref="74" type="CrossSummary" isKey="true">
+                  <Alias>FisicoVigente</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>17.45,1.5,1,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,6</Font>
+                  <Guid>6dcfb7348cbdef8fc1bf86867f5124a4</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2.8,0</MaxSize>
+                  <Name>CrossTab1_Sum1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Summary>None</Summary>
+                  <SummaryValues>SkipZerosAndNulls</SummaryValues>
+                  <Text>0</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <Value>{FDCnxProgramacionFisica.FisicoVigente}
+{Format("{0:C2}", FDCnxProgramacionFisica.FisicoVigenteMonto)}</Value>
+                </CrossTab1_Sum1>
+                <CrossTitle12 Ref="75" type="CrossTitle" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>0,0.45,2,1</ClientRectangle>
+                  <Font>Arial,6,Bold</Font>
+                  <Guid>d1fe1b74a2ce5234073b86867e064184</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2.8,0</MaxSize>
+                  <MinSize>0,1</MinSize>
+                  <Name>CrossTitle12</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Componente</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TypeOfComponent>Row:CrossTab1_Row1</TypeOfComponent>
+                </CrossTitle12>
+                <CrossTitle1 Ref="76" type="CrossTitle" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>2,0.45,2,1</ClientRectangle>
+                  <Font>Arial,6,Bold</Font>
+                  <Guid>10a37876985a7bc82bba86867e2120ed</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <MinSize>0,1</MinSize>
+                  <Name>CrossTitle1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Codigo Renglon</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TypeOfComponent>Row:CrossTab1_Row2</TypeOfComponent>
+                </CrossTitle1>
+                <CrossTitle2 Ref="77" type="CrossTitle" isKey="true">
+                  <Border>None;[255:255:255];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,0,18.6,0.1</ClientRectangle>
+                  <Enabled>False</Enabled>
+                  <Font>Arial,8</Font>
+                  <Guid>63853eab8c395124649086867e361894</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>0,0.1</MaxSize>
+                  <Name>CrossTitle2</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TypeOfComponent>LeftTitle</TypeOfComponent>
+                </CrossTitle2>
+                <CrossTitle3 Ref="78" type="CrossTitle" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>4,0.45,2,1</ClientRectangle>
+                  <Font>Arial,6,Bold</Font>
+                  <Guid>a24e02c5f9c41559f54f86867e58895a</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <MinSize>0,1</MinSize>
+                  <Name>CrossTitle3</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Descripción</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TypeOfComponent>Row:CrossTab1_Row3</TypeOfComponent>
+                </CrossTitle3>
+                <CrossTitle4 Ref="79" type="CrossTitle" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>6,0.45,1.4,1</ClientRectangle>
+                  <Font>Arial,6,Bold</Font>
+                  <Guid>69a0c929542332646fe186867e75a99a</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>1.5,0</MaxSize>
+                  <MinSize>0,1</MinSize>
+                  <Name>CrossTitle4</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Unidad de Medición</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TypeOfComponent>Row:CrossTab1_Row4</TypeOfComponent>
+                </CrossTitle4>
+                <CrossTitle5 Ref="80" type="CrossTitle" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>7.4,0.45,2.6,1</ClientRectangle>
+                  <Font>Arial,6,Bold</Font>
+                  <Guid>01c104a5f3a1f621494e86867e8b5e0d</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2.8,0</MaxSize>
+                  <MinSize>0,1</MinSize>
+                  <Name>CrossTitle5</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Cantidad                            Contratada</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TypeOfComponent>Row:CrossTab1_Row5</TypeOfComponent>
+                </CrossTitle5>
+                <CrossTitle6 Ref="81" type="CrossTitle" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>10,0.45,1,1</ClientRectangle>
+                  <Font>Arial,6,Bold</Font>
+                  <Guid>8148876e21df9f011c4286867e9faf5a</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>3.4,0</MaxSize>
+                  <MinSize>0,1</MinSize>
+                  <Name>CrossTitle6</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Cantidad                             Ajustada</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TypeOfComponent>Row:CrossTab1_Row6</TypeOfComponent>
+                </CrossTitle6>
+                <CrossTitle7 Ref="82" type="CrossTitle" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>11,0.45,2,1</ClientRectangle>
+                  <Font>Arial,6,Bold</Font>
+                  <Guid>74ed0300989106f7a0da86867eb37e38</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2.8,0</MaxSize>
+                  <MinSize>0,1</MinSize>
+                  <Name>CrossTitle7</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Precio Unitario</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TypeOfComponent>Row:CrossTab1_Row7</TypeOfComponent>
+                </CrossTitle7>
+                <CrossTitle8 Ref="83" type="CrossTitle" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>13,0.45,2.6,1</ClientRectangle>
+                  <Font>Arial,6,Bold</Font>
+                  <Guid>e60fd0f61dfe786fac5386867ec9fd62</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2.6,0</MaxSize>
+                  <MinSize>0,1</MinSize>
+                  <Name>CrossTitle8</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Valor Original</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TypeOfComponent>Row:CrossTab1_Row8</TypeOfComponent>
+                </CrossTitle8>
+                <CrossTab1_Row9_Title Ref="84" type="CrossTitle" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>15.6,0.45,1.8,1</ClientRectangle>
+                  <Font>Arial,6,Bold</Font>
+                  <Guid>541fd7638da74fd69016ca14b13ee3e4</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2.4,0</MaxSize>
+                  <MinSize>0,1</MinSize>
+                  <Name>CrossTab1_Row9_Title</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Monto Ajustado</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TypeOfComponent>Row:CrossTab1_Row9</TypeOfComponent>
+                </CrossTab1_Row9_Title>
+                <CrossTab1_Column1 Ref="85" type="CrossColumn" isKey="true">
+                  <Alias>PeriodoDesde</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>17.45,0.45,1,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{Format("{0:dd/MM/yyyy}", FDCnxProgramacionFisica.PeriodoDesde)}
+{Format("{0:dd/MM/yyyy}", FDCnxProgramacionFisica.PeriodoHasta)}</DisplayValue>
+                  <Font>Arial,6,Bold</Font>
+                  <Guid>0071b607a5b4c2e74a9986867f444ad0</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2.8,0</MaxSize>
+                  <Name>CrossTab1_Column1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <SortType>ByValue</SortType>
+                  <Text>PeriodoDesde</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TotalGuid>3cefa476cae1594a412e86867e29fe15</TotalGuid>
+                  <Value>{FDCnxProgramacionFisica.PeriodoDesde}</Value>
+                </CrossTab1_Column1>
+                <CrossTab1_RightTitle Ref="86" type="CrossTitle" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>18.65,0,2,0.4</ClientRectangle>
+                  <Font>Arial,8</Font>
+                  <Guid>a1fbeaa66bae42339b0b06ef340bb185</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RightTitle</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="52" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>PeriodoDesde</Text>
+                  <TextBrush>[105:105:105]</TextBrush>
+                  <TypeOfComponent>RightTitle</TypeOfComponent>
+                </CrossTab1_RightTitle>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <DataRelationName />
+              <DataSourceName>FDCnxProgramacionFisica</DataSourceName>
+              <EmptyValue />
+              <Filters isList="true" count="0" />
+              <GrowToHeight>True</GrowToHeight>
+              <MinSize>0,1</MinSize>
+              <Name>CrossTab1</Name>
+              <Page isRef="4" />
+              <Parent isRef="51" />
+              <Sort isList="true" count="0" />
+            </CrossTab1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>FDCnxProgramacionFisica</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="2">
+            <value>ASC</value>
+            <value>ComponenteCorrel</value>
+          </Sort>
+        </DataBand1>
+        <ReportSummaryBand1 Ref="87" type="ReportSummaryBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,10.4,41.18,8.8</ClientRectangle>
+          <Components isList="true" count="18">
+            <Text34 Ref="88" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,0,3.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text34</Name>
+              <Page isRef="4" />
+              <Parent isRef="87" />
+              <Text>Monto Original del Proyecto:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="89" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text34>
+            <Text33 Ref="90" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,0,5.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text33</Name>
+              <Page isRef="4" />
+              <Parent isRef="87" />
+              <Text>{FDCnxProgramacionFisica.MontoOriginal}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="91" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text33>
+            <Text39 Ref="92" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.8,0,2.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text39</Name>
+              <Page isRef="4" />
+              <Parent isRef="87" />
+              <Text>Monto Ajustado</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="93" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text39>
+            <Text26 Ref="94" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.8,0.4,2.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="4" />
+              <Parent isRef="87" />
+              <Text>{FDCnxProgramacionFisica.Montomod}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="95" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+            <Text25 Ref="96" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.4,0.4,2.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="4" />
+              <Parent isRef="87" />
+              <Text>{FDCnxProgramacionFisica.MontoOriginal}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="97" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+            <Text23 Ref="98" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.4,0.4,1,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="4" />
+              <Parent isRef="87" />
+              <Text>TOTAL:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text23>
+            <Text38 Ref="99" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.4,0,2.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text38</Name>
+              <Page isRef="4" />
+              <Parent isRef="87" />
+              <Text>Valor Original</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="100" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text38>
+            <Text21 Ref="101" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0.6,6.8,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>aa38e4a651a541ca9d807b4ea8dbdda3</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="4" />
+              <Parent isRef="87" />
+              <Text>Elaboro:</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+            </Text21>
+            <Text18 Ref="102" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>7,6.8,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>b48aa4781bba4b5292bd7bc9158611fb</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="4" />
+              <Parent isRef="87" />
+              <Text>Acepto:</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+            </Text18>
+            <Text19 Ref="103" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>7.4,8,5.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>c1f1b4a06b094ceb834b3dca9549e6ee</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="4" />
+              <Parent isRef="87" />
+              <Text>SUPERVISOR/SUPERVISORA
+{FDCnxProgramacionFisica.Supervisora}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Text19>
+            <Text17 Ref="104" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>1,8,3.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>7d8dafcd57dc4a7eb3cf3feeff588448</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="4" />
+              <Parent isRef="87" />
+              <Text>Ing. SUPERINTENDENTE/
+CONTRATISTA</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Text17>
+            <Text20 Ref="105" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>21.2,8,4.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>779153c138c046518b2b38dd488db777</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="4" />
+              <Parent isRef="87" />
+              <Text>DIRECTOR O SUBDIRECTOR
+COVIAL</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Text20>
+            <Text22 Ref="106" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>28,8,4.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>ab2b7a8c13d64221822b18cd3300c40d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="4" />
+              <Parent isRef="87" />
+              <Text>SUPERVISOR REGIONAL DE 
+CONTROL Y SEGUIMIENTO</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Text22>
+            <CrossTab3 Ref="107" type="Stimulsoft.Report.CrossTab.StiCrossTab" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>0.8,1.2,12.4,2.6</ClientRectangle>
+              <Components isList="true" count="12">
+                <CrossTab3_ColTotal1 Ref="108" type="CrossColumnTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>5.05,0.05,0,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>bc8dade914164b65a56e8a0630b2efc4</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab3_ColTotal1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="107" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab3_ColTotal1>
+                <CrossTab3_Column1_Title Ref="109" type="CrossTitle" isKey="true">
+                  <Border>All;Transparent;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,0.05,3.8,0.4</ClientRectangle>
+                  <Font>Arial,8</Font>
+                  <Guid>ea9e4fec12da47f6833b0b40a3e4bd75</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab3_Column1_Title</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="107" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>[105:105:105]</TextBrush>
+                  <TypeOfComponent>Col:CrossTab3_Column1</TypeOfComponent>
+                </CrossTab3_Column1_Title>
+                <CrossTab3_SummaryTitle Ref="110" type="CrossTitle" isKey="true">
+                  <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,0.5,0.2,1.6</ClientRectangle>
+                  <Font>Arial,8</Font>
+                  <Guid>076965a55ca046ab97448abd4abade67</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab3_SummaryTitle</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="107" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>[105:105:105]</TextBrush>
+                  <TypeOfComponent>SummaryTitle</TypeOfComponent>
+                </CrossTab3_SummaryTitle>
+                <CrossTab3_SumHeader1 Ref="111" type="Stimulsoft.Report.CrossTab.StiCrossSummaryHeader" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0.2,0.5,3.6,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,6.75,Regular,Point,False,0</Font>
+                  <Guid>4facfa0c210c4627870c7314257a0b51</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab3_SumHeader1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="107" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>EJECUCION MENSUAL</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab3_SumHeader1>
+                <CrossTab3_SumHeader2 Ref="112" type="Stimulsoft.Report.CrossTab.StiCrossSummaryHeader" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0.2,0.9,3.6,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,6.75,Regular,Point,False,0</Font>
+                  <Guid>4dd49898423f4b56b6726bfe810fb541</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab3_SumHeader2</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="107" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>ACUMULADO MENSUAL</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab3_SumHeader2>
+                <CrossTab3_SumHeader3 Ref="113" type="Stimulsoft.Report.CrossTab.StiCrossSummaryHeader" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0.2,1.3,3.6,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,6.75,Regular,Point,False,0</Font>
+                  <Guid>d216e86055464fc5b0409dd44d74a8a1</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab3_SumHeader3</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="107" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>PORCENTAJE MENSUAL %</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab3_SumHeader3>
+                <CrossTab3_Column1 Ref="114" type="CrossColumn" isKey="true">
+                  <Alias>PeriodoDesde</Alias>
+                  <AllowHtmlTags>True</AllowHtmlTags>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>3.85,0.05,1.4,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{Format("{0:dd/MM/yyyy}", FDCnxProgramacionFisica.PeriodoDesde) } {Format("{0:dd/MM/yyyy}", FDCnxProgramacionFisica.PeriodoHasta) }</DisplayValue>
+                  <EnumeratorType>Arabic</EnumeratorType>
+                  <Font>Arial,5</Font>
+                  <Guid>012e13fc54734721905a4a9eeb8b9874</Guid>
+                  <Margins>1,1,1,1</Margins>
+                  <MaxSize>5.5,0</MaxSize>
+                  <Name>CrossTab3_Column1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="107" />
+                  <PrintOnAllPages>False</PrintOnAllPages>
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <SortDirection>None</SortDirection>
+                  <SortType>ByValue</SortType>
+                  <Text>PeriodoDesde</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TextQuality>Wysiwyg</TextQuality>
+                  <TotalGuid>bc8dade914164b65a56e8a0630b2efc4</TotalGuid>
+                  <Value>{FDCnxProgramacionFisica.PeriodoDesde}</Value>
+                </CrossTab3_Column1>
+                <CrossTab3_Sum1 Ref="115" type="CrossSummary" isKey="true">
+                  <Alias>SUMA</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>3.85,0.5,1.4,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,6.75,Regular,Point,False,0</Font>
+                  <Guid>c23ea742824049eaa557ec683efce0d8</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab3_Sum1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="107" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Summary>None</Summary>
+                  <Text>0</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextFormat Ref="116" type="CurrencyFormat" isKey="true">
+                    <GroupSeparator>,</GroupSeparator>
+                    <NegativePattern>1</NegativePattern>
+                    <PositivePattern>0</PositivePattern>
+                    <Symbol>Q</Symbol>
+                  </TextFormat>
+                  <Value>{FDCnxProgramacionFisica.SUMA+0}</Value>
+                </CrossTab3_Sum1>
+                <CrossTab3_Sum2 Ref="117" type="CrossSummary" isKey="true">
+                  <Alias>AcumuladoMensual</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>3.85,0.9,1.4,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,6.75,Regular,Point,False,0</Font>
+                  <Guid>40f78ced8ae641b7b5f0110b26025b3d</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab3_Sum2</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="107" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Summary>None</Summary>
+                  <Text>0</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextFormat Ref="118" type="CurrencyFormat" isKey="true">
+                    <GroupSeparator>,</GroupSeparator>
+                    <NegativePattern>1</NegativePattern>
+                    <PositivePattern>0</PositivePattern>
+                    <Symbol>Q</Symbol>
+                  </TextFormat>
+                  <Value>{FDCnxProgramacionFisica.AcumuladoMensual}</Value>
+                </CrossTab3_Sum2>
+                <CrossTab3_Sum3 Ref="119" type="CrossSummary" isKey="true">
+                  <Alias>SUMA</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>3.85,1.3,1.4,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,6.75,Regular,Point,False,0</Font>
+                  <Guid>fa1f3cffde9347d4b37f229c69e2c467</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab3_Sum3</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="107" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Summary>None</Summary>
+                  <Text>0</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextFormat Ref="120" type="NumberFormat" isKey="true">
+                    <GroupSeparator>,</GroupSeparator>
+                    <NegativePattern>1</NegativePattern>
+                  </TextFormat>
+                  <Value>{Round(((FDCnxProgramacionFisica.SUMA/FDCnxProgramacionFisica.MontoOriginal)*100),4)}</Value>
+                </CrossTab3_Sum3>
+                <CrossTab3_Sum4 Ref="121" type="CrossSummary" isKey="true">
+                  <Alias>AcumuladoMensual</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>3.85,1.7,1.4,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,6.75,Regular,Point,False,0</Font>
+                  <Guid>8832aa3054cd438cbc64199f54ad3052</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab3_Sum4</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="107" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Summary>None</Summary>
+                  <Text>0</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextFormat Ref="122" type="NumberFormat" isKey="true">
+                    <GroupSeparator>,</GroupSeparator>
+                    <NegativePattern>1</NegativePattern>
+                  </TextFormat>
+                  <Value>{Round(((FDCnxProgramacionFisica.AcumuladoMensual/FDCnxProgramacionFisica.MontoOriginal)*100),4)}</Value>
+                </CrossTab3_Sum4>
+                <CrossTab3_SumHeader4 Ref="123" type="Stimulsoft.Report.CrossTab.StiCrossSummaryHeader" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0.2,1.7,3.6,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,6.75,Regular,Point,False,0</Font>
+                  <Guid>5d6453e3ab0d4b288c14465366e1bac1</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab3_SumHeader4</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="107" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>PORCENTAJE ACUMULADO %</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab3_SumHeader4>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <DataRelationName />
+              <DataSourceName>FDCnxProgramacionFisica</DataSourceName>
+              <EmptyValue />
+              <Filters isList="true" count="0" />
+              <Name>CrossTab3</Name>
+              <Page isRef="4" />
+              <Parent isRef="87" />
+              <Printable>False</Printable>
+              <PrintIfEmpty>False</PrintIfEmpty>
+              <Sort isList="true" count="0" />
+            </CrossTab3>
+            <HorizontalLinePrimitive6 Ref="124" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0.6,7.6,4.6,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="125" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>6e0f5459e237487986c305cf55773319</Guid>
+              <Name>HorizontalLinePrimitive6</Name>
+              <Page isRef="4" />
+              <Parent isRef="87" />
+              <StartCap Ref="126" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive6>
+            <HorizontalLinePrimitive1 Ref="127" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>7.6,7.6,5.2,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="128" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>0905e43b59244655b587ac349171588b</Guid>
+              <Name>HorizontalLinePrimitive1</Name>
+              <Page isRef="4" />
+              <Parent isRef="87" />
+              <StartCap Ref="129" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive1>
+            <HorizontalLinePrimitive2 Ref="130" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>21.2,7.6,4.6,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="131" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>58bfda8dadb54e8b88e2e4fa85102f91</Guid>
+              <Name>HorizontalLinePrimitive2</Name>
+              <Page isRef="4" />
+              <Parent isRef="87" />
+              <StartCap Ref="132" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive2>
+            <HorizontalLinePrimitive4 Ref="133" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>28.4,7.6,4.6,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="134" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>8a5628c79b834ef79f8d8ad130ef2c7d</Guid>
+              <Name>HorizontalLinePrimitive4</Name>
+              <Page isRef="4" />
+              <Parent isRef="87" />
+              <StartCap Ref="135" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive4>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportSummaryBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <PrintIfEmpty>False</PrintIfEmpty>
+        </ReportSummaryBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>9d02f7208725424a88e8f61207b39c7b</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>21.89</PageHeight>
+      <PageWidth>43.18</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="136" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="137" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true">
+    <Duplex>Simplex</Duplex>
+  </PrinterSettings>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>11/23/2022 10:19:46 AM</ReportChanged>
+  <ReportCreated>5/10/2017 10:35:55 AM</ReportCreated>
+  <ReportFile>C:\Users\gisys\OneDrive\Documentos\proyectos\SICOP\SICOP-Web\Covialgt\Covialgt\Reportes\RptProgramacionFisica.mrt</ReportFile>
+  <ReportGuid>ad152e24e42649a29b3167966c51dfab</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2012.1.1300</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        
+        public Report()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

@@ -1,0 +1,574 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.0" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <Connection Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>Connection</Alias>
+        <ConnectionString>User ID=etzic;Data Source=192.168.1.90\COVIALAPP;Initial Catalog=z_PRODUCCION_sicopDB;Integrated Security=False;Password=Covi@l2018*.</ConnectionString>
+        <Name>Connection</Name>
+        <PromptUserNameAndPassword>False</PromptUserNameAndPassword>
+      </Connection>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <DataSource1 Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DataSource1</Alias>
+        <Columns isList="true" count="7">
+          <value>Anio,System.String</value>
+          <value>programa,System.String</value>
+          <value>estado,System.String</value>
+          <value>monto_ejecutado,System.Decimal</value>
+          <value>monto_original,System.Decimal</value>
+          <value>monto_mod,System.Decimal</value>
+          <value>Orden,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DataSource1</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_Aniop,,8,0</value>
+          <value>_x0040_programa,,22,10</value>
+        </Parameters>
+        <SqlCommand>declare @anio int=@Aniop
+if @programa=''
+begin
+select 
+	a.AnioID as anio
+	,b.programacodigo as programa
+	,c.EstadoDesc as estado
+	,convert(decimal(16,2),sum(a.MontoEjecutado)) as monto_ejecutado
+	,sum(b.MontoOriginal) as monto_original
+	,sum(dbo.fnTotalDocCambios( b.AnioID,b.ProyectoCodigo))  as monto_mod
+	,c.orden		
+	from tblEstimaciones a
+	inner join tblproyectos b ON A.AnioID =B.AnioID AND a.ProyectoCodigo =b.ProyectoCodigo 
+		and a.AnioID =@anio   and a.EstadoID in (1,2,3,4,5,6,8,9,14,15,16,22,23,24,27,39)
+	inner join tblCatEstimacionEstado c on a.EstadoID =c.EstadoID 
+	inner join tblEmpresas d on b.EmpresaNIT =d.EmpresaNIT  and b.ProyectoEstatusID=3 and b.EmpresaNIT is not null 
+	group by a.AnioID,b.programacodigo,c.EstadoDesc 	,c.orden
+UNION
+SELECT 
+	PRO.AnioID as anio
+	,PRO.programacodigo as programa
+	,'Sin Estimación' as estado
+	,convert(decimal(16,2),sum(dbo.fnTotalDocCambios( pro.AnioID,pro.ProyectoCodigo)))  as monto_ejecutado
+	,sum(pro.MontoOriginal) as monto_original
+	,sum(dbo.fnTotalDocCambios( pro.AnioID,pro.ProyectoCodigo) ) monto_mod
+	,20 orden
+FROM TBLPROYECTOS pro 
+INNER JOIN tblEmpresas EM ON PRO.EmpresaNIT=EM.EmpresaNIT
+WHERE pro.ProyectoCodigo NOT IN(
+select 	
+	distinct b.ProyectoCodigo
+	from tblEstimaciones a
+	inner join tblproyectos b ON A.AnioID =B.AnioID AND a.ProyectoCodigo =b.ProyectoCodigo 
+		and a.AnioID =@anio   and a.EstadoID in (1,2,3,4,5,6,8,9,14,15,16,22,23,24,27,39) 
+	inner join tblCatEstimacionEstado c on a.EstadoID =c.EstadoID 
+	inner join tblEmpresas d on b.EmpresaNIT =d.EmpresaNIT and b.ProyectoEstatusID=3 and b.EmpresaNIT is not null) AND AnioID=@anio AND MontoOriginal&gt;0 
+GROUP BY PRO.AnioID,PRO.programacodigo 
+UNION
+SELECT	
+	PRO.AnioID as anio
+	,PRO.PROGRAMACODIGO as programa
+	,'Sin Estimación' as estado
+	,convert(decimal(16,2), sum(dbo.fnTotalDocCambios(pro.AnioID,pro.ProyectoCodigo) - dbo.fnObtenerTotalEstimaciones(pro.AnioID,pro.ProyectoCodigo))) monto_ejecutado
+	,sum(pro.MontoOriginal) as monto_original
+	,sum(dbo.fnTotalDocCambios( pro.AnioID,pro.ProyectoCodigo))  monto_mod--dbo.fnTotalDocCambios(pro.AnioID,pro.ProyectoCodigo) as monto_mod
+	,20 orden
+from tblproyectos pro
+		inner join (
+select
+	distinct est.AnioID,est.ProyectoCodigo
+	from tblEstimaciones est
+	inner join tblproyectos pro ON est.AnioID =pro.AnioID AND est.ProyectoCodigo =pro.ProyectoCodigo  
+	and pro.AnioID =@anio AND   est.EstadoID in (1,2,3,4,5,6,8,9,14,15,16,22,23,24,27,39))tbl on pro.anioid=tbl.anioid and pro.ProyectoCodigo=tbl.ProyectoCodigo
+		inner join tblEmpresas emp on pro.EmpresaNIT =emp.EmpresaNIT  and pro.ProyectoEstatusID=3 and emp.EmpresaNIT is not null 
+	group by PRO.AnioID,PRO.PROGRAMACODIGO,pro.ProyectoCodigo
+
+
+
+end 
+else
+begin
+select 
+	a.AnioID as anio
+	,b.programacodigo as programa
+	,c.EstadoDesc as estado
+	,convert(decimal(16,2), sum(a.MontoEjecutado)) as monto_ejecutado
+	,sum(b.MontoOriginal) as monto_original
+	,sum(dbo.fnTotalDocCambios( b.AnioID,b.ProyectoCodigo))  as monto_mod
+	,c.orden		
+	from tblEstimaciones a
+	inner join tblproyectos b ON A.AnioID =B.AnioID AND a.ProyectoCodigo =b.ProyectoCodigo  and b.ProgramaCodigo=@programa
+		and a.AnioID =@anio   and a.EstadoID in (1,2,3,4,5,6,8,9,14,15,16,22,23,24,27,39)
+	inner join tblCatEstimacionEstado c on a.EstadoID =c.EstadoID 
+	inner join tblEmpresas d on b.EmpresaNIT =d.EmpresaNIT  and b.ProyectoEstatusID=3 and b.EmpresaNIT is not null 
+	group by a.AnioID,b.programacodigo,c.EstadoDesc 	,c.orden
+UNION
+SELECT 
+	PRO.AnioID as anio
+	,PRO.programacodigo as programa
+	,'Sin Estimación' as estado
+	,convert(decimal(16,2), sum(dbo.fnTotalDocCambios( pro.AnioID,pro.ProyectoCodigo)))  as monto_ejecutado
+	,sum(pro.MontoOriginal) as monto_original
+	,sum(dbo.fnTotalDocCambios( pro.AnioID,pro.ProyectoCodigo) ) monto_mod
+	,20 orden
+FROM TBLPROYECTOS pro 
+INNER JOIN tblEmpresas EM ON PRO.EmpresaNIT=EM.EmpresaNIT
+WHERE pro.ProyectoCodigo NOT IN(
+select 	
+	distinct b.ProyectoCodigo
+	from tblEstimaciones a
+	inner join tblproyectos b ON A.AnioID =B.AnioID AND a.ProyectoCodigo =b.ProyectoCodigo and b.ProgramaCodigo=@programa
+		and a.AnioID =@anio   and a.EstadoID in (1,2,3,4,5,6,8,9,14,15,16,22,23,24,27,39) 
+	inner join tblCatEstimacionEstado c on a.EstadoID =c.EstadoID 
+	inner join tblEmpresas d on b.EmpresaNIT =d.EmpresaNIT and b.ProyectoEstatusID=3 and b.EmpresaNIT is not null) AND AnioID=@anio AND MontoOriginal&gt;0 and pro.programacodigo=@programa
+GROUP BY PRO.AnioID,PRO.programacodigo 
+UNION
+SELECT	
+	PRO.AnioID as anio
+	,PRO.PROGRAMACODIGO as programa
+	,'Sin Estimación' as estado
+	,convert(decimal(16,2), sum(dbo.fnTotalDocCambios(pro.AnioID,pro.ProyectoCodigo) - dbo.fnObtenerTotalEstimaciones(pro.AnioID,pro.ProyectoCodigo))) monto_ejecutado
+	,sum(pro.MontoOriginal) as monto_original
+	,sum(dbo.fnTotalDocCambios( pro.AnioID,pro.ProyectoCodigo))  monto_mod--dbo.fnTotalDocCambios(pro.AnioID,pro.ProyectoCodigo) as monto_mod
+	,20 orden
+from tblproyectos pro
+		inner join (
+select
+	distinct est.AnioID,est.ProyectoCodigo
+	from tblEstimaciones est
+	inner join tblproyectos pro ON est.AnioID =pro.AnioID AND est.ProyectoCodigo =pro.ProyectoCodigo  and ProgramaCodigo=@programa
+	and pro.AnioID =@anio AND   est.EstadoID in (1,2,3,4,5,6,8,9,14,15,16,22,23,24,27,39))tbl on pro.anioid=tbl.anioid and pro.ProyectoCodigo=tbl.ProyectoCodigo
+		inner join tblEmpresas emp on pro.EmpresaNIT =emp.EmpresaNIT  and pro.ProyectoEstatusID=3 and emp.EmpresaNIT is not null and pro.ProgramaCodigo=@programa
+	group by PRO.AnioID,PRO.PROGRAMACODIGO,pro.ProyectoCodigo
+end</SqlCommand>
+      </DataSource1>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <PageHeaderBand1 Ref="5" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,40,7.4</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text1 Ref="6" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.4,4.8,24,1.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,16,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>REPORTE DE DEUDA POR ESTADO DE ESTIMACIÓN</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Image1 Ref="7" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.2,1.6,6,5</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Image>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</Image>
+              <Name>Image1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+            </Image1>
+            <Text25 Ref="8" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.4,2.8,24,2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,16,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>MINISTERIO DE COMUNICACIONES INFRAESTRUCTURA Y VIVIENDA
+UNIDAD EJECUTORA DE CONSERVACION VIAL -COVIAL-</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+            <Image2 Ref="9" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>30.4,3,3.4,2.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Guid>f2c76d497f2d405d8a630ec9fb0645c4</Guid>
+              <Image>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</Image>
+              <Name>Image2</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+            </Image2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageHeaderBand1>
+        <PageFooterBand1 Ref="10" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,26.9,40,0.8</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text26 Ref="11" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>30,0.2,3.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="4" />
+              <Parent isRef="10" />
+              <Text>{PageNumber} de {TotalPageCount}</Text>
+              <TextBrush>DarkGray</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageFooterBand1>
+        <DataBand2 Ref="12" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,8.6,40,13</ClientRectangle>
+          <Components isList="true" count="1">
+            <CrossTab1 Ref="13" type="Stimulsoft.Report.CrossTab.StiCrossTab" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,40,5.8</ClientRectangle>
+              <Components isList="true" count="13">
+                <CrossTab1_RowTotal1 Ref="14" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>0,2.3,3,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,10</Font>
+                  <Guid>bc8528840a8a455592e3e04d61591937</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal1>
+                <CrossTab1_Row1_Title Ref="15" type="CrossTitle" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>SteelBlue</Brush>
+                  <ClientRectangle>0,0.45,1,1.2</ClientRectangle>
+                  <Font>Arial,8</Font>
+                  <Guid>8349f0f1d4424f52861a849cb682fe29</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_Row1_Title</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>AÑO</Text>
+                  <TextBrush>White</TextBrush>
+                  <TypeOfComponent>Row:CrossTab1_Row1</TypeOfComponent>
+                </CrossTab1_Row1_Title>
+                <CrossTab1_RowTotal2 Ref="16" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>1,2.3,0,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>45b97dcf7b66471c99fc702afa0242f9</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal2</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal2>
+                <CrossTab1_Row2_Title Ref="17" type="CrossTitle" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>SteelBlue</Brush>
+                  <ClientRectangle>1,0.45,2,1.2</ClientRectangle>
+                  <Font>Arial,8</Font>
+                  <Guid>7442e80f25fe4ec4a361a4583d5b46de</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_Row2_Title</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>PROGRAMA</Text>
+                  <TextBrush>White</TextBrush>
+                  <TypeOfComponent>Row:CrossTab1_Row2</TypeOfComponent>
+                </CrossTab1_Row2_Title>
+                <CrossTab1_ColTotal1 Ref="18" type="CrossColumnTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>4.45,0.45,1.2,1.2</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,10</Font>
+                  <Guid>9e1cc8fb3c5c418ab40178f6ea6bfbc5</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>3,0</MaxSize>
+                  <Name>CrossTab1_ColTotal1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_ColTotal1>
+                <CrossTab1_LeftTitle Ref="19" type="CrossTitle" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,0,3,0.4</ClientRectangle>
+                  <Font>Arial,8</Font>
+                  <Guid>5d69591ceef84baba04df3ffadfac614</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_LeftTitle</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>[105:105:105]</TextBrush>
+                  <TypeOfComponent>LeftTitle</TypeOfComponent>
+                </CrossTab1_LeftTitle>
+                <CrossTab1_ColTotal2 Ref="20" type="CrossColumnTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>4.45,1.05,0,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>523bb3eba9d6454894cc6b0b8219534e</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_ColTotal2</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_ColTotal2>
+                <CrossTab1_Row1 Ref="21" type="CrossRow" isKey="true">
+                  <Alias>Anio</Alias>
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,1.7,1,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{DataSource1.Anio}</DisplayValue>
+                  <Font>Arial,12</Font>
+                  <Guid>786924686c434ef9b1ef0967679ab06d</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_Row1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Anio</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TotalGuid>bc8528840a8a455592e3e04d61591937</TotalGuid>
+                  <Value>{DataSource1.Anio}</Value>
+                </CrossTab1_Row1>
+                <CrossTab1_Row2 Ref="22" type="CrossRow" isKey="true">
+                  <Alias>programa</Alias>
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>1,1.7,2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{DataSource1.programa}</DisplayValue>
+                  <Font>Arial,12</Font>
+                  <Guid>a3c1c1b107104b7e85f10f1cb09388a3</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_Row2</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>programa</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TotalGuid>45b97dcf7b66471c99fc702afa0242f9</TotalGuid>
+                  <Value>{DataSource1.programa}</Value>
+                </CrossTab1_Row2>
+                <CrossTab1_Column1 Ref="23" type="CrossColumn" isKey="true">
+                  <Alias>Orden</Alias>
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>SteelBlue</Brush>
+                  <ClientRectangle>3.05,0.45,1.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{DataSource1.Orden}</DisplayValue>
+                  <Font>Arial,12</Font>
+                  <Guid>5951ad2b9ad44660abb923a0ff3885ae</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>3,0</MaxSize>
+                  <Name>CrossTab1_Column1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Orden</Text>
+                  <TextBrush>SteelBlue</TextBrush>
+                  <TotalGuid>9e1cc8fb3c5c418ab40178f6ea6bfbc5</TotalGuid>
+                  <Value>{DataSource1.Orden}</Value>
+                </CrossTab1_Column1>
+                <CrossTab1_Column2 Ref="24" type="CrossColumn" isKey="true">
+                  <Alias>estado</Alias>
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>SteelBlue</Brush>
+                  <ClientRectangle>3.05,1.05,1.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{DataSource1.estado}</DisplayValue>
+                  <Font>Arial,12</Font>
+                  <Guid>33e3c27bad0d479aa0333a425f59394b</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>3,0</MaxSize>
+                  <Name>CrossTab1_Column2</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>estado</Text>
+                  <TextBrush>White</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TotalGuid>523bb3eba9d6454894cc6b0b8219534e</TotalGuid>
+                  <Value>{DataSource1.estado}</Value>
+                </CrossTab1_Column2>
+                <CrossTab1_Sum1 Ref="25" type="CrossSummary" isKey="true">
+                  <Alias>monto_ejecutado</Alias>
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>3.05,1.7,1.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,10</Font>
+                  <Guid>9265cb1056bc4c45a8b13903cfde5df1</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>3,0</MaxSize>
+                  <Name>CrossTab1_Sum1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>0</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextFormat Ref="26" type="CurrencyFormat" isKey="true">
+                    <DecimalSeparator>,</DecimalSeparator>
+                    <GroupSeparator>.</GroupSeparator>
+                    <NegativePattern>8</NegativePattern>
+                    <PositivePattern>3</PositivePattern>
+                    <Symbol>€</Symbol>
+                  </TextFormat>
+                  <Value>{DataSource1.monto_ejecutado}</Value>
+                </CrossTab1_Sum1>
+                <CrossTab1_RightTitle Ref="27" type="CrossTitle" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>SteelBlue</Brush>
+                  <ClientRectangle>3.05,0,2.6,0.4</ClientRectangle>
+                  <Font>Arial,8</Font>
+                  <Guid>af58702c4c354383bbe107de2c60faaf</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RightTitle</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>ESTADO</Text>
+                  <TextBrush>White</TextBrush>
+                  <TypeOfComponent>RightTitle</TypeOfComponent>
+                </CrossTab1_RightTitle>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <DataRelationName />
+              <DataSourceName>DataSource1</DataSourceName>
+              <EmptyValue />
+              <Filters isList="true" count="0" />
+              <Guid>4c3d39510fec47f4a7b953924dcdbea9</Guid>
+              <Name>CrossTab1</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <Sort isList="true" count="2">
+                <value>ASC</value>
+                <value>Num</value>
+              </Sort>
+              <SummaryDirection>LeftToRight</SummaryDirection>
+            </CrossTab1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>DataSource1</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>749ad363bd424b0898ae317510b19089</Guid>
+          <Name>DataBand2</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </DataBand2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>85ba8107220948d59e479e63219182b7</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>42</PageWidth>
+      <PaperSize>A3</PaperSize>
+      <PrintHeadersFootersFromPreviousPage>True</PrintHeadersFootersFromPreviousPage>
+      <Report isRef="0" />
+      <Watermark Ref="28" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="29" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>11/28/2018 11:27:02 AM</ReportChanged>
+  <ReportCreated>5/15/2018 2:49:45 PM</ReportCreated>
+  <ReportFile>\\192.168.1.90\g$\SRV2\wwwroot\SICOP\Reportes\rptDeudaPrograma.mrt</ReportFile>
+  <ReportGuid>4d845bb664e240e7bad8b9928c768d66</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2010.1.700</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        
+        public Report()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="1">
+    <Style1 Ref="30" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>All;White;1;Solid;False;4;Black</Border>
+      <Brush>SteelBlue</Brush>
+      <Font>Arial,12,Regular,Point,False,0</Font>
+      <Name>Style1</Name>
+      <TextBrush>Black</TextBrush>
+    </Style1>
+  </Styles>
+</StiSerializer>

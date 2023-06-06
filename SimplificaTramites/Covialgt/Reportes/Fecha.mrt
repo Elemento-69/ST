@@ -1,0 +1,2542 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <cnfecha Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>cnfecha</Alias>
+        <ConnectionStringEncrypted>9FSPz0YMWlniX9UIz1z2J9E0zYhIZ9PIaBjtiXlxJ+PKNNnr6HFp8cxB1WxqSaRngnrVoUNMSVnjZxXM6i1iRtla+cLJGMqIbVg9RGcl9i/j0I1D71zZ+e1JnI1q7OBujXw=</ConnectionStringEncrypted>
+        <Name>cnfecha</Name>
+      </cnfecha>
+    </Databases>
+    <DataSources isList="true" count="5">
+      <reportefecha Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>reportefecha</Alias>
+        <Columns isList="true" count="10">
+          <value>anioID,System.Int32</value>
+          <value>Cuentadescripcion,System.String</value>
+          <value>fuente,System.Int32</value>
+          <value>movcorrel,System.Int32</value>
+          <value>montoasig,System.Decimal</value>
+          <value>concepto,System.String</value>
+          <value>decre,System.Decimal</value>
+          <value>incre,System.Decimal</value>
+          <value>fechamov,System.String</value>
+          <value>saldomov,System.Decimal</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>reportefecha</Name>
+        <NameInSource>cnfecha</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>_x0040_AnioID,,8,10</value>
+          <value>_x0040_IDFuente,,22,10</value>
+          <value>_x0040_Usuario,,22,25</value>
+        </Parameters>
+        <SqlCommand>execute reportefecha @AnioID, @IDFuente</SqlCommand>
+      </reportefecha>
+      <prCertificacionesfecha Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>prCertificacionesfecha</Alias>
+        <Columns isList="true" count="14">
+          <value>codigocert,System.String</value>
+          <value>proyectocodigo,System.String</value>
+          <value>aniocertificacion,System.Int32</value>
+          <value>saldo,System.Decimal</value>
+          <value>tipomonto,System.String</value>
+          <value>fuente,System.Int32</value>
+          <value>fuenteid,System.Int32</value>
+          <value>debe,System.Decimal</value>
+          <value>haber,System.Decimal</value>
+          <value>montoasig,System.Decimal</value>
+          <value>saldomov,System.Decimal</value>
+          <value>correl,System.Int32</value>
+          <value>fecha,System.String</value>
+          <value>anioproy,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>prCertificacionesfecha</Name>
+        <NameInSource>cnfecha</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_AnioID,,8,10</value>
+          <value>_x0040_IDFuente,,22,10</value>
+        </Parameters>
+        <SqlCommand>execute prCertificacionesfecha @AnioID, @IDFuente</SqlCommand>
+      </prCertificacionesfecha>
+      <prDumentosfecha Ref="5" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>prDumentosfecha</Alias>
+        <Columns isList="true" count="13">
+          <value>DocCambioTipoID,System.String</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>fecha,System.String</value>
+          <value>EstadoDesc,System.String</value>
+          <value>MontoDocCambio,System.String</value>
+          <value>TipoMonto,System.String</value>
+          <value>debe,System.Decimal</value>
+          <value>haber,System.Decimal</value>
+          <value>montoasig,System.Decimal</value>
+          <value>saldomov,System.String</value>
+          <value>sumcre,System.Decimal</value>
+          <value>sumde,System.Decimal</value>
+          <value>saldofinaldumento,System.Decimal</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>prDumentosfecha</Name>
+        <NameInSource>cnfecha</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_AnioID,,8,10</value>
+          <value>_x0040_IDFuente,,3,10</value>
+        </Parameters>
+        <SqlCommand>execute prDumentosfecha @AnioID, @IDFuente</SqlCommand>
+      </prDumentosfecha>
+      <prDumentosnoaprobfecha Ref="6" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>prDumentosnoaprobfecha</Alias>
+        <Columns isList="true" count="13">
+          <value>DocCambioTipoID,System.String</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>fecha,System.String</value>
+          <value>EstadoDesc,System.String</value>
+          <value>MontoDocCambio,System.String</value>
+          <value>TipoMonto,System.String</value>
+          <value>debe,System.Decimal</value>
+          <value>haber,System.Decimal</value>
+          <value>montoasig,System.Decimal</value>
+          <value>saldomov,System.String</value>
+          <value>sumcre,System.Decimal</value>
+          <value>sumde,System.Decimal</value>
+          <value>saldofinaldumento,System.Decimal</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>prDumentosnoaprobfecha</Name>
+        <NameInSource>cnfecha</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_AnioID,,8,10</value>
+          <value>_x0040_IDFuente,,3,10</value>
+        </Parameters>
+        <SqlCommand>execute prDumentosnoaprobfecha 2014, 1</SqlCommand>
+      </prDumentosnoaprobfecha>
+      <prsaldoinicialinforme Ref="7" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>prsaldoinicialinforme</Alias>
+        <Columns isList="true" count="5">
+          <value>MontoAsignado,System.Decimal</value>
+          <value>saldoinicial,System.Decimal</value>
+          <value>totcertifi,System.Decimal</value>
+          <value>totdumento,System.Decimal</value>
+          <value>totdumentonoaprob,System.Decimal</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>prsaldoinicialinforme</Name>
+        <NameInSource>cnfecha</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_AnioID,,8,10</value>
+          <value>_x0040_IDFuente,,3,10</value>
+        </Parameters>
+        <SqlCommand>execute prsaldoinicialinforme @AnioID, @IDFuente</SqlCommand>
+      </prsaldoinicialinforme>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="2">
+    <Page1 Ref="8" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="14">
+        <PageHeaderBand1 Ref="9" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,3.27</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text3 Ref="10" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.6,1.4,12.52,0.91</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,14,Underline</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="8" />
+              <Parent isRef="9" />
+              <Text>REPORTE DE SALDO DE CUENTA CORRIENTE</Text>
+              <TextBrush>Black</TextBrush>
+            </Text3>
+            <Image1 Ref="11" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.6,1.2,2.6,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Guid>5ec6f685432540c286ba0e2c8c1be1d8</Guid>
+              <Image>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</Image>
+              <Name>Image1</Name>
+              <Page isRef="8" />
+              <Parent isRef="9" />
+              <Stretch>True</Stretch>
+            </Image1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+        </PageHeaderBand1>
+        <PageFooterBand1 Ref="12" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,27.1,19,0.6</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text25 Ref="13" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.2,0,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="8" />
+              <Parent isRef="12" />
+              <Text>{PageNumber}/{TotalPageCount}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+            <Text26 Ref="14" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13.8,0,5.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="8" />
+              <Parent isRef="12" />
+              <Text>{Time}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+            <Text23 Ref="15" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.6,0,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="8" />
+              <Parent isRef="12" />
+              <Text>Página:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text23>
+            <Text31 Ref="16" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,4.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="8" />
+              <Parent isRef="12" />
+              <Text>Usuario: {reportefecha.Parameters["@Usuario"].ParameterValue}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text31>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+        </PageFooterBand1>
+        <HeaderBand1 Ref="17" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,4.47,19,1.8</ClientRectangle>
+          <Components isList="true" count="12">
+            <Text1 Ref="18" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.2,4.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="8" />
+              <Parent isRef="17" />
+              <Text>Desc. Presupuesto</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text2 Ref="19" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.2,1.2,4.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="8" />
+              <Parent isRef="17" />
+              <Text>Concepto</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text4 Ref="20" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.4,1.2,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="8" />
+              <Parent isRef="17" />
+              <Text>Fecha</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text9 Ref="21" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.2,1.2,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="8" />
+              <Parent isRef="17" />
+              <Text>Debe(-)</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <Text10 Ref="22" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.6,1.2,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="8" />
+              <Parent isRef="17" />
+              <Text>Haber(+)</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text11 Ref="23" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.4,1.2,3.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="8" />
+              <Parent isRef="17" />
+              <Text>Saldo</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+            <Text12 Ref="24" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="8" />
+              <Parent isRef="17" />
+              <Text>AÑO:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text16 Ref="25" type="Text" isKey="true">
+              <Alias>anio</Alias>
+              <Border>Top, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.2,0,3,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="8" />
+              <Parent isRef="17" />
+              <Text>{reportefecha.anioID}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text16>
+            <Text15 Ref="26" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.6,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="8" />
+              <Parent isRef="17" />
+              <Text>Fuente:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text15>
+            <Text17 Ref="27" type="Text" isKey="true">
+              <Alias>fuente</Alias>
+              <Border>Top, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.6,0.6,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="8" />
+              <Parent isRef="17" />
+              <Text>{reportefecha.fuente}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text17>
+            <Text18 Ref="28" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.6,0.6,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="8" />
+              <Parent isRef="17" />
+              <Text>Saldo inicial:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text18>
+            <Text20 Ref="29" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.4,0.6,3.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="8" />
+              <Parent isRef="17" />
+              <Text>{reportefecha.montoasig}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="30" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text20>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>HeaderBand1</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+        </HeaderBand1>
+        <Data1 Ref="31" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,7.07,19,0.47</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text14 Ref="32" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.2,0,4.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="8" />
+              <Parent isRef="31" />
+              <Text>{reportefecha.concepto}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <Text5 Ref="33" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,4.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="8" />
+              <Parent isRef="31" />
+              <Text>{reportefecha.Cuentadescripcion}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text6 Ref="34" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8.4,0,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="8" />
+              <Parent isRef="31" />
+              <Text>{reportefecha.fechamov}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text7 Ref="35" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>12.6,0,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="8" />
+              <Parent isRef="31" />
+              <Text>{reportefecha.incre}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="36" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text13 Ref="37" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>15.4,0,3.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="8" />
+              <Parent isRef="31" />
+              <Text>{reportefecha.saldomov}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="38" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text13>
+            <Text8 Ref="39" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>10.2,0,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="8" />
+              <Parent isRef="31" />
+              <Text>{reportefecha.decre}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="40" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>reportefecha</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>Data1</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+          <Sort isList="true" count="0" />
+        </Data1>
+        <FooterBand1 Ref="41" type="FooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,8.34,19,1</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text19 Ref="42" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.4,0,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="8" />
+              <Parent isRef="41" />
+              <Text>Saldos:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text19>
+            <Text21 Ref="43" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.6,0,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="8" />
+              <Parent isRef="41" />
+              <Text>{Sum(reportefecha.incre)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="44" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+            <Text22 Ref="45" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.2,0,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="8" />
+              <Parent isRef="41" />
+              <Text>{Sum(reportefecha.decre)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="46" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text22>
+            <Text24 Ref="47" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.4,0,3.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="8" />
+              <Parent isRef="41" />
+              <Text>{reportefecha.montoasig+Sum(reportefecha.incre)-Sum(reportefecha.decre)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="48" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>FooterBand1</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+        </FooterBand1>
+        <HeaderBand2 Ref="49" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,10.14,19,1.8</ClientRectangle>
+          <Components isList="true" count="14">
+            <Text27 Ref="50" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.2,1.2,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="8" />
+              <Parent isRef="49" />
+              <Text>Codigo Cert.</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text27>
+            <Text29 Ref="51" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.6,1.2,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="8" />
+              <Parent isRef="49" />
+              <Text>Proyecto</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text29>
+            <Text33 Ref="52" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9,1.2,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text33</Name>
+              <Page isRef="8" />
+              <Parent isRef="49" />
+              <Text>Debe(-)</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text33>
+            <Text35 Ref="53" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.2,1.2,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text35</Name>
+              <Page isRef="8" />
+              <Parent isRef="49" />
+              <Text>Haber(+)</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text35>
+            <Text37 Ref="54" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.4,1.2,3.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>5d894884242d4a2095f1a7911e82a36d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text37</Name>
+              <Page isRef="8" />
+              <Parent isRef="49" />
+              <Text>Saldo</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text37>
+            <Text32 Ref="55" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.2,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>009124b404174a3098aa0c9dbc60f642</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text32</Name>
+              <Page isRef="8" />
+              <Parent isRef="49" />
+              <Text>No.</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text32>
+            <Text43 Ref="56" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.8,1.2,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>37260540d8014818b70159b267dfad52</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text43</Name>
+              <Page isRef="8" />
+              <Parent isRef="49" />
+              <Text>Fecha Cert.</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text43>
+            <Text44 Ref="57" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.2,0,3.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text44</Name>
+              <Page isRef="8" />
+              <Parent isRef="49" />
+              <Text>{prCertificacionesfecha.Parameters["@AnioID"].ParameterValue}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text44>
+            <Text47 Ref="58" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text47</Name>
+              <Page isRef="8" />
+              <Parent isRef="49" />
+              <Text>AÑO:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text47>
+            <Text48 Ref="59" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.6,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>abbcbe0362b64982a063eaddd20fac80</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text48</Name>
+              <Page isRef="8" />
+              <Parent isRef="49" />
+              <Text>Fuente:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text48>
+            <Text50 Ref="60" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.8,0.6,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text50</Name>
+              <Page isRef="8" />
+              <Parent isRef="49" />
+              <Text>{prCertificacionesfecha.fuente}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text50>
+            <Text49 Ref="61" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.2,0.6,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text49</Name>
+              <Page isRef="8" />
+              <Parent isRef="49" />
+              <Text>Saldo Inicial:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text49>
+            <Text51 Ref="62" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.4,0.6,3.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text51</Name>
+              <Page isRef="8" />
+              <Parent isRef="49" />
+              <Text>{prCertificacionesfecha.montoasig}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="63" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text51>
+            <Text115 Ref="64" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,1.2,1.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text115</Name>
+              <Page isRef="8" />
+              <Parent isRef="49" />
+              <Text>Año</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text115>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>HeaderBand2</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+        </HeaderBand2>
+        <DataBand1 Ref="65" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,12.74,19,0.6</ClientRectangle>
+          <Components isList="true" count="8">
+            <Text28 Ref="66" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1.2,0,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="8" />
+              <Parent isRef="65" />
+              <Text>{prCertificacionesfecha.codigocert}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text28>
+            <Text30 Ref="67" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>3.6,0,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="8" />
+              <Parent isRef="65" />
+              <Text>{prCertificacionesfecha.proyectocodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text30>
+            <Text39 Ref="68" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>15.4,0,3.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text39</Name>
+              <Page isRef="8" />
+              <Parent isRef="65" />
+              <Text>{prCertificacionesfecha.saldomov}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="69" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text39>
+            <Text46 Ref="70" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>6.8,0,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text46</Name>
+              <Page isRef="8" />
+              <Parent isRef="65" />
+              <Text>{prCertificacionesfecha.fecha}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text46>
+            <Text45 Ref="71" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>a2fcf60264e948b8b47f5028271e4a4c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text45</Name>
+              <Page isRef="8" />
+              <Parent isRef="65" />
+              <Text>{prCertificacionesfecha.correl}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text45>
+            <Text34 Ref="72" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>9,0,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text34</Name>
+              <Page isRef="8" />
+              <Parent isRef="65" />
+              <Text>{prCertificacionesfecha.debe}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="73" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text34>
+            <Text36 Ref="74" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>12.2,0,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text36</Name>
+              <Page isRef="8" />
+              <Parent isRef="65" />
+              <Text>{prCertificacionesfecha.haber}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="75" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text36>
+            <Text116 Ref="76" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>5.4,0,1.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text116</Name>
+              <Page isRef="8" />
+              <Parent isRef="65" />
+              <Text>{prCertificacionesfecha.anioproy}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text116>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>prCertificacionesfecha</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+        <FooterBand2 Ref="77" type="FooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,14.14,19,1</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text38 Ref="78" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.8,0,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <Guid>4ab9c0f532d84d9f82923e216aec5519</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text38</Name>
+              <Page isRef="8" />
+              <Parent isRef="77" />
+              <Text>Saldos:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text38>
+            <Text40 Ref="79" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9,0,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>94e17fdcf785478db779cdd5237007b4</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text40</Name>
+              <Page isRef="8" />
+              <Parent isRef="77" />
+              <Text>{Sum(prCertificacionesfecha.debe)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="80" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text40>
+            <Text42 Ref="81" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.4,0,3.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>e395d80566ea4f2193db2392913741a6</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text42</Name>
+              <Page isRef="8" />
+              <Parent isRef="77" />
+              <Text>{prCertificacionesfecha.montoasig-Sum(prCertificacionesfecha.debe)+Sum(prCertificacionesfecha.haber)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="82" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text42>
+            <Text41 Ref="83" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.2,0,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>9d01c6ca6f6c4f1781d05e48e9fde07f</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text41</Name>
+              <Page isRef="8" />
+              <Parent isRef="77" />
+              <Text>{Sum(prCertificacionesfecha.haber)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="84" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text41>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>FooterBand2</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+        </FooterBand2>
+        <HeaderBand3 Ref="85" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,15.94,19,1.8</ClientRectangle>
+          <Components isList="true" count="12">
+            <Text52 Ref="86" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>74f767c924fb456ba8bda16669212670</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text52</Name>
+              <Page isRef="8" />
+              <Parent isRef="85" />
+              <Text>AÑO:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text52>
+            <Text53 Ref="87" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.2,0,3.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text53</Name>
+              <Page isRef="8" />
+              <Parent isRef="85" />
+              <Text>{prDumentosfecha.Parameters["@AnioID"].ParameterValue}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text53>
+            <Text54 Ref="88" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.6,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>e5892e9ca6fe47729b4eccd7f796ee43</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text54</Name>
+              <Page isRef="8" />
+              <Parent isRef="85" />
+              <Text>Fuente:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text54>
+            <Text55 Ref="89" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.8,0.6,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text55</Name>
+              <Page isRef="8" />
+              <Parent isRef="85" />
+              <Text>{prCertificacionesfecha.fuente}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text55>
+            <Text56 Ref="90" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.2,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text56</Name>
+              <Page isRef="8" />
+              <Parent isRef="85" />
+              <Text>Doc Cambio</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text56>
+            <Text58 Ref="91" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.2,1.2,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text58</Name>
+              <Page isRef="8" />
+              <Parent isRef="85" />
+              <Text>Proyecto</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text58>
+            <Text60 Ref="92" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,1.2,3.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text60</Name>
+              <Page isRef="8" />
+              <Parent isRef="85" />
+              <Text>EstadoDesc</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text60>
+            <Text62 Ref="93" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.2,1.2,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text62</Name>
+              <Page isRef="8" />
+              <Parent isRef="85" />
+              <Text>Debe(-)</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text62>
+            <Text64 Ref="94" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.4,1.2,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text64</Name>
+              <Page isRef="8" />
+              <Parent isRef="85" />
+              <Text>Haber(+)</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text64>
+            <Text66 Ref="95" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.6,1.2,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text66</Name>
+              <Page isRef="8" />
+              <Parent isRef="85" />
+              <Text>Saldo</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text66>
+            <Text73 Ref="96" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.4,0.6,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>c2a116dafc9c4f65844200955bdbc27c</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text73</Name>
+              <Page isRef="8" />
+              <Parent isRef="85" />
+              <Text>Saldo Inicial:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text73>
+            <Text71 Ref="97" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.6,0.6,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>68ab73c30cf84a3dbfe6475efe5fd29a</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text71</Name>
+              <Page isRef="8" />
+              <Parent isRef="85" />
+              <Text>{prCertificacionesfecha.saldomov}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="98" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text71>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>HeaderBand3</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+        </HeaderBand3>
+        <DataBand2 Ref="99" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,18.54,19,0.6</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text57 Ref="100" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text57</Name>
+              <Page isRef="8" />
+              <Parent isRef="99" />
+              <Text>{prDumentosfecha.DocCambioTipoID}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text57>
+            <Text59 Ref="101" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.2,0,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text59</Name>
+              <Page isRef="8" />
+              <Parent isRef="99" />
+              <Text>{prDumentosfecha.ProyectoCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text59>
+            <Text61 Ref="102" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.6,0,3.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text61</Name>
+              <Page isRef="8" />
+              <Parent isRef="99" />
+              <Text>{prDumentosfecha.EstadoDesc}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text61>
+            <Text63 Ref="103" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8.2,0,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text63</Name>
+              <Page isRef="8" />
+              <Parent isRef="99" />
+              <Text>{prDumentosfecha.debe}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="104" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text63>
+            <Text68 Ref="105" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>14.6,0,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text68</Name>
+              <Page isRef="8" />
+              <Parent isRef="99" />
+              <Text>{prDumentosfecha.saldomov}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="106" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text68>
+            <Text65 Ref="107" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>11.4,0,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text65</Name>
+              <Page isRef="8" />
+              <Parent isRef="99" />
+              <Text>{prDumentosfecha.haber}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="108" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text65>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>prDumentosfecha</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataBand2</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+          <Sort isList="true" count="0" />
+        </DataBand2>
+        <FooterBand3 Ref="109" type="FooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,19.94,19,1</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text67 Ref="110" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.4,0,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <Guid>3c6f7adc37fd43ada643d42750d333a0</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text67</Name>
+              <Page isRef="8" />
+              <Parent isRef="109" />
+              <Text>Saldos:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text67>
+            <Text69 Ref="111" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.2,0,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>94303a29d63a4c38809096607587289f</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text69</Name>
+              <Page isRef="8" />
+              <Parent isRef="109" />
+              <Text>{Sum(prDumentosfecha.debe)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="112" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text69>
+            <Text72 Ref="113" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.6,0,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text72</Name>
+              <Page isRef="8" />
+              <Parent isRef="109" />
+              <Text>{prDumentosfecha.saldofinaldumento}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="114" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text72>
+            <Text70 Ref="115" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.4,0,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>8e038959d42b4c54ba062b78300370eb</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text70</Name>
+              <Page isRef="8" />
+              <Parent isRef="109" />
+              <Text>{Sum(prDumentosfecha.haber)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="116" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text70>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>FooterBand3</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+        </FooterBand3>
+        <HeaderBand4 Ref="117" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,21.74,19,1.8</ClientRectangle>
+          <Components isList="true" count="12">
+            <Text74 Ref="118" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>72b599e8b464495f8686136bda08caf4</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text74</Name>
+              <Page isRef="8" />
+              <Parent isRef="117" />
+              <Text>AÑO:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text74>
+            <Text75 Ref="119" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.2,0,3.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>9a2cbb1288bd4d848a92f3d460b000a2</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text75</Name>
+              <Page isRef="8" />
+              <Parent isRef="117" />
+              <Text>{prDumentosnoaprobfecha.Parameters["@AnioID"].ParameterValue}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text75>
+            <Text76 Ref="120" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.6,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>2f8712df718c4babb217d333ee936e8a</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text76</Name>
+              <Page isRef="8" />
+              <Parent isRef="117" />
+              <Text>Fuente:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text76>
+            <Text77 Ref="121" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.8,0.6,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>e068c9c473654e929a860983a2d6d8da</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text77</Name>
+              <Page isRef="8" />
+              <Parent isRef="117" />
+              <Text>{prCertificacionesfecha.fuente}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text77>
+            <Text78 Ref="122" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.2,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>5e4d39f308874d48877935fc7b8e24c8</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text78</Name>
+              <Page isRef="8" />
+              <Parent isRef="117" />
+              <Text>Doc Cambio</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text78>
+            <Text79 Ref="123" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.2,1.2,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>8b51635855fc4bb4b24e2bcdfd597126</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text79</Name>
+              <Page isRef="8" />
+              <Parent isRef="117" />
+              <Text>Proyecto</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text79>
+            <Text80 Ref="124" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,1.2,3.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>568756e902fd4e12895df6041d8b1c9d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text80</Name>
+              <Page isRef="8" />
+              <Parent isRef="117" />
+              <Text>EstadoDesc</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text80>
+            <Text81 Ref="125" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.2,1.2,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>a6819352fbd144109e7e667589dc1a99</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text81</Name>
+              <Page isRef="8" />
+              <Parent isRef="117" />
+              <Text>Debe(-)</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text81>
+            <Text82 Ref="126" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.4,1.2,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>5251bb4870104d109f316c669199fa14</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text82</Name>
+              <Page isRef="8" />
+              <Parent isRef="117" />
+              <Text>Haber(+)</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text82>
+            <Text83 Ref="127" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.6,1.2,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>e6dbefc438754ccdb55d35bc13b42b71</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text83</Name>
+              <Page isRef="8" />
+              <Parent isRef="117" />
+              <Text>Saldo</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text83>
+            <Text84 Ref="128" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.6,0.6,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>d98aa8b751c041d8a822c112b2d15da7</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text84</Name>
+              <Page isRef="8" />
+              <Parent isRef="117" />
+              <Text>{prDumentosfecha.saldofinaldumento}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="129" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text84>
+            <Text85 Ref="130" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.4,0.6,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>41f13791075d4c518c946fcb7123d0cc</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text85</Name>
+              <Page isRef="8" />
+              <Parent isRef="117" />
+              <Text>Saldo Inicial:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text85>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>HeaderBand4</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+        </HeaderBand4>
+        <DataBand3 Ref="131" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,24.34,19,0.6</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text86 Ref="132" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>e22a71e4bfff44fea0235a169e80a736</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text86</Name>
+              <Page isRef="8" />
+              <Parent isRef="131" />
+              <Text>{prDumentosnoaprobfecha.DocCambioTipoID}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text86>
+            <Text87 Ref="133" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.2,0,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>b3b41b5feb09485aa15547d1c89c68fd</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text87</Name>
+              <Page isRef="8" />
+              <Parent isRef="131" />
+              <Text>{prDumentosnoaprobfecha.ProyectoCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text87>
+            <Text88 Ref="134" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.6,0,3.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>8ac8a3f04f4f407181b57d57733d9193</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text88</Name>
+              <Page isRef="8" />
+              <Parent isRef="131" />
+              <Text>{prDumentosnoaprobfecha.EstadoDesc}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text88>
+            <Text90 Ref="135" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8.2,0,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>7f3d5f8afaaa491ebf670b5ccafd50e9</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text90</Name>
+              <Page isRef="8" />
+              <Parent isRef="131" />
+              <Text>{prDumentosnoaprobfecha.debe}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="136" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text90>
+            <Text91 Ref="137" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>14.6,0,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>dc3ccfced10240b58e98c4e1ebd433a1</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text91</Name>
+              <Page isRef="8" />
+              <Parent isRef="131" />
+              <Text>{prDumentosnoaprobfecha.saldomov}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="138" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text91>
+            <Text89 Ref="139" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>11.4,0,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>6110ee0f152846ba83893c62251f759f</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text89</Name>
+              <Page isRef="8" />
+              <Parent isRef="131" />
+              <Text>{prDumentosnoaprobfecha.haber}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="140" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text89>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>prDumentosnoaprobfecha</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataBand3</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+          <Sort isList="true" count="0" />
+        </DataBand3>
+        <FooterBand4 Ref="141" type="FooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,25.74,19,1</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text92 Ref="142" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,0,3.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <Guid>d48c3d0d02eb4e6b9fd541c95e4217be</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text92</Name>
+              <Page isRef="8" />
+              <Parent isRef="141" />
+              <Text>Saldos:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text92>
+            <Text93 Ref="143" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.2,0,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>84662fff085240fab79e57dc899a23b5</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text93</Name>
+              <Page isRef="8" />
+              <Parent isRef="141" />
+              <Text>{Sum(prDumentosnoaprobfecha.debe)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="144" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text93>
+            <Text95 Ref="145" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.6,0,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>3e21d5485638459c8199133fa0eb9c94</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text95</Name>
+              <Page isRef="8" />
+              <Parent isRef="141" />
+              <Text>{prDumentosnoaprobfecha.saldofinaldumento}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="146" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text95>
+            <Text94 Ref="147" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.4,0,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <Guid>5e8fa5c4a79b4b4289c65f28a48a4c20</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text94</Name>
+              <Page isRef="8" />
+              <Parent isRef="141" />
+              <Text>{Sum(prDumentosnoaprobfecha.haber)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="148" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text94>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>FooterBand4</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+        </FooterBand4>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>ab2be9e3847e424aaf8e50f0a8b9f971</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="149" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+    <subReport_1 Ref="150" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <PageHeaderBand2 Ref="151" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,3.2</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text100 Ref="152" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.6,1.4,12.6,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,14,Underline</Font>
+              <Guid>a6eb84535a9640c7bdc3a69362726373</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text100</Name>
+              <Page isRef="150" />
+              <Parent isRef="151" />
+              <Text>REPORTE DE SALDO DE CUENTA CORRIENTE</Text>
+              <TextBrush>Black</TextBrush>
+            </Text100>
+            <Image2 Ref="153" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.6,1.2,2.6,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Guid>945f02310e784518adbcdf452878e062</Guid>
+              <Image>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</Image>
+              <Name>Image2</Name>
+              <Page isRef="150" />
+              <Parent isRef="151" />
+              <Stretch>True</Stretch>
+            </Image2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>9b82ed7f754a44449c1daa4681216032</Guid>
+          <Name>PageHeaderBand2</Name>
+          <Page isRef="150" />
+          <Parent isRef="150" />
+        </PageHeaderBand2>
+        <PageFooterBand2 Ref="154" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,27.1,19,0.6</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text96 Ref="155" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.2,0,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Guid>b049fc5b7a1748afb98d838e20638352</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text96</Name>
+              <Page isRef="150" />
+              <Parent isRef="154" />
+              <Text>{PageNumber}/{TotalPageCount}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text96>
+            <Text97 Ref="156" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13.8,0,5.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Guid>adcb37990a2b4ce4b526d7868732e293</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text97</Name>
+              <Page isRef="150" />
+              <Parent isRef="154" />
+              <Text>{Time}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text97>
+            <Text98 Ref="157" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.6,0,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Guid>f38a58484cb24182bf6a4b029fea5b09</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text98</Name>
+              <Page isRef="150" />
+              <Parent isRef="154" />
+              <Text>Página:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text98>
+            <Text99 Ref="158" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,4.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Guid>24da24afd24a43bbab56839c111ffa3e</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text99</Name>
+              <Page isRef="150" />
+              <Parent isRef="154" />
+              <Text>Usuario: {reportefecha.Parameters["@Usuario"].ParameterValue}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text99>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>ca7ea017296f4f44b00ce2534766fb65</Guid>
+          <Name>PageFooterBand2</Name>
+          <Page isRef="150" />
+          <Parent isRef="150" />
+        </PageFooterBand2>
+        <ReportSummaryBand1 Ref="159" type="ReportSummaryBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,4.4,19,6</ClientRectangle>
+          <Components isList="true" count="14">
+            <Text101 Ref="160" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.2,1.6,8.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text101</Name>
+              <Page isRef="150" />
+              <Parent isRef="159" />
+              <Text>Saldo Inicial</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text101>
+            <Text102 Ref="161" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.2,2.2,8.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text102</Name>
+              <Page isRef="150" />
+              <Parent isRef="159" />
+              <Text>Certificaciones</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text102>
+            <Text103 Ref="162" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.2,2.8,8.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text103</Name>
+              <Page isRef="150" />
+              <Parent isRef="159" />
+              <Text>Documentos De Cambio Aprobados</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text103>
+            <Text104 Ref="163" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.2,3.4,8.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,12</Font>
+              <Guid>6846af76ca6a461e8f82795d989671ad</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text104</Name>
+              <Page isRef="150" />
+              <Parent isRef="159" />
+              <Text>Documentos De Cambio No Aprobados</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text104>
+            <Text106 Ref="164" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,1.6,5.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text106</Name>
+              <Page isRef="150" />
+              <Parent isRef="159" />
+              <Text>{prsaldoinicialinforme.saldoinicial}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="165" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text106>
+            <Text107 Ref="166" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,2.2,5.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text107</Name>
+              <Page isRef="150" />
+              <Parent isRef="159" />
+              <Text>{prsaldoinicialinforme.totcertifi}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="167" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text107>
+            <Text108 Ref="168" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,2.8,5.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text108</Name>
+              <Page isRef="150" />
+              <Parent isRef="159" />
+              <Text>{prsaldoinicialinforme.totdumento}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="169" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text108>
+            <Text109 Ref="170" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,3.4,5.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,10</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text109</Name>
+              <Page isRef="150" />
+              <Parent isRef="159" />
+              <Text>{prsaldoinicialinforme.totdumentonoaprob}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="171" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text109>
+            <Text105 Ref="172" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.8,4,4.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text105</Name>
+              <Page isRef="150" />
+              <Parent isRef="159" />
+              <Text>Saldo Final:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text105>
+            <Text110 Ref="173" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,4,5.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text110</Name>
+              <Page isRef="150" />
+              <Parent isRef="159" />
+              <Text>{prsaldoinicialinforme.saldoinicial+prsaldoinicialinforme.totcertifi+prsaldoinicialinforme.totdumento+prsaldoinicialinforme.totdumentonoaprob}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="174" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text110>
+            <Text111 Ref="175" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5,1,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,12</Font>
+              <Guid>dc38d57dc7bb4b52950defd41a245bb0</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text111</Name>
+              <Page isRef="150" />
+              <Parent isRef="159" />
+              <Text>Fuente:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text111>
+            <Text112 Ref="176" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.2,1,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,12</Font>
+              <Guid>4a9a1156af064678b5f1e61de0660d81</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text112</Name>
+              <Page isRef="150" />
+              <Parent isRef="159" />
+              <Text>Año:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text112>
+            <Text114 Ref="177" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.8,1,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text114</Name>
+              <Page isRef="150" />
+              <Parent isRef="159" />
+              <Text>{prCertificacionesfecha.fuente}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text114>
+            <Text113 Ref="178" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.4,1,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial Black,11</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text113</Name>
+              <Page isRef="150" />
+              <Parent isRef="159" />
+              <Text>{prCertificacionesfecha.Parameters["@AnioID"].ParameterValue}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text113>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportSummaryBand1</Name>
+          <Page isRef="150" />
+          <Parent isRef="150" />
+        </ReportSummaryBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>4861dda872094f3c9e1305298907d495</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>subReport_1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="179" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </subReport_1>
+  </Pages>
+  <PrinterSettings Ref="180" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>8/19/2014 12:33:05 PM</ReportChanged>
+  <ReportCreated>5/8/2014 11:43:16 AM</ReportCreated>
+  <ReportFile>C:\Users\Gisystems\Desktop\Fecha.mrt</ReportFile>
+  <ReportGuid>5782136eb53f46c78a4b97110e905f3a</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2013.1.1600</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        
+        public Report()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

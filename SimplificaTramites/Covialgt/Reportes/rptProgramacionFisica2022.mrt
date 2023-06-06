@@ -1,0 +1,3298 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <connection Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>connection</Alias>
+        <ConnectionStringEncrypted>9NKPSEZV00HpR6E0xHBiP9E00atFS5P5Yl/oOGopJ+OLIJvJSGdBpOda9XRjWLVu315picZMo4lGXD2ASxFpXp5a2ShVeFvxwhW9rfEN7GfTYNtoYUxb8HJBTXRjDa0v0TTNoclR8u1rS72ATw3j</ConnectionStringEncrypted>
+        <Key>637d7601257e48c2b64093acb95cc61b</Key>
+        <Name>connection</Name>
+      </connection>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <cnxPrograFisica Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>cnxPrograFisica</Alias>
+        <Columns isList="true" count="41">
+          <value>SupervisoraAnioID,System.Int32</value>
+          <value>ProgramaCodigo,System.String</value>
+          <value>ProyectoSupervisionCodigo,System.String</value>
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>ContratoCodigo,System.String</value>
+          <value>Supervisora,System.String</value>
+          <value>Longitud,System.Decimal</value>
+          <value>CadenaTramos,System.String</value>
+          <value>FechaInicioFisico,System.DateTime</value>
+          <value>FechaContrato,System.DateTime</value>
+          <value>FechaFinaModificado,System.DateTime</value>
+          <value>FechaFinalOriginal,System.DateTime</value>
+          <value>ComponenteCorrel,System.Byte</value>
+          <value>ComponenteDesc,System.String</value>
+          <value>RenglonCodCOVIAL,System.String</value>
+          <value>RenglonID,System.Int32</value>
+          <value>ProyectoRenglonNombre,System.String</value>
+          <value>RenglonUni,System.String</value>
+          <value>RenglonCantidadTotal,System.Decimal</value>
+          <value>RenglonPrecioUnitario,System.Decimal</value>
+          <value>FisicoVigente,System.Decimal</value>
+          <value>FisicoVigenteMonto,System.Decimal</value>
+          <value>SUMA,System.Decimal</value>
+          <value>AcumuladoMensual,System.Decimal</value>
+          <value>MontoOriginal,System.Decimal</value>
+          <value>Montomod,System.Decimal</value>
+          <value>PeriodoDesde,System.DateTime</value>
+          <value>PeriodoHasta,System.DateTime</value>
+          <value>NombreEmpresa,System.String</value>
+          <value>CantidadAjustada,System.Decimal</value>
+          <value>MontoAjustado,System.Decimal</value>
+          <value>ContratoAmpliatorio,System.String</value>
+          <value>FechaContratoAmpliatorio,System.DateTime</value>
+          <value>ContratoModificado,System.String</value>
+          <value>PeriodoCorrelImpresion,System.Int32</value>
+          <value>FechaModificado,System.DateTime</value>
+          <value>MontoMod1,System.Decimal</value>
+          <value>ContratoTerminacionAnticipada,System.String</value>
+          <value>FechaContratoTerminacionAnticipada,System.String</value>
+          <value>AnioContrato,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>2ee1d2b8b39b4f238f9fe32ea8676fe4</Key>
+        <Name>cnxPrograFisica</Name>
+        <NameInSource>connection</NameInSource>
+        <Parameters isList="true" count="6">
+          <value>_x0040_AnioID,,8,4</value>
+          <value>_x0040_ProyectoCodigo,,22,30</value>
+          <value>_x0040_PeriodoCorr,,8,4</value>
+          <value>_x0040_PeriodoCorrImpresion,,8,4</value>
+          <value>_x0040_pFechaFiltro,,4,4</value>
+          <value>_x0040_pProgramaVersionID,,8,4</value>
+        </Parameters>
+        <SqlCommand>exec ObtenerReporte_S_ProgramacionFisicaMod2022 @AnioID, @ProyectoCodigo, @PeriodoCorr, @PeriodoCorrImpresion, @pFechaFiltro, @pProgramaVersionID</SqlCommand>
+      </cnxPrograFisica>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>3fbe3d4f71174d18b9a3b59cec110a00</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="3">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="4">
+        <PageFooterBand1 Ref="5" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,18.8,33.6,0.8</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text25 Ref="6" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>28.8,0.04,4.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Página: {PageNumber} de {TotalPageCount}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text25>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageFooterBand1>
+        <PageHeaderBand1 Ref="7" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,33.6,6.6</ClientRectangle>
+          <Components isList="true" count="26">
+            <Image1 Ref="8" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,0.2,2.4,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <IconColor>68, 114, 196</IconColor>
+              <ImageBytes>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
+RSolcFsAAAAASUVORK5CYII=</ImageBytes>
+              <Margins>0,0,0,0</Margins>
+              <Name>Image1</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Stretch>True</Stretch>
+            </Image1>
+            <Text1 Ref="9" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7,0.2,18.8,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>MINISTERIO DE COMUNICACIONES INFRAESTRUCTURA Y VIVIENDA 
+UNIDAD EJECUTORA DE CONSERVACIÓN VIAL</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text1>
+            <Text2 Ref="10" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.6,11.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>SUPERVISOR/A No. {cnxPrograFisica.Supervisora}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text2>
+            <Text3 Ref="11" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.2,15.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>5. PROGRAMACIÓN FISICA No. {cnxPrograFisica.Parameters["@PeriodoCorrImpresion"].ParameterValue}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text3>
+            <Text4 Ref="12" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.8,11.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>{cnxPrograFisica.NombreEmpresa}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text4>
+            <Text5 Ref="13" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3.2,11.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>Contrato: {cnxPrograFisica.ContratoCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text5>
+            <Text6 Ref="14" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3.6,11.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>Contrato Ampliatorio: {cnxPrograFisica.ContratoAmpliatorio}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text6>
+            <Text7 Ref="15" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,4,11.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>Contrato Modificado: {cnxPrograFisica.ContratoModificado}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text7>
+            <Text8 Ref="16" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,4.4,11.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>Contrato Terminación Anticipada: {cnxPrograFisica.ContratoTerminacionAnticipada}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text8>
+            <Text9 Ref="17" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,4.8,11.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>Longitud: {cnxPrograFisica.Longitud} Kms</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text9>
+            <Text10 Ref="18" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>0,5.4,33.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>{cnxPrograFisica.CadenaTramos}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+            </Text10>
+            <Text11 Ref="19" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13,3.2,7.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>Fecha Contrato: {Format("{0: dd/MM/yyyy}", cnxPrograFisica.FechaContrato)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text11>
+            <Text12 Ref="20" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13,3.6,3.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>Fecha Contrato Ampliatorio:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text12>
+            <Text13 Ref="21" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13,4.4,7.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>Fecha Terminación Anticipada: {Format("{0: dd/MM/yyyy}", cnxPrograFisica.FechaContratoTerminacionAnticipada)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text13>
+            <Text14 Ref="22" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>21,3,2.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>Monto del Contrato: </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text14>
+            <Text15 Ref="23" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>21,3.4,2.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>Monto Ajustado: </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text15>
+            <Text16 Ref="24" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>23.8,3,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>{cnxPrograFisica.MontoOriginal}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="25" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+            </Text16>
+            <Text17 Ref="26" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>23.8,3.4,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>{cnxPrograFisica.Montomod}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="27" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+            </Text17>
+            <Text18 Ref="28" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>29.4,2.6,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>{cnxPrograFisica.MontoOriginal}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="29" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+            </Text18>
+            <Text19 Ref="30" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>27.2,2.6,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>Monto Original:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text19>
+            <Text20 Ref="31" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>27.2,3,6.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>Fecha Inicio Físico: {Format("{0: dd/MM/yyyy}", cnxPrograFisica.FechaInicioFisico)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text20>
+            <Text21 Ref="32" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>27.2,3.4,6.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>Fecha de Finalización Original: {Format("{0: dd/MM/yyyy}", cnxPrograFisica.FechaFinalOriginal)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text21>
+            <Text22 Ref="33" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>27.2,3.8,6.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>Fecha de Finalización Modificada: {Format("{0: dd/MM/yyyy}", cnxPrograFisica.FechaFinaModificado)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text22>
+            <Text23 Ref="34" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,6,16.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>Proyecto: {cnxPrograFisica.ProyectoCodigo} - {cnxPrograFisica.AnioID}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text23>
+            <Text24 Ref="35" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16.8,3.6,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>{Format("{0: dd/MM/yyyy}", cnxPrograFisica.FechaContratoAmpliatorio)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text24>
+            <Text91 Ref="36" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13,4,11.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text91</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>Contrato Modificado: {cnxPrograFisica.ContratoModificado}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text91>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageHeaderBand1>
+        <DataBand1 Ref="37" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,7.8,33.6,2.2</ClientRectangle>
+          <Components isList="true" count="1">
+            <CrossTab1 Ref="38" type="Stimulsoft.Report.CrossTab.StiCrossTab" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanBreak>True</CanBreak>
+              <ClientRectangle>0,0,33.4,2</ClientRectangle>
+              <Components isList="true" count="32">
+                <CrossTab1_ColTotal1 Ref="39" type="CrossColumnTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>4.05,0.05,0,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Enabled>False</Enabled>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>9dae34c66e0b47a0af6d829593be456d</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_ColTotal1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_ColTotal1>
+                <CrossTab1_RowTotal1 Ref="40" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>0,1.3,2.4,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Enabled>False</Enabled>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>7ad3d567d93648f7be63c3fdd17b46a3</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal1>
+                <CrossTab1_Row1_Title Ref="41" type="CrossTitle" isKey="true">
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>0,0.45,2,0.8</ClientRectangle>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,7,Bold</Font>
+                  <Guid>2a314b2292684cce9ba85fe07302f8f6</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <Name>CrossTab1_Row1_Title</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Componente</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TypeOfComponent>Row:CrossTab1_Row1</TypeOfComponent>
+                </CrossTab1_Row1_Title>
+                <CrossTab1_LeftTitle Ref="42" type="CrossTitle" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,0,17.8,0.4</ClientRectangle>
+                  <Enabled>False</Enabled>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>9ef86a4f69994e7bb3db4326f59adc72</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_LeftTitle</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>[105:105:105]</TextBrush>
+                  <TypeOfComponent>LeftTitle</TypeOfComponent>
+                </CrossTab1_LeftTitle>
+                <CrossTab1_RowTotal2 Ref="43" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>2.4,1.3,2.8,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Enabled>False</Enabled>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>00717d6a5e6b4ba1a5645524da0b1a13</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal2</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal2>
+                <CrossTab1_Row2_Title Ref="44" type="CrossTitle" isKey="true">
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>2,0.45,2.4,0.8</ClientRectangle>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8,Bold</Font>
+                  <Guid>2ab79b3428424227afc802b3285a12e6</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_Row2_Title</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Código Renglon</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TypeOfComponent>Row:CrossTab1_Row2</TypeOfComponent>
+                </CrossTab1_Row2_Title>
+                <CrossTab1_RowTotal3 Ref="45" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>5.2,1.3,3.4,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Enabled>False</Enabled>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>46a801789291412ca8f964cb51f4934e</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal3</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal3>
+                <CrossTab1_Row3_Title Ref="46" type="CrossTitle" isKey="true">
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>4.4,0.45,2,0.8</ClientRectangle>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8,Bold</Font>
+                  <Guid>865f433edd7546ba87cdc76067572728</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_Row3_Title</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Descripción</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TypeOfComponent>Row:CrossTab1_Row3</TypeOfComponent>
+                </CrossTab1_Row3_Title>
+                <CrossTab1_RowTotal4 Ref="47" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>8.6,1.3,1.6,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Enabled>False</Enabled>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>7cd4b017c6f847fe81bf0c958c0316c4</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal4</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal4>
+                <CrossTab1_Row4_Title Ref="48" type="CrossTitle" isKey="true">
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>6.4,0.45,1.4,0.8</ClientRectangle>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,7,Bold</Font>
+                  <Guid>046bb88d1d1645afa3e9e4cc69c9cae8</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <Name>CrossTab1_Row4_Title</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Unidad de Medición</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                  <TypeOfComponent>Row:CrossTab1_Row4</TypeOfComponent>
+                </CrossTab1_Row4_Title>
+                <CrossTab1_RowTotal5 Ref="49" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>11.2,1.3,3,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Enabled>False</Enabled>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>00f3d22921af44299e502eceb6ab7e41</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal5</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal5>
+                <CrossTab1_Row5_Title Ref="50" type="CrossTitle" isKey="true">
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>7.8,0.45,2,0.8</ClientRectangle>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,7,Bold</Font>
+                  <Guid>5263679ab084458b8d978355f01f8d3c</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <Name>CrossTab1_Row5_Title</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Cantidad Contratada</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                  <TypeOfComponent>Row:CrossTab1_Row5</TypeOfComponent>
+                </CrossTab1_Row5_Title>
+                <CrossTab1_RowTotal6 Ref="51" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>14.2,1.3,2.4,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Enabled>False</Enabled>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>2e439db6e29240acbe9d3171c1346207</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal6</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal6>
+                <CrossTab1_Row6_Title Ref="52" type="CrossTitle" isKey="true">
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>9.8,0.45,2,0.8</ClientRectangle>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,7,Bold</Font>
+                  <Guid>665a4ccff0804254a21ce72e6debfc18</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <Name>CrossTab1_Row6_Title</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Cantidad Ajustada</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                  <TypeOfComponent>Row:CrossTab1_Row6</TypeOfComponent>
+                </CrossTab1_Row6_Title>
+                <CrossTab1_RowTotal7 Ref="53" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>16.6,1.3,3,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Enabled>False</Enabled>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>0a300548e9824da4b85b03376297616c</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal7</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal7>
+                <CrossTab1_Row7_Title Ref="54" type="CrossTitle" isKey="true">
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>11.8,0.45,2,0.8</ClientRectangle>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,7,Bold</Font>
+                  <Guid>132372f26a364921a641ed7ef4db446d</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <Name>CrossTab1_Row7_Title</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Precio Unitario</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TypeOfComponent>Row:CrossTab1_Row7</TypeOfComponent>
+                </CrossTab1_Row7_Title>
+                <CrossTab1_RowTotal8 Ref="55" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>19.6,1.7,5,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Enabled>False</Enabled>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>89b37dd4861c4480bbe2946248790de6</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal8</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal8>
+                <CrossTab1_Row8_Title Ref="56" type="CrossTitle" isKey="true">
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>13.8,0.45,2,0.8</ClientRectangle>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,7,Bold</Font>
+                  <Guid>3254555fa0874ffa8812b416c5ff7954</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <Name>CrossTab1_Row8_Title</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Valor Original</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TypeOfComponent>Row:CrossTab1_Row8</TypeOfComponent>
+                </CrossTab1_Row8_Title>
+                <CrossTab1_RowTotal9 Ref="57" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>22.6,1.3,2,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Enabled>False</Enabled>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>c944a2e3f21a47d984e72023c10f42a0</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal9</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal9>
+                <CrossTab1_Row9_Title Ref="58" type="CrossTitle" isKey="true">
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>15.8,0.45,2,0.8</ClientRectangle>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,7,Bold</Font>
+                  <Guid>6a1e0dec0d1346ae9e431e864a14f996</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <Name>CrossTab1_Row9_Title</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Monto Ajustado</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TypeOfComponent>Row:CrossTab1_Row9</TypeOfComponent>
+                </CrossTab1_Row9_Title>
+                <CrossTab1_RightTitle Ref="59" type="CrossTitle" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>17.85,0,2,0.4</ClientRectangle>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,7</Font>
+                  <Guid>592c3670380e41efa3eaf4055bf4fe74</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RightTitle</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>PeriodoDesde</Text>
+                  <TextBrush>[105:105:105]</TextBrush>
+                  <TypeOfComponent>RightTitle</TypeOfComponent>
+                </CrossTab1_RightTitle>
+                <CrossTab1_Row1 Ref="60" type="CrossRow" isKey="true">
+                  <Alias>ComponenteDesc</Alias>
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,1.3,2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{cnxPrograFisica.ComponenteDesc}</DisplayValue>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,7</Font>
+                  <Guid>5068b4a8c8f8488dba98b60ab0c1789f</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <Name>CrossTab1_Row1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>ComponenteDesc</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                  <TotalGuid>7ad3d567d93648f7be63c3fdd17b46a3</TotalGuid>
+                  <Value>{cnxPrograFisica.ComponenteDesc}</Value>
+                </CrossTab1_Row1>
+                <CrossTab1_Row2 Ref="61" type="CrossRow" isKey="true">
+                  <Alias>RenglonCodCOVIAL</Alias>
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>2,1.3,2.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{cnxPrograFisica.RenglonCodCOVIAL}</DisplayValue>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,7</Font>
+                  <Guid>fbc711dbca2e49cbb0bd3370b801c21d</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_Row2</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>RenglonCodCOVIAL</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                  <TotalGuid>00717d6a5e6b4ba1a5645524da0b1a13</TotalGuid>
+                  <Value>{cnxPrograFisica.RenglonCodCOVIAL}</Value>
+                </CrossTab1_Row2>
+                <CrossTab1_Row3 Ref="62" type="CrossRow" isKey="true">
+                  <Alias>ProyectoRenglonNombre</Alias>
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>4.4,1.3,2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{cnxPrograFisica.ProyectoRenglonNombre}</DisplayValue>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,7</Font>
+                  <Guid>2b9029e7ea804ba8a1b33f098b494ffd</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <Name>CrossTab1_Row3</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>ProyectoRenglonNombre</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                  <TotalGuid>46a801789291412ca8f964cb51f4934e</TotalGuid>
+                  <Value>{cnxPrograFisica.ProyectoRenglonNombre}</Value>
+                </CrossTab1_Row3>
+                <CrossTab1_Row4 Ref="63" type="CrossRow" isKey="true">
+                  <Alias>RenglonUni</Alias>
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>6.4,1.3,1.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{cnxPrograFisica.RenglonUni}</DisplayValue>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,7</Font>
+                  <Guid>7376a3525bb94befb5fc32dbacfb0e4c</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <Name>CrossTab1_Row4</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>RenglonUni</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TotalGuid>7cd4b017c6f847fe81bf0c958c0316c4</TotalGuid>
+                  <Value>{cnxPrograFisica.RenglonUni}</Value>
+                </CrossTab1_Row4>
+                <CrossTab1_Row5 Ref="64" type="CrossRow" isKey="true">
+                  <Alias>RenglonCantidadTotal</Alias>
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>7.8,1.3,2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{cnxPrograFisica.RenglonCantidadTotal}</DisplayValue>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,7</Font>
+                  <Guid>9c9df6f32c42422782b578ecf227b724</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <Name>CrossTab1_Row5</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>RenglonCantidadTotal</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                  <TotalGuid>00f3d22921af44299e502eceb6ab7e41</TotalGuid>
+                  <Value>{cnxPrograFisica.RenglonCantidadTotal}</Value>
+                </CrossTab1_Row5>
+                <CrossTab1_Row6 Ref="65" type="CrossRow" isKey="true">
+                  <Alias>CantidadAjustada</Alias>
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>9.8,1.3,2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{cnxPrograFisica.CantidadAjustada}</DisplayValue>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,7</Font>
+                  <Guid>865b1e6d7f4d41639dfc139329c19c22</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <Name>CrossTab1_Row6</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>CantidadAjustada</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                  <TotalGuid>2e439db6e29240acbe9d3171c1346207</TotalGuid>
+                  <Value>{cnxPrograFisica.CantidadAjustada}</Value>
+                </CrossTab1_Row6>
+                <CrossTab1_Row7 Ref="66" type="CrossRow" isKey="true">
+                  <Alias>RenglonPrecioUnitario</Alias>
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>11.8,1.3,2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{cnxPrograFisica.RenglonPrecioUnitario}</DisplayValue>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,7</Font>
+                  <Guid>b1cf713c6d414c49acfd92d7f95ae0a7</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <Name>CrossTab1_Row7</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>RenglonPrecioUnitario</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextFormat Ref="67" type="CurrencyFormat" isKey="true">
+                    <DecimalDigits>2</DecimalDigits>
+                    <GroupSeparator>,</GroupSeparator>
+                    <NegativePattern>1</NegativePattern>
+                    <PositivePattern>0</PositivePattern>
+                    <State>DecimalDigits, DecimalSeparator, CurrencySymbol</State>
+                    <Symbol>Q</Symbol>
+                  </TextFormat>
+                  <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                  <TotalGuid>0a300548e9824da4b85b03376297616c</TotalGuid>
+                  <Value>{cnxPrograFisica.RenglonPrecioUnitario}</Value>
+                </CrossTab1_Row7>
+                <CrossTab1_Row8 Ref="68" type="CrossRow" isKey="true">
+                  <Alias>RenglonCantidadTotal</Alias>
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>13.8,1.3,2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{cnxPrograFisica.RenglonCantidadTotal}</DisplayValue>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,7</Font>
+                  <Guid>a17d6939528740449f8882f41fc94843</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <Name>CrossTab1_Row8</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>RenglonCantidadTotal</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextFormat Ref="69" type="CurrencyFormat" isKey="true">
+                    <DecimalDigits>2</DecimalDigits>
+                    <GroupSeparator>,</GroupSeparator>
+                    <NegativePattern>1</NegativePattern>
+                    <PositivePattern>0</PositivePattern>
+                    <Symbol>Q</Symbol>
+                    <UseLocalSetting>False</UseLocalSetting>
+                  </TextFormat>
+                  <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                  <TotalGuid>89b37dd4861c4480bbe2946248790de6</TotalGuid>
+                  <Value>{cnxPrograFisica.RenglonCantidadTotal}</Value>
+                </CrossTab1_Row8>
+                <CrossTab1_Row9 Ref="70" type="CrossRow" isKey="true">
+                  <Alias>MontoAjustado</Alias>
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>15.8,1.3,2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{cnxPrograFisica.MontoAjustado}</DisplayValue>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,7</Font>
+                  <Guid>631ff5e463374d99bfc60d374059bf60</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <Name>CrossTab1_Row9</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>MontoAjustado</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextFormat Ref="71" type="CurrencyFormat" isKey="true">
+                    <DecimalDigits>2</DecimalDigits>
+                    <GroupSeparator>,</GroupSeparator>
+                    <NegativePattern>1</NegativePattern>
+                    <PositivePattern>0</PositivePattern>
+                    <Symbol>Q</Symbol>
+                    <UseLocalSetting>False</UseLocalSetting>
+                  </TextFormat>
+                  <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                  <TotalGuid>c944a2e3f21a47d984e72023c10f42a0</TotalGuid>
+                  <Value>{cnxPrograFisica.MontoAjustado}</Value>
+                </CrossTab1_Row9>
+                <CrossTab1_Column1 Ref="72" type="CrossColumn" isKey="true">
+                  <Alias>PeriodoDesde</Alias>
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>[216:216:216]</Brush>
+                  <ClientRectangle>17.85,0.45,2,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{Format("{0:dd/MM/yyyy}",cnxPrograFisica.PeriodoDesde)}
+{Format("{0:dd/MM/yyyy}",cnxPrograFisica.PeriodoHasta)}</DisplayValue>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,7,Bold</Font>
+                  <Guid>a7886127fa0646ab819283f8d356f9ee</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <Name>CrossTab1_Column1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>PeriodoDesde</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TotalGuid>9dae34c66e0b47a0af6d829593be456d</TotalGuid>
+                  <Value>{cnxPrograFisica.PeriodoDesde}</Value>
+                </CrossTab1_Column1>
+                <CrossTab1_Sum1 Ref="73" type="CrossSummary" isKey="true">
+                  <Alias>FisicoVigente</Alias>
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>17.85,1.3,2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,7</Font>
+                  <Guid>fd540e1d8f6f440a8cbb1bee8bff6e2e</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <Name>CrossTab1_Sum1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="38" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Summary>None</Summary>
+                  <SummaryValues>SkipZerosAndNulls</SummaryValues>
+                  <Text>0</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextFormat Ref="74" type="CurrencyFormat" isKey="true">
+                    <DecimalDigits>2</DecimalDigits>
+                    <GroupSeparator>,</GroupSeparator>
+                    <NegativePattern>1</NegativePattern>
+                    <PositivePattern>0</PositivePattern>
+                    <Symbol>Q</Symbol>
+                    <UseLocalSetting>False</UseLocalSetting>
+                  </TextFormat>
+                  <Value>{cnxPrograFisica.FisicoVigente}</Value>
+                </CrossTab1_Sum1>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <DataRelationName />
+              <DataSourceName>cnxPrograFisica</DataSourceName>
+              <EmptyValue />
+              <Expressions isList="true" count="0" />
+              <Filters isList="true" count="0" />
+              <KeepCrossTabTogether>True</KeepCrossTabTogether>
+              <MaxSize>33.4,0</MaxSize>
+              <Name>CrossTab1</Name>
+              <Page isRef="4" />
+              <Parent isRef="37" />
+              <Sort isList="true" count="0" />
+            </CrossTab1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>cnxPrograFisica</DataSourceName>
+          <Expressions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+        <ReportSummaryBand3 Ref="75" type="ReportSummaryBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,10.8,33.6,1.4</ClientRectangle>
+          <Components isList="true" count="7">
+            <Text28 Ref="76" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.4,0,1.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="4" />
+              <Parent isRef="75" />
+              <Text>Valor Original</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text28>
+            <Text29 Ref="77" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16.2,0,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="4" />
+              <Parent isRef="75" />
+              <Text>Monto Ajustado</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text29>
+            <Text30 Ref="78" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13.2,0.4,1.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="4" />
+              <Parent isRef="75" />
+              <Text>TOTAL:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text30>
+            <Text31 Ref="79" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.4,0.4,1.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="4" />
+              <Parent isRef="75" />
+              <Text>{cnxPrograFisica.MontoOriginal}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="80" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text31>
+            <Text32 Ref="81" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16.2,0.4,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text32</Name>
+              <Page isRef="4" />
+              <Parent isRef="75" />
+              <Text>{cnxPrograFisica.Montomod}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="82" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text32>
+            <Text26 Ref="83" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,0,3.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="4" />
+              <Parent isRef="75" />
+              <Text>Monto Original del Proyecto:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+            <Text27 Ref="84" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.2,0,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="4" />
+              <Parent isRef="75" />
+              <Text>{cnxPrograFisica.MontoOriginal}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="85" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text27>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>ReportSummaryBand3</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </ReportSummaryBand3>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Expressions isList="true" count="0" />
+      <Guid>5746148babd34fa18ed89f6b3de2ec5c</Guid>
+      <Margins>1,1,1,1</Margins>
+      <MirrorMargins>True</MirrorMargins>
+      <Name>Page1</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>21.6</PageHeight>
+      <PageWidth>35.6</PageWidth>
+      <PaperSize>Legal</PaperSize>
+      <Report isRef="0" />
+      <StretchToPrintArea>True</StretchToPrintArea>
+      <TitleBeforeHeader>True</TitleBeforeHeader>
+    </Page1>
+    <Page2 Ref="86" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <PageHeaderBand2 Ref="87" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,33.6,6.6</ClientRectangle>
+          <Components isList="true" count="26">
+            <Image2 Ref="88" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,0.2,2.4,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <IconColor>68, 114, 196</IconColor>
+              <ImageBytes>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
+RSolcFsAAAAASUVORK5CYII=</ImageBytes>
+              <Margins>0,0,0,0</Margins>
+              <Name>Image2</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Stretch>True</Stretch>
+            </Image2>
+            <Text39 Ref="89" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7,0.2,18.8,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text39</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>MINISTERIO DE COMUNICACIONES INFRAESTRUCTURA Y VIVIENDA 
+UNIDAD EJECUTORA DE CONSERVACIÓN VIAL</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text39>
+            <Text40 Ref="90" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.6,11.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text40</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>SUPERVISOR/A No. {cnxPrograFisica.Supervisora}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text40>
+            <Text41 Ref="91" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.2,15.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text41</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>5. PROGRAMACIÓN FISICA No. {cnxPrograFisica.Parameters["@PeriodoCorrImpresion"].ParameterValue}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text41>
+            <Text42 Ref="92" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.8,11.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text42</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>{cnxPrograFisica.NombreEmpresa}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text42>
+            <Text43 Ref="93" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3.2,11.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text43</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>Contrato: {cnxPrograFisica.ContratoCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text43>
+            <Text44 Ref="94" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3.6,11.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text44</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>Contrato Ampliatorio: {cnxPrograFisica.ContratoAmpliatorio}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text44>
+            <Text45 Ref="95" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,4,11.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text45</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>Contrato Modificado: {cnxPrograFisica.ContratoModificado}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text45>
+            <Text46 Ref="96" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,4.4,11.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text46</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>Contrato Terminación Anticipada: {cnxPrograFisica.ContratoTerminacionAnticipada}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text46>
+            <Text47 Ref="97" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,4.8,11.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text47</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>Longitud: {cnxPrograFisica.Longitud} Kms</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text47>
+            <Text48 Ref="98" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>0,5.4,33.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text48</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>{cnxPrograFisica.CadenaTramos}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+            </Text48>
+            <Text49 Ref="99" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13,3.2,7.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text49</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>Fecha Contrato: {Format("{0: dd/MM/yyyy}", cnxPrograFisica.FechaContrato)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text49>
+            <Text50 Ref="100" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13,3.6,3.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text50</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>Fecha Contrato Ampliatorio:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text50>
+            <Text51 Ref="101" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13,4.4,7.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text51</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>Fecha Terminación Anticipada: {Format("{0: dd/MM/yyyy}", cnxPrograFisica.FechaContratoTerminacionAnticipada)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text51>
+            <Text52 Ref="102" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>21,3,2.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text52</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>Monto del Contrato: </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text52>
+            <Text53 Ref="103" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>21,3.4,2.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text53</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>Monto Ajustado: </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text53>
+            <Text54 Ref="104" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>23.8,3,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text54</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>{cnxPrograFisica.MontoOriginal}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="105" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+            </Text54>
+            <Text55 Ref="106" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>23.8,3.4,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text55</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>{cnxPrograFisica.Montomod}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="107" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+            </Text55>
+            <Text56 Ref="108" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>29.4,2.6,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text56</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>{cnxPrograFisica.MontoOriginal}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="109" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+            </Text56>
+            <Text57 Ref="110" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>27.2,2.6,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text57</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>Monto Original:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text57>
+            <Text58 Ref="111" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>27.2,3,6.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text58</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>Fecha Inicio Físico: {Format("{0: dd/MM/yyyy}", cnxPrograFisica.FechaInicioFisico)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text58>
+            <Text59 Ref="112" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>27.2,3.4,6.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text59</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>Fecha de Finalización Original: {Format("{0: dd/MM/yyyy}", cnxPrograFisica.FechaFinalOriginal)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text59>
+            <Text60 Ref="113" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>27.2,3.8,6.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text60</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>Fecha de Finalización Modificada: {Format("{0: dd/MM/yyyy}", cnxPrograFisica.FechaFinaModificado)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text60>
+            <Text61 Ref="114" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,6,16.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text61</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>Proyecto: {cnxPrograFisica.ProyectoCodigo} - {cnxPrograFisica.AnioID}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text61>
+            <Text62 Ref="115" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16.8,3.6,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text62</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>{Format("{0: dd/MM/yyyy}", cnxPrograFisica.FechaContratoAmpliatorio)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text62>
+            <Text90 Ref="116" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13,4,11.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text90</Name>
+              <Page isRef="86" />
+              <Parent isRef="87" />
+              <Text>Contrato Modificado: {cnxPrograFisica.ContratoModificado}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text90>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>PageHeaderBand2</Name>
+          <Page isRef="86" />
+          <Parent isRef="86" />
+        </PageHeaderBand2>
+        <PageFooterBand2 Ref="117" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,18.8,33.6,0.8</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text87 Ref="118" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>28.8,0.04,4.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text87</Name>
+              <Page isRef="86" />
+              <Parent isRef="117" />
+              <Text>Página: {PageNumber} de {TotalPageCount}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text87>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>PageFooterBand2</Name>
+          <Page isRef="86" />
+          <Parent isRef="86" />
+        </PageFooterBand2>
+        <ReportSummaryBand1 Ref="119" type="ReportSummaryBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,7.8,33.6,5.6</ClientRectangle>
+          <Components isList="true" count="1">
+            <CrossTab2 Ref="120" type="Stimulsoft.Report.CrossTab.StiCrossTab" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanBreak>True</CanBreak>
+              <ClientRectangle>0.6,1.8,11.8,3</ClientRectangle>
+              <Components isList="true" count="12">
+                <CrossTab2_ColTotal1 Ref="121" type="CrossColumnTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>4.05,0.05,0,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Enabled>False</Enabled>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>0708d774113a41a2b0a43c7f142e5295</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab2_ColTotal1</Name>
+                  <Page isRef="86" />
+                  <Parent isRef="120" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab2_ColTotal1>
+                <CrossTab2_Column1_Title Ref="122" type="CrossTitle" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,0.05,2,0.4</ClientRectangle>
+                  <Enabled>False</Enabled>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>525345967f3746479dde0e2526ee36cd</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab2_Column1_Title</Name>
+                  <Page isRef="86" />
+                  <Parent isRef="120" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>PeriodoDesde</Text>
+                  <TextBrush>[105:105:105]</TextBrush>
+                  <TypeOfComponent>Col:CrossTab2_Column1</TypeOfComponent>
+                </CrossTab2_Column1_Title>
+                <CrossTab2_SummaryTitle Ref="123" type="CrossTitle" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,0.5,3.2,0.8</ClientRectangle>
+                  <Enabled>False</Enabled>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>6910fba40664461a90f67649c7b0a55d</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab2_SummaryTitle</Name>
+                  <Page isRef="86" />
+                  <Parent isRef="120" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>EJECUCIÓN MENSUAL</Text>
+                  <TextBrush>[105:105:105]</TextBrush>
+                  <TypeOfComponent>SummaryTitle</TypeOfComponent>
+                </CrossTab2_SummaryTitle>
+                <CrossTab2_SumHeader1 Ref="124" type="Stimulsoft.Report.CrossTab.StiCrossSummaryHeader" isKey="true">
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0.2,0.5,4.2,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>3978cb4c2969467f95713cf9325e4da8</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab2_SumHeader1</Name>
+                  <Page isRef="86" />
+                  <Parent isRef="120" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>EJECUCIÓN MENSUAL</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                </CrossTab2_SumHeader1>
+                <CrossTab2_SumHeader2 Ref="125" type="Stimulsoft.Report.CrossTab.StiCrossSummaryHeader" isKey="true">
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0.2,0.9,4.2,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>a942b399eb774e86a991e8f0853846ec</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab2_SumHeader2</Name>
+                  <Page isRef="86" />
+                  <Parent isRef="120" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>ACUMULADO MENSUAL</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                </CrossTab2_SumHeader2>
+                <CrossTab2_SumHeader3 Ref="126" type="Stimulsoft.Report.CrossTab.StiCrossSummaryHeader" isKey="true">
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0.2,1.3,4.2,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>ec00fe117eeb49b1af7fc751b55b6c1d</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab2_SumHeader3</Name>
+                  <Page isRef="86" />
+                  <Parent isRef="120" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>PORCENTAJE MENSUAl %</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                </CrossTab2_SumHeader3>
+                <CrossTab2_SumHeader4 Ref="127" type="Stimulsoft.Report.CrossTab.StiCrossSummaryHeader" isKey="true">
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0.2,1.7,4.2,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>17ac897c588e4697bcae90d40c968559</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab2_SumHeader4</Name>
+                  <Page isRef="86" />
+                  <Parent isRef="120" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>PORCENTAJE ACUMULADO %</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                </CrossTab2_SumHeader4>
+                <CrossTab2_Column1 Ref="128" type="CrossColumn" isKey="true">
+                  <Alias>PeriodoDesde</Alias>
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>4.45,0.05,2,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{Format("{0:dd/MM/yyyy}",cnxPrograFisica.PeriodoDesde)}
+{Format("{0:dd/MM/yyyy}",cnxPrograFisica.PeriodoHasta)}</DisplayValue>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>c6a5390e10f541a3993478c9e86b7867</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab2_Column1</Name>
+                  <Page isRef="86" />
+                  <Parent isRef="120" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>PeriodoDesde</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TotalGuid>0708d774113a41a2b0a43c7f142e5295</TotalGuid>
+                  <Value>{cnxPrograFisica.PeriodoDesde}</Value>
+                </CrossTab2_Column1>
+                <CrossTab2_Sum1 Ref="129" type="CrossSummary" isKey="true">
+                  <Alias>SUMA</Alias>
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>4.45,0.5,2,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>dcc4305ac64549ccaed7e6939d1c76a5</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab2_Sum1</Name>
+                  <Page isRef="86" />
+                  <Parent isRef="120" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>0</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextFormat Ref="130" type="CurrencyFormat" isKey="true">
+                    <DecimalDigits>2</DecimalDigits>
+                    <GroupSeparator>,</GroupSeparator>
+                    <NegativePattern>1</NegativePattern>
+                    <PositivePattern>0</PositivePattern>
+                    <Symbol>Q</Symbol>
+                    <UseLocalSetting>False</UseLocalSetting>
+                  </TextFormat>
+                  <Value>{cnxPrograFisica.SUMA}</Value>
+                </CrossTab2_Sum1>
+                <CrossTab2_Sum2 Ref="131" type="CrossSummary" isKey="true">
+                  <Alias>AcumuladoMensual</Alias>
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>4.45,0.9,2,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>08187efde74c49ad8e9b0cf112188c2c</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab2_Sum2</Name>
+                  <Page isRef="86" />
+                  <Parent isRef="120" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>0</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextFormat Ref="132" type="CurrencyFormat" isKey="true">
+                    <DecimalDigits>2</DecimalDigits>
+                    <GroupSeparator>,</GroupSeparator>
+                    <NegativePattern>1</NegativePattern>
+                    <PositivePattern>0</PositivePattern>
+                    <Symbol>Q</Symbol>
+                    <UseLocalSetting>False</UseLocalSetting>
+                  </TextFormat>
+                  <Value>{cnxPrograFisica.AcumuladoMensual}</Value>
+                </CrossTab2_Sum2>
+                <CrossTab2_Sum3 Ref="133" type="CrossSummary" isKey="true">
+                  <Alias>SUMA</Alias>
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>4.45,1.3,2,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>e8b531b2f57f4de6ba51c7a1b56c3a8b</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab2_Sum3</Name>
+                  <Page isRef="86" />
+                  <Parent isRef="120" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>0</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextFormat Ref="134" type="CurrencyFormat" isKey="true">
+                    <DecimalDigits>2</DecimalDigits>
+                    <GroupSeparator>,</GroupSeparator>
+                    <NegativePattern>1</NegativePattern>
+                    <PositivePattern>0</PositivePattern>
+                    <Symbol>Q</Symbol>
+                    <UseLocalSetting>False</UseLocalSetting>
+                  </TextFormat>
+                  <Value>{Round(((cnxPrograFisica.SUMA/cnxPrograFisica.MontoOriginal)*100),4)}
+</Value>
+                </CrossTab2_Sum3>
+                <CrossTab2_Sum4 Ref="135" type="CrossSummary" isKey="true">
+                  <Alias>AcumuladoMensual</Alias>
+                  <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>4.45,1.7,2,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>670df6174a04421db2f12701f431e4e1</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab2_Sum4</Name>
+                  <Page isRef="86" />
+                  <Parent isRef="120" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>0</Text>
+                  <TextBrush>[0:0:0]</TextBrush>
+                  <TextFormat Ref="136" type="CurrencyFormat" isKey="true">
+                    <DecimalDigits>2</DecimalDigits>
+                    <GroupSeparator>,</GroupSeparator>
+                    <NegativePattern>1</NegativePattern>
+                    <PositivePattern>0</PositivePattern>
+                    <Symbol>Q</Symbol>
+                    <UseLocalSetting>False</UseLocalSetting>
+                  </TextFormat>
+                  <Value>{Round(((cnxPrograFisica.AcumuladoMensual/cnxPrograFisica.MontoOriginal)*100),4)}
+</Value>
+                </CrossTab2_Sum4>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <DataRelationName />
+              <DataSourceName>cnxPrograFisica</DataSourceName>
+              <EmptyValue />
+              <Expressions isList="true" count="0" />
+              <Filters isList="true" count="0" />
+              <Name>CrossTab2</Name>
+              <Page isRef="86" />
+              <Parent isRef="119" />
+              <Sort isList="true" count="0" />
+            </CrossTab2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>ReportSummaryBand1</Name>
+          <Page isRef="86" />
+          <Parent isRef="86" />
+        </ReportSummaryBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Expressions isList="true" count="0" />
+      <Guid>eadacfc75038409ab95dfad466c2144e</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page2</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>21.6</PageHeight>
+      <PageWidth>35.6</PageWidth>
+      <PaperSize>Legal</PaperSize>
+      <Report isRef="0" />
+    </Page2>
+    <Page3 Ref="137" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <PageHeaderBand3 Ref="138" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,33.6,6.6</ClientRectangle>
+          <Components isList="true" count="26">
+            <Image3 Ref="139" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,0.2,2.4,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <IconColor>68, 114, 196</IconColor>
+              <ImageBytes>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
+RSolcFsAAAAASUVORK5CYII=</ImageBytes>
+              <Margins>0,0,0,0</Margins>
+              <Name>Image3</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Stretch>True</Stretch>
+            </Image3>
+            <Text63 Ref="140" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7,0.2,18.8,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text63</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>MINISTERIO DE COMUNICACIONES INFRAESTRUCTURA Y VIVIENDA 
+UNIDAD EJECUTORA DE CONSERVACIÓN VIAL</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text63>
+            <Text64 Ref="141" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.6,11.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text64</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>SUPERVISOR/A No. {cnxPrograFisica.Supervisora}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text64>
+            <Text65 Ref="142" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.2,15.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text65</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>5. PROGRAMACIÓN FISICA No. {cnxPrograFisica.Parameters["@PeriodoCorrImpresion"].ParameterValue}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text65>
+            <Text66 Ref="143" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.8,11.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text66</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>{cnxPrograFisica.NombreEmpresa}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text66>
+            <Text67 Ref="144" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3.2,11.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text67</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>Contrato: {cnxPrograFisica.ContratoCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text67>
+            <Text68 Ref="145" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3.6,11.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text68</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>Contrato Ampliatorio: {cnxPrograFisica.ContratoAmpliatorio}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text68>
+            <Text69 Ref="146" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,4,11.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text69</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>Contrato Modificado: {cnxPrograFisica.ContratoModificado}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text69>
+            <Text70 Ref="147" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,4.4,11.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text70</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>Contrato Terminación Anticipada: {cnxPrograFisica.ContratoTerminacionAnticipada}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text70>
+            <Text71 Ref="148" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,4.8,11.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text71</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>Longitud: {cnxPrograFisica.Longitud} Kms</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text71>
+            <Text72 Ref="149" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>0,5.4,33.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text72</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>{cnxPrograFisica.CadenaTramos}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+            </Text72>
+            <Text73 Ref="150" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13,3.2,7.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text73</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>Fecha Contrato: {Format("{0: dd/MM/yyyy}", cnxPrograFisica.FechaContrato)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text73>
+            <Text74 Ref="151" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13,3.6,3.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text74</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>Fecha Contrato Ampliatorio:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text74>
+            <Text76 Ref="152" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13,4.4,7.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text76</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>Fecha Terminación Anticipada: {Format("{0: dd/MM/yyyy}", cnxPrograFisica.FechaContratoTerminacionAnticipada)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text76>
+            <Text77 Ref="153" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>21,3,2.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text77</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>Monto del Contrato: </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text77>
+            <Text78 Ref="154" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>21,3.4,2.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text78</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>Monto Ajustado: </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text78>
+            <Text79 Ref="155" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>23.8,3,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text79</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>{cnxPrograFisica.MontoOriginal}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="156" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+            </Text79>
+            <Text80 Ref="157" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>23.8,3.4,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text80</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>{cnxPrograFisica.Montomod}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="158" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+            </Text80>
+            <Text81 Ref="159" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>29.4,2.6,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text81</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>{cnxPrograFisica.MontoOriginal}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="160" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+            </Text81>
+            <Text82 Ref="161" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>27.2,2.6,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text82</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>Monto Original:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text82>
+            <Text83 Ref="162" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>27.2,3,6.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text83</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>Fecha Inicio Físico: {Format("{0: dd/MM/yyyy}", cnxPrograFisica.FechaInicioFisico)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text83>
+            <Text84 Ref="163" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>27.2,3.4,6.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text84</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>Fecha de Finalización Original: {Format("{0: dd/MM/yyyy}", cnxPrograFisica.FechaFinalOriginal)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text84>
+            <Text85 Ref="164" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>27.2,3.8,6.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text85</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>Fecha de Finalización Modificada: {Format("{0: dd/MM/yyyy}", cnxPrograFisica.FechaFinaModificado)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text85>
+            <Text86 Ref="165" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,6,16.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text86</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>Proyecto: {cnxPrograFisica.ProyectoCodigo} - {cnxPrograFisica.AnioID}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text86>
+            <Text89 Ref="166" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16.8,3.6,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text89</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>{Format("{0: dd/MM/yyyy}", cnxPrograFisica.FechaContratoAmpliatorio)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text89>
+            <Text75 Ref="167" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13,4,11.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text75</Name>
+              <Page isRef="137" />
+              <Parent isRef="138" />
+              <Text>Contrato Modificado: {cnxPrograFisica.ContratoModificado}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text75>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>PageHeaderBand3</Name>
+          <Page isRef="137" />
+          <Parent isRef="137" />
+        </PageHeaderBand3>
+        <PageFooterBand3 Ref="168" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,18.8,33.6,0.8</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text88 Ref="169" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>28.8,0.04,4.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text88</Name>
+              <Page isRef="137" />
+              <Parent isRef="168" />
+              <Text>Página: {PageNumber} de {TotalPageCount}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text88>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>PageFooterBand3</Name>
+          <Page isRef="137" />
+          <Parent isRef="137" />
+        </PageFooterBand3>
+        <ReportSummaryBand2 Ref="170" type="ReportSummaryBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,7.8,33.6,4.4</ClientRectangle>
+          <Components isList="true" count="10">
+            <Text33 Ref="171" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.2,1.6,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text33</Name>
+              <Page isRef="137" />
+              <Parent isRef="170" />
+              <Text>Elaborado:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text33>
+            <Text34 Ref="172" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.8,2.8,4.2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text34</Name>
+              <Page isRef="137" />
+              <Parent isRef="170" />
+              <Text>Ing. SUPERINTENDENTE/
+CONTRATISTA</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text34>
+            <Text35 Ref="173" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.6,1.6,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text35</Name>
+              <Page isRef="137" />
+              <Parent isRef="170" />
+              <Text>Aceptado:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text35>
+            <Text36 Ref="174" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.4,2.8,4.2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text36</Name>
+              <Page isRef="137" />
+              <Parent isRef="170" />
+              <Text>SUPERVISOR/SUPERVISORA
+{cnxPrograFisica.Supervisora}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text36>
+            <Text37 Ref="175" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>19.8,2.8,4.2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text37</Name>
+              <Page isRef="137" />
+              <Parent isRef="170" />
+              <Text>DIRECTOR O SUBDIRECTOR
+COVIAL</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text37>
+            <Text38 Ref="176" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>27.6,2.8,4.2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text38</Name>
+              <Page isRef="137" />
+              <Parent isRef="170" />
+              <Text>DIRECTOR O SUBDIRECTOR
+COVIAL</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text38>
+            <HorizontalLinePrimitive1 Ref="177" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>1.2,2.6,7.2,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <Conditions isList="true" count="0" />
+              <EndCap Ref="178" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Expressions isList="true" count="0" />
+              <Name>HorizontalLinePrimitive1</Name>
+              <Page isRef="137" />
+              <Parent isRef="170" />
+              <StartCap Ref="179" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive1>
+            <HorizontalLinePrimitive2 Ref="180" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>9.6,2.4,7.2,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <Conditions isList="true" count="0" />
+              <EndCap Ref="181" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Expressions isList="true" count="0" />
+              <Name>HorizontalLinePrimitive2</Name>
+              <Page isRef="137" />
+              <Parent isRef="170" />
+              <StartCap Ref="182" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive2>
+            <HorizontalLinePrimitive3 Ref="183" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>18.8,2.6,6.2,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <Conditions isList="true" count="0" />
+              <EndCap Ref="184" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Expressions isList="true" count="0" />
+              <Name>HorizontalLinePrimitive3</Name>
+              <Page isRef="137" />
+              <Parent isRef="170" />
+              <StartCap Ref="185" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive3>
+            <HorizontalLinePrimitive4 Ref="186" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>26.6,2.6,6.2,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <Conditions isList="true" count="0" />
+              <EndCap Ref="187" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Expressions isList="true" count="0" />
+              <Name>HorizontalLinePrimitive4</Name>
+              <Page isRef="137" />
+              <Parent isRef="170" />
+              <StartCap Ref="188" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive4>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>ReportSummaryBand2</Name>
+          <Page isRef="137" />
+          <Parent isRef="137" />
+        </ReportSummaryBand2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Expressions isList="true" count="0" />
+      <Guid>1882b17d6595456586a5d19e7e7ddf97</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page3</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>21.6</PageHeight>
+      <PageWidth>35.6</PageWidth>
+      <PaperSize>Legal</PaperSize>
+      <Report isRef="0" />
+    </Page3>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>3/24/2023 11:37:53 AM</ReportChanged>
+  <ReportCreated>1/18/2023 11:03:24 AM</ReportCreated>
+  <ReportFile>C:\Users\tony\Documents\GitHub\SICOP-Web\Covialgt\Covialgt\Reportes\rptProgramacionFisica2022.mrt</ReportFile>
+  <ReportGuid>8e9dc761d1ec42d997bb818c3af24079</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2023.1.1.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

@@ -1,0 +1,2896 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.0" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <CnxDocOrdenCambio Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>CnxDocOrdenCambio</Alias>
+        <ConnectionString />
+        <Name>CnxDocOrdenCambio</Name>
+        <PromptUserNameAndPassword>False</PromptUserNameAndPassword>
+      </CnxDocOrdenCambio>
+    </Databases>
+    <DataSources isList="true" count="3">
+      <FDObtenerReporteDocumentosCambioConFiltro2011 Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>FDObtenerReporteDocumentosCambioConFiltro2011</Alias>
+        <Columns isList="true" count="49">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>DocCambioCorrel,System.Int32</value>
+          <value>Nombre,System.String</value>
+          <value>DocCambioTipoID,System.String</value>
+          <value>RenglonID,System.Int32</value>
+          <value>ProyectoRenglonNombre,System.String</value>
+          <value>RenglonCodCOVIAL,System.String</value>
+          <value>RenglonUni,System.String</value>
+          <value>RenglonPrecioUnitario,System.Decimal</value>
+          <value>DocCambioJustifica,System.String</value>
+          <value>MontoDocCambio,System.Decimal</value>
+          <value>FechaPresentación,System.DateTime</value>
+          <value>MontoOriginal,System.Decimal</value>
+          <value>MontoModificado,System.Decimal</value>
+          <value>ModificaPlazo,System.Boolean</value>
+          <value>DocCambioTipoCorrel,System.Int32</value>
+          <value>Observaciones,System.String</value>
+          <value>Clausula,System.String</value>
+          <value>RenglonCantidad,System.Decimal</value>
+          <value>ContratoCodigo,System.String</value>
+          <value>TRAMOSDESCRIPCION,System.String</value>
+          <value>DiasDocCambio,System.Int32</value>
+          <value>FechaPresentacion,System.DateTime</value>
+          <value>EsSancion,System.Boolean</value>
+          <value>Plazo,System.Int32</value>
+          <value>Expr1,System.Decimal</value>
+          <value>FechaInicioFisico,System.DateTime</value>
+          <value>FechaFinalOriginal,System.DateTime</value>
+          <value>FechaFinaModificado,System.DateTime</value>
+          <value>ContratoTipoID,System.Int32</value>
+          <value>ComponenteDesc,System.String</value>
+          <value>SupervisoraAnioID,System.String</value>
+          <value>ProyectoSupervisionCodigo,System.String</value>
+          <value>SubTotal,System.Decimal</value>
+          <value>CantidadTramo,System.Decimal</value>
+          <value>TramoCodigo,System.String</value>
+          <value>subtotalTramo,System.Decimal</value>
+          <value>CostoTramo,System.Decimal</value>
+          <value>snip,System.String</value>
+          <value>PorcentajeModificado,System.Decimal</value>
+          <value>PorcentajeDocumento,System.Decimal</value>
+          <value>PorcentajeAjustado,System.Decimal</value>
+          <value>ProgramaCodigo,System.String</value>
+          <value>FechaFinalizacion,System.DateTime</value>
+          <value>Fecha_Fin,System.DateTime</value>
+          <value>Porcentaje_Documento,System.Decimal</value>
+          <value>Porcentaje_Modificado,System.Decimal</value>
+          <value>Monto_Ajustado,System.Decimal</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>FDObtenerReporteDocumentosCambioConFiltro2011</Name>
+        <NameInSource>CnxDocOrdenCambio</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>_x0040_AnioID,,8,4</value>
+          <value>_x0040_ProyectoCodigo,,22,10</value>
+          <value>_x0040_DocCambioCorrel,,8,4</value>
+        </Parameters>
+        <SqlCommand>exec ObtenerReporteDocumentosCambioConFiltro2011 @AnioID,@ProyectoCodigo,@DocCambioCorrel</SqlCommand>
+      </FDObtenerReporteDocumentosCambioConFiltro2011>
+      <FDCnxTramosenDC Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>FDCnxTramosenDC</Alias>
+        <Columns isList="true" count="11">
+          <value>TramoID,System.Int32</value>
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.Int32</value>
+          <value>DocCambioCorrel,System.Int32</value>
+          <value>UserName,System.String</value>
+          <value>DateModify,System.Int32</value>
+          <value>EstadoTramo,System.Int32</value>
+          <value>TramoCodigo,System.String</value>
+          <value>TramoDesc,System.String</value>
+          <value>TramoLong,System.Decimal</value>
+          <value>DepartamentoNombre,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>FDCnxTramosenDC</Name>
+        <NameInSource>CnxDocOrdenCambio</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>_x0040_AnioID,,8,4</value>
+          <value>_x0040_ProyectoCodigo,,22,10</value>
+          <value>_x0040_DocCambioCorrel,,8,4</value>
+        </Parameters>
+        <SqlCommand>exec prObtertblProyectosTramosBitacora_Info @AnioID,@ProyectoCodigo,@DocCambioCorrel</SqlCommand>
+      </FDCnxTramosenDC>
+      <FDCnxDocOrdenCambiopag2 Ref="5" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>FDCnxDocOrdenCambiopag2</Alias>
+        <Columns isList="true" count="10">
+          <value>AnioID,System.Int32</value>
+          <value>ProgramaCodigo,System.String</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>RenglonID,System.Int32</value>
+          <value>RenglonCodCOVIAL,System.String</value>
+          <value>RenglonCantidad,System.Decimal</value>
+          <value>CantidadTramo,System.Decimal</value>
+          <value>subtotalTramo,System.Decimal</value>
+          <value>ProyectoRenglonNombre,System.String</value>
+          <value>RenglonPrecioUnitario,System.Decimal</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>FDCnxDocOrdenCambiopag2</Name>
+        <NameInSource>CnxDocOrdenCambio</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>_x0040_AnioID,,8,10</value>
+          <value>_x0040_ProyectoCodigo,,22,10</value>
+          <value>_x0040_DocCambioCorrel,,8,5</value>
+        </Parameters>
+        <SqlCommand>exec ObtenerReporteDocumentosCambioConFiltro2011Pagina2 @AnioID,@ProyectoCodigo,@DocCambioCorrel</SqlCommand>
+      </FDCnxDocOrdenCambiopag2>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="6">
+      <value>,SumaSubtramo,SumaSubtramo,System.Decimal,_x0030_.00,False,False</value>
+      <value>,AbsolutSumaTramo,AbsolutSumaTramo,System.Decimal,_x0030_.00,False,False</value>
+      <value>,DifContratoMonto,DifContratoMonto,System.Decimal,_x0030_.00,False,False</value>
+      <value>,SumaCostoEstimado,SumaCostoEstimado,System.Decimal,_x0030_.00,False,False</value>
+      <value>,longValor,longValor,System.String,,False,False</value>
+      <value>,longValor2,longValor2,System.String,,False,False</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="4">
+    <Page1 Ref="6" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="10">
+        <PageHeaderBand1 Ref="7" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19.59,5.2</ClientRectangle>
+          <Components isList="true" count="17">
+            <Image1 Ref="8" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Image>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</Image>
+              <Name>Image1</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Stretch>True</Stretch>
+            </Image1>
+            <Text12 Ref="9" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.2,0,15.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>Sistema Integral de Control de Proyectos</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text13 Ref="10" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.2,0.4,15.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>FICHA PARA LOS DOCUMENTOS DE CAMBIO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text13>
+            <Text14 Ref="11" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.2,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>UNIDAD EJECUTORA DE CONSERVACION VIAL -COVIAL-</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <Text15 Ref="12" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.6,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>MINISTERIO DE COMUNICACIONES, INFRAESTRUCTURA Y VIVIENDA</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text15>
+            <Text16 Ref="13" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>DOCUMENTO DE CAMBIO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text16>
+            <Text17 Ref="14" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.6,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>Documentos de Cambio:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text17>
+            <Text18 Ref="15" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>Orden de Trabajo Suplementario Nº.</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text18>
+            <Text19 Ref="16" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3.4,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>Acuerdo de Trabajo Extra Nº.</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text19>
+            <Text20 Ref="17" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3.8,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>Orden de Cambio Nº.</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text20>
+            <Text21 Ref="18" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>0,4.2,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>De Acuerdo al contrato administrativo No. {FDObtenerReporteDocumentosCambioConFiltro2011.ContratoCodigo}-2016 - COV - M suscrito entre el Ministerio de Comunicaciones, Infraestructura y Vivienda a travez de la Unidad Ejecutora de Consevacion Vial -COVIAL- y {FDObtenerReporteDocumentosCambioConFiltro2011.Nombre} , se ordena {IIF(FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoID =="OC","Decrementar",
+IIF(FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoID =="OTS","Incrementar",
+IIF(FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoID =="ATE","Crear","" )))} los siguientes trabajos de acuerdo a los precios contratados para el proyecto {FDObtenerReporteDocumentosCambioConFiltro2011.ProyectoCodigo} - {FDObtenerReporteDocumentosCambioConFiltro2011.AnioID} cuyos tramos son:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Text21>
+            <Text22 Ref="19" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,2.6,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>{FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioCorrel}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text22>
+            <Text23 Ref="20" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,3,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>{IIF((FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoID) == "OTS",FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoCorrel,"" )}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text23>
+            <Text24 Ref="21" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,3.4,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>{IIF(FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoID=="ATE",FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoCorrel,"")}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+            <Text25 Ref="22" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,3.8,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>{IIF((FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoID) == "OC",FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoCorrel,"" )}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+            <Text26 Ref="23" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,4.8,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>{FDObtenerReporteDocumentosCambioConFiltro2011.TRAMOSDESCRIPCION}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Text26>
+            <Text27 Ref="24" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.8,2.6,7.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>Guatemala, {Format("{0: dddd}", FDObtenerReporteDocumentosCambioConFiltro2011.FechaPresentación)}, {Format("{0: dd }" ,  FDObtenerReporteDocumentosCambioConFiltro2011.FechaPresentación)}de {Format("{0:MMMM}",  FDObtenerReporteDocumentosCambioConFiltro2011.FechaPresentación)} del {Format("{0:yyyy}",  FDObtenerReporteDocumentosCambioConFiltro2011.FechaPresentación)}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text27>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="6" />
+          <Parent isRef="6" />
+        </PageHeaderBand1>
+        <PageFooterBand1 Ref="25" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,25.34,19.59,0.6</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text83 Ref="26" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,9,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text83</Name>
+              <Page isRef="6" />
+              <Parent isRef="25" />
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text83>
+            <Text87 Ref="27" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.6,0,9,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text87</Name>
+              <Page isRef="6" />
+              <Parent isRef="25" />
+              <Text>Página: {PageNumber} / {TotalPageCount}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text87>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="6" />
+          <Parent isRef="6" />
+        </PageFooterBand1>
+        <Data2 Ref="28" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,6.4,19.59,0.2</ClientRectangle>
+          <Components isList="true" count="1">
+            <SubReport1 Ref="29" type="SubReport" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,19.6,0.2</ClientRectangle>
+              <Components isList="true" count="0" />
+              <Name>SubReport1</Name>
+              <Page isRef="6" />
+              <Parent isRef="28" />
+              <SubReportPageGuid>CD2F2525F6E96E18CC9844D4BDEA2189</SubReportPageGuid>
+            </SubReport1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Name>Data2</Name>
+          <Page isRef="6" />
+          <Parent isRef="6" />
+          <Sort isList="true" count="0" />
+        </Data2>
+        <GroupHeaderBand1 Ref="30" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,7.4,19.59,1.6</ClientRectangle>
+          <Components isList="true" count="9">
+            <Text29 Ref="31" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.CantidadTramo,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,7,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="6" />
+              <Parent isRef="30" />
+              <Text>SNIP: {FDObtenerReporteDocumentosCambioConFiltro2011.snip}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text29>
+            <Text30 Ref="32" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.CantidadTramo,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,7,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="6" />
+              <Parent isRef="30" />
+              <Text>{FDObtenerReporteDocumentosCambioConFiltro2011.TramoCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text30>
+            <Text32 Ref="33" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.6,0.8,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.CantidadTramo,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text32</Name>
+              <Page isRef="6" />
+              <Parent isRef="30" />
+              <Text>Renglón</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text32>
+            <Text33 Ref="34" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.8,0.8,4.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.CantidadTramo,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text33</Name>
+              <Page isRef="6" />
+              <Parent isRef="30" />
+              <Text>Descripción de renglones</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text33>
+            <Text35 Ref="35" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.6,0.8,1.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.CantidadTramo,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text35</Name>
+              <Page isRef="6" />
+              <Parent isRef="30" />
+              <Text>Unidad</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text35>
+            <Text36 Ref="36" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.2,0.8,3,0.8</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.CantidadTramo,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text36</Name>
+              <Page isRef="6" />
+              <Parent isRef="30" />
+              <Text>Cantidad</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text36>
+            <Text37 Ref="37" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.2,0.8,2.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.CantidadTramo,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text37</Name>
+              <Page isRef="6" />
+              <Parent isRef="30" />
+              <Text>Precio Unitario</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text37>
+            <Text34 Ref="38" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16.8,0.8,2.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.CantidadTramo,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text34</Name>
+              <Page isRef="6" />
+              <Parent isRef="30" />
+              <Text>Costo Total Estimado</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text34>
+            <Text49 Ref="39" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.8,2.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.CantidadTramo,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text49</Name>
+              <Page isRef="6" />
+              <Parent isRef="30" />
+              <Text>Componente</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text49>
+          </Components>
+          <Condition>{FDObtenerReporteDocumentosCambioConFiltro2011.TramoCodigo}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderBand1</Name>
+          <Page isRef="6" />
+          <Parent isRef="6" />
+        </GroupHeaderBand1>
+        <Data3 Ref="40" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,9.8,19.59,0.6</ClientRectangle>
+          <Components isList="true" count="7">
+            <Text39 Ref="41" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.6,0,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.CantidadTramo,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,7</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text39</Name>
+              <Page isRef="6" />
+              <Parent isRef="40" />
+              <Text>{FDObtenerReporteDocumentosCambioConFiltro2011.RenglonCodCOVIAL}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text39>
+            <Text40 Ref="42" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.8,0,4.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.CantidadTramo,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,7</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text40</Name>
+              <Page isRef="6" />
+              <Parent isRef="40" />
+              <Text>{FDObtenerReporteDocumentosCambioConFiltro2011.ProyectoRenglonNombre}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text40>
+            <Text42 Ref="43" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>9.6,0,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.CantidadTramo,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,7</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text42</Name>
+              <Page isRef="6" />
+              <Parent isRef="40" />
+              <Text>{FDObtenerReporteDocumentosCambioConFiltro2011.RenglonUni}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text42>
+            <Text31 Ref="44" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.CantidadTramo,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,7</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="6" />
+              <Parent isRef="40" />
+              <Text>{FDObtenerReporteDocumentosCambioConFiltro2011.ComponenteDesc}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text31>
+            <Text43 Ref="45" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>11.2,0,3,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.CantidadTramo,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,7</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text43</Name>
+              <Page isRef="6" />
+              <Parent isRef="40" />
+              <Text>{FDObtenerReporteDocumentosCambioConFiltro2011.CantidadTramo}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text43>
+            <Text44 Ref="46" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>14.2,0,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.CantidadTramo,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,7</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text44</Name>
+              <Page isRef="6" />
+              <Parent isRef="40" />
+              <Text>{IIF(FDObtenerReporteDocumentosCambioConFiltro2011.ContratoTipoID==5,FDObtenerReporteDocumentosCambioConFiltro2011.RenglonPrecioUnitario,IIF(FDObtenerReporteDocumentosCambioConFiltro2011.ContratoTipoID==1,FDObtenerReporteDocumentosCambioConFiltro2011.RenglonPrecioUnitario,IIF(FDObtenerReporteDocumentosCambioConFiltro2011.ContratoTipoID==2,FDObtenerReporteDocumentosCambioConFiltro2011.RenglonPrecioUnitario,FDObtenerReporteDocumentosCambioConFiltro2011.RenglonPrecioUnitario)))}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="47" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text44>
+            <Text41 Ref="48" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>16.8,0,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.CantidadTramo,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,7</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text41</Name>
+              <Page isRef="6" />
+              <Parent isRef="40" />
+              <Text>{Round(FDObtenerReporteDocumentosCambioConFiltro2011.subtotalTramo,2)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="49" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text41>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>FDObtenerReporteDocumentosCambioConFiltro2011</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>Data3</Name>
+          <Page isRef="6" />
+          <Parent isRef="6" />
+          <Sort isList="true" count="0" />
+        </Data3>
+        <GroupFooterBand1 Ref="50" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,11.2,19.59,0.6</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text28 Ref="51" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.2,0,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.CantidadTramo,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,7</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="6" />
+              <Parent isRef="50" />
+              <Text>Total</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text28>
+            <Text45 Ref="52" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16.8,0,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.CantidadTramo,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,7</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text45</Name>
+              <Page isRef="6" />
+              <Parent isRef="50" />
+              <Text>{SumaCostoEstimado = Round(Sum(FDObtenerReporteDocumentosCambioConFiltro2011.subtotalTramo),2)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="53" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text45>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterBand1</Name>
+          <Page isRef="6" />
+          <Parent isRef="6" />
+        </GroupFooterBand1>
+        <GroupHeaderBand4 Ref="54" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,12.6,19.59,1</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text46 Ref="55" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.6,0.4,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text46</Name>
+              <Page isRef="6" />
+              <Parent isRef="54" />
+              <Text>Total de este Documento:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text46>
+            <Text47 Ref="56" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17,0.4,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text47</Name>
+              <Page isRef="6" />
+              <Parent isRef="54" />
+              <Text>{Sum(FDObtenerReporteDocumentosCambioConFiltro2011.subtotalTramo)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="57" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text47>
+          </Components>
+          <Condition>{FDObtenerReporteDocumentosCambioConFiltro2011.AnioID}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderBand4</Name>
+          <Page isRef="6" />
+          <Parent isRef="6" />
+        </GroupHeaderBand4>
+        <Data4 Ref="58" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,14.4,19.59,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <DataSourceName>FDObtenerReporteDocumentosCambioConFiltro2011</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>Data4</Name>
+          <Page isRef="6" />
+          <Parent isRef="6" />
+          <Sort isList="true" count="0" />
+        </Data4>
+        <GroupFooterBand3 Ref="59" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,15.2,19.59,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterBand3</Name>
+          <Page isRef="6" />
+          <Parent isRef="6" />
+        </GroupFooterBand3>
+        <ReportSummaryBand2 Ref="60" type="ReportSummaryBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,16,19.59,2.27</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text48 Ref="61" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.4,19.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text48</Name>
+              <Page isRef="6" />
+              <Parent isRef="60" />
+              <Text>----- Ultima Linea -----</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text48>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportSummaryBand2</Name>
+          <Page isRef="6" />
+          <Parent isRef="6" />
+        </ReportSummaryBand2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>e7301b125b2240b6a0d124bdf12e5847</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>27.94</PageHeight>
+      <PageWidth>21.59</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="62" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+    <Sub_TramosenDC Ref="63" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>White</Brush>
+      <Components isList="true" count="3">
+        <GroupHeaderBand5 Ref="64" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19.6,1</ClientRectangle>
+          <Components isList="true" count="5">
+            <Text4 Ref="65" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.8,0.6,10,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDCnxTramosenDC.UserName,EqualTo,N,,String,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="63" />
+              <Parent isRef="64" />
+              <Text>Descripción</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text6 Ref="66" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>12.8,0.6,4.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDCnxTramosenDC.UserName,EqualTo,N,,String,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="63" />
+              <Parent isRef="64" />
+              <Text>Departamento</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text8 Ref="67" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>17,0.6,2.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDCnxTramosenDC.UserName,EqualTo,N,,String,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="63" />
+              <Parent isRef="64" />
+              <Text>L (Kms)</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text2 Ref="68" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0.6,2.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDCnxTramosenDC.UserName,EqualTo,N,,String,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="63" />
+              <Parent isRef="64" />
+              <Text>Codigo</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text1 Ref="69" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,19.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDCnxTramosenDC.UserName,EqualTo,N,,String,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="63" />
+              <Parent isRef="64" />
+              <Text>Se {FDCnxTramosenDC.EstadoTramo} los tramos que se detallan a continuación:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Text1>
+          </Components>
+          <Condition>{FDCnxTramosenDC.ProyectoCodigo}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderBand5</Name>
+          <Page isRef="63" />
+          <Parent isRef="63" />
+        </GroupHeaderBand5>
+        <Data1 Ref="70" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,2.2,19.6,0.6</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text9 Ref="71" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>17,0,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDCnxTramosenDC.UserName,EqualTo,N,,String,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="63" />
+              <Parent isRef="70" />
+              <Text>{FDCnxTramosenDC.TramoLong}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <Text5 Ref="72" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.8,0,10,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDCnxTramosenDC.UserName,EqualTo,N,,String,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="63" />
+              <Parent isRef="70" />
+              <Text>{FDCnxTramosenDC.TramoDesc}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text111 Ref="73" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDCnxTramosenDC.UserName,EqualTo,N,,String,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text111</Name>
+              <Page isRef="63" />
+              <Parent isRef="70" />
+              <Text>{FDCnxTramosenDC.TramoCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text111>
+            <Text3 Ref="74" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>12.8,0,4.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDCnxTramosenDC.UserName,EqualTo,N,,String,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="63" />
+              <Parent isRef="70" />
+              <Text>{FDCnxTramosenDC.DepartamentoNombre}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>FDCnxTramosenDC</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>Data1</Name>
+          <Page isRef="63" />
+          <Parent isRef="63" />
+          <Sort isList="true" count="0" />
+        </Data1>
+        <GroupFooterBand4 Ref="75" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,3.6,19.6,0.6</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text10 Ref="76" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>17,0,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDCnxTramosenDC.UserName,EqualTo,N,,String,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,7</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="63" />
+              <Parent isRef="75" />
+              <Text>{Sum(FDCnxTramosenDC.TramoLong)}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text11 Ref="77" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>12.8,0,4.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDCnxTramosenDC.UserName,EqualTo,N,,String,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,7,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="63" />
+              <Parent isRef="75" />
+              <Text>TOTAL:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterBand4</Name>
+          <Page isRef="63" />
+          <Parent isRef="63" />
+        </GroupFooterBand4>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>CD2F2525F6E96E18CC9844D4BDEA2189</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Sub_TramosenDC</Name>
+      <PageHeight>27.94</PageHeight>
+      <PageWidth>21.6</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="78" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,10</Font>
+        <TextBrush>Black</TextBrush>
+      </Watermark>
+    </Sub_TramosenDC>
+    <Sub_Resumen Ref="79" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>White</Brush>
+      <Components isList="true" count="6">
+        <PageHeaderBand2 Ref="80" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19.6,5.4</ClientRectangle>
+          <Components isList="true" count="17">
+            <Image2 Ref="81" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Image>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</Image>
+              <Name>Image2</Name>
+              <Page isRef="79" />
+              <Parent isRef="80" />
+              <Stretch>True</Stretch>
+            </Image2>
+            <Text38 Ref="82" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.2,0,15.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text38</Name>
+              <Page isRef="79" />
+              <Parent isRef="80" />
+              <Text>Sistema Integral de Control de Proyectos</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text38>
+            <Text50 Ref="83" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.2,0.4,15.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text50</Name>
+              <Page isRef="79" />
+              <Parent isRef="80" />
+              <Text>FICHA PARA LOS DOCUMENTOS DE CAMBIO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text50>
+            <Text51 Ref="84" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.2,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text51</Name>
+              <Page isRef="79" />
+              <Parent isRef="80" />
+              <Text>UNIDAD EJECUTORA DE CONSERVACION VIAL -COVIAL-</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text51>
+            <Text52 Ref="85" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.6,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text52</Name>
+              <Page isRef="79" />
+              <Parent isRef="80" />
+              <Text>MINISTERIO DE COMUNICACIONES, INFRAESTRUCTURA Y VIVIENDA</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text52>
+            <Text53 Ref="86" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text53</Name>
+              <Page isRef="79" />
+              <Parent isRef="80" />
+              <Text>DOCUMENTO DE CAMBIO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text53>
+            <Text54 Ref="87" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.6,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text54</Name>
+              <Page isRef="79" />
+              <Parent isRef="80" />
+              <Text>Documentos de Cambio:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text54>
+            <Text55 Ref="88" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text55</Name>
+              <Page isRef="79" />
+              <Parent isRef="80" />
+              <Text>Orden de Trabajo Suplementario Nº.</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text55>
+            <Text56 Ref="89" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3.4,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text56</Name>
+              <Page isRef="79" />
+              <Parent isRef="80" />
+              <Text>Acuerdo de Trabajo Extra Nº.</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text56>
+            <Text57 Ref="90" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3.8,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text57</Name>
+              <Page isRef="79" />
+              <Parent isRef="80" />
+              <Text>Orden de Cambio Nº.</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text57>
+            <Text58 Ref="91" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>0,4.2,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text58</Name>
+              <Page isRef="79" />
+              <Parent isRef="80" />
+              <Text>De Acuerdo al contrato administrativo No. {FDObtenerReporteDocumentosCambioConFiltro2011.ContratoCodigo}-2016 - COV - M suscrito entre el Ministerio de Comunicaciones, Infraestructura y Vivienda a travez de la Unidad Ejecutora de Consevacion Vial -COVIAL- y {FDObtenerReporteDocumentosCambioConFiltro2011.Nombre} , se ordena {IIF(FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoID =="OC","Decrementar",
+IIF(FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoID =="OTS","Incrementar",
+IIF(FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoID =="ATE","Crear","" )))} los siguientes trabajos de acuerdo a los precios contratados para el proyecto {FDObtenerReporteDocumentosCambioConFiltro2011.ProyectoCodigo} - {FDObtenerReporteDocumentosCambioConFiltro2011.AnioID} cuyos tramos son:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Text58>
+            <Text59 Ref="92" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,2.6,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text59</Name>
+              <Page isRef="79" />
+              <Parent isRef="80" />
+              <Text>{FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioCorrel}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text59>
+            <Text60 Ref="93" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,3,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text60</Name>
+              <Page isRef="79" />
+              <Parent isRef="80" />
+              <Text>{IIF((FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoID) == "OTS",FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoCorrel,"" )}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text60>
+            <Text61 Ref="94" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,3.4,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text61</Name>
+              <Page isRef="79" />
+              <Parent isRef="80" />
+              <Text>{IIF(FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoID=="ATE",FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoCorrel,"")}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text61>
+            <Text62 Ref="95" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,3.8,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text62</Name>
+              <Page isRef="79" />
+              <Parent isRef="80" />
+              <Text>{IIF((FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoID) == "OC",FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoCorrel,"" )}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text62>
+            <Text63 Ref="96" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,4.8,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text63</Name>
+              <Page isRef="79" />
+              <Parent isRef="80" />
+              <Text>{FDObtenerReporteDocumentosCambioConFiltro2011.TRAMOSDESCRIPCION}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Text63>
+            <Text64 Ref="97" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.8,2.6,7.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text64</Name>
+              <Page isRef="79" />
+              <Parent isRef="80" />
+              <Text>Guatemala, {Format("{0: dddd}", FDObtenerReporteDocumentosCambioConFiltro2011.FechaPresentación)}, {Format("{0: dd }" ,  FDObtenerReporteDocumentosCambioConFiltro2011.FechaPresentación)}de {Format("{0:MMMM}",  FDObtenerReporteDocumentosCambioConFiltro2011.FechaPresentación)} del {Format("{0:yyyy}",  FDObtenerReporteDocumentosCambioConFiltro2011.FechaPresentación)}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text64>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand2</Name>
+          <Page isRef="79" />
+          <Parent isRef="79" />
+        </PageHeaderBand2>
+        <PageFooterBand2 Ref="98" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,25.34,19.6,0.6</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text90 Ref="99" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.06,9,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text90</Name>
+              <Page isRef="79" />
+              <Parent isRef="98" />
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text90>
+            <Text91 Ref="100" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.6,0.06,9,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text91</Name>
+              <Page isRef="79" />
+              <Parent isRef="98" />
+              <Text>Página: {PageNumber} / {TotalPageCount}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text91>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand2</Name>
+          <Page isRef="79" />
+          <Parent isRef="79" />
+        </PageFooterBand2>
+        <GroupHeaderBand2 Ref="101" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,6.6,19.6,1.6</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text102 Ref="102" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.6,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text102</Name>
+              <Page isRef="79" />
+              <Parent isRef="101" />
+              <Text>RESUMEN DE RENGLONES</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text102>
+            <Text86 Ref="103" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text86</Name>
+              <Page isRef="79" />
+              <Parent isRef="101" />
+              <Text>Renglón</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text86>
+            <Text96 Ref="104" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.2,1,7,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text96</Name>
+              <Page isRef="79" />
+              <Parent isRef="101" />
+              <Text>Descripción de renglones</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text96>
+            <Text97 Ref="105" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.2,1,3,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text97</Name>
+              <Page isRef="79" />
+              <Parent isRef="101" />
+              <Text>Cantidad</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text97>
+            <Text98 Ref="106" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.2,1,3.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text98</Name>
+              <Page isRef="79" />
+              <Parent isRef="101" />
+              <Text>Precio Unitario</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text98>
+            <Text100 Ref="107" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.8,1,3.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text100</Name>
+              <Page isRef="79" />
+              <Parent isRef="101" />
+              <Text>Total</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text100>
+          </Components>
+          <Condition>{FDCnxDocOrdenCambiopag2.AnioID}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderBand2</Name>
+          <Page isRef="79" />
+          <Parent isRef="79" />
+        </GroupHeaderBand2>
+        <Data5 Ref="108" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,9,19.6,0.8</ClientRectangle>
+          <Components isList="true" count="5">
+            <Text101 Ref="109" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text101</Name>
+              <Page isRef="79" />
+              <Parent isRef="108" />
+              <Text>{FDCnxDocOrdenCambiopag2.RenglonCodCOVIAL}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text101>
+            <Text81 Ref="110" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.2,0,7,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text81</Name>
+              <Page isRef="79" />
+              <Parent isRef="108" />
+              <Text>{FDCnxDocOrdenCambiopag2.ProyectoRenglonNombre}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text81>
+            <Text82 Ref="111" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.2,0,3,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text82</Name>
+              <Page isRef="79" />
+              <Parent isRef="108" />
+              <Text>{FDCnxDocOrdenCambiopag2.CantidadTramo}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text82>
+            <Text84 Ref="112" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.2,0,3.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text84</Name>
+              <Page isRef="79" />
+              <Parent isRef="108" />
+              <Text>{FDCnxDocOrdenCambiopag2.RenglonPrecioUnitario}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="113" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text84>
+            <Text85 Ref="114" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.8,0,3.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text85</Name>
+              <Page isRef="79" />
+              <Parent isRef="108" />
+              <Text>{FDCnxDocOrdenCambiopag2.subtotalTramo}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="115" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text85>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>FDCnxDocOrdenCambiopag2</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>Data5</Name>
+          <Page isRef="79" />
+          <Parent isRef="79" />
+          <Sort isList="true" count="0" />
+        </Data5>
+        <GroupFooterBand2 Ref="116" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,10.6,19.6,0.8</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterBand2</Name>
+          <Page isRef="79" />
+          <Parent isRef="79" />
+        </GroupFooterBand2>
+        <ReportSummaryBand3 Ref="117" type="ReportSummaryBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,12.2,19.6,0.87</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text88 Ref="118" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.2,0.13,3.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text88</Name>
+              <Page isRef="79" />
+              <Parent isRef="117" />
+              <Text>Total de este Documento:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text88>
+            <Text89 Ref="119" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.8,0.13,3.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text89</Name>
+              <Page isRef="79" />
+              <Parent isRef="117" />
+              <Text>{Round(Sum(FDCnxDocOrdenCambiopag2.subtotalTramo),2)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="120" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text89>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportSummaryBand3</Name>
+          <Page isRef="79" />
+          <Parent isRef="79" />
+        </ReportSummaryBand3>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>D102D69D78C3838DFDFC5329C8808F68</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Sub_Resumen</Name>
+      <PageHeight>27.94</PageHeight>
+      <PageWidth>21.6</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="121" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,10</Font>
+        <TextBrush>Black</TextBrush>
+      </Watermark>
+    </Sub_Resumen>
+    <SubReport_1 Ref="122" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>White</Brush>
+      <Components isList="true" count="5">
+        <PageHeaderBand4 Ref="123" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19.59,5.4</ClientRectangle>
+          <Components isList="true" count="17">
+            <Image4 Ref="124" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Image>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</Image>
+              <Name>Image4</Name>
+              <Page isRef="122" />
+              <Parent isRef="123" />
+              <Stretch>True</Stretch>
+            </Image4>
+            <Text94 Ref="125" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.2,0,15.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text94</Name>
+              <Page isRef="122" />
+              <Parent isRef="123" />
+              <Text>Sistema Integral de Control de Proyectos</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text94>
+            <Text65 Ref="126" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.2,0.4,15.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text65</Name>
+              <Page isRef="122" />
+              <Parent isRef="123" />
+              <Text>FICHA PARA LOS DOCUMENTOS DE CAMBIO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text65>
+            <Text66 Ref="127" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.2,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text66</Name>
+              <Page isRef="122" />
+              <Parent isRef="123" />
+              <Text>UNIDAD EJECUTORA DE CONSERVACION VIAL -COVIAL-</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text66>
+            <Text67 Ref="128" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.6,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text67</Name>
+              <Page isRef="122" />
+              <Parent isRef="123" />
+              <Text>MINISTERIO DE COMUNICACIONES, INFRAESTRUCTURA Y VIVIENDA</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text67>
+            <Text68 Ref="129" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text68</Name>
+              <Page isRef="122" />
+              <Parent isRef="123" />
+              <Text>DOCUMENTO DE CAMBIO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text68>
+            <Text69 Ref="130" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.6,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text69</Name>
+              <Page isRef="122" />
+              <Parent isRef="123" />
+              <Text>Documentos de Cambio:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text69>
+            <Text70 Ref="131" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text70</Name>
+              <Page isRef="122" />
+              <Parent isRef="123" />
+              <Text>Orden de Trabajo Suplementario Nº.</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text70>
+            <Text71 Ref="132" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3.4,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text71</Name>
+              <Page isRef="122" />
+              <Parent isRef="123" />
+              <Text>Acuerdo de Trabajo Extra Nº.</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text71>
+            <Text72 Ref="133" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3.8,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text72</Name>
+              <Page isRef="122" />
+              <Parent isRef="123" />
+              <Text>Orden de Cambio Nº.</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text72>
+            <Text73 Ref="134" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>0,4.2,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text73</Name>
+              <Page isRef="122" />
+              <Parent isRef="123" />
+              <Text>De Acuerdo al contrato administrativo No. {FDObtenerReporteDocumentosCambioConFiltro2011.ContratoCodigo}-2016 - COV - M suscrito entre el Ministerio de Comunicaciones, Infraestructura y Vivienda a travez de la Unidad Ejecutora de Consevacion Vial -COVIAL- y {FDObtenerReporteDocumentosCambioConFiltro2011.Nombre} , se ordena {IIF(FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoID =="OC","Decrementar",
+IIF(FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoID =="OTS","Incrementar",
+IIF(FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoID =="ATE","Crear","" )))} los siguientes trabajos de acuerdo a los precios contratados para el proyecto {FDObtenerReporteDocumentosCambioConFiltro2011.ProyectoCodigo} - {FDObtenerReporteDocumentosCambioConFiltro2011.AnioID} cuyos tramos son:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Text73>
+            <Text74 Ref="135" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,2.6,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text74</Name>
+              <Page isRef="122" />
+              <Parent isRef="123" />
+              <Text>{FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioCorrel}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text74>
+            <Text75 Ref="136" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,3,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text75</Name>
+              <Page isRef="122" />
+              <Parent isRef="123" />
+              <Text>{IIF((FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoID) == "OTS",FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoCorrel,"" )}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text75>
+            <Text76 Ref="137" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,3.4,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text76</Name>
+              <Page isRef="122" />
+              <Parent isRef="123" />
+              <Text>{IIF(FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoID=="ATE",FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoCorrel,"")}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text76>
+            <Text77 Ref="138" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,3.8,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text77</Name>
+              <Page isRef="122" />
+              <Parent isRef="123" />
+              <Text>{IIF((FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoID) == "OC",FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioTipoCorrel,"" )}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text77>
+            <Text78 Ref="139" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,4.8,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text78</Name>
+              <Page isRef="122" />
+              <Parent isRef="123" />
+              <Text>{FDObtenerReporteDocumentosCambioConFiltro2011.TRAMOSDESCRIPCION}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Text78>
+            <Text79 Ref="140" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.8,2.6,7.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text79</Name>
+              <Page isRef="122" />
+              <Parent isRef="123" />
+              <Text>Guatemala, {Format("{0: dddd}", FDObtenerReporteDocumentosCambioConFiltro2011.FechaPresentación)}, {Format("{0: dd }" ,  FDObtenerReporteDocumentosCambioConFiltro2011.FechaPresentación)}de {Format("{0:MMMM}",  FDObtenerReporteDocumentosCambioConFiltro2011.FechaPresentación)} del {Format("{0:yyyy}",  FDObtenerReporteDocumentosCambioConFiltro2011.FechaPresentación)}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text79>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand4</Name>
+          <Page isRef="122" />
+          <Parent isRef="122" />
+        </PageHeaderBand4>
+        <PageFooterBand3 Ref="141" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,25.34,19.59,0.6</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text92 Ref="142" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,9,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text92</Name>
+              <Page isRef="122" />
+              <Parent isRef="141" />
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text92>
+            <Text93 Ref="143" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.6,0,9,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text93</Name>
+              <Page isRef="122" />
+              <Parent isRef="141" />
+              <Text>Página: {PageNumber} / {TotalPageCount}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text93>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand3</Name>
+          <Page isRef="122" />
+          <Parent isRef="122" />
+        </PageFooterBand3>
+        <GroupHeaderBand3 Ref="144" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,6.6,19.59,5.6</ClientRectangle>
+          <Components isList="true" count="26">
+            <Text80 Ref="145" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text80</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>Este documento de cambio {IIF(FDObtenerReporteDocumentosCambioConFiltro2011.MontoDocCambio != 0,"Si","No")} modifica el valor del Contrato.</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text80>
+            <Text95 Ref="146" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text95</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>JUSTIFICACIÓN: {FDObtenerReporteDocumentosCambioConFiltro2011.DocCambioJustifica}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text95>
+            <Text99 Ref="147" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1,5.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text99</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>VALOR ORIGINAL DEL CONTRATO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text99>
+            <Text103 Ref="148" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.4,5.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text103</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>VALOR MODIFICADO DEL CONTRATO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text103>
+            <Text104 Ref="149" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.8,5.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text104</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>VALOR ESTE DOCUMENTO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text104>
+            <Text105 Ref="150" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.2,5.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text105</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>VALOR DEL CONTRATO AJUSTADO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text105>
+            <Text106 Ref="151" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.8,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text106</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>Este Documento de Cambio {IIF(FDObtenerReporteDocumentosCambioConFiltro2011.DiasDocCambio != 0,"Si","No")} modifica el tiempo contractual.</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text106>
+            <Text107 Ref="152" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.6,1,5,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text107</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>{FDObtenerReporteDocumentosCambioConFiltro2011.MontoOriginal}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="153" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text107>
+            <Text108 Ref="154" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.6,1.4,5,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text108</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>{FDObtenerReporteDocumentosCambioConFiltro2011.MontoModificado}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="155" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text108>
+            <Text109 Ref="156" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.6,1.8,5,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text109</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>{Round(Sum(FDObtenerReporteDocumentosCambioConFiltro2011.subtotalTramo),2)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="157" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text109>
+            <Text110 Ref="158" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.6,2.2,5,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text110</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>{FDObtenerReporteDocumentosCambioConFiltro2011.MontoModificado + Round(Sum(FDObtenerReporteDocumentosCambioConFiltro2011.subtotalTramo),2)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="159" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text110>
+            <Text126 Ref="160" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.6,1,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Enabled>False</Enabled>
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text126</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Printable>False</Printable>
+              <Text>{SumaSubtramo=(Round(Sum(FDObtenerReporteDocumentosCambioConFiltro2011.subtotalTramo),2))}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text126>
+            <Text145 Ref="161" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.6,1.4,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Enabled>False</Enabled>
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text145</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Printable>False</Printable>
+              <Text>{AbsolutSumaTramo=Abs(Sum(FDObtenerReporteDocumentosCambioConFiltro2011.subtotalTramo))}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text145>
+            <Text143 Ref="162" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.6,1.8,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Enabled>False</Enabled>
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text143</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Printable>False</Printable>
+              <Text>{DifContratoMonto=FDObtenerReporteDocumentosCambioConFiltro2011.MontoModificado + Round(Sum(FDObtenerReporteDocumentosCambioConFiltro2011.subtotalTramo),2) }</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text143>
+            <Text124 Ref="163" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.4,1,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text124</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>100.00%</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="164" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text124>
+            <Text127 Ref="165" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.4,1.4,1,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text127</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>{FDObtenerReporteDocumentosCambioConFiltro2011.PorcentajeModificado}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="166" type="NumberFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>1</NegativePattern>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text127>
+            <Text144 Ref="167" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.4,1.8,1,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text144</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>{FDObtenerReporteDocumentosCambioConFiltro2011.PorcentajeDocumento}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="168" type="NumberFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>1</NegativePattern>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text144>
+            <Text146 Ref="169" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.4,2.2,1,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text146</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>{FDObtenerReporteDocumentosCambioConFiltro2011.PorcentajeAjustado}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="170" type="NumberFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>1</NegativePattern>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text146>
+            <Text147 Ref="171" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13.4,1.4,1,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text147</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>%</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="172" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text147>
+            <Text148 Ref="173" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13.4,1.8,1,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text148</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>%</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="174" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text148>
+            <Text149 Ref="175" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13.4,2.2,1,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text149</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>%</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="176" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>5</NegativePattern>
+                <PositivePattern>1</PositivePattern>
+                <Symbol>p.</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text149>
+            <Text151 Ref="177" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,5,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.DiasDocCambio,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text151</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>NUEVA FECHA DE FINALIZACION: {Format("{0: dddd}", FDObtenerReporteDocumentosCambioConFiltro2011.FechaFinalizacion)}  {Format("{0: dd}", FDObtenerReporteDocumentosCambioConFiltro2011.FechaFinalizacion)} de {Format("{0: MMMM yyyy}", FDObtenerReporteDocumentosCambioConFiltro2011.FechaFinalizacion)}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text151>
+            <Text150 Ref="178" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,3.4,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.DiasDocCambio,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text150</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>FECHA INICIO CONTRACTUAL: {Format("{0: dddd }", FDObtenerReporteDocumentosCambioConFiltro2011.FechaInicioFisico)} {Format("{0: dd}", FDObtenerReporteDocumentosCambioConFiltro2011.FechaInicioFisico)} de {Format("{0:MMMM yyyy}", FDObtenerReporteDocumentosCambioConFiltro2011.FechaInicioFisico)}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text150>
+            <Text117 Ref="179" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,4.6,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.DiasDocCambio,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text117</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>{IIF(FDObtenerReporteDocumentosCambioConFiltro2011.DiasDocCambio &gt; 0,"TIEMPO AMPLIADO:", "TIEMPO DECREMENTADO:")} {FDObtenerReporteDocumentosCambioConFiltro2011.DiasDocCambio} Días</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text117>
+            <Text116 Ref="180" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,4.2,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.DiasDocCambio,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text116</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>FECHA DE FINALIZACION: {Format("{0: dddd}", FDObtenerReporteDocumentosCambioConFiltro2011.Fecha_Fin)} {Format("{0: dd}", FDObtenerReporteDocumentosCambioConFiltro2011.Fecha_Fin)} de {Format("{0: MMMM}", FDObtenerReporteDocumentosCambioConFiltro2011.Fecha_Fin)} {Format("{0:yyyy}", FDObtenerReporteDocumentosCambioConFiltro2011.Fecha_Fin)}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text116>
+            <Text115 Ref="181" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,3.8,19.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.DiasDocCambio,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text115</Name>
+              <Page isRef="122" />
+              <Parent isRef="144" />
+              <Text>TIEMPO CONTRACTUAL: {FDObtenerReporteDocumentosCambioConFiltro2011.Plazo} Días</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text115>
+          </Components>
+          <Condition>{FDObtenerReporteDocumentosCambioConFiltro2011.AnioID}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderBand3</Name>
+          <Page isRef="122" />
+          <Parent isRef="122" />
+        </GroupHeaderBand3>
+        <Data6 Ref="182" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,13,19.59,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <DataSourceName>FDObtenerReporteDocumentosCambioConFiltro2011</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>Data6</Name>
+          <Page isRef="122" />
+          <Parent isRef="122" />
+          <Sort isList="true" count="0" />
+        </Data6>
+        <ReportSummaryBand1 Ref="183" type="ReportSummaryBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,13.8,19.59,9.8</ClientRectangle>
+          <Components isList="true" count="23">
+            <Text141 Ref="184" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,6.2,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text141</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <Text>Vo. Bo.</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text141>
+            <Text140 Ref="185" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.2,7.4,6.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text140</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <Text>(f) Encargado Departamento Financiero</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text140>
+            <Text138 Ref="186" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1,7.4,7.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text138</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <Text>(f)Sub-Director Técnico / Director</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text138>
+            <Text137 Ref="187" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1,5,7.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text137</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <Text>(f)Supervisor Regional de Control y Seguimiento</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text137>
+            <Text136 Ref="188" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11,4,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text136</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <Text>Vo. Bo.</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text136>
+            <Text135 Ref="189" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.2,5,6.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text135</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <Text>(f)Coordinador de Control y Seguimiento</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text135>
+            <Text134 Ref="190" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,4,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text134</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <Text>Vo. Bo.</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text134>
+            <Text133 Ref="191" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.2,3,5.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text133</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <Text>(f) Contratista/Superintendente</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text133>
+            <Text132 Ref="192" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11,2.2,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text132</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <Text>Aceptó</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text132>
+            <Text131 Ref="193" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1,3,5.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text131</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <Text>{IIF(FDObtenerReporteDocumentosCambioConFiltro2011.ProgramaCodigo == "S",
+ "(f)Supervisor - " + FDObtenerReporteDocumentosCambioConFiltro2011.ProyectoCodigo + "-" +  FDObtenerReporteDocumentosCambioConFiltro2011.SupervisoraAnioID,
+"(f)Supervisor - " + FDObtenerReporteDocumentosCambioConFiltro2011.ProyectoSupervisionCodigo) } -  {FDObtenerReporteDocumentosCambioConFiltro2011.SupervisoraAnioID}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text131>
+            <Text123 Ref="194" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.2,0,2.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.MontoDocCambio,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text123</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <Text>% de {IIF((Sum(FDObtenerReporteDocumentosCambioConFiltro2011.subtotalTramo,)/FDObtenerReporteDocumentosCambioConFiltro2011.MontoOriginal)*100 &lt; 0,"decremento","incremento")}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="195" type="NumberFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>1</NegativePattern>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text123>
+            <Text122 Ref="196" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.4,0,0.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.MontoDocCambio,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text122</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <Text>{FDObtenerReporteDocumentosCambioConFiltro2011.PorcentajeDocumento}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="197" type="NumberFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator />
+                <NegativePattern>1</NegativePattern>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text122>
+            <Text121 Ref="198" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,4.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.MontoDocCambio,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text121</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <Text>Esta modificación representa un</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text121>
+            <Text142 Ref="199" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.8,0,6.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.MontoDocCambio,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text142</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <Text>al valor original del contrato, por una cantidad de:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text142>
+            <Text125 Ref="200" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2,3.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text125</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <Text>{IIF(FDObtenerReporteDocumentosCambioConFiltro2011.ContratoTipoID==5,"Aceptó","Elaboró")}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text125>
+            <Text129 Ref="201" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.6,0,4.8,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,1</Font>
+              <Margins>0,0,0,0</Margins>
+              <MaxSize>6,0.3</MaxSize>
+              <Name>Text129</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <Printable>False</Printable>
+              <ShiftMode>None</ShiftMode>
+              <Text>{IIF(SumaSubtramo&lt;0,"Menos","")} {longValor=Replace(ToCurrencyWordsEs(AbsolutSumaTramo,"EUR",2),"euro","quetzale")} {longValor2=Replace(ToCurrencyWordsEs( DifContratoMonto ,"EUR",2),"euro","quetzale")}</Text>
+              <TextBrush>[255:255:255]</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Text129>
+            <Text112 Ref="202" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.01,0.46,19.43,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>FDObtenerReporteDocumentosCambioConFiltro2011.MontoDocCambio,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_10,False,True,</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <Guid>b6099e68df04440f9c159eedc9b1fcb1</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text112</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <Text>{IIF(SumaSubtramo&lt;0,"Menos","")} {Letras.NumerosALetras(AbsolutSumaTramo)} quedando el contrato con un monto de {Letras.NumerosALetras(DifContratoMonto)}.</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text112>
+            <HorizontalLinePrimitive2 Ref="203" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>12.2,3,5.4,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="204" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>9B43775D3E854549955F57AD794200FF</Guid>
+              <Name>HorizontalLinePrimitive2</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <StartCap Ref="205" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive2>
+            <HorizontalLinePrimitive1 Ref="206" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>1,3,5.4,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="207" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>9B43775D3E854549955F57AD794200FF</Guid>
+              <Name>HorizontalLinePrimitive1</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <StartCap Ref="208" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive1>
+            <HorizontalLinePrimitive4 Ref="209" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>12.2,5,5.4,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="210" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>9B43775D3E854549955F57AD794200FF</Guid>
+              <Name>HorizontalLinePrimitive4</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <StartCap Ref="211" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive4>
+            <HorizontalLinePrimitive3 Ref="212" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>1,5,7,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="213" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>9B43775D3E854549955F57AD794200FF</Guid>
+              <Name>HorizontalLinePrimitive3</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <StartCap Ref="214" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive3>
+            <HorizontalLinePrimitive5 Ref="215" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>12.2,7.4,5.4,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="216" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>9B43775D3E854549955F57AD794200FF</Guid>
+              <Name>HorizontalLinePrimitive5</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <StartCap Ref="217" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive5>
+            <HorizontalLinePrimitive6 Ref="218" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>1,7.4,7,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="219" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>9B43775D3E854549955F57AD794200FF</Guid>
+              <Name>HorizontalLinePrimitive6</Name>
+              <Page isRef="122" />
+              <Parent isRef="183" />
+              <StartCap Ref="220" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive6>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportSummaryBand1</Name>
+          <Page isRef="122" />
+          <Parent isRef="122" />
+        </ReportSummaryBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>E40E1B7EB81B3C1AE1AA532EE6FA6F9F</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>SubReport_1</Name>
+      <PageHeight>27.94</PageHeight>
+      <PageWidth>21.59</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="221" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,10</Font>
+        <TextBrush>Black</TextBrush>
+      </Watermark>
+    </SubReport_1>
+  </Pages>
+  <PrinterSettings Ref="222" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="9">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+    <value>ClaseLetras.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>2/20/2018 5:07:37 PM</ReportChanged>
+  <ReportCreated>5/8/2017 11:52:13 AM</ReportCreated>
+  <ReportFile>\\192.168.1.90\g$\SRV2\wwwroot\SICOP\Reportes\RrptDocumentosCambio_2016_Con_Cov_M.mrt</ReportFile>
+  <ReportGuid>27e34a2384974c7ea7b01e1f068d438a</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2010.1.700</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+using ClaseLetras.Conversion;
+
+namespace Reports
+{
+    
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        
+        public Report()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

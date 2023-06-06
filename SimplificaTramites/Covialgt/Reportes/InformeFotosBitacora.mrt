@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.0" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <Conexión Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>Conexión</Alias>
+        <ConnectionString>Data Source=192.168.0.10; Initial Catalog=z_PRODUCCION_sicopDB; User Id=mlopez; Password=gisys2407</ConnectionString>
+        <Name>Conexión</Name>
+        <PromptUserNameAndPassword>False</PromptUserNameAndPassword>
+      </Conexión>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <ObtenerDatosBitacora Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>ObtenerDatosBitacora</Alias>
+        <Columns isList="true" count="15">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>BitacoraCorr,System.Int32</value>
+          <value>Titulo,System.String</value>
+          <value>Descripcion,System.String</value>
+          <value>FotoNombre,System.String</value>
+          <value>Latitud,System.Double</value>
+          <value>Longitud,System.Double</value>
+          <value>IMEI,System.String</value>
+          <value>IMSI,System.String</value>
+          <value>Fecha,System.DateTime</value>
+          <value>UserName,System.String</value>
+          <value>DateModify,System.DateTime</value>
+          <value>DesdeTelefono,System.Boolean</value>
+          <value>Visible,System.Boolean</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>ObtenerDatosBitacora</Name>
+        <NameInSource>Conexión</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_AnioID,,8,0</value>
+          <value>_x0040_ProyectoCodigo,,22,10</value>
+        </Parameters>
+        <SqlCommand>exec "dbo"."ObtenerDatosBitacora" @AnioID, @ProyectoCodigo</SqlCommand>
+      </ObtenerDatosBitacora>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <Text5 Ref="5" type="Text" isKey="true">
+          <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.8,26.8,3.2,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,9</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text5</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Text>{PageNumber} de {TotalPageCount}</Text>
+          <TextBrush>Black</TextBrush>
+          <VertAlignment>Center</VertAlignment>
+        </Text5>
+        <HeaderBand1 Ref="6" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,3.4</ClientRectangle>
+          <Components isList="true" count="5">
+            <Image1 Ref="7" type="Image" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,1.8,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Image>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</Image>
+              <Name>Image1</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Stretch>True</Stretch>
+            </Image1>
+            <Text1 Ref="8" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.2,0.2,8.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,16,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>REPORTE FOTOS BITACORA</Text>
+              <TextBrush>Black</TextBrush>
+            </Text1>
+            <Text2 Ref="9" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.6,0.8,3,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,16,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>-COVIAL-</Text>
+              <TextBrush>Black</TextBrush>
+            </Text2>
+            <Text3 Ref="10" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.6,6.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>PROYECTO :  {ObtenerDatosBitacora.Parameters["@ProyectoCodigo"].ParameterValue}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+            <Text4 Ref="11" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.2,6.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>AÑO :  {ObtenerDatosBitacora.Parameters["@AnioID"].ParameterValue}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>HeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </HeaderBand1>
+        <Table2 Ref="12" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,4.6,19,7</ClientRectangle>
+          <ColumnCount>3</ColumnCount>
+          <Components isList="true" count="18">
+            <Table2_Cell1 Ref="13" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,6,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>38224a2f60c0426bb15c9d917a8e5978</Guid>
+              <ID>25</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell1</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell1>
+            <Table2_Cell2 Ref="14" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,0,2.2,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>851c86f54f0c4ccda309bc3c6003a291</Guid>
+              <ID>26</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell2</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell2>
+            <Table2_Cell3 Ref="15" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.2,0,4,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>66f8fe177fab4eaab87e565a32cd95a9</Guid>
+              <ID>27</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell3</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell3>
+            <Table2_Cell4 Ref="16" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.2,6,4.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>44e41a65b4ed4f4b83e9f875b8ed81aa</Guid>
+              <ID>0</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell4</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell4>
+            <Table2_Cell5 Ref="17" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,0.2,2.2,4.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Enabled>False</Enabled>
+              <Font>Arial,9</Font>
+              <Guid>4be3b3a0d4f546c19954083195185a83</Guid>
+              <ID>1</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell5</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <ParentJoin>2</ParentJoin>
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell5>
+            <Table2_Cell6 Ref="18" type="Stimulsoft.Report.Components.Table.StiTableCellImage" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,0.2,6.2,4.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Guid>fbe4a6bfed13436bad57cdd8b23bd327</Guid>
+              <ID>2</ID>
+              <ImageURL>http://www.covial.gob.gt:1090/Sicop/Paginas/Procesos/Formularios/Mapas/GetThumbnail.aspx?Tipo=5&amp;MaxPixels=350&amp;Fotografia={ObtenerDatosBitacora.FotoNombre}</ImageURL>
+              <Join>True</Join>
+              <JoinCells isList="true" count="2">
+                <value>1</value>
+                <value>2</value>
+              </JoinCells>
+              <Name>Table2_Cell6</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <ParentJoin>2</ParentJoin>
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Stretch>True</Stretch>
+            </Table2_Cell6>
+            <Table2_Cell7 Ref="19" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,4.6,6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>14cc215664464f5f8b764aee56314004</Guid>
+              <ID>5</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell7</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell7>
+            <Table2_Cell8 Ref="20" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,4.6,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <Guid>0e7348b6eca848a7ac91acc569165ac5</Guid>
+              <ID>6</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell8</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Titulo:</Text>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell8>
+            <Table2_Cell9 Ref="21" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.2,4.6,4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>e7927a5e47bd48718ca3b55f88297801</Guid>
+              <ID>7</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell9</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{ObtenerDatosBitacora.Titulo}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Table2_Cell9>
+            <Table2_Cell10 Ref="22" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,5.4,6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>e47c9c5eba35447eb0349e03a48f18e1</Guid>
+              <ID>10</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell10</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell10>
+            <Table2_Cell11 Ref="23" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,5.4,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <Guid>391c7f60d4a5400e93b0762e338d2b86</Guid>
+              <ID>11</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell11</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Descripcion:
+</Text>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell11>
+            <Table2_Cell12 Ref="24" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.2,5.4,4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>75f26868ff594119aa4c8e97ea5aa2eb</Guid>
+              <ID>12</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell12</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{ObtenerDatosBitacora.Descripcion}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Table2_Cell12>
+            <Table2_Cell13 Ref="25" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,6.2,6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>f4c54bd43245498d95aad23dfbe2c111</Guid>
+              <ID>15</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell13</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell13>
+            <Table2_Cell14 Ref="26" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,6.2,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <Guid>027e0d9713e54a0a89e63e7b9f317992</Guid>
+              <ID>16</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell14</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>ID:</Text>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell14>
+            <Table2_Cell15 Ref="27" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.2,6.2,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>68a4527484ed43d1a753e3cf3b25ecd4</Guid>
+              <ID>17</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell15</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{ObtenerDatosBitacora.BitacoraCorr}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Table2_Cell15>
+            <Table2_Cell16 Ref="28" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,6.6,6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <ID>28</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell16</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell16>
+            <Table2_Cell17 Ref="29" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>Top;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,6.6,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <ID>29</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell17</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell17>
+            <Table2_Cell18 Ref="30" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>Top;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.2,6.6,4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <ID>30</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell18</Name>
+              <Page isRef="4" />
+              <Parent isRef="12" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell18>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>ObtenerDatosBitacora</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>2b06c2cdcb8543cca5641801f48d7c6b</Guid>
+          <Name>Table2</Name>
+          <NumberID>31</NumberID>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <RowCount>6</RowCount>
+          <Sort isList="true" count="0" />
+        </Table2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>ed29cf529a114a47b3e8abac9f7ba233</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="31" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="32" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Informe</ReportAlias>
+  <ReportChanged>8/13/2012 4:03:57 PM</ReportChanged>
+  <ReportCreated>8/13/2012 10:38:06 AM</ReportCreated>
+  <ReportFile>C:\Users\Usuario\Desktop\SICOP 27072012\SICOP\Reportes\InformeFotosBitacora.mrt</ReportFile>
+  <ReportGuid>a62fe6fe86924f60a2e7d021d1445553</ReportGuid>
+  <ReportName>Informe</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2010.1.700</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Informe : Stimulsoft.Report.StiReport
+    {
+        
+        public Informe()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

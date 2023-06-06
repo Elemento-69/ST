@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.0" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <Connection Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>Connection</Alias>
+        <ConnectionString>User ID=etzic;Data Source=192.168.1.90\COVIALAPP;Initial Catalog=z_PRODUCCION_sicopDB;Integrated Security=False;Password=Covi@l2018*.</ConnectionString>
+        <Name>Connection</Name>
+        <PromptUserNameAndPassword>False</PromptUserNameAndPassword>
+      </Connection>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <DataSource1 Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DataSource1</Alias>
+        <Columns isList="true" count="5">
+          <value>ANIOID,System.String</value>
+          <value>PROYECTOCODIGO,System.String</value>
+          <value>DOCCAMBIOCORREL,System.String</value>
+          <value>Monto,System.Decimal</value>
+          <value>TramoDesc,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DataSource1</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_anioid,,8,0</value>
+          <value>_x0040_proyecto,,22,10</value>
+        </Parameters>
+        <SqlCommand>exec PrDetalleRespaldoPresupuestario @anioid,@proyecto</SqlCommand>
+      </DataSource1>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <INCREMENTO_x0020_Y_x0020_DECREMENTO_x0020_A_x0020_LAS_x0020_CANTIDADES_x0020_CONTRATADAS Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <PageHeaderBand1 Ref="5" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,33.6,2.8</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text1 Ref="6" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,33.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,18,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>MINISTERIO DE COMUNICACIONES, INFRAESTRUCTURA Y VIVIENDA</Text>
+              <TextBrush>Black</TextBrush>
+            </Text1>
+            <Text2 Ref="7" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.8,33.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>UNIDAD EJECUTORA DE CONSERVACIÓN VIAL  -COVIAL-</Text>
+              <TextBrush>Black</TextBrush>
+            </Text2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageHeaderBand1>
+        <PageFooterBand1 Ref="8" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,14,33.6,4.6</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageFooterBand1>
+        <DataBand2 Ref="9" type="DataBand" isKey="true">
+          <Brush>EmptyBrush</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,4,33.6,4.6</ClientRectangle>
+          <Components isList="true" count="1">
+            <CrossTab1 Ref="10" type="Stimulsoft.Report.CrossTab.StiCrossTab" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,33.6,3.4</ClientRectangle>
+              <Components isList="true" count="14">
+                <CrossTab1_ColTotal1 Ref="11" type="CrossColumnTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>7.85,0.45,1,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>d3e27627e5394e74b637185b143918c0</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>3,0</MaxSize>
+                  <Name>CrossTab1_ColTotal1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="10" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_ColTotal1>
+                <CrossTab1_RowTotal1 Ref="12" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>0,2.1,4.8,0.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>eb413be97cb94aabb7d2f2671b3668ee</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="10" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal1>
+                <CrossTab1_Row1_Title Ref="13" type="CrossTitle" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>SteelBlue</Brush>
+                  <ClientRectangle>0,0.45,1.2,0.8</ClientRectangle>
+                  <Font>Arial,8</Font>
+                  <Guid>ca1a2177862f480a844dab12a9677c10</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_Row1_Title</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="10" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>AÑO</Text>
+                  <TextBrush>White</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TypeOfComponent>Row:CrossTab1_Row1</TypeOfComponent>
+                </CrossTab1_Row1_Title>
+                <CrossTab1_LeftTitle Ref="14" type="CrossTitle" isKey="true">
+                  <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,0,4.8,0.4</ClientRectangle>
+                  <Font>Arial,8</Font>
+                  <Guid>a35342bb0c6644ec8a6bcbf8634bb346</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_LeftTitle</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="10" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>DataSource1</Text>
+                  <TextBrush>White</TextBrush>
+                  <TypeOfComponent>LeftTitle</TypeOfComponent>
+                </CrossTab1_LeftTitle>
+                <CrossTab1_RowTotal2 Ref="15" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>1.2,2.1,0,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>c484bfbcf6d3475b9309b97645a006e3</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal2</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="10" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal2>
+                <CrossTab1_Row2_Title Ref="16" type="CrossTitle" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>SteelBlue</Brush>
+                  <ClientRectangle>1.2,0.45,2,0.8</ClientRectangle>
+                  <Font>Arial,8</Font>
+                  <Guid>b5c0e98671454404ac43768f43d21e8c</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <Name>CrossTab1_Row2_Title</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="10" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>PROYECTO CODIGO</Text>
+                  <TextBrush>White</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TypeOfComponent>Row:CrossTab1_Row2</TypeOfComponent>
+                </CrossTab1_Row2_Title>
+                <CrossTab1_RowTotal3 Ref="17" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>3.2,2.1,0,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>d58fe1ca3e3a4746bf57959a0f20f806</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal3</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="10" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal3>
+                <CrossTab1_Row3_Title Ref="18" type="CrossTitle" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>SteelBlue</Brush>
+                  <ClientRectangle>3.2,0.45,1.6,0.8</ClientRectangle>
+                  <Font>Arial,8</Font>
+                  <Guid>49442d3e433148f6991b5e9c7cad3f1d</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>4,0</MaxSize>
+                  <Name>CrossTab1_Row3_Title</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="10" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>TRAMO</Text>
+                  <TextBrush>White</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TypeOfComponent>Row:CrossTab1_Row3</TypeOfComponent>
+                </CrossTab1_Row3_Title>
+                <CrossTab1_Row1 Ref="19" type="CrossRow" isKey="true">
+                  <Alias>ANIOID</Alias>
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,1.3,1.2,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{DataSource1.ANIOID}</DisplayValue>
+                  <Font>Arial,8</Font>
+                  <Guid>723e0ed4e3e74bb8bdba53ad59990cd5</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_Row1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="10" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>ANIOID</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TotalGuid>eb413be97cb94aabb7d2f2671b3668ee</TotalGuid>
+                  <Value>{DataSource1.ANIOID}</Value>
+                </CrossTab1_Row1>
+                <CrossTab1_Row2 Ref="20" type="CrossRow" isKey="true">
+                  <Alias>PROYECTOCODIGO</Alias>
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>1.2,1.3,2,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{DataSource1.PROYECTOCODIGO}</DisplayValue>
+                  <Font>Arial,8</Font>
+                  <Guid>ac933396dfc84e0c93179dc239d48937</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>2,0</MaxSize>
+                  <Name>CrossTab1_Row2</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="10" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>PROYECTOCODIGO</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TotalGuid>c484bfbcf6d3475b9309b97645a006e3</TotalGuid>
+                  <Value>{DataSource1.PROYECTOCODIGO}</Value>
+                </CrossTab1_Row2>
+                <CrossTab1_Row3 Ref="21" type="CrossRow" isKey="true">
+                  <Alias>TramoDesc</Alias>
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>3.2,1.3,1.6,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{DataSource1.TramoDesc}</DisplayValue>
+                  <Font>Arial,8</Font>
+                  <Guid>0ca3967767794ee384b05e759030f0cf</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>4,0</MaxSize>
+                  <Name>CrossTab1_Row3</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="10" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>TramoDesc</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TotalGuid>d58fe1ca3e3a4746bf57959a0f20f806</TotalGuid>
+                  <Value>{DataSource1.TramoDesc}</Value>
+                </CrossTab1_Row3>
+                <CrossTab1_Column1 Ref="22" type="CrossColumn" isKey="true">
+                  <Alias>DOCCAMBIOCORREL</Alias>
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>SteelBlue</Brush>
+                  <ClientRectangle>4.85,0.45,3,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{DataSource1.DOCCAMBIOCORREL}</DisplayValue>
+                  <Font>Arial,8</Font>
+                  <Guid>f4d705ebae5547d389bffdceb42ce747</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>3,0</MaxSize>
+                  <Name>CrossTab1_Column1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="10" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>DOCCAMBIOCORREL</Text>
+                  <TextBrush>White</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TotalGuid>d3e27627e5394e74b637185b143918c0</TotalGuid>
+                  <Value>{DataSource1.DOCCAMBIOCORREL}</Value>
+                </CrossTab1_Column1>
+                <CrossTab1_Sum1 Ref="23" type="CrossSummary" isKey="true">
+                  <Alias>Monto</Alias>
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>4.85,1.3,3,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>eada9510cdf5464a91d9b079c746d170</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>3,0</MaxSize>
+                  <Name>CrossTab1_Sum1</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="10" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>0</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextFormat Ref="24" type="CurrencyFormat" isKey="true">
+                    <DecimalSeparator>,</DecimalSeparator>
+                    <GroupSeparator>.</GroupSeparator>
+                    <NegativePattern>8</NegativePattern>
+                    <PositivePattern>3</PositivePattern>
+                    <Symbol>€</Symbol>
+                  </TextFormat>
+                  <Value>{DataSource1.Monto}</Value>
+                </CrossTab1_Sum1>
+                <CrossTab1_RightTitle Ref="25" type="CrossTitle" isKey="true">
+                  <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>4.85,0,4,0.4</ClientRectangle>
+                  <Font>Arial,8</Font>
+                  <Guid>223e8de8e8ea45d4a8593f9f20266cfe</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RightTitle</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="10" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>DOCCAMBIOCORREL</Text>
+                  <TextBrush>White</TextBrush>
+                  <TypeOfComponent>RightTitle</TypeOfComponent>
+                </CrossTab1_RightTitle>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <DataRelationName />
+              <DataSourceName>DataSource1</DataSourceName>
+              <EmptyValue />
+              <Filters isList="true" count="0" />
+              <Linked>True</Linked>
+              <Name>CrossTab1</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Sort isList="true" count="0" />
+              <SummaryDirection>LeftToRight</SummaryDirection>
+            </CrossTab1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>dtFacturas</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataBand2</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </DataBand2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>68583f4580d14f9fb8b4f215f34adb69</Guid>
+      <Margins>1,1,2,1</Margins>
+      <Name>INCREMENTO Y DECREMENTO A LAS CANTIDADES CONTRATADAS</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>21.6</PageHeight>
+      <PageWidth>35.6</PageWidth>
+      <PaperSize>Legal</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="26" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </INCREMENTO_x0020_Y_x0020_DECREMENTO_x0020_A_x0020_LAS_x0020_CANTIDADES_x0020_CONTRATADAS>
+  </Pages>
+  <PrinterSettings Ref="27" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Documentos de Cambio</ReportAlias>
+  <ReportChanged>12/13/2018 3:15:28 PM</ReportChanged>
+  <ReportCreated>11/24/2017 4:20:15 PM</ReportCreated>
+  <ReportFile>\\192.168.1.90\g$\SRV2\wwwroot\SICOP\Reportes\RptDetalleRespaldoPresupuestario.mrt</ReportFile>
+  <ReportGuid>338bde9ea3024f4d8414761c55a63fa9</ReportGuid>
+  <ReportName>Resume de Facturas</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2010.1.700</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Resume_de_Facturas : Stimulsoft.Report.StiReport
+    {
+        
+        public Resume_de_Facturas()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

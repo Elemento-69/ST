@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.0" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <Connection Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>Connection</Alias>
+        <ConnectionString>User ID=jmrodriguez;Data Source=192.168.1.90\covialapp;Initial Catalog=z_PRODUCCION_sicopDB;Integrated Security=False;Password=Covial2018</ConnectionString>
+        <Name>Connection</Name>
+        <PromptUserNameAndPassword>False</PromptUserNameAndPassword>
+      </Connection>
+    </Databases>
+    <DataSources isList="true" count="2">
+      <dtProgramas Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>dtProgramas</Alias>
+        <Columns isList="true" count="7">
+          <value>AnioId,System.Int32</value>
+          <value>ProgramaCodigo,System.String</value>
+          <value>Programas,System.Int32</value>
+          <value>ProgramaNombre,System.String</value>
+          <value>Rango,System.Decimal</value>
+          <value>Mes,System.Decimal</value>
+          <value>Totales,System.Decimal</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>dtProgramas</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_anioNomina,,8,4</value>
+          <value>_x0040_mes,,8,2</value>
+        </Parameters>
+        <SqlCommand>exec MontosPagadosXPrograma @anioNomina,@mes,1</SqlCommand>
+      </dtProgramas>
+      <dtEncabezado Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>dtEncabezado</Alias>
+        <Columns isList="true" count="2">
+          <value>Rango,System.String</value>
+          <value>Mes,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>dtEncabezado</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_anioNomina,,8,4</value>
+          <value>_x0040_mes,,8,2</value>
+        </Parameters>
+        <SqlCommand>exec EncabezadoMes @mes</SqlCommand>
+      </dtEncabezado>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="5" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="5">
+        <PageHeaderBand1 Ref="6" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,27.7,2.6</ClientRectangle>
+          <Components isList="true" count="4">
+            <Image1 Ref="7" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,3.14,1.94</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Guid>872782c5214a40d69e7aa74d2171f24d</Guid>
+              <Image>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</Image>
+              <Name>Image1</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Stretch>True</Stretch>
+            </Image1>
+            <Text1 Ref="8" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,0,20.85,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <Guid>9f8b604910ff49e89a425371cf610b6c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>MINISTERIO DE COMUNICACIONES INFRAESTRUCTURA Y VIVIENDA</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text2 Ref="9" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.6,0.8,20.85,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <Guid>5eb139406e354baa9ca3f5b035a1fcc4</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>UNIDAD EJECUTORA DE CONSERVACION VIAL - COVIAL</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text3 Ref="10" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,1.4,20.85,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <Guid>609a747eddce4d22b067b6186389cb30</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>MONTOS DEVENGADOS POR PROGRAMA EN NOMINA:{dtProgramas.Parameters["@anioNomina"].ParameterValue}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </PageHeaderBand1>
+        <PageFooterBand1 Ref="11" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,16.6,27.7,2.4</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </PageFooterBand1>
+        <HeaderBand1 Ref="12" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,3.8,27.7,1.2</ClientRectangle>
+          <Components isList="true" count="1">
+            <Table1 Ref="13" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+              <Brush>Transparent</Brush>
+              <BusinessObjectGuid isNull="true" />
+              <ClientRectangle>0,0.4,27.7,0.8</ClientRectangle>
+              <ColumnCount>7</ColumnCount>
+              <Components isList="true" count="7">
+                <Table1_Cell1 Ref="14" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+                  <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,0,4,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Calibri,11,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>0</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Table1_Cell1</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Año</Text>
+                  <TextBrush>Black</TextBrush>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell1>
+                <Table1_Cell2 Ref="15" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+                  <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>4,0,4,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Calibri,11,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>1</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Table1_Cell2</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Programa</Text>
+                  <TextBrush>Black</TextBrush>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell2>
+                <Table1_Cell3 Ref="16" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+                  <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>8,0,4,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Calibri,11,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>26</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Table1_Cell3</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>No. Proyectos</Text>
+                  <TextBrush>Black</TextBrush>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell3>
+                <Table1_Cell4 Ref="17" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+                  <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>12,0,4,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Calibri,11,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>2</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Table1_Cell4</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>ProgramaNombre</Text>
+                  <TextBrush>Black</TextBrush>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell4>
+                <Table1_Cell5 Ref="18" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+                  <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>16,0,4,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Calibri,11,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>3</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Table1_Cell5</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{dtEncabezado.Rango}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell5>
+                <Table1_Cell6 Ref="19" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+                  <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>20,0,3.8,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Calibri,11,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>4</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Table1_Cell6</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{dtEncabezado.Mes}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell6>
+                <Table1_Cell7 Ref="20" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+                  <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>23.8,0,3.9,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Calibri,11,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>25</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Table1_Cell7</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="13" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Totales</Text>
+                  <TextBrush>Black</TextBrush>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell7>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <DataRelationName isNull="true" />
+              <DataSourceName>dtEncabezado</DataSourceName>
+              <Filters isList="true" count="0" />
+              <Name>Table1</Name>
+              <NumberID>27</NumberID>
+              <Page isRef="5" />
+              <Parent isRef="12" />
+              <RowCount>1</RowCount>
+              <Sort isList="true" count="0" />
+            </Table1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>HeaderBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </HeaderBand1>
+        <Table2 Ref="21" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,5.8,27.7,1.8</ClientRectangle>
+          <ColumnCount>7</ColumnCount>
+          <Components isList="true" count="7">
+            <Table2_Cell1 Ref="22" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>93e46e84998643089a2e31b91ad40540</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>0</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell1</Name>
+              <Page isRef="5" />
+              <Parent isRef="21" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{dtProgramas.AnioId}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Table2_Cell1>
+            <Table2_Cell2 Ref="23" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,0,4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>5f7f8545ca624eafa92837bf0d3ebd89</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>25</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell2</Name>
+              <Page isRef="5" />
+              <Parent isRef="21" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{dtProgramas.ProgramaCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Table2_Cell2>
+            <Table2_Cell3 Ref="24" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8,0,4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>26</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell3</Name>
+              <Page isRef="5" />
+              <Parent isRef="21" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{dtProgramas.Programas}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Table2_Cell3>
+            <Table2_Cell4 Ref="25" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,0,4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>c1cb367391ea496098b4f5c1b4c1231d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>1</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell4</Name>
+              <Page isRef="5" />
+              <Parent isRef="21" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{dtProgramas.ProgramaNombre}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Table2_Cell4>
+            <Table2_Cell5 Ref="26" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16,0,4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>16f2987c664f43cea6a2bafbf89c1430</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>2</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell5</Name>
+              <Page isRef="5" />
+              <Parent isRef="21" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{dtProgramas.Rango}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="27" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Table2_Cell5>
+            <Table2_Cell6 Ref="28" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>20,0,3.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>8b101a2ec8914695a07beefd09f2c60a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>3</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell6</Name>
+              <Page isRef="5" />
+              <Parent isRef="21" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{dtProgramas.Mes}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="29" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Table2_Cell6>
+            <Table2_Cell7 Ref="30" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>23.8,0,3.9,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>31f90e770567414b98487ec3d302e5d0</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>4</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell7</Name>
+              <Page isRef="5" />
+              <Parent isRef="21" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{dtProgramas.Totales}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="31" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Table2_Cell7>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>dtProgramas</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>c7f5dc227c7e45c89a1e2638d9009dca</Guid>
+          <Name>Table2</Name>
+          <NumberID>27</NumberID>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+          <RowCount>1</RowCount>
+          <Sort isList="true" count="0" />
+        </Table2>
+        <ReportSummaryBand1 Ref="32" type="ReportSummaryBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,8.4,27.7,0.8</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text4 Ref="33" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>23.8,0.2,3.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Calibri,11,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="5" />
+              <Parent isRef="32" />
+              <Text>{Sum(Table2,dtProgramas.Totales)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="34" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text5 Ref="35" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>20,0.2,4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Calibri,11,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="5" />
+              <Parent isRef="32" />
+              <Text>{Sum(Table2,dtProgramas.Mes)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="36" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text6 Ref="37" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16,0.2,4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Calibri,11,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="5" />
+              <Parent isRef="32" />
+              <Text>{Sum(Table2,dtProgramas.Rango)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="38" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportSummaryBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </ReportSummaryBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>24fa478a03f048cb829204b72e3d29d2</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>21</PageHeight>
+      <PageWidth>29.7</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="39" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="40" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>9/17/2019 2:36:33 PM</ReportChanged>
+  <ReportCreated>9/12/2019 3:38:37 PM</ReportCreated>
+  <ReportFile>C:\Users\jrodriguez\Desktop\MontosPagadosXProgramaTotal.mrt</ReportFile>
+  <ReportGuid>e048d3d4286348238346a57327f30096</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2010.1.700</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        
+        public Report()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

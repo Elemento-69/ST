@@ -1,0 +1,746 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <cnxActaDeEstimacion Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>cnxActaDeEstimacion</Alias>
+        <ConnectionStringEncrypted>9NLPCUhRS6HpX6EYVSjjcsR61aFnV5OIyxC97OEl9hOJUtHDRXyjoUVdqBzKPegP9HBTC0VMMYVGYdnM5cTiF9l0qytGFqv1bFj9YWNJ4+ff3Mvk10rThcx4uaVjJSI34ELNTk0FsM3jfazM9HGx49Vs3etbe9pBXWVl+GFJdX7ebPejYVvCYHIRzY10fGITwxjBq8gY04FsFf3JSwSsl8RgZWtOAyKM4UfZ9GM=</ConnectionStringEncrypted>
+        <Key>e94d7756b34945d68a773c4a3fc34046</Key>
+        <Name>cnxActaDeEstimacion</Name>
+      </cnxActaDeEstimacion>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <prActaDeEstimacion Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>prActaDeEstimacion</Alias>
+        <Columns isList="true" count="16">
+          <value>ORIGINAL,AnioID,AnioID,AnioID,System.Int32,_x0033_4469113579e473f89d7d5bf6044dd82</value>
+          <value>ORIGINAL,ProyectoCodigo,ProyectoCodigo,ProyectoCodigo,System.String,f403a664b23c4b13b7a36f1a009749d5</value>
+          <value>ORIGINAL,Nombre,Nombre,Nombre,System.String,_x0032_b468f479940479ea27ba1093db30777</value>
+          <value>ORIGINAL,ProyectoDescripcion,ProyectoDescripcion,ProyectoDescripcion,System.String,_x0032_4c34e437da14b12947da5001b4c1f3a</value>
+          <value>ORIGINAL,No_Contrato,No_Contrato,No_Contrato,System.String,_x0034_37244ac1fed471783c2650b502dff05</value>
+          <value>ORIGINAL,FechaContrato,FechaContrato,FechaContrato,System.String,_x0037_7e75ba8ec3b47689fd4a6d063409e92</value>
+          <value>ORIGINAL,anioSupervisora,anioSupervisora,anioSupervisora,System.Int32,df0b12c508f64ab39b8a7329f4716e78</value>
+          <value>ORIGINAL,ProyectoSupervisora,ProyectoSupervisora,ProyectoSupervisora,System.String,eef64d76dcee4f559196aee27ef7b48d</value>
+          <value>ORIGINAL,direccionSupervisora,direccionSupervisora,direccionSupervisora,System.String,e53a0d5281a04b53a5f280604218874d</value>
+          <value>ORIGINAL,nombreSupervisora,nombreSupervisora,nombreSupervisora,System.String,bfe521dcb5c24e4f8447e3f61648b35b</value>
+          <value>ORIGINAL,FechaDesde,FechaDesde,FechaDesde,System.String,aa8a9950be7342eeb64dc6ad24f8c057</value>
+          <value>ORIGINAL,FechaHasta,FechaHasta,FechaHasta,System.String,_x0034_e0b176496714690b58d843501c50d01</value>
+          <value>ORIGINAL,MontoEjecutado,MontoEjecutado,MontoEjecutado,System.String,f2346589f3e145968ef3604bb57a0d00</value>
+          <value>ORIGINAL,MontoaRecibir,MontoaRecibir,MontoaRecibir,System.String,_x0037_7c6939efd774f9f89bba2c1add309df</value>
+          <value>ORIGINAL,Cargo,Cargo,Cargo,System.String,_x0032_a59da22783744388bd931a021bdc100</value>
+          <value>ORIGINAL,CantidadesEstimacion,CantidadesEstimacion,CantidadesEstimacion,System.String,_x0033_a4e3adfc83146f3ad8a4b2ae726f4d7</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>459dec80818f450d9c6fac3a7d354f54</Key>
+        <Name>prActaDeEstimacion</Name>
+        <NameInSource>cnxActaDeEstimacion</NameInSource>
+        <Parameters isList="true" count="13">
+          <value>_x0040_anio,,8,0,69d5fd88c84540c6bf54e75930318b1e</value>
+          <value>_x0040_proyectoCodigo,,22,10,94ffdd6d26e7429bb040628e629d434c</value>
+          <value>_x0040_estimacionCorr,,8,0,f9b428ddd64b48d7b2a66a69a9ae4b2c</value>
+          <value>NoActa,,22,10,b27f43a0a80243018cd7df2eae4581d8</value>
+          <value>horaActa,,22,10,1bbcb9bf67274f89aec70a26db28250f</value>
+          <value>fechaActaIn,,22,15,9a5b73f95ca44c2bbe84aab7faa3709e</value>
+          <value>NombreEncargadoPE,,22,20,20a7644e1e1d4e0aace2917d061ed725</value>
+          <value>NombreEncargadoPS,,22,20,10d836ccb25143b09829e81e2b771094</value>
+          <value>TituloEncargadoPE,,12,250,1c78bc17e1b54daf9220380afde503e6</value>
+          <value>TituloEncargadoPS,,12,250,e3cbfe4969aa49cc8b3ccffe34adc07d</value>
+          <value>noFolio,,22,50,af96c2988b6a4a3292d8c7db1cd34039</value>
+          <value>CodigoProyLetras,,22,250,6404216cf2c641eabc5992a911f50bf5</value>
+          <value>FechaDelNombramiento,,18,50,a1989b483d83446eaf9245760738abab</value>
+        </Parameters>
+        <SqlCommand>exec prActaDeEstimacion @anio,@proyectoCodigo, @estimacionCorr</SqlCommand>
+      </prActaDeEstimacion>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="1">
+      <value>,var1,var1,,System.String,Format_x0028__x0022__x007B_0:N0_x007D__x0022__x002C__x0020_Replace_x0028_Remove_x0028__x0022_B-006_x0022__x002C_0_x002C_2_x0029__x002C_0_x002C__x0022__x0022__x0029__x0029__x0020_,False,True,False,False,,_x0036_dd85af2cade4bc3a59fd2129f5dab5c</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>53fd5bee875c44feaeb7f4bc59af05ac</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="9">
+        <PageHeaderBand1 Ref="5" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.5,19.6,2</ClientRectangle>
+          <Components isList="true" count="6">
+            <Image1 Ref="6" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,2.5,1.5</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <IconColor>68, 114, 196</IconColor>
+              <ImageBytes>/9j/4AAQSkZJRgABAQEAeAB4AAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/
+2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwM
+BwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM
+DAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAA8AGQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEA
+AAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJx
+FDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNk
+ZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJ
+ytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
+BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMz
+UvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3
+eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBv/BP74hfHb9oX/gvH+0tJqnxm+ME3wt+D
+XjbxKiaAfGGoNo7TS6peWun2JtvP8tYUjSeVEC7B9jRcbTiv1Z/4TjXP+g5rP/gdL/8AFV47+yJ+
+xRqn7OeqfGPVH8Pat/bXxS+Kvinxneyixdi0FzqtwLFQ4XJT7IkMgU/de4l9eex/aA1zxV8Gvgb4
+u8WaP4F8VeLdZ8P6TcXunaJp+jXd5c6vdqh8i2WOFGkIkl2KxUHapZjgKSP82fGbPOKeIeNa9PKY
+V1ShJUKaipxi+V2crqyfNNyal/K462R+m5HQwmGwKlWcbv3ne1/T7j8Sf+C/X/BYL4uf8N33vgT4
+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</ImageBytes>
+              <Margins>0,0,0,0</Margins>
+              <Name>Image1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+            </Image1>
+            <Text4 Ref="7" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,0,12,0.5</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,13,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>UNIDAD EJECUTORA DE CONSERVACION VIAL -COVIAL-.</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+            </Text4>
+            <Text12 Ref="8" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,0.5,12,0.5</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>MINISTERIO DE COMUNICACIONES, INFRAESTRUCTURA Y VIVIENDA</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+            </Text12>
+            <Text15 Ref="9" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,1,12,0.5</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>SUBDIRECCION TECNICA</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+            </Text15>
+            <Text16 Ref="10" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,1.5,12,0.5</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>DEPARTAMENTO DE CONTROL Y SEGUIMIENTO DE PROYECTOS</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+            </Text16>
+            <HorizontalLinePrimitive1 Ref="11" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0,2,19.5,0.0254</ClientRectangle>
+              <Color>127, 127, 127</Color>
+              <Conditions isList="true" count="0" />
+              <EndCap Ref="12" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Expressions isList="true" count="0" />
+              <Name>HorizontalLinePrimitive1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Size>3.5</Size>
+              <StartCap Ref="13" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageHeaderBand1>
+        <PageFooterBand1 Ref="14" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,49.06,19.6,5.5</ClientRectangle>
+          <Components isList="true" count="8">
+            <Shape1 Ref="15" type="Shape" isKey="true">
+              <BackgroundColor>Transparent</BackgroundColor>
+              <BorderColor>Black</BorderColor>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3,0.86,6.5,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,8</Font>
+              <ForeColor>Black</ForeColor>
+              <Margins>0,0,0,0</Margins>
+              <Name>Shape1</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <ShapeType Ref="16" type="Stimulsoft.Report.Components.ShapeTypes.StiHorizontalLineShapeType" isKey="true" />
+            </Shape1>
+            <Text9 Ref="17" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>10.5,1.8,7.5,2.5</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>Coordinador de Servicios de Ingeniería &lt;br&gt;
+{prActaDeEstimacion.Nombre}
+</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+            </Text9>
+            <Text11 Ref="18" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.5,1.8,7.5,2.5</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>Supervisor {prActaDeEstimacion.ProyectoSupervisora}-{prActaDeEstimacion.anioSupervisora}&lt;br&gt;
+Unidad Ejecutora de Conservación Vial Covial.</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+            </Text11>
+            <Text13 Ref="19" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.5,0.26,0.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,12</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>F)</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text13>
+            <Text14 Ref="20" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.6,0.26,0.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,12</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text>F)</Text>
+              <TextBrush>Black</TextBrush>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text14>
+            <Shape2 Ref="21" type="Shape" isKey="true">
+              <BackgroundColor>Transparent</BackgroundColor>
+              <BorderColor>Black</BorderColor>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11,0.86,6.5,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,8</Font>
+              <ForeColor>Black</ForeColor>
+              <Margins>0,0,0,0</Margins>
+              <Name>Shape2</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <ShapeType Ref="22" type="Stimulsoft.Report.Components.ShapeTypes.StiHorizontalLineShapeType" isKey="true" />
+            </Shape2>
+            <Text8 Ref="23" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3,1.26,6.5,0.5</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text> {prActaDeEstimacion.Parameters["NombreEncargadoPS"].ParameterValue}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text8>
+            <Text6 Ref="24" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11,1.26,6.5,0.5</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="4" />
+              <Parent isRef="14" />
+              <Text> {prActaDeEstimacion.Parameters["NombreEncargadoPE"].ParameterValue}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text6>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageFooterBand1>
+        <GroupHeaderBand11 Ref="25" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,3.5,19.6,2</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text1 Ref="26" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.5,0.4,5.1,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4" />
+              <Parent isRef="25" />
+              <Text>LIBRO DE ACTAS</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+            </Text1>
+            <Text19 Ref="27" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,1.4,8.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="4" />
+              <Parent isRef="25" />
+              <Text>ACTA DE SERVICIOS DE INGENIERIA.</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+            </Text19>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>GroupHeaderBand11</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </GroupHeaderBand11>
+        <GroupHeaderBand5 Ref="28" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,6.5,19.6,10.5</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text10 Ref="29" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15,0.4,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="4" />
+              <Parent isRef="28" />
+              <Text>{prActaDeEstimacion.Parameters["noFolio"].ParameterValue}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+            </Text10>
+            <Text3 Ref="30" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.5,1.3,14.6,5.7</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,12</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4" />
+              <Parent isRef="28" />
+              <Text>Acta No. {prActaDeEstimacion.Parameters["NoActa"].ParameterValue}-{prActaDeEstimacion.AnioID}. Siendo las {prActaDeEstimacion.Parameters["horaActa"].ParameterValue} horas del día {prActaDeEstimacion.Parameters["fechaActaIn"].ParameterValue}, nos encontramos reunidos en las oficinas de la Sub Dirección Técnica de la Unidad Ejecutora de Conservación Vial -COVIAL- "SDT", ubicadas Salón número siete Finca Nacional La Aurora zona 13 en la Ciudada de Guatemala, las siguientes personas: {prActaDeEstimacion.Parameters["TituloEncargadoPS"].ParameterValue} {prActaDeEstimacion.Parameters["NombreEncargadoPS"].ParameterValue}, en su calidad de Supervisor {prActaDeEstimacion.ProyectoSupervisora}-{prActaDeEstimacion.anioSupervisora}, de la Unidad Ejecutora de Conservacíon Vial COVIAL, según oficio No. STCOVIAL {prActaDeEstimacion.ProyectoCodigo}-{prActaDeEstimacion.AnioID}, Clasif. Nombramiento de regional como supervisor de proyecto GAMD/ST De fecha {prActaDeEstimacion.Parameters["FechaDelNombramiento"].ParameterValue} emitido por la Sub-Dirección de la Unidad Ejecutora de Conservación Vial, -COVIAL- Y {prActaDeEstimacion.Parameters["TituloEncargadoPE"].ParameterValue} {prActaDeEstimacion.Parameters["NombreEncargadoPE"].ParameterValue}, Coordinador de Servicios de Ingeniería de la empresa {prActaDeEstimacion.Nombre} contratista que tiene a su cargo la ejecución de los trabajos de Servicios de Consultoría Especifica para el Monitoreo, Auditoría y Asistencia Técnica de Proyectos Según Decreto 21-2022 del Proyecto {prActaDeEstimacion.ProyectoCodigo}-{prActaDeEstimacion.AnioID} </Text>
+              <TextBrush>Black</TextBrush>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+            </Text3>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>GroupHeaderBand5</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </GroupHeaderBand5>
+        <GroupHeaderBand6 Ref="31" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,18,19.6,2.5</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text2 Ref="32" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.5,0,14.6,1.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,12</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="31" />
+              <Text>&lt;u&gt;&lt;b&gt;PRIMERO:&lt;/u&gt;&lt;/b&gt; Se tiene por objeto certificar el valor del cuadro de servicios de ingeniería número {prActaDeEstimacion.Parameters["@estimacionCorr"].ParameterValue}&lt;/b&gt;, del periodo que comprende del &lt;b&gt;{prActaDeEstimacion.FechaDesde}&lt;/b&gt; al &lt;b&gt;{prActaDeEstimacion.FechaHasta}&lt;/b&gt; con valor siguiente:&lt;br&gt;&lt;br&gt;
+
+
+
+
+ 
+
+</Text>
+              <TextBrush>Black</TextBrush>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+            </Text2>
+            <Text17 Ref="33" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>2.5,1.5,14.6,1.1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,12</Font>
+              <HorAlignment>Width</HorAlignment>
+              <LineSpacing>0.5</LineSpacing>
+              <Margins>0,0,1,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="4" />
+              <Parent isRef="31" />
+              <Text>{Replace(Replace(Replace(prActaDeEstimacion.CantidadesEstimacion,"++","&lt;br&gt;"),"--","&lt;li&gt;"),"**","&lt;/li&gt;")}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+            </Text17>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>GroupHeaderBand6</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </GroupHeaderBand6>
+        <GroupHeaderBand10 Ref="34" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,21.5,19.6,2</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text18 Ref="35" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>2.5,0,14.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,12</Font>
+              <HorAlignment>Width</HorAlignment>
+              <LineSpacing>0.5</LineSpacing>
+              <Margins>0,0,1,0</Margins>
+              <MaxSize>0,6</MaxSize>
+              <Name>Text18</Name>
+              <Page isRef="4" />
+              <Parent isRef="34" />
+              <Text>Siendo el monto total a cobrar de: &lt;b&gt;{prActaDeEstimacion.MontoaRecibir}&lt;/b&gt; en esta estimación.</Text>
+              <TextBrush>Black</TextBrush>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+            </Text18>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>GroupHeaderBand10</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </GroupHeaderBand10>
+        <GroupHeaderBand7 Ref="36" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,24.5,19.6,3</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text5 Ref="37" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.5,0,14.6,1.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,12</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="4" />
+              <Parent isRef="36" />
+              <Text>&lt;b&gt;&lt;u&gt;SEGUNDO:&lt;/b&gt;&lt;/u&gt; Se deja contancia que los trabajos reportados fueron ejecutados a cabalidad, la empresa contratista junto con el supervisor se responsabilizan de forma solidaria y mancomunada, por las cantidades y valores que se indican en la presente acta ejecutados durante este periodo.</Text>
+              <TextBrush>Black</TextBrush>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+            </Text5>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>GroupHeaderBand7</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </GroupHeaderBand7>
+        <GroupHeaderBand8 Ref="38" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,28.5,19.6,5</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text7 Ref="39" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.5,0,14.6,2.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Segoe UI Emoji,12</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="4" />
+              <Parent isRef="38" />
+              <Text>&lt;b&gt;&lt;u&gt;TERCERO:&lt;/b&gt;&lt;/u&gt; No habiendo más que hacer constar, se da por finalizada en el mismo lugar y fecha, la que es leída por cada una de las partes y quedando enterados de la misma, de su objeto, validez y demás alcances y efectos legales, la ratifican, aceptan y firman de entera conformidad.</Text>
+              <TextBrush>Black</TextBrush>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+            </Text7>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>GroupHeaderBand8</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </GroupHeaderBand8>
+        <DataBand2 Ref="40" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,34.5,19.6,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <Expressions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Name>DataBand2</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </DataBand2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Expressions isList="true" count="0" />
+      <Guid>9214bfde3dfb4d908a257b375fcb2c71</Guid>
+      <Margins>1,1,0.5,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>35.6</PageHeight>
+      <PageWidth>21.6</PageWidth>
+      <PaperSize>Legal</PaperSize>
+      <Report isRef="0" />
+    </Page1>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>ActaDeEstimacionServiciosDeIngenieria</ReportAlias>
+  <ReportChanged>5/25/2023 9:30:37 AM</ReportChanged>
+  <ReportCreated>2/3/2023 3:47:13 PM</ReportCreated>
+  <ReportFile>C:\Users\tony\Documents\GitHub\SICOP-Web\Covialgt\Covialgt\Reportes\rptActaDeEstimacionServiciosDeIngenieria.mrt</ReportFile>
+  <ReportGuid>928194488c9d40288645af3bd22de604</ReportGuid>
+  <ReportName>ActaDeEstimacionServiciosDeIngenieria</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2023.1.1.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class ActaDeEstimacionServiciosDeIngenieria : Stimulsoft.Report.StiReport
+    {
+        public ActaDeEstimacionServiciosDeIngenieria()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

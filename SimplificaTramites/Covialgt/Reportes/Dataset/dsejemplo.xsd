@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsejemplo" targetNamespace="http://tempuri.org/dsejemplo.xsd" xmlns:mstns="http://tempuri.org/dsejemplo.xsd" xmlns="http://tempuri.org/dsejemplo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="DAO.My.MySettings.ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="DAO.My.MySettings.ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.DAO.My.MySettings.ConnectionString.ConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsejemplo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsejemplo" msprop:Generator_DataSetName="dsejemplo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="prObtenertblProyectos" msprop:Generator_UserTableName="prObtenertblProyectos" msprop:Generator_RowDeletedName="prObtenertblProyectosRowDeleted" msprop:Generator_TableClassName="prObtenertblProyectosDataTable" msprop:Generator_RowChangedName="prObtenertblProyectosRowChanged" msprop:Generator_RowClassName="prObtenertblProyectosRow" msprop:Generator_RowChangingName="prObtenertblProyectosRowChanging" msprop:Generator_RowEvArgName="prObtenertblProyectosRowChangeEvent" msprop:Generator_RowEvHandlerName="prObtenertblProyectosRowChangeEventHandler" msprop:Generator_TablePropName="prObtenertblProyectos" msprop:Generator_TableVarName="tableprObtenertblProyectos" msprop:Generator_RowDeletingName="prObtenertblProyectosRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AnioID" msprop:Generator_UserColumnName="AnioID" msprop:Generator_ColumnPropNameInRow="AnioID" msprop:Generator_ColumnVarNameInTable="columnAnioID" msprop:Generator_ColumnPropNameInTable="AnioIDColumn" type="xs:int" />
+              <xs:element name="ProgramaCodigo" msprop:Generator_UserColumnName="ProgramaCodigo" msprop:Generator_ColumnPropNameInRow="ProgramaCodigo" msprop:Generator_ColumnVarNameInTable="columnProgramaCodigo" msprop:Generator_ColumnPropNameInTable="ProgramaCodigoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProyectoCodigo" msprop:Generator_UserColumnName="ProyectoCodigo" msprop:Generator_ColumnPropNameInRow="ProyectoCodigo" msprop:Generator_ColumnVarNameInTable="columnProyectoCodigo" msprop:Generator_ColumnPropNameInTable="ProyectoCodigoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProyectoDescripcion" msprop:Generator_UserColumnName="ProyectoDescripcion" msprop:Generator_ColumnPropNameInRow="ProyectoDescripcion" msprop:Generator_ColumnVarNameInTable="columnProyectoDescripcion" msprop:Generator_ColumnPropNameInTable="ProyectoDescripcionColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="180" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Plazo" msprop:Generator_UserColumnName="Plazo" msprop:Generator_ColumnPropNameInRow="Plazo" msprop:Generator_ColumnVarNameInTable="columnPlazo" msprop:Generator_ColumnPropNameInTable="PlazoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ProyectoMontoPresupuesto" msprop:Generator_UserColumnName="ProyectoMontoPresupuesto" msprop:Generator_ColumnPropNameInRow="ProyectoMontoPresupuesto" msprop:Generator_ColumnVarNameInTable="columnProyectoMontoPresupuesto" msprop:Generator_ColumnPropNameInTable="ProyectoMontoPresupuestoColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FechaInicioFisico" msprop:Generator_UserColumnName="FechaInicioFisico" msprop:Generator_ColumnPropNameInRow="FechaInicioFisico" msprop:Generator_ColumnVarNameInTable="columnFechaInicioFisico" msprop:Generator_ColumnPropNameInTable="FechaInicioFisicoColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fechaFinalOriginal" msprop:Generator_UserColumnName="fechaFinalOriginal" msprop:Generator_ColumnPropNameInRow="fechaFinalOriginal" msprop:Generator_ColumnVarNameInTable="columnfechaFinalOriginal" msprop:Generator_ColumnPropNameInTable="fechaFinalOriginalColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:prObtenertblProyectos" />
+      <xs:field xpath="mstns:AnioID" />
+      <xs:field xpath="mstns:ProyectoCodigo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

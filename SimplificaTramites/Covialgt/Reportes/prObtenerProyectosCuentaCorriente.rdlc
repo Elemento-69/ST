@@ -1,0 +1,1335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DAO.My.MySettings.ConnectionString">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>06f8b5fb-b817-4cb7-8520-ac92e3a27a58</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>0.5cm</BottomMargin>
+  <RightMargin>0.5cm</RightMargin>
+  <PageWidth>27.94cm</PageWidth>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Textbox Name="textbox5">
+        <Left>0.25cm</Left>
+        <Top>0.25cm</Top>
+        <rd:DefaultName>textbox5</rd:DefaultName>
+        <ZIndex>2</ZIndex>
+        <Width>1.25cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <FontSize>12pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.63492cm</Height>
+        <Value>Año:</Value>
+      </Textbox>
+      <Textbox Name="AnioID">
+        <Left>1.5cm</Left>
+        <Top>0.25cm</Top>
+        <rd:DefaultName>AnioID</rd:DefaultName>
+        <ZIndex>1</ZIndex>
+        <Width>2.53968cm</Width>
+        <Style>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <FontSize>12pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.63492cm</Height>
+        <Value>=first(Fields!AnioID.Value)</Value>
+      </Textbox>
+      <Table Name="table1">
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>3</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox7">
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <ZIndex>25</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>9pt</FontSize>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Totales Generales</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox24">
+                      <rd:DefaultName>textbox24</rd:DefaultName>
+                      <ZIndex>24</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Sum(Fields!MontoOriginal.Value, "prObtenerProyectosCuentaCorriente_prObtenerProyectosCuentaCorriente"))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox29">
+                      <rd:DefaultName>textbox29</rd:DefaultName>
+                      <ZIndex>23</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Sum(Fields!MontoModificado.Value, "prObtenerProyectosCuentaCorriente_prObtenerProyectosCuentaCorriente"))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <rd:DefaultName>textbox10</rd:DefaultName>
+                      <ZIndex>22</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Sum(Fields!Monto_Incremento.Value, "prObtenerProyectosCuentaCorriente_prObtenerProyectosCuentaCorriente"))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox25">
+                      <rd:DefaultName>textbox25</rd:DefaultName>
+                      <ZIndex>21</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Sum(Fields!Monto_Estimacines_Recibidas.Value, "prObtenerProyectosCuentaCorriente_prObtenerProyectosCuentaCorriente"))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox35">
+                      <rd:DefaultName>textbox35</rd:DefaultName>
+                      <ZIndex>20</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Sum(Fields!Monto_Pagado_de_Estimaciones.Value, "prObtenerProyectosCuentaCorriente_prObtenerProyectosCuentaCorriente"))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox20">
+                      <rd:DefaultName>textbox20</rd:DefaultName>
+                      <ZIndex>19</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Sum(Fields!Monto_Pendiente_de_Estimaciones.Value, "prObtenerProyectosCuentaCorriente_prObtenerProyectosCuentaCorriente"))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox34">
+                      <rd:DefaultName>textbox34</rd:DefaultName>
+                      <ZIndex>18</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Sum(Fields!Saldo_Pendiente_de_Pago.Value, "prObtenerProyectosCuentaCorriente_prObtenerProyectosCuentaCorriente"))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>1cm</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+        <DataSetName>prObtenerProyectosCuentaCorriente_prObtenerProyectosCuentaCorriente</DataSetName>
+        <Top>1.25cm</Top>
+        <TableGroups>
+          <TableGroup>
+            <Footer>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ColSpan>3</ColSpan>
+                      <ReportItems>
+                        <Textbox Name="textbox12">
+                          <rd:DefaultName>textbox12</rd:DefaultName>
+                          <ZIndex>17</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>700</FontWeight>
+                            <FontSize>9pt</FontSize>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>Total del Programa</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox23">
+                          <rd:DefaultName>textbox23</rd:DefaultName>
+                          <ZIndex>16</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>700</FontWeight>
+                            <FontSize>8pt</FontSize>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=FormatCurrency(Sum(Fields!MontoOriginal.Value, "table1_Group1"))</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox28">
+                          <rd:DefaultName>textbox28</rd:DefaultName>
+                          <ZIndex>15</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>700</FontWeight>
+                            <FontSize>8pt</FontSize>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=FormatCurrency(Sum(Fields!MontoModificado.Value, "table1_Group1"))</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox9">
+                          <rd:DefaultName>textbox9</rd:DefaultName>
+                          <ZIndex>14</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>700</FontWeight>
+                            <FontSize>8pt</FontSize>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=FormatCurrency(Sum(Fields!Monto_Incremento.Value,"table1_Group1"))</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox21">
+                          <rd:DefaultName>textbox21</rd:DefaultName>
+                          <ZIndex>13</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>700</FontWeight>
+                            <FontSize>8pt</FontSize>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=FormatCurrency(Sum(Fields!Monto_Estimacines_Recibidas.Value, "table1_Group1"))</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox19">
+                          <ZIndex>12</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>700</FontWeight>
+                            <FontSize>8pt</FontSize>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=FormatCurrency(Sum(Fields!Monto_Pagado_de_Estimaciones.Value, "table1_Group1"))</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox33">
+                          <ZIndex>11</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>700</FontWeight>
+                            <FontSize>8pt</FontSize>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=FormatCurrency(Sum(Fields!Monto_Pendiente_de_Estimaciones.Value, "table1_Group1"))</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox14">
+                          <ZIndex>10</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>700</FontWeight>
+                            <FontSize>8pt</FontSize>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=FormatCurrency(Sum(Fields!Saldo_Pendiente_de_Pago.Value, "table1_Group1"))</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>1.02646cm</Height>
+                </TableRow>
+              </TableRows>
+            </Footer>
+            <Header>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ColSpan>9</ColSpan>
+                      <ReportItems>
+                        <Textbox Name="programanombre">
+                          <rd:DefaultName>programanombre</rd:DefaultName>
+                          <ZIndex>27</ZIndex>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>700</FontWeight>
+                            <FontSize>8pt</FontSize>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!programanombre.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox13">
+                          <rd:DefaultName>textbox13</rd:DefaultName>
+                          <ZIndex>26</ZIndex>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>700</FontWeight>
+                            <FontSize>8pt</FontSize>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>1cm</Height>
+                </TableRow>
+              </TableRows>
+            </Header>
+            <Grouping Name="table1_Group1">
+              <Label>=Fields!programanombre.Value</Label>
+              <GroupExpressions>
+                <GroupExpression>=Fields!programanombre.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+          </TableGroup>
+        </TableGroups>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ProyectoCodigo">
+                      <rd:DefaultName>ProyectoCodigo</rd:DefaultName>
+                      <ZIndex>9</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ProyectoCodigo.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="nombre">
+                      <rd:DefaultName>nombre</rd:DefaultName>
+                      <ZIndex>8</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!nombre.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ContratoCodigo">
+                      <rd:DefaultName>ContratoCodigo</rd:DefaultName>
+                      <ZIndex>7</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ContratoCodigo.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="MontoOriginal">
+                      <rd:DefaultName>MontoOriginal</rd:DefaultName>
+                      <ZIndex>6</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Fields!MontoOriginal.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="MontoModificado">
+                      <rd:DefaultName>MontoModificado</rd:DefaultName>
+                      <ZIndex>5</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Fields!MontoModificado.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Monto_Incremento">
+                      <rd:DefaultName>Monto_Incremento</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Fields!Monto_Incremento.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Monto_Estimacines_Recibidas">
+                      <rd:DefaultName>Monto_Estimacines_Recibidas</rd:DefaultName>
+                      <ZIndex>3</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Fields!Monto_Estimacines_Recibidas.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Monto_Pagado_de_Estimaciones">
+                      <rd:DefaultName>Monto_Pagado_de_Estimaciones</rd:DefaultName>
+                      <ZIndex>2</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Fields!Monto_Pagado_de_Estimaciones.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Monto_Pendiente_de_Estimaciones">
+                      <rd:DefaultName>Monto_Pendiente_de_Estimaciones</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Fields!Monto_Pendiente_de_Estimaciones.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Saldo_Pendiente_de_Pago">
+                      <rd:DefaultName>Saldo_Pendiente_de_Pago</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Fields!Saldo_Pendiente_de_Pago.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.75cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <FontSize>8pt</FontSize>
+        </Style>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox22">
+                      <ZIndex>37</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>PROYECTO</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox26">
+                      <ZIndex>36</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>EMPRESA</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox27">
+                      <ZIndex>35</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>No. Contrato</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox31">
+                      <ZIndex>34</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Monto Contrato</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox32">
+                      <ZIndex>33</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Monto Modificado</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox6">
+                      <rd:DefaultName>textbox6</rd:DefaultName>
+                      <ZIndex>32</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Monto de Incremento</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox8">
+                      <rd:DefaultName>textbox8</rd:DefaultName>
+                      <ZIndex>31</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Monto de Estimaciones Recibida</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox36">
+                      <ZIndex>30</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Monto Pagado de Estimaciones</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox37">
+                      <ZIndex>29</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Monto Pendiente de Estimaciones</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox11">
+                      <rd:DefaultName>textbox11</rd:DefaultName>
+                      <ZIndex>28</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Saldo Pendiente de Pago</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>1.25cm</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>1.75cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>4.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.75cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.75cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.75cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.75cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.75cm</Width>
+          </TableColumn>
+        </TableColumns>
+      </Table>
+    </ReportItems>
+    <Height>6.27646cm</Height>
+  </Body>
+  <PageHeader>
+    <ReportItems>
+      <Line Name="line2">
+        <Left>0.25cm</Left>
+        <Top>3.25cm</Top>
+        <ZIndex>4</ZIndex>
+        <Width>25.75cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+      </Line>
+      <Image Name="image1">
+        <Sizing>Fit</Sizing>
+        <Left>0.5cm</Left>
+        <MIMEType>image/png</MIMEType>
+        <Top>0.25cm</Top>
+        <ZIndex>3</ZIndex>
+        <Width>2.25cm</Width>
+        <Source>Embedded</Source>
+        <Style />
+        <Height>1.5cm</Height>
+        <Value>covial_logo_small</Value>
+      </Image>
+      <Textbox Name="textbox3">
+        <Left>0.25cm</Left>
+        <Top>2.25cm</Top>
+        <ZIndex>2</ZIndex>
+        <Width>25.75cm</Width>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <FontSize>11pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.75cm</Height>
+        <Value>CUENTA CORRIENTE POR PROYECTO </Value>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <Left>3.03836cm</Left>
+        <CanShrink>true</CanShrink>
+        <Top>1cm</Top>
+        <ZIndex>1</ZIndex>
+        <Width>10.12963cm</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.58664cm</Height>
+        <Value>UNIDAD EJECUTORA DE CONSERVACION VIAL</Value>
+      </Textbox>
+      <Textbox Name="textbox2">
+        <Left>3.03836cm</Left>
+        <CanShrink>true</CanShrink>
+        <Top>0.25cm</Top>
+        <rd:DefaultName>textbox2</rd:DefaultName>
+        <Width>14.75cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>WindowInset</Default>
+            <Left>None</Left>
+          </BorderStyle>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <FontSize>11pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.75cm</Height>
+        <Value>MINISTERIO DE COMUNICACIONES, INFRAESTRUCTURA Y VIVIENDA</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>3.25cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+  </PageHeader>
+  <rd:ReportID>caf851a2-2444-4ea0-84bd-615bbe6c6a83</rd:ReportID>
+  <LeftMargin>0.5cm</LeftMargin>
+  <EmbeddedImages>
+    <EmbeddedImage Name="covial_logo_small">
+      <ImageData>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</ImageData>
+      <MIMEType>image/png</MIMEType>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <DataSets>
+    <DataSet Name="prObtenerProyectosCuentaCorriente_prObtenerProyectosCuentaCorriente">
+      <rd:DataSetInfo>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:DataSetName>prObtenerProyectosCuentaCorriente</rd:DataSetName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterName>prObtenerProyectosCuentaCorrienteTableAdapter</rd:TableAdapterName>
+        <rd:TableName>prObtenerProyectosCuentaCorriente</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>dbo.prObtenerProyectosCuentaCorriente</CommandText>
+        <DataSourceName>DAO.My.MySettings.ConnectionString</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="ProyectoCodigo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ProyectoCodigo</DataField>
+        </Field>
+        <Field Name="AnioID">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AnioID</DataField>
+        </Field>
+        <Field Name="ProgramaCodigo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ProgramaCodigo</DataField>
+        </Field>
+        <Field Name="ContratoCodigo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ContratoCodigo</DataField>
+        </Field>
+        <Field Name="EmpresaNIT">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EmpresaNIT</DataField>
+        </Field>
+        <Field Name="MontoAnticipo">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>MontoAnticipo</DataField>
+        </Field>
+        <Field Name="programanombre">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>programanombre</DataField>
+        </Field>
+        <Field Name="nombre">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>nombre</DataField>
+        </Field>
+        <Field Name="MontoOriginal">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>MontoOriginal</DataField>
+        </Field>
+        <Field Name="MontoModificado">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>MontoModificado</DataField>
+        </Field>
+        <Field Name="Monto_Pagado">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Monto Pagado</DataField>
+        </Field>
+        <Field Name="Monto_Pendiente_Pago">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Monto Pendiente Pago</DataField>
+        </Field>
+        <Field Name="Monto_Incremento">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Monto Incremento</DataField>
+        </Field>
+        <Field Name="Monto_Pagado_de_Estimaciones">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Monto Pagado de Estimaciones</DataField>
+        </Field>
+        <Field Name="Monto_Pendiente_de_Estimaciones">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Monto Pendiente de Estimaciones</DataField>
+        </Field>
+        <Field Name="Saldo_Pendiente_de_Pago">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Saldo Pendiente de Pago</DataField>
+        </Field>
+        <Field Name="Monto_Estimacines_Recibidas">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Monto Estimacines Recibidas</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>26.5cm</Width>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <Language>es-GT</Language>
+  <PageFooter>
+    <ReportItems>
+      <Line Name="line1">
+        <Top>0.25cm</Top>
+        <ZIndex>5</ZIndex>
+        <Width>26.25cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <Height>0cm</Height>
+      </Line>
+      <Textbox Name="textbox18">
+        <Left>23.25cm</Left>
+        <Top>0.5cm</Top>
+        <ZIndex>4</ZIndex>
+        <Width>2.5cm</Width>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <FontSize>6pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.50265cm</Height>
+        <Value>=Globals!PageNumber &amp; "/" &amp; Globals!TotalPages</Value>
+      </Textbox>
+      <Textbox Name="textbox17">
+        <Left>21.25cm</Left>
+        <Top>0.5cm</Top>
+        <ZIndex>3</ZIndex>
+        <Width>2cm</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <FontSize>6pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.50265cm</Height>
+        <Value>Numero Pagina:</Value>
+      </Textbox>
+      <Textbox Name="textbox16">
+        <Left>2cm</Left>
+        <Top>0.75cm</Top>
+        <ZIndex>2</ZIndex>
+        <Width>7.25cm</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <FontSize>6pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.50265cm</Height>
+        <Value>=Now</Value>
+      </Textbox>
+      <Textbox Name="textbox15">
+        <Left>0.25cm</Left>
+        <Top>0.75cm</Top>
+        <ZIndex>1</ZIndex>
+        <Width>1.87831cm</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <FontSize>6pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.50265cm</Height>
+        <Value>Fecha Impresión:</Value>
+      </Textbox>
+      <Textbox Name="textbox4">
+        <Left>0.25cm</Left>
+        <Top>0.25cm</Top>
+        <Width>6.75cm</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <FontSize>6pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.50265cm</Height>
+        <Value>=Globals!ReportName</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>1.5cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+  </PageFooter>
+  <TopMargin>1.5cm</TopMargin>
+  <PageHeight>21.59cm</PageHeight>
+</Report>

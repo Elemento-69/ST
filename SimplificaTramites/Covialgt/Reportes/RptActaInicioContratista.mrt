@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.0" application="StiReport">
+  <Dictionary type="Dictionary" isKey="true" Ref="1">
+    <Databases count="1" isList="true">
+      <cnactacontratista type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true" Ref="2">
+        <Name>cnactacontratista</Name>
+        <PromptUserNameAndPassword>False</PromptUserNameAndPassword>
+        <ConnectionString>Integrated Security=False;Data Source=192.168.1.20;Initial Catalog=SICOP_PRUEBAS;Password=12345;User ID=ebaquiax</ConnectionString>
+        <Alias>cnactacontratista</Alias>
+      </cnactacontratista>
+    </Databases>
+    <DataSources count="6" isList="true">
+      <PrObtenerDatosActaInicioContratist type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true" Ref="3">
+        <Columns count="55" isList="true">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>ProyectoCodigoLetras,System.String</value>
+          <value>Departamento,System.String</value>
+          <value>Municipio,System.String</value>
+          <value>HoraActa,System.String</value>
+          <value>FechaActa,System.DateTime</value>
+          <value>FechaActaLetras,System.String</value>
+          <value>NotarioActa,System.String</value>
+          <value>DireccionNotario,System.String</value>
+          <value>DireccionSupervisor,System.String</value>
+          <value>NombreIngenieroRequerimiento,System.String</value>
+          <value>CargoIngenieroRequerimiento,System.String</value>
+          <value>NombreDelegadoResidente,System.String</value>
+          <value>CertificacionFideicomisoNumero,System.String</value>
+          <value>CertificacionFideicomisoLetras,System.String</value>
+          <value>FechaCertifiFideicomiso,System.DateTime</value>
+          <value>FechaCertifiFideicomisoLetras,System.String</value>
+          <value>FechaInicioEjecucion,System.DateTime</value>
+          <value>FechaInicioEjecucionLetras,System.String</value>
+          <value>NumContratoEscrituraPublicaLetras,System.String</value>
+          <value>NumContratoEscrituraPublicaNum,System.String</value>
+          <value>FechaContratoEscrituraPLetras,System.String</value>
+          <value>FechaContratoEscrituraPNum,System.DateTime</value>
+          <value>NotarioEscrituraPublica,System.String</value>
+          <value>NombreMandatarioEspecial,System.String</value>
+          <value>NumeroClausulaLetras,System.String</value>
+          <value>LiteralLetras,System.String</value>
+          <value>FechaInicioContratoLetras,System.String</value>
+          <value>FechaInicioContratoNum,System.DateTime</value>
+          <value>FechaFinalContratoLetras,System.String</value>
+          <value>FechaFinalContratoNum,System.DateTime</value>
+          <value>NumeroDiasContractualesLetras,System.String</value>
+          <value>NumeroDiasContractualesNum,System.Int32</value>
+          <value>FinalizacionMinutosLetras,System.String</value>
+          <value>UsuarioCreo,System.String</value>
+          <value>UsuarrioModifico,System.String</value>
+          <value>FechaCreo,System.DateTime</value>
+          <value>FechaModifico,System.DateTime</value>
+          <value>EmpresaNombre,System.String</value>
+          <value>EsPropietario,System.Boolean</value>
+          <value>RepresentantePropietario,System.String</value>
+          <value>EsEmpresa,System.Boolean</value>
+          <value>ClausulaCertificacionFideicomiso,System.String</value>
+          <value>LiteralCertificacionFideicomiso,System.String</value>
+          <value>NombreIngenieroSupervisor,System.String</value>
+          <value>ProyectoAño,System.String</value>
+          <value>NumeroEscrituraLetras,System.String</value>
+          <value>CargoIngenieroEsEmpresa,System.String</value>
+          <value>CategoriaProyecto,System.String</value>
+          <value>CargoEncargadoBanco,System.String</value>
+          <value>TituloPersonaRequiereActa,System.String</value>
+          <value>CertificacionFideicomiso2,System.String</value>
+          <value>FechaCertifiFideicomiso2Letras,System.String</value>
+          <value>FechaCertifiFideicomiso2,System.DateTime</value>
+        </Columns>
+        <NameInSource>cnactacontratista</NameInSource>
+        <SqlCommand>exec PrObtenerDatosActaInicioContratista @AnioID, @ProyectoCodigo, @CertificacionFideicomisoNumero</SqlCommand>
+        <Parameters count="3" isList="true">
+          <value>_x0040_AnioID,,8,10</value>
+          <value>_x0040_ProyectoCodigo,,22,50</value>
+          <value>_x0040_CertificacionFideicomisoNumero,,22,50</value>
+        </Parameters>
+        <Name>PrObtenerDatosActaInicioContratist</Name>
+        <Dictionary isRef="1"/>
+        <Alias>PrObtenerDatosActaInicioContratist</Alias>
+      </PrObtenerDatosActaInicioContratist>
+      <PrObtieneSupervisoraActaInicioContractual type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true" Ref="4">
+        <Columns count="9" isList="true">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>ProyectoEstatusID,System.Int32</value>
+          <value>ProgramaCodigo,System.String</value>
+          <value>EmpresaNIT,System.String</value>
+          <value>SupervisoraAnioID,System.Int32</value>
+          <value>ProyectoSupervisionCodigo,System.String</value>
+          <value>ProyectoDescripcion,System.String</value>
+          <value>ProyectoSupervisorCodigoAnio,System.String</value>
+        </Columns>
+        <NameInSource>cnactacontratista</NameInSource>
+        <SqlCommand>exec PrObtieneSupervisoraActaInicioContractual @AnioID, @ProyectoCodigo</SqlCommand>
+        <Parameters count="2" isList="true">
+          <value>_x0040_AnioID,,8,10</value>
+          <value>_x0040_ProyectoCodigo,,22,50</value>
+        </Parameters>
+        <Name>PrObtieneSupervisoraActaInicioContractual</Name>
+        <Dictionary isRef="1"/>
+        <Alias>PrObtieneSupervisoraActaInicioContractual</Alias>
+      </PrObtieneSupervisoraActaInicioContractual>
+      <PrObtieneTramosActaInicioContratista type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true" Ref="5">
+        <Columns count="12" isList="true">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>ProgramaCodigo,System.String</value>
+          <value>Tramos,System.String</value>
+          <value>NitProyecto,System.String</value>
+          <value>SupervisoraAnioID,System.Int32</value>
+          <value>ProyectoSupervisionCodigo,System.String</value>
+          <value>NitSupervisor,System.String</value>
+          <value>NombreSupervisor,System.String</value>
+          <value>RepresentanteSupervisor,System.String</value>
+          <value>NombreEmpresa,System.String</value>
+          <value>ContratoCodigo,System.String</value>
+        </Columns>
+        <NameInSource>cnactacontratista</NameInSource>
+        <SqlCommand>exec PrObtieneTramosActaInicioContratista @AnioID, @ProyectoCodigo</SqlCommand>
+        <Parameters count="2" isList="true">
+          <value>_x0040_AnioID,,8,10</value>
+          <value>_x0040_ProyectoCodigo,,22,50</value>
+        </Parameters>
+        <Name>PrObtieneTramosActaInicioContratista</Name>
+        <Dictionary isRef="1"/>
+        <Alias>PrObtieneTramosActaInicioContratista</Alias>
+      </PrObtieneTramosActaInicioContratista>
+      <prObtenerinforptactanotarialcontratista type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true" Ref="6">
+        <Columns count="47" isList="true">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>ProgramaCodigo,System.String</value>
+          <value>Tramos,System.String</value>
+          <value>NitProyecto,System.String</value>
+          <value>SupervisoraAnioID,System.Int32</value>
+          <value>ProyectoSupervisionCodigo,System.String</value>
+          <value>NitSupervisor,System.String</value>
+          <value>NombreSupervisor,System.String</value>
+          <value>RepresentanteSupervisor,System.String</value>
+          <value>NombreEmpresa,System.String</value>
+          <value>RepresentanteEmpresa,System.String</value>
+          <value>ContratoCodigo,System.String</value>
+          <value>FechaContrato,System.DateTime</value>
+          <value>Acta,System.String</value>
+          <value>Departamento,System.String</value>
+          <value>Municipio,System.String</value>
+          <value>HoraActa,System.String</value>
+          <value>FechaActa,System.DateTime</value>
+          <value>DireccionSupervisor,System.String</value>
+          <value>NotarioActa,System.String</value>
+          <value>Superintendente,System.String</value>
+          <value>NotarioProyecto,System.String</value>
+          <value>SupervisorRegional,System.String</value>
+          <value>NumeralRomano,System.String</value>
+          <value>DescripcionProyecto,System.String</value>
+          <value>FechaInspeccion,System.DateTime</value>
+          <value>FechaInicio,System.DateTime</value>
+          <value>FechaFinal,System.DateTime</value>
+          <value>Clase,System.String</value>
+          <value>Poliza,System.String</value>
+          <value>Aseguradora,System.String</value>
+          <value>ValorActa,System.Decimal</value>
+          <value>JustificacionCuarto,System.String</value>
+          <value>justificacionQuinto,System.String</value>
+          <value>Delegado,System.String</value>
+          <value>EsEmpresa,System.Boolean</value>
+          <value>ValorActaComa,System.String</value>
+          <value>AplicaPoliza2,System.Boolean</value>
+          <value>Clase2,System.String</value>
+          <value>Poliza2,System.String</value>
+          <value>Aseguradora2,System.String</value>
+          <value>Valorpoliza2,System.Decimal</value>
+          <value>ValorpolizaComa2,System.String</value>
+          <value>EmpresaNombre,System.String</value>
+          <value>esPropietario,System.Boolean</value>
+          <value>RepresentantePropietario,System.String</value>
+        </Columns>
+        <NameInSource>cnactacontratista</NameInSource>
+        <SqlCommand>exec [prObtenerinforptactanotarialcontratista] 2013, 'B-002'</SqlCommand>
+        <Parameters count="0" isList="true"/>
+        <Name>prObtenerinforptactanotarialcontratista</Name>
+        <Dictionary isRef="1"/>
+        <Alias>prObtenerinforptactanotarialcontratista</Alias>
+      </prObtenerinforptactanotarialcontratista>
+      <PrObtenerDescripcionProyecto type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true" Ref="7">
+        <Columns count="7" isList="true">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>ProgramaCodigo,System.String</value>
+          <value>RepresentanteSupervisor,System.String</value>
+          <value>NombreEmpresa,System.String</value>
+          <value>ContratoCodigo,System.String</value>
+          <value>ProgramaNombre,System.String</value>
+        </Columns>
+        <NameInSource>cnactacontratista</NameInSource>
+        <SqlCommand>exec PrObtenerDescripcionProyecto @AnioID, @ProyectoCodigo</SqlCommand>
+        <Parameters count="2" isList="true">
+          <value>_x0040_AnioID,,8,10</value>
+          <value>_x0040_ProyectoCodigo,,22,20</value>
+        </Parameters>
+        <Name>PrObtenerDescripcionProyecto</Name>
+        <Dictionary isRef="1"/>
+        <Alias>PrObtenerDescripcionProyecto</Alias>
+      </PrObtenerDescripcionProyecto>
+      <PrObtenerDatosContratosProyectos type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true" Ref="8">
+        <Columns count="11" isList="true">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>ContratoAmpliatorio,System.String</value>
+          <value>FechaContratoAmpliatorio,System.String</value>
+          <value>ContratoAmpliatorioLetras,System.String</value>
+          <value>ContratoModificado,System.String</value>
+          <value>FechaContratoModificado,System.String</value>
+          <value>ContratoModificadoLetras,System.String</value>
+          <value>ContratoTerminacionAnticipada,System.String</value>
+          <value>FechaContratoTerminacionAnticipada,System.String</value>
+          <value>ContratoTerminacionAnticipadaLetras,System.String</value>
+        </Columns>
+        <NameInSource>cnactacontratista</NameInSource>
+        <SqlCommand>exec PrObtenerDatosContratosProyectos @AnioID , @ProyectoCodigo</SqlCommand>
+        <Parameters count="2" isList="true">
+          <value>_x0040_AnioID,,8,10</value>
+          <value>_x0040_ProyectoCodigo,,22,50</value>
+        </Parameters>
+        <Name>PrObtenerDatosContratosProyectos</Name>
+        <Dictionary isRef="1"/>
+        <Alias>PrObtenerDatosContratosProyectos</Alias>
+      </PrObtenerDatosContratosProyectos>
+    </DataSources>
+    <Relations count="0" isList="true"/>
+    <Variables count="0" isList="true"/>
+    <Report isRef="0"/>
+  </Dictionary>
+  <Pages count="2" isList="true">
+    <Page1 type="Page" isKey="true" Ref="9">
+      <Name>Page1</Name>
+      <PageWidth>21.6</PageWidth>
+      <Brush>Transparent</Brush>
+      <PageHeight>35.6</PageHeight>
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Conditions count="0" isList="true"/>
+      <Watermark type="Stimulsoft.Report.Components.StiWatermark" isKey="true" Ref="10">
+        <Font>Arial,100,Regular,Point</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+      <Margins>1,1,1,1</Margins>
+      <Interaction type="Stimulsoft.Report.Components.StiInteraction" isKey="true" Ref="11">
+        <DrillDownParameter1 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="12"/>
+        <DrillDownParameter2 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="13"/>
+        <DrillDownParameter3 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="14"/>
+      </Interaction>
+      <Guid>3d3e980fba974b548b0148a102b01525</Guid>
+      <Components count="3" isList="true">
+        <DataBand1 type="DataBand" isKey="true" Ref="15">
+          <Name>DataBand1</Name>
+          <Brush>Transparent</Brush>
+          <Border>None;Black;1;Solid;False;4;Black</Border>
+          <Conditions count="0" isList="true"/>
+          <СolumnDirection>AcrossThenDown</СolumnDirection>
+          <Filters count="0" isList="true"/>
+          <Sort count="0" isList="true"/>
+          <Interaction type="Stimulsoft.Report.Components.StiBandInteraction" isKey="true" Ref="16">
+            <DrillDownParameter1 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="17"/>
+            <DrillDownParameter2 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="18"/>
+            <DrillDownParameter3 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="19"/>
+          </Interaction>
+          <MaxHeight>0</MaxHeight>
+          <MinHeight>0</MinHeight>
+          <ClientRectangle>0,0.3999999999999999,19.6,1.6</ClientRectangle>
+          <Parent isRef="9"/>
+          <Page isRef="9"/>
+          <Components count="1" isList="true">
+            <Text9 type="Text" isKey="true" Ref="20">
+              <Left>0</Left>
+              <Text>ACTA DE INICIO FISICO Y CONTRACTUAL</Text>
+              <Name>Text9</Name>
+              <TextBrush>Black</TextBrush>
+              <Font>Arial,11,Bold,Point</Font>
+              <Brush>Transparent</Brush>
+              <Top>0.7</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <Conditions count="0" isList="true"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat type="GeneralFormat" isKey="true" Ref="21"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction type="Stimulsoft.Report.Components.StiInteraction" isKey="true" Ref="22">
+                <DrillDownParameter1 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="23"/>
+                <DrillDownParameter2 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="24"/>
+                <DrillDownParameter3 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="25"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Guid>d9dcf3f8d6ea44b290c7b5ee8bb49608</Guid>
+              <Page isRef="9"/>
+              <ClientRectangle>0,0.6999999999999997,19.6,0.7999999999999998</ClientRectangle>
+              <Parent isRef="15"/>
+            </Text9>
+          </Components>
+          <FilterMode>And</FilterMode>
+        </DataBand1>
+        <DataBand2 type="DataBand" isKey="true" Ref="26">
+          <Name>DataBand2</Name>
+          <Brush>Transparent</Brush>
+          <Border>None;Black;1;Solid;False;4;Black</Border>
+          <Conditions count="0" isList="true"/>
+          <СolumnDirection>AcrossThenDown</СolumnDirection>
+          <Filters count="0" isList="true"/>
+          <Sort count="0" isList="true"/>
+          <Interaction type="Stimulsoft.Report.Components.StiBandInteraction" isKey="true" Ref="27">
+            <DrillDownParameter1 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="28"/>
+            <DrillDownParameter2 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="29"/>
+            <DrillDownParameter3 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="30"/>
+          </Interaction>
+          <MaxHeight>0</MaxHeight>
+          <MinHeight>0</MinHeight>
+          <ClientRectangle>0,2.8,19.6,2</ClientRectangle>
+          <Parent isRef="9"/>
+          <Page isRef="9"/>
+          <Components count="2" isList="true">
+            <SubReport1 type="SubReport" isKey="true" Ref="31">
+              <Left>0</Left>
+              <Name>SubReport1</Name>
+              <UseExternalReport>False</UseExternalReport>
+              <Brush>Transparent</Brush>
+              <Top>0</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Interaction type="Stimulsoft.Report.Components.StiInteraction" isKey="true" Ref="32">
+                <DrillDownParameter1 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="33"/>
+                <DrillDownParameter2 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="34"/>
+                <DrillDownParameter3 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="35"/>
+              </Interaction>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Page isRef="9"/>
+              <Parent isRef="26"/>
+              <Components count="0" isList="true"/>
+              <SubReportPageGuid>38202aa5011347ebb6f98d078cee9a13</SubReportPageGuid>
+              <ClientRectangle>0,0,19.6,1.6000000000000005</ClientRectangle>
+            </SubReport1>
+            <Text2 type="Text" isKey="true" Ref="36">
+              <Left>1.2</Left>
+              <Text>&lt;line-height="1.5"&gt;En el Municipio de {PrObtenerDatosActaInicioContratist.Municipio}, Departamento de {PrObtenerDatosActaInicioContratist.Departamento}, siendo las {PrObtenerDatosActaInicioContratist.HoraActa} horas del día  {PrObtenerDatosActaInicioContratist.FechaActaLetras} Yo, el Infrascrito Notario {PrObtenerDatosActaInicioContratist.NotarioActa}, me encuentro constituido en {PrObtenerDatosActaInicioContratist.DireccionNotario}  a requerimiento del {PrObtenerDatosActaInicioContratist.TituloPersonaRequiereActa} {PrObtenerDatosActaInicioContratist.NombreIngenieroRequerimiento}, {PrObtenerDatosActaInicioContratist.CargoIngenieroRequerimiento}  de la Empresa {PrObtieneTramosActaInicioContratista.NombreEmpresa} que tiene a su cargo la ejecución del Proyecto  {PrObtenerDatosActaInicioContratist.ProyectoAño} y el  {IIF((PrObtenerDatosActaInicioContratist.EsEmpresa), "Ingeniero(a) " + PrObtenerDatosActaInicioContratist.NombreDelegadoResidente + " "+PrObtenerDatosActaInicioContratist.CargoIngenieroEsEmpresa + " de la empresa "+  PrObtenerDatosActaInicioContratist.EmpresaNombre  + " ,Supervisora " + PrObtieneSupervisoraActaInicioContractual.ProyectoSupervisorCodigoAnio, "Ingeniero(a) " + PrObtenerDatosActaInicioContratist.NombreIngenieroSupervisor + "  Supervisor/(a) número  " +PrObtieneSupervisoraActaInicioContractual.ProyectoSupervisorCodigoAnio )}, para hacer constar lo siguiente: &lt;b&gt;PRIMERO:&lt;/b&gt;  El/La {PrObtenerDatosActaInicioContratist.TituloPersonaRequiereActa} {PrObtenerDatosActaInicioContratist.NombreIngenieroRequerimiento}, {PrObtenerDatosActaInicioContratist.CargoIngenieroRequerimiento}  de la empresa {PrObtieneTramosActaInicioContratista.NombreEmpresa},  pone a la vista al infrascrito Notario, una copia simple de la &lt;b&gt; CERTIFICACIÓN FIDEICOMISO {PrObtenerDatosActaInicioContratist.CertificacionFideicomisoLetras} ({PrObtenerDatosActaInicioContratist.CertificacionFideicomisoNumero}) &lt;/b&gt; , de fecha {PrObtenerDatosActaInicioContratist.FechaCertifiFideicomisoLetras} {IIF(PrObtenerDatosActaInicioContratist.CertificacionFideicomiso2=="","","&lt;b&gt; y CERTIFICACIÓN FIDEICOMISO " + "("+ PrObtenerDatosActaInicioContratist.CertificacionFideicomiso2 +")&lt;/b&gt;" + " de fecha " + PrObtenerDatosActaInicioContratist.FechaCertifiFideicomiso2Letras)} mediante el cual el Director y Secretario del Comité Técnico de la Unidad Ejecutora de Conservación Vial -COVIAL-, autoriza a la empresa {PrObtieneTramosActaInicioContratista.NombreEmpresa} a dar inicio a la ejecución de los trabajos de {PrObtenerDatosActaInicioContratist.CategoriaProyecto} 
+ a partir del  {PrObtenerDatosActaInicioContratist.FechaInicioEjecucionLetras}. &lt;b&gt;SEGUNDO:&lt;/b&gt; Se tiene a la vista el primer testimonio del {IIF(PrObtenerDatosContratosProyectos.ContratoAmpliatorio=="",""," Contrato Ampliatorio número " + PrObtenerDatosContratosProyectos.ContratoAmpliatorioLetras + " (" + PrObtenerDatosContratosProyectos.ContratoAmpliatorio + ")" + " de fecha " + PrObtenerDatosContratosProyectos.FechaContratoAmpliatorio + ", ")} {IIF(PrObtenerDatosContratosProyectos.ContratoModificado=="",""," Contrato Modificado número " + PrObtenerDatosContratosProyectos.ContratoModificadoLetras + " (" + PrObtenerDatosContratosProyectos.ContratoModificado + ")" + " de fecha " + PrObtenerDatosContratosProyectos.FechaContratoModificado + ", ")} {IIF(PrObtenerDatosContratosProyectos.ContratoTerminacionAnticipada=="",""," Contrato Terminación Anticipada número " + PrObtenerDatosContratosProyectos.ContratoTerminacionAnticipadaLetras + " (" + PrObtenerDatosContratosProyectos.ContratoTerminacionAnticipada + ")" + " de fecha " + PrObtenerDatosContratosProyectos.FechaContratoTerminacionAnticipada + ", ")} contrato en Escritura Pública número {PrObtenerDatosActaInicioContratist.NumeroEscrituraLetras} ({PrObtenerDatosActaInicioContratist.NumContratoEscrituraPublicaNum}) de fecha {PrObtenerDatosActaInicioContratist.FechaContratoEscrituraPLetras}, legalizada ante el Notario {PrObtenerDatosActaInicioContratist.NotarioEscrituraPublica}, por medio del cual se legaliza el plazo contractual entre la empresa {PrObtieneTramosActaInicioContratista.NombreEmpresa}, y el/la señor(a) {PrObtenerDatosActaInicioContratist.NombreMandatarioEspecial}, quién actúa en  carácter de {PrObtenerDatosActaInicioContratist.CargoEncargadoBanco}, entidad bancaria que actúa como Fiduciario del Fideicomiso del Fondo Vial, en base a la Cláusula {PrObtenerDatosActaInicioContratist.NumeroClausulaLetras}, {IIF((PrObtenerDatosActaInicioContratist.LiteralLetras ==""),"" , "literal "+ PrObtenerDatosActaInicioContratist.LiteralLetras )} del contrato en mención, dio inicio &lt;b&gt;EL PLAZO CONTRACTUAL&lt;/b&gt; el día {PrObtenerDatosActaInicioContratist.FechaInicioContratoLetras}  y finaliza el {PrObtenerDatosActaInicioContratist.FechaFinalContratoLetras} para hacer un total de {PrObtenerDatosActaInicioContratist.NumeroDiasContractualesLetras}  ({PrObtenerDatosActaInicioContratist.NumeroDiasContractualesNum}) días contractuales, fue suscrito dicho contrato para la ejecución de los trabajos de {PrObtenerDatosActaInicioContratist.CategoriaProyecto} del Proyecto: &lt;b&gt;({PrObtenerDatosActaInicioContratist.ProyectoAño})&lt;/b&gt;, &lt;b&gt;{IIF(PrObtieneTramosActaInicioContratista.ProgramaCodigo == "SV" || PrObtieneTramosActaInicioContratista.ProgramaCodigo == "SG" || PrObtieneTramosActaInicioContratista.ProgramaCodigo == "P" || PrObtieneTramosActaInicioContratista.ProgramaCodigo == "SH" || PrObtieneTramosActaInicioContratista.ProgramaCodigo == "DM" ,"Departamentos:","Tramos:")}&lt;/b&gt; {PrObtieneTramosActaInicioContratista.Tramos} &lt;b&gt;TERCERO: &lt;/b&gt;El/La  {IIF((PrObtenerDatosActaInicioContratist.EsEmpresa), "Ingeniero(a) " + PrObtenerDatosActaInicioContratist.NombreDelegadoResidente +  " " + PrObtenerDatosActaInicioContratist.CargoIngenieroEsEmpresa + " de la empresa " + PrObtenerDatosActaInicioContratist.EmpresaNombre + ", supervisora " + PrObtieneSupervisoraActaInicioContractual.ProyectoSupervisorCodigoAnio, "Ingeniero(a) " + PrObtenerDatosActaInicioContratist.NombreIngenieroSupervisor + "  Supervisor/(a) número  " + PrObtieneSupervisoraActaInicioContractual.ProyectoSupervisorCodigoAnio)}, confirma el inicio físico según &lt;b&gt; CERTIFICACIÓN FIDEICOMISO {PrObtenerDatosActaInicioContratist.CertificacionFideicomisoLetras} ({PrObtenerDatosActaInicioContratist.CertificacionFideicomisoNumero}) &lt;/b&gt; , de fecha {PrObtenerDatosActaInicioContratist.FechaCertifiFideicomisoLetras} {IIF(PrObtenerDatosActaInicioContratist.CertificacionFideicomiso2=="","","&lt;b&gt; y CERTIFICACIÓN FIDEICOMISO " + "("+ PrObtenerDatosActaInicioContratist.CertificacionFideicomiso2 +")&lt;/b&gt;" + " de fecha " + PrObtenerDatosActaInicioContratist.FechaCertifiFideicomiso2Letras)}, dando cumplimiento a la cláusula  {PrObtenerDatosActaInicioContratist.NumeroClausulaLetras},{IIF((PrObtenerDatosActaInicioContratist.LiteralCertificacionFideicomiso ==""),"" , " literal "+ PrObtenerDatosActaInicioContratist.LiteralCertificacionFideicomiso)} del contrato en mención e inicio contractual el día {PrObtenerDatosActaInicioContratist.FechaInicioContratoLetras}. &lt;b&gt;CUARTO:&lt;/b&gt; El/La {PrObtenerDatosActaInicioContratist.TituloPersonaRequiereActa} {PrObtenerDatosActaInicioContratist.NombreIngenieroRequerimiento}, {PrObtenerDatosActaInicioContratist.CargoIngenieroRequerimiento} de la Empresa {PrObtieneTramosActaInicioContratista.NombreEmpresa}, manifiesta su aceptación a lo anterior estipulado en la presente acta. No habiendo nada más que hacer constar se da por finalizada la presente en el mismo lugar y fecha, {PrObtenerDatosActaInicioContratist.FinalizacionMinutosLetras} después de su inicio en una hoja de papel bond tamaño oficio, la que leída por cada una de las partes, y quedando bien enterados de la misma, de su objeto, validez y demás alcances  y efectos legales, la ratifican, aceptan y firman con el infrascrito Notario autorizante quien sella y firma la presente Acta Notarial.&lt;/line-height&gt;</Text>
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Name>Text2</Name>
+              <TextBrush>Black</TextBrush>
+              <Font>Arial,10,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Top>0.2</Top>
+              <CanGrow>True</CanGrow>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Width</HorAlignment>
+              <GrowToHeight>True</GrowToHeight>
+              <Conditions count="0" isList="true"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat type="GeneralFormat" isKey="true" Ref="37"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction type="Stimulsoft.Report.Components.StiInteraction" isKey="true" Ref="38">
+                <DrillDownParameter1 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="39"/>
+                <DrillDownParameter2 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="40"/>
+                <DrillDownParameter3 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="41"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextQuality>Wysiwyg</TextQuality>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <WordWrap>True</WordWrap>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Guid>9f8a92ab35c34b3c9e626c19841aabad</Guid>
+              <Page isRef="9"/>
+              <ClientRectangle>1.2000000000000006,0.20000000000000018,17.7,1</ClientRectangle>
+              <Parent isRef="26"/>
+            </Text2>
+          </Components>
+          <FilterMode>And</FilterMode>
+        </DataBand2>
+        <ReportSummaryBand1 type="ReportSummaryBand" isKey="true" Ref="42">
+          <Name>ReportSummaryBand1</Name>
+          <Brush>Transparent</Brush>
+          <Border>None;Black;1;Solid;False;4;Black</Border>
+          <Conditions count="0" isList="true"/>
+          <Interaction type="Stimulsoft.Report.Components.StiInteraction" isKey="true" Ref="43">
+            <DrillDownParameter1 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="44"/>
+            <DrillDownParameter2 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="45"/>
+            <DrillDownParameter3 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="46"/>
+          </Interaction>
+          <MinHeight>0</MinHeight>
+          <MaxHeight>0</MaxHeight>
+          <Page isRef="9"/>
+          <Components count="5" isList="true">
+            <Text3 type="Text" isKey="true" Ref="47">
+              <Left>2</Left>
+              <Text>Ing. {IIF((PrObtenerDatosActaInicioContratist.EsEmpresa),PrObtenerDatosActaInicioContratist.NombreDelegadoResidente,PrObtenerDatosActaInicioContratist.NombreIngenieroSupervisor)}
+{IIF((PrObtenerDatosActaInicioContratist.EsEmpresa),"Delegado Residente  " ,"Supervisor No. " + PrObtieneSupervisoraActaInicioContractual.ProyectoSupervisorCodigoAnio)}
+{IIF((PrObtenerDatosActaInicioContratist.EsEmpresa),"Supervisor/(a)  "  + PrObtieneSupervisoraActaInicioContractual.ProyectoSupervisorCodigoAnio  ,"" )}</Text>
+              <Name>Text3</Name>
+              <TextBrush>Black</TextBrush>
+              <Font>Arial,10,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Top>0.8</Top>
+              <CanGrow>True</CanGrow>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <GrowToHeight>True</GrowToHeight>
+              <Conditions count="0" isList="true"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat type="GeneralFormat" isKey="true" Ref="48"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction type="Stimulsoft.Report.Components.StiInteraction" isKey="true" Ref="49">
+                <DrillDownParameter1 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="50"/>
+                <DrillDownParameter2 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="51"/>
+                <DrillDownParameter3 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="52"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <WordWrap>True</WordWrap>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Guid>5f252e71acc6486f93144684f001f420</Guid>
+              <Page isRef="9"/>
+              <ClientRectangle>2,0.8000000000000007,7.4,1.6000000000000005</ClientRectangle>
+              <Parent isRef="42"/>
+            </Text3>
+            <Text4 type="Text" isKey="true" Ref="53">
+              <Left>10.4</Left>
+              <Text>{PrObtenerDatosActaInicioContratist.TituloPersonaRequiereActa}. {PrObtenerDatosActaInicioContratist.NombreIngenieroRequerimiento}
+{PrObtenerDatosActaInicioContratist.CargoIngenieroRequerimiento}</Text>
+              <Name>Text4</Name>
+              <TextBrush>Black</TextBrush>
+              <Font>Arial,10,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Top>0.8</Top>
+              <CanGrow>True</CanGrow>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <GrowToHeight>True</GrowToHeight>
+              <Conditions count="0" isList="true"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat type="GeneralFormat" isKey="true" Ref="54"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction type="Stimulsoft.Report.Components.StiInteraction" isKey="true" Ref="55">
+                <DrillDownParameter1 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="56"/>
+                <DrillDownParameter2 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="57"/>
+                <DrillDownParameter3 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="58"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <WordWrap>True</WordWrap>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Guid>070c7108b00b478f9e53702af46b1bc7</Guid>
+              <Page isRef="9"/>
+              <ClientRectangle>10.4,0.8000000000000007,6.6,2.2</ClientRectangle>
+              <Parent isRef="42"/>
+            </Text4>
+            <Text5 type="Text" isKey="true" Ref="59">
+              <Left>6.6</Left>
+              <Text>{PrObtenerDatosActaInicioContratist.NotarioActa}
+Abogado(a) y Notario(a)</Text>
+              <Name>Text5</Name>
+              <TextBrush>Black</TextBrush>
+              <Font>Arial,10,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Top>5.4</Top>
+              <CanGrow>True</CanGrow>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <HorAlignment>Center</HorAlignment>
+              <GrowToHeight>True</GrowToHeight>
+              <Conditions count="0" isList="true"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat type="GeneralFormat" isKey="true" Ref="60"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction type="Stimulsoft.Report.Components.StiInteraction" isKey="true" Ref="61">
+                <DrillDownParameter1 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="62"/>
+                <DrillDownParameter2 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="63"/>
+                <DrillDownParameter3 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="64"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <WordWrap>True</WordWrap>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Guid>da7190f1e22e42a2bf823418627973a6</Guid>
+              <Page isRef="9"/>
+              <ClientRectangle>6.6,5.400000000000001,6.6,1.6000000000000032</ClientRectangle>
+              <Parent isRef="42"/>
+            </Text5>
+            <Text10 type="Text" isKey="true" Ref="65">
+              <Left>5.2</Left>
+              <Text>Ante Mi:</Text>
+              <Name>Text10</Name>
+              <TextBrush>Black</TextBrush>
+              <Font>Arial,11,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Top>5.4</Top>
+              <CanGrow>True</CanGrow>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <GrowToHeight>True</GrowToHeight>
+              <Conditions count="0" isList="true"/>
+              <TextFormat type="GeneralFormat" isKey="true" Ref="66"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction type="Stimulsoft.Report.Components.StiInteraction" isKey="true" Ref="67">
+                <DrillDownParameter1 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="68"/>
+                <DrillDownParameter2 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="69"/>
+                <DrillDownParameter3 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="70"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <WordWrap>True</WordWrap>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Guid>ffcd20c8068644a59d353074ae8edbb7</Guid>
+              <Page isRef="9"/>
+              <ClientRectangle>5.2,5.400000000000001,1.6000000000000005,0.5999999999999996</ClientRectangle>
+              <Parent isRef="42"/>
+            </Text10>
+            <Text1 type="Text" isKey="true" Ref="71">
+              <Left>2.4</Left>
+              <Text>{IIF(PrObtenerDatosActaInicioContratist.CertificacionFideicomiso2=="90","","")}</Text>
+              <Name>Text1</Name>
+              <TextBrush>Black</TextBrush>
+              <Font>Arial,10,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Top>3.8</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions count="0" isList="true"/>
+              <TextFormat type="GeneralFormat" isKey="true" Ref="72"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction type="Stimulsoft.Report.Components.StiInteraction" isKey="true" Ref="73">
+                <DrillDownParameter1 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="74"/>
+                <DrillDownParameter2 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="75"/>
+                <DrillDownParameter3 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="76"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Page isRef="9"/>
+              <ClientRectangle>2.4,3.8,13.799999999999999,0.5999999999999996</ClientRectangle>
+              <Parent isRef="42"/>
+            </Text1>
+          </Components>
+          <ClientRectangle>0,5.6000000000000005,19.6,7.599999999999999</ClientRectangle>
+          <Parent isRef="9"/>
+        </ReportSummaryBand1>
+      </Components>
+      <Report isRef="0"/>
+    </Page1>
+    <subReport_1 type="Page" isKey="true" Ref="77">
+      <Name>subReport_1</Name>
+      <PageWidth>21.6</PageWidth>
+      <Brush>Transparent</Brush>
+      <PageHeight>29.7</PageHeight>
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Conditions count="0" isList="true"/>
+      <Watermark type="Stimulsoft.Report.Components.StiWatermark" isKey="true" Ref="78">
+        <Font>Arial,100,Regular,Point</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+      <Margins>1,1,1,1</Margins>
+      <Interaction type="Stimulsoft.Report.Components.StiInteraction" isKey="true" Ref="79">
+        <DrillDownParameter1 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="80"/>
+        <DrillDownParameter2 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="81"/>
+        <DrillDownParameter3 type="Stimulsoft.Report.Components.StiDrillDownParameter" isKey="true" Ref="82"/>
+      </Interaction>
+      <Guid>38202aa5011347ebb6f98d078cee9a13</Guid>
+      <Components count="0" isList="true"/>
+      <Report isRef="0"/>
+    </subReport_1>
+  </Pages>
+  <ReportName>Report</ReportName>
+  <ReportAlias>Report</ReportAlias>
+  <EngineVersion>EngineV2</EngineVersion>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReferencedAssemblies count="8" isList="true">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles count="0" isList="true"/>
+  <PrinterSettings type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" Ref="83"/>
+  <ReportGuid>14c512c07f5d47cdaa01fc7afb5dd62b</ReportGuid>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ReportFile>Report.mrt</ReportFile>
+</StiSerializer>

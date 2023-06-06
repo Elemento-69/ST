@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>ASP.NET Web API Help Page</title>
+    <link href="/API_REST_COVIAL/Content/bootstrap.css" rel="stylesheet"/>
+<link href="/API_REST_COVIAL/Content/site.css" rel="stylesheet"/>
+
+    <script src="/API_REST_COVIAL/Scripts/modernizr-2.8.3.js"></script>
+
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/API_REST_COVIAL/">Nombre de aplicaci&#243;n</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/API_REST_COVIAL/">Inicio</a></li>
+                    <li><a href="/API_REST_COVIAL/Help">API</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        
+
+<link type="text/css" href="/API_REST_COVIAL/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<header class="help-page">
+    <div class="content-wrapper">
+        <div class="float-left">
+            <h1>ASP.NET Web API Help Page</h1>
+        </div>
+    </div>
+</header>
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <h2>Introduction</h2>
+            <p>
+                Provide a general description of your APIs here.
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+
+
+<h2 id="DashboardGerencial">DashboardGerencial</h2>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-DashboardGerencial-GetDatosDashboard-pAnioID-pPrograma">GET api/DashboardGerencial/GetDatosDashboard/{pAnioID}/{pPrograma}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="Login">Login</h2>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-login-echoping">GET api/login/echoping</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-login-echouser">GET api/login/echouser</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/POST-api-login-authenticate">POST api/login/authenticate</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/POST-api-login-authenticateWeb">POST api/login/authenticateWeb</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/POST-api-login-refreshtoken">POST api/login/refreshtoken</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="Proyecto">Proyecto</h2>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Proyecto-GetListadoXPrograma-pAnioID-pProgramaCodigo">GET api/Proyecto/GetListadoXPrograma/{pAnioID}/{pProgramaCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="VideoAPP">VideoAPP</h2>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/POST-api-video-insertar">POST api/video/insertar</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="Programa">Programa</h2>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Programa-Get-pAnioID">GET api/Programa/Get/{pAnioID}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="EmergenciasMultimedia">EmergenciasMultimedia</h2>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/POST-api-EmergenciasApp-insertarFotosDesdeMovil">POST api/EmergenciasApp/insertarFotosDesdeMovil</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/POST-api-EmergenciasApp-insertarVideosDesdeMovil">POST api/EmergenciasApp/insertarVideosDesdeMovil</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/POST-api-EmergenciasApp-editarComentarioFoto">POST api/EmergenciasApp/editarComentarioFoto</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/POST-api-EmergenciasApp-editarComentarioVideo">POST api/EmergenciasApp/editarComentarioVideo</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="EstimacionesDetallesAPP">EstimacionesDetallesAPP</h2>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/POST-api-EstimacionesDetalles-insertar">POST api/EstimacionesDetalles/insertar</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="ProyectosAPP">ProyectosAPP</h2>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-ProyectosApp-GetSincronizacionProyectos-pid_usuario">GET api/ProyectosApp/GetSincronizacionProyectos/{pid_usuario}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="Emergencias">Emergencias</h2>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/POST-api-EmergenciasApp-insertar">POST api/EmergenciasApp/insertar</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="Renglon">Renglon</h2>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Renglon-Get-pAnioID-pProyectoCodigo">GET api/Renglon/Get/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="Dashboard">Dashboard</h2>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-GetDocCambioRetenidos-pAnioID-pProyectoCodigo">GET api/Dashboard/GetDocCambioRetenidos/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-GetDatosBitacora-pAnioID-pProyectoCodigo">GET api/Dashboard/GetDatosBitacora/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-GetEstadoCT-pAnioID-pProyectoCodigo">GET api/Dashboard/GetEstadoCT/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-GetSupProgDia-pAnioID-pProyectoCodigo-Fecha">GET api/Dashboard/GetSupProgDia/{pAnioID}/{pProyectoCodigo}/{Fecha}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-GetGraficoBarra-pAnioID-pProyectoCodigo">GET api/Dashboard/GetGraficoBarra/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-GetGraficoLineal-pAnioID-pProyectoCodigo">GET api/Dashboard/GetGraficoLineal/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-GetEstimacionesGerencial-pAnioID-pProyectoCodigo">GET api/Dashboard/GetEstimacionesGerencial/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-GetProyGerencialAmpliado-pAnioID-pProyectoCodigo">GET api/Dashboard/GetProyGerencialAmpliado/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-GetTramosXProyecto-pAnioID-pProyectoCodigo">GET api/Dashboard/GetTramosXProyecto/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-RenglonesGerencialAVLR-pAnioID-pProyectoCodigo">GET api/Dashboard/RenglonesGerencialAVLR/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-EjecucionPorFechas-pAnioID-pProyectoCodigo-pFechaDesde-pFechaHasta">GET api/Dashboard/EjecucionPorFechas/{pAnioID}/{pProyectoCodigo}/{pFechaDesde}/{pFechaHasta}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-ComponentesRenglonGerencial-pAnioID-pProyectoCodigo">GET api/Dashboard/ComponentesRenglonGerencial/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-PeriodosExistenFotos-pAnioID-pProyectoCodigo">GET api/Dashboard/PeriodosExistenFotos/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-PeriodosExistenVideos-pAnioID-pProyectoCodigo">GET api/Dashboard/PeriodosExistenVideos/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-FotografiasXperiodo-pPeriodo-pAnioID-pProyectoCodigo">GET api/Dashboard/FotografiasXperiodo/{pPeriodo}/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-Rotulos-pAnioID-pProyectoCodigo">GET api/Dashboard/Rotulos/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-DocumentosCambioGerencial-pAnioID-pProyectoCodigo">GET api/Dashboard/DocumentosCambioGerencial/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-AvanceFisicoFinanciero-pAnioID-pProyectoCodigo">GET api/Dashboard/AvanceFisicoFinanciero/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-FechaUltimoIngreso-pAnioID-pProyectoCodigo">GET api/Dashboard/FechaUltimoIngreso/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-PagosXProyecto-pAnioID-pProyectoCodigo">GET api/Dashboard/PagosXProyecto/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-ProyectosSanciones-pAnioID-pProyectoCodigo">GET api/Dashboard/ProyectosSanciones/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-ProyectosSupervisados-pAnioID-pProyectoCodigo">GET api/Dashboard/ProyectosSupervisados/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-ProyectosPorSupervisor-pAnioID-pProyectoCodigo">GET api/Dashboard/ProyectosPorSupervisor/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-MensajesPara-pUsuario">GET api/Dashboard/MensajesPara/{pUsuario}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-ProyectoEmergenciaFotos-pAnioID-pProyectoCodigo">GET api/Dashboard/ProyectoEmergenciaFotos/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-ProyectoFotografiaAdmin-pAnioID-pProyectoCodigo">GET api/Dashboard/ProyectoFotografiaAdmin/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-MontoEjecutadoTramos-pAnioID-pProyectoCodigo-pPeriodo">GET api/Dashboard/MontoEjecutadoTramos/{pAnioID}/{pProyectoCodigo}/{pPeriodo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Dashboard-VideosXPeriodo-pPeriodo-pAnioID-pProyectoCodigo">GET api/Dashboard/VideosXPeriodo/{pPeriodo}/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="EstimacionSupervisor">EstimacionSupervisor</h2>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-EstimacionSupervisor-GetAspiracionPago-pAnioID-pProyectoCodigoSupervisor-pFechaDesde-pFechaHasta">GET api/EstimacionSupervisor/GetAspiracionPago/{pAnioID}/{pProyectoCodigoSupervisor}/{pFechaDesde}/{pFechaHasta}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="FotoAPP">FotoAPP</h2>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/POST-api-fotografia-insertar">POST api/fotografia/insertar</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-fotografia-ObtenerFotografiasEjecucion-pAnioID-pProyectoCodigo-pTramoID-pRenglonID-pFechaInicio-pFechaFin">GET api/fotografia/ObtenerFotografiasEjecucion/{pAnioID}/{pProyectoCodigo}/{pTramoID}/{pRenglonID}/{pFechaInicio}/{pFechaFin}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-fotografia-ObtenerFotografiasEjecucionGalerias-pAnioID-pProyectoCodigo-pTramoID-pRenglonID-pFechaInicio-pFechaFin-pUsuario-pTipo">GET api/fotografia/ObtenerFotografiasEjecucionGalerias/{pAnioID}/{pProyectoCodigo}/{pTramoID}/{pRenglonID}/{pFechaInicio}/{pFechaFin}/{pUsuario}/{pTipo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-fotografia-ObtenerFotografiasAdmin-pAnioID-pProyectoCodigo-pTramoID-pFechaInicio-pFechaFin">GET api/fotografia/ObtenerFotografiasAdmin/{pAnioID}/{pProyectoCodigo}/{pTramoID}/{pFechaInicio}/{pFechaFin}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-fotografia-ObtenerFotografiasAdminSeleccion-pAnioID-pProyectoCodigo-pTramoID-pFechaInicio-pFechaFin-pUsuario-pAccion">GET api/fotografia/ObtenerFotografiasAdminSeleccion/{pAnioID}/{pProyectoCodigo}/{pTramoID}/{pFechaInicio}/{pFechaFin}/{pUsuario}/{pAccion}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/POST-api-fotografia-insertarFotoEjecucionFicha">POST api/fotografia/insertarFotoEjecucionFicha</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/POST-api-fotografia-quitarFotosEjecucionFicha">POST api/fotografia/quitarFotosEjecucionFicha</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/POST-api-fotografia-insertarFotoAdminFicha">POST api/fotografia/insertarFotoAdminFicha</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/POST-api-fotografia-quitarFotosAdminEjecucionFicha">POST api/fotografia/quitarFotosAdminEjecucionFicha</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="Tramo">Tramo</h2>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-Tramo-Get-pAnioID-pProyectoCodigo">GET api/Tramo/Get/{pAnioID}/{pProyectoCodigo}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="PlanAnual">PlanAnual</h2>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/API_REST_COVIAL/Help/Api/GET-api-PlanAnual-Get">GET api/PlanAnual/Get</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>    </section>
+</div>
+
+        <hr />
+        <footer>
+            <p>&copy; 2021 - Mi aplicación ASP.NET</p>
+        </footer>
+    </div>
+
+    <script src="/API_REST_COVIAL/Scripts/jquery-3.3.1.js"></script>
+
+    <script src="/API_REST_COVIAL/Scripts/bootstrap.js"></script>
+
+    
+</body>
+</html>

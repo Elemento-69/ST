@@ -1,0 +1,1553 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <CnxReporteSuspensionesAFInanciera Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>CnxReporteSuspensionesAFInanciera</Alias>
+        <ConnectionString>Data Source=192.168.1.90\covialapp; 
+Pooling=True; Max Pool Size=75; 
+Connection Timeout=300;Initial Catalog=z_PRODUCCION_sicopDB;uid=UsuarioExterno;password=Us3r00@dm1n</ConnectionString>
+        <Name>CnxReporteSuspensionesAFInanciera</Name>
+      </CnxReporteSuspensionesAFInanciera>
+    </Databases>
+    <DataSources isList="true" count="5">
+      <prReporteSuspensionesAFinanciera Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>prReporteSuspensionesAFinanciera</Alias>
+        <Columns isList="true" count="21">
+          <value>ProyectoNOG,System.Int32</value>
+          <value>ProyectoDescripcion,System.String</value>
+          <value>ContratoCodigo,System.String</value>
+          <value>FechaInicioContraActual,System.DateTime</value>
+          <value>FechaFinContraActual,System.DateTime</value>
+          <value>DiasOriginalProyecto,System.Int32</value>
+          <value>FechaSuspension,System.DateTime</value>
+          <value>FechaReactivacion,System.DateTime</value>
+          <value>DiasSuspension,System.Int32</value>
+          <value>TiempoContraActual,System.Int32</value>
+          <value>PeriodoDelEstPagada,System.DateTime</value>
+          <value>PeriodoHastaEstPagada,System.DateTime</value>
+          <value>DiasEstPagada,System.Int32</value>
+          <value>EstimacionCorr,System.Int32</value>
+          <value>EstimacionPdtePagarFechaDesde,System.DateTime</value>
+          <value>EstimacionPdteFechaHasta,System.DateTime</value>
+          <value>DiasaPagarEst,System.Int32</value>
+          <value>PeriodoContraactualPagado,System.Int32</value>
+          <value>PeriodoContraactualPendientePago,System.Int32</value>
+          <value>TotalDias,System.Int32</value>
+          <value>EsSupervision,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>prReporteSuspensionesAFinanciera</Name>
+        <NameInSource>CnxReporteSuspensionesAFInanciera</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>_x0040_pAnioID,,8,0</value>
+          <value>_x0040_pProyectoCodigo,,12,10</value>
+          <value>_x0040_pEstimacionCorr,,8,0</value>
+        </Parameters>
+        <SqlCommand>execute prReporteSuspensionesAFinanciera @pAnioID, @pProyectoCodigo, @pEstimacionCorr</SqlCommand>
+      </prReporteSuspensionesAFinanciera>
+      <prReporteSuspensionesOC Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>prReporteSuspensionesOC</Alias>
+        <Columns isList="true" count="4">
+          <value>DocCambioCorrel,System.Int32</value>
+          <value>Desde,System.DateTime</value>
+          <value>Hasta,System.DateTime</value>
+          <value>DiasDocCambio,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>prReporteSuspensionesOC</Name>
+        <NameInSource>CnxReporteSuspensionesAFInanciera</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_pAnioID,,8,4</value>
+          <value>_x0040_pProyectoCodigo,,12,10</value>
+        </Parameters>
+        <SqlCommand>EXEC prReporteSuspensionesOC @pAnioID,@pProyectoCodigo</SqlCommand>
+      </prReporteSuspensionesOC>
+      <prReporteSuspensionesOTS Ref="5" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>prReporteSuspensionesOTS</Alias>
+        <Columns isList="true" count="4">
+          <value>DocCambioCorrel,System.Int32</value>
+          <value>Desde,System.DateTime</value>
+          <value>Hasta,System.DateTime</value>
+          <value>DiasDocCambio,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>prReporteSuspensionesOTS</Name>
+        <NameInSource>CnxReporteSuspensionesAFInanciera</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_pAnioID,,8,4</value>
+          <value>_x0040_pProyectoCodigo,,12,10</value>
+        </Parameters>
+        <SqlCommand>EXEC prReporteSuspensionesOTS @pAnioID, @pProyectoCodigo</SqlCommand>
+      </prReporteSuspensionesOTS>
+      <prReporteSuspensionesReactivaciones Ref="6" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>prReporteSuspensionesReactivaciones</Alias>
+        <Columns isList="true" count="5">
+          <value>DocumentoSuspension,System.String</value>
+          <value>DiasAfectados,System.Int32</value>
+          <value>ActaSuspension,System.String</value>
+          <value>FechaDesde,System.DateTime</value>
+          <value>FechaHasta,System.DateTime</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>prReporteSuspensionesReactivaciones</Name>
+        <NameInSource>CnxReporteSuspensionesAFInanciera</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>_x0040_pAnioID,,8,4</value>
+          <value>_x0040_pProyectoCodigo,,12,15</value>
+          <value>_x0040_pEstimacionCorr,,8,7</value>
+        </Parameters>
+        <SqlCommand>EXEC prReporteSuspensionesReactivaciones @pAnioID,@pProyectoCodigo, @pEstimacionCorr</SqlCommand>
+      </prReporteSuspensionesReactivaciones>
+      <prReporteSuspensionesPeriodosEstimaciones Ref="7" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>prReporteSuspensionesPeriodosEstimaciones</Alias>
+        <Columns isList="true" count="3">
+          <value>FechaDesde,System.DateTime</value>
+          <value>FechaHasta,System.DateTime</value>
+          <value>Dias,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>prReporteSuspensionesPeriodosEstimaciones</Name>
+        <NameInSource>CnxReporteSuspensionesAFInanciera</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>_x0040_Anioid,,8,5</value>
+          <value>_x0040_ProyectoCodigo,,12,15</value>
+          <value>_x0040_EstimacionCorr,,8,5</value>
+        </Parameters>
+        <SqlCommand>EXEC [prReporteSuspensionesPeriodosEstimaciones] @AnioId,@ProyectoCodigo,@EstimacionCorr</SqlCommand>
+      </prReporteSuspensionesPeriodosEstimaciones>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="8" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="17">
+        <PageHeaderBand1 Ref="9" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19.6,1.78</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text26 Ref="10" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,0.2,16.4,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>81a5c69ef0584fec96963b39345d44be</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="8" />
+              <Parent isRef="9" />
+              <Text>MINISTERIO DE COMUNICACIONES, INFRAESTRUCTURA Y VIVIENDA -CIV
+UNIDAD EJECUTORA DE CONSERVACIÓN VIAL - COVIAL</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+            <Shape1 Ref="11" type="Shape" isKey="true">
+              <BorderColor>74, 126, 187</BorderColor>
+              <Brush>GradientBrush,[226:236:255],[165:197:255],90</Brush>
+              <ClientRectangle>0,1.8,19.6,0.1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Guid>a2426fbd818742e5bae279b890d44b1a</Guid>
+              <Name>Shape1</Name>
+              <Page isRef="8" />
+              <Parent isRef="9" />
+              <ShapeType Ref="12" type="Stimulsoft.Report.Components.ShapeTypes.StiRoundedRectangleShapeType" isKey="true">
+                <Round>0.2</Round>
+              </ShapeType>
+            </Shape1>
+            <Image1 Ref="13" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,4.2,1.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Image>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</Image>
+              <Name>Image1</Name>
+              <Page isRef="8" />
+              <Parent isRef="9" />
+              <Stretch>True</Stretch>
+            </Image1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>31a5df74dc824b0eac6c178ad899980c</Guid>
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+        </PageHeaderBand1>
+        <PageFooterBand1 Ref="14" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,32.8,19.6,0.8</ClientRectangle>
+          <Components isList="true" count="2">
+            <Shape5 Ref="15" type="Shape" isKey="true">
+              <BorderColor>74, 126, 187</BorderColor>
+              <Brush>GradientBrush,[226:236:255],[165:197:255],90</Brush>
+              <ClientRectangle>0,0.1,19.6,0.1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Guid>2884da53fd004f06a7245b4974ff1da1</Guid>
+              <Name>Shape5</Name>
+              <Page isRef="8" />
+              <Parent isRef="14" />
+              <ShapeType Ref="16" type="Stimulsoft.Report.Components.ShapeTypes.StiRoundedRectangleShapeType" isKey="true">
+                <Round>0.2</Round>
+              </ShapeType>
+            </Shape5>
+            <HorizontalLinePrimitive1 Ref="17" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0,0.3,19.6,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="18" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>95a0d13a291b4c8ebc73b73a12db921e</Guid>
+              <Name>HorizontalLinePrimitive1</Name>
+              <Page isRef="8" />
+              <Parent isRef="14" />
+              <Size>2</Size>
+              <StartCap Ref="19" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>ed080a5e95d744a9a36eeea00d7d6bc8</Guid>
+          <Name>PageFooterBand1</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+        </PageFooterBand1>
+        <Text21 Ref="20" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>-23.8,12.2,2,0.4</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,8</Font>
+          <Guid>c0b99f1002d54136b86bf62c9382159a</Guid>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text21</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+          <TextBrush>Black</TextBrush>
+        </Text21>
+        <ReportTitleBand1 Ref="21" type="ReportTitleBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.98,19.6,1.2</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text41 Ref="22" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,2.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>f7c55c4e1a8242628e11a060b4d0ee72</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text41</Name>
+              <Page isRef="8" />
+              <Parent isRef="21" />
+              <Text>CONTRATO:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text41>
+            <Text42 Ref="23" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,2.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>c0df636a1ef949d691977effb93e1601</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text42</Name>
+              <Page isRef="8" />
+              <Parent isRef="21" />
+              <Text>PROYECTO:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text42>
+            <Text9 Ref="24" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.8,2.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>d90b4bbc1f9046ff9eb3da38a0ec2d50</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="8" />
+              <Parent isRef="21" />
+              <Text>NOG:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text9>
+            <Text17 Ref="25" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.8,0,16.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>ce15659e6253466892a71f2d7c830f17</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="8" />
+              <Parent isRef="21" />
+              <Text>{prReporteSuspensionesAFinanciera.ContratoCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text17>
+            <Text18 Ref="26" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.8,0.4,16.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>fab9dd093e0c4ed88c68773b64ffe5f1</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="8" />
+              <Parent isRef="21" />
+              <Text>{prReporteSuspensionesAFinanciera.ProyectoDescripcion}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </Text18>
+            <Text19 Ref="27" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.8,0.8,16.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>dc528de834d6427db800710ada8782fc</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="8" />
+              <Parent isRef="21" />
+              <Text>{prReporteSuspensionesAFinanciera.ProyectoNOG}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text19>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportTitleBand1</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+        </ReportTitleBand1>
+        <GroupHeaderBand2 Ref="28" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,4.98,19.6,0.6</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text54 Ref="29" type="Text" isKey="true">
+              <Border>AdvDimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;False;4;DimGray</Border>
+              <Brush>[147:203:255]</Brush>
+              <ClientRectangle>0,0,15.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>acc9b83bb5204822a6fbd6c2ce1d3a47</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text54</Name>
+              <Page isRef="8" />
+              <Parent isRef="28" />
+              <Text>CONTRATO ORIGINAL</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text54>
+            <Text2 Ref="30" type="Text" isKey="true">
+              <Border>AdvDimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;False;4;DimGray</Border>
+              <Brush>[147:203:255]</Brush>
+              <ClientRectangle>15.2,0,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>3319adec5c1740a3ad6ec2483da359ae</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="8" />
+              <Parent isRef="28" />
+              <Text>FECHAS</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text22 Ref="31" type="Text" isKey="true">
+              <Border>AdvDimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;False;4;DimGray</Border>
+              <Brush>[147:203:255]</Brush>
+              <ClientRectangle>17.4,0,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>b9de40a32e4f4962bc977b7441e9dfaa</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="8" />
+              <Parent isRef="28" />
+              <Text>DIAS</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text22>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>af992704d19448bf90417c89f783e94b</Guid>
+          <Name>GroupHeaderBand2</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+        </GroupHeaderBand2>
+        <DataBand2 Ref="32" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,6.38,19.6,1.2</ClientRectangle>
+          <Components isList="true" count="5">
+            <Text20 Ref="33" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.02,8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="8" />
+              <Parent isRef="32" />
+              <TextBrush>Black</TextBrush>
+            </Text20>
+            <Text38 Ref="34" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.2,0.02,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>7273e752e2fb4c48a0103c4d634eb291</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text38</Name>
+              <Page isRef="8" />
+              <Parent isRef="32" />
+              <Text>{prReporteSuspensionesAFinanciera.FechaInicioContraActual}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="35" type="DateFormat" isKey="true" />
+              <Type>Expression</Type>
+            </Text38>
+            <Text39 Ref="36" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.2,0.42,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>203c497bc39b4113bc1d4b48470c1f5a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text39</Name>
+              <Page isRef="8" />
+              <Parent isRef="32" />
+              <Text>{prReporteSuspensionesAFinanciera.FechaFinContraActual}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="37" type="DateFormat" isKey="true" />
+              <Type>Expression</Type>
+            </Text39>
+            <Text43 Ref="38" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.4,0.02,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>56e0c89a3bdf4816acfc0d5b705026b7</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text43</Name>
+              <Page isRef="8" />
+              <Parent isRef="32" />
+              <Text>{prReporteSuspensionesAFinanciera.DiasOriginalProyecto}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text43>
+            <Text44 Ref="39" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0.02,13,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>91f474631a5840f29dcacfdc7ccb7a10</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text44</Name>
+              <Page isRef="8" />
+              <Parent isRef="32" />
+              <Text>Tiempo contractual meses según Acta de Inicio</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+            </Text44>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <Filters isList="true" count="0" />
+          <Guid>f07ea00d89d3434f9611e5b968ff1d5a</Guid>
+          <Name>DataBand2</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+          <Sort isList="true" count="0" />
+        </DataBand2>
+        <GroupHeaderBand1 Ref="40" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,8.38,19.6,0.6</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text23 Ref="41" type="Text" isKey="true">
+              <Border>AdvDimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;False;4;DimGray</Border>
+              <Brush>[147:203:255]</Brush>
+              <ClientRectangle>0,0,12.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>af28fde976b443fea316fb1dc64a5d93</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="8" />
+              <Parent isRef="40" />
+              <Text>INCREMENTO</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text23>
+            <Text24 Ref="42" type="Text" isKey="true">
+              <Border>AdvDimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;False;4;DimGray</Border>
+              <Brush>[147:203:255]</Brush>
+              <ClientRectangle>15.4,0,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>2e3bbac3ba2f43048add931b5e5a0781</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="8" />
+              <Parent isRef="40" />
+              <Text>FECHAS</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+            <Text25 Ref="43" type="Text" isKey="true">
+              <Border>AdvDimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;False;4;DimGray</Border>
+              <Brush>[147:203:255]</Brush>
+              <ClientRectangle>17.6,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>e21438b5f0a347e68717f67a86b66d82</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="8" />
+              <Parent isRef="40" />
+              <Text>DIAS</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+            <Text27 Ref="44" type="Text" isKey="true">
+              <Border>AdvDimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;False;4;DimGray</Border>
+              <Brush>[147:203:255]</Brush>
+              <ClientRectangle>12.8,0,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>13089293ad41403c98f58a6d92d25f1b</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="8" />
+              <Parent isRef="40" />
+              <Text>NO. DOC.</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text27>
+          </Components>
+          <Conditions isList="true" count="1">
+            <value>prReporteSuspensionesOTS.DocCambioCorrel,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+          </Conditions>
+          <Guid>35778435cfd74ccfa2632ca8aace4257</Guid>
+          <Name>GroupHeaderBand1</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+        </GroupHeaderBand1>
+        <DataBand3 Ref="45" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,9.78,19.6,1.2</ClientRectangle>
+          <Components isList="true" count="5">
+            <Text29 Ref="46" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.2,0.02,2.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>41bb90170830426e9b4c65054f2bf0cf</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="8" />
+              <Parent isRef="45" />
+              <Text>{prReporteSuspensionesOTS.Desde}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="47" type="DateFormat" isKey="true" />
+              <Type>DataColumn</Type>
+            </Text29>
+            <Text30 Ref="48" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.2,0.42,2.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>499df68b81eb4a36a29d94b2eaa04ef9</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="8" />
+              <Parent isRef="45" />
+              <Text>{prReporteSuspensionesOTS.Hasta}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="49" type="DateFormat" isKey="true" />
+              <Type>DataColumn</Type>
+            </Text30>
+            <Text31 Ref="50" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.6,0.02,1.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>a26f2710d1da49398d1808c3d230dbd8</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="8" />
+              <Parent isRef="45" />
+              <Text>{prReporteSuspensionesOTS.DiasDocCambio}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text31>
+            <Text32 Ref="51" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0.02,13,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>bd7013a78cb744a68f26da9f61383545</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text32</Name>
+              <Page isRef="8" />
+              <Parent isRef="45" />
+              <Text>Documento de cambio/Orden de trabajo suplementario - ampliación de tiempo</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+            </Text32>
+            <Text36 Ref="52" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13,0.02,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>9ab5dbdd211146d4a31dbba2dfce29d4</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text36</Name>
+              <Page isRef="8" />
+              <Parent isRef="45" />
+              <Text>{prReporteSuspensionesOTS.DocCambioCorrel}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="53" type="DateFormat" isKey="true" />
+              <Type>DataColumn</Type>
+            </Text36>
+          </Components>
+          <Conditions isList="true" count="1">
+            <value>prReporteSuspensionesOTS.DocCambioCorrel,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+          </Conditions>
+          <DataRelationName isNull="true" />
+          <Filters isList="true" count="0" />
+          <Guid>92af191ae878478c880d61a46aad01e5</Guid>
+          <Name>DataBand3</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+          <Sort isList="true" count="0" />
+        </DataBand3>
+        <GroupHeaderBand3 Ref="54" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,11.78,19.6,0.4</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text7 Ref="55" type="Text" isKey="true">
+              <Border>AdvDimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;False;4;DimGray</Border>
+              <Brush>[147:203:255]</Brush>
+              <ClientRectangle>0,0,12.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>a74dd0594e814299a98a55c50464b0a2</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="8" />
+              <Parent isRef="54" />
+              <Text>DECREMENTO</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text8 Ref="56" type="Text" isKey="true">
+              <Border>AdvDimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;False;4;DimGray</Border>
+              <Brush>[147:203:255]</Brush>
+              <ClientRectangle>15.2,0,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>6412c644ffa64b949da31920eb833822</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="8" />
+              <Parent isRef="54" />
+              <Text>FECHAS</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text12 Ref="57" type="Text" isKey="true">
+              <Border>AdvDimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;False;4;DimGray</Border>
+              <Brush>[147:203:255]</Brush>
+              <ClientRectangle>17.4,0,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>4ce316e60ac64cd686dbfec26127997d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="8" />
+              <Parent isRef="54" />
+              <Text>DIAS</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text37 Ref="58" type="Text" isKey="true">
+              <Border>AdvDimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;False;4;DimGray</Border>
+              <Brush>[147:203:255]</Brush>
+              <ClientRectangle>12.8,0,2.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>e08797362d2048d0a424a9b183bde69a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text37</Name>
+              <Page isRef="8" />
+              <Parent isRef="54" />
+              <Text>NO. DOC.</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text37>
+          </Components>
+          <Conditions isList="true" count="1">
+            <value>prReporteSuspensionesOC.DiasDocCambio,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+          </Conditions>
+          <Guid>0bf161eb50d84ad8b64ed9c7d48accd7</Guid>
+          <Name>GroupHeaderBand3</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+        </GroupHeaderBand3>
+        <DataBand4 Ref="59" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,12.98,19.6,1.2</ClientRectangle>
+          <Components isList="true" count="5">
+            <Text40 Ref="60" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.2,0.02,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>f2e2e92aa96e46128258548b428de182</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text40</Name>
+              <Page isRef="8" />
+              <Parent isRef="59" />
+              <Text>{prReporteSuspensionesOC.Desde}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="61" type="DateFormat" isKey="true" />
+              <Type>DataColumn</Type>
+            </Text40>
+            <Text45 Ref="62" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.2,0.42,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>49601743ab6f4ad980ac19ec42d14656</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text45</Name>
+              <Page isRef="8" />
+              <Parent isRef="59" />
+              <Text>{prReporteSuspensionesOC.Hasta}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="63" type="DateFormat" isKey="true" />
+              <Type>DataColumn</Type>
+            </Text45>
+            <Text46 Ref="64" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.4,0.02,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>07b0879a40ec452b95c12b0dd7d37b01</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text46</Name>
+              <Page isRef="8" />
+              <Parent isRef="59" />
+              <Text>{prReporteSuspensionesOC.DiasDocCambio}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="65" type="NumberFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+              </TextFormat>
+              <Type>DataColumn</Type>
+            </Text46>
+            <Text49 Ref="66" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.8,0.02,2.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>e96a698ee634419bbb9409b5e7164b75</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text49</Name>
+              <Page isRef="8" />
+              <Parent isRef="59" />
+              <Text>{prReporteSuspensionesOC.DocCambioCorrel}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="67" type="DateFormat" isKey="true" />
+              <Type>DataColumn</Type>
+            </Text49>
+            <Text47 Ref="68" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0.02,12.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>5702975d25d1422e9831516afd5a8709</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text47</Name>
+              <Page isRef="8" />
+              <Parent isRef="59" />
+              <Text>Orden de cambio</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+            </Text47>
+          </Components>
+          <Conditions isList="true" count="1">
+            <value>prReporteSuspensionesOC.DiasDocCambio,EqualTo,_x0030_,,String,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+          </Conditions>
+          <DataRelationName isNull="true" />
+          <Filters isList="true" count="0" />
+          <Guid>8e91736491b2400bac84ebebd5376a69</Guid>
+          <Name>DataBand4</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+          <Sort isList="true" count="0" />
+        </DataBand4>
+        <GroupFooterBand1 Ref="69" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,14.98,19.6,0.8</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text48 Ref="70" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.4,0.2,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>6fb63fb7961249aab57c1ed1c886a0c7</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text48</Name>
+              <Page isRef="8" />
+              <Parent isRef="69" />
+              <Text>{prReporteSuspensionesAFinanciera.TotalDias}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text48>
+            <Text55 Ref="71" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.8,0.2,5.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>135aad15b7cf4a058681c8526c90659a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text55</Name>
+              <Page isRef="8" />
+              <Parent isRef="69" />
+              <Text>Tiempo contractual - modificado</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text55>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>605849c59c164bf5bf80560af62f942a</Guid>
+          <Name>GroupFooterBand1</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+        </GroupFooterBand1>
+        <GroupHeaderBand4 Ref="72" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,16.58,19.6,0.6</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text5 Ref="73" type="Text" isKey="true">
+              <Border>AdvDimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;False;4;DimGray</Border>
+              <Brush>[147:203:255]</Brush>
+              <ClientRectangle>17.4,0.02,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>21dc70288dd4471788d81b65e8bebd5d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="8" />
+              <Parent isRef="72" />
+              <Text>DIAS</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text16 Ref="74" type="Text" isKey="true">
+              <Border>AdvDimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;False;4;DimGray</Border>
+              <Brush>[147:203:255]</Brush>
+              <ClientRectangle>2,0.02,13.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>1fe6c7947b71446d9132e30e3ae3c26d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="8" />
+              <Parent isRef="72" />
+              <Text>DOCUMENTOS SUSPENSIÓN</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text16>
+            <Text33 Ref="75" type="Text" isKey="true">
+              <Border>AdvDimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;False;4;DimGray</Border>
+              <Brush>[147:203:255]</Brush>
+              <ClientRectangle>0,0.02,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>0f94e3e47c9a40629d85a97e8d91127b</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text33</Name>
+              <Page isRef="8" />
+              <Parent isRef="72" />
+              <Text>ACTA</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text33>
+            <Text28 Ref="76" type="Text" isKey="true">
+              <Border>AdvDimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;DimGray;1;Solid;False;4;DimGray</Border>
+              <Brush>[147:203:255]</Brush>
+              <ClientRectangle>15.2,0.02,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>99a2c2634fd54db9b38f3e5128cd800e</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="8" />
+              <Parent isRef="72" />
+              <Text>FECHAS</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text28>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>bddd4147b6b043bbb0d8796605686f77</Guid>
+          <Name>GroupHeaderBand4</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+        </GroupHeaderBand4>
+        <DataBand5 Ref="77" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,17.98,19.6,1</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text34 Ref="78" type="Text" isKey="true">
+              <Border>None;[165:165:165];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,0.02,13.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text34</Name>
+              <Page isRef="8" />
+              <Parent isRef="77" />
+              <Text>Acta de suspensión temporal</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text34>
+            <Text53 Ref="79" type="Text" isKey="true">
+              <Border>None;[165:165:165];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.4,0.02,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text53</Name>
+              <Page isRef="8" />
+              <Parent isRef="77" />
+              <Text>{prReporteSuspensionesReactivaciones.DiasAfectados}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text53>
+            <Text56 Ref="80" type="Text" isKey="true">
+              <Border>None;[165:165:165];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.02,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text56</Name>
+              <Page isRef="8" />
+              <Parent isRef="77" />
+              <Text>{prReporteSuspensionesReactivaciones.ActaSuspension}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text56>
+            <Text1 Ref="81" type="Text" isKey="true">
+              <Border>None;[165:165:165];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,0.42,13.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>29f37729bbc040a285816fc00730d48b</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="8" />
+              <Parent isRef="77" />
+              <Text>Acta de reinicio contractual</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text1>
+            <Text50 Ref="82" type="Text" isKey="true">
+              <Border>None;[165:165:165];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.2,0.02,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>92f6bac104e04771b1756627b319219e</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text50</Name>
+              <Page isRef="8" />
+              <Parent isRef="77" />
+              <Text>{prReporteSuspensionesReactivaciones.FechaDesde}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="83" type="DateFormat" isKey="true" />
+              <Type>Expression</Type>
+            </Text50>
+            <Text51 Ref="84" type="Text" isKey="true">
+              <Border>None;[165:165:165];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.2,0.42,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>932537e4a8ed41f99b9b1f297f112e5a</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text51</Name>
+              <Page isRef="8" />
+              <Parent isRef="77" />
+              <Text>{prReporteSuspensionesReactivaciones.FechaHasta}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="85" type="DateFormat" isKey="true" />
+              <Type>DataColumn</Type>
+            </Text51>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>prReporteSuspensionesReactivaciones</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>dd647dd57a224387aee7687cbc0b3e53</Guid>
+          <Name>DataBand5</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+          <Sort isList="true" count="0" />
+        </DataBand5>
+        <GroupFooterBand4 Ref="86" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,19.78,19.6,0.8</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text57 Ref="87" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.4,0.2,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>cc7bdb52e1ae42ca8be1faac821971ed</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text57</Name>
+              <Page isRef="8" />
+              <Parent isRef="86" />
+              <Text>{Sum (prReporteSuspensionesReactivaciones.DiasAfectados)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text57>
+            <Text59 Ref="88" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,0.2,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>8eb2a463beff4b38931f4aca293504d7</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text59</Name>
+              <Page isRef="8" />
+              <Parent isRef="86" />
+              <Text>Total Días Suspensión:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text59>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>c7a0e1f22a424ad4acb6cd7902cbd877</Guid>
+          <Name>GroupFooterBand4</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+        </GroupFooterBand4>
+        <DataBand6 Ref="89" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,21.38,19.6,2.4</ClientRectangle>
+          <Components isList="true" count="8">
+            <Text4 Ref="90" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15,0.62,2.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>prReporteSuspensionesAFinanciera.DiasEstPagada,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+              </Conditions>
+              <Font>Arial,9</Font>
+              <Guid>6ba271beec7e4a698654e3a7262f0d5d</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="8" />
+              <Parent isRef="89" />
+              <Text>{prReporteSuspensionesAFinanciera.PeriodoDelEstPagada}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="91" type="DateFormat" isKey="true" />
+              <Type>DataColumn</Type>
+            </Text4>
+            <Text6 Ref="92" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15,1.02,2.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>prReporteSuspensionesAFinanciera.DiasEstPagada,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+              </Conditions>
+              <Font>Arial,9</Font>
+              <Guid>73fa461fcbd14f668ca736a669f9d87d</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="8" />
+              <Parent isRef="89" />
+              <Text>{prReporteSuspensionesAFinanciera.PeriodoHastaEstPagada}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="93" type="DateFormat" isKey="true" />
+              <Type>DataColumn</Type>
+            </Text6>
+            <Text11 Ref="94" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.4,0.62,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>prReporteSuspensionesAFinanciera.DiasEstPagada,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+              </Conditions>
+              <Font>Arial,9</Font>
+              <Guid>4ac3899580c8494fa2746c025159595f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="8" />
+              <Parent isRef="89" />
+              <Text>{prReporteSuspensionesAFinanciera.DiasEstPagada}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+            <Text13 Ref="95" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>10.2,0.6,4.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>prReporteSuspensionesAFinanciera.DiasEstPagada,EqualTo,_x0030_,,String,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+              </Conditions>
+              <Font>Arial,9,Bold</Font>
+              <Guid>4d0972de08054b9c863cebad47a9ce44</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="8" />
+              <Parent isRef="89" />
+              <Text>Períodos pagados DEL</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+            </Text13>
+            <Text14 Ref="96" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>13.8,1.02,0.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>prReporteSuspensionesAFinanciera.DiasEstPagada,EqualTo,_x0030_,,Numeric,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+              </Conditions>
+              <Font>Arial,9,Bold</Font>
+              <Guid>ce8f302050f34c6bbf04a4ed99ded66d</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="8" />
+              <Parent isRef="89" />
+              <Text>AL</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+            </Text14>
+            <Text15 Ref="97" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>10.2,1.82,4.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>5ddeb190bc264db9be5fb3d84621bec1</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="8" />
+              <Parent isRef="89" />
+              <Text>ESTIMACIÓN A PAGAR:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+            </Text15>
+            <Text35 Ref="98" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15,1.82,2.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>9ef4c79e7af140c9b1036102a0380e43</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text35</Name>
+              <Page isRef="8" />
+              <Parent isRef="89" />
+              <Text>{prReporteSuspensionesAFinanciera.EstimacionCorr}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="99" type="DateFormat" isKey="true" />
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text35>
+            <HorizontalLinePrimitive2 Ref="100" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0,0.22,19.4,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="101" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>d5ac98b7664147fa9c55e890f8a36f69</Guid>
+              <Name>HorizontalLinePrimitive2</Name>
+              <Page isRef="8" />
+              <Parent isRef="89" />
+              <Size>2</Size>
+              <StartCap Ref="102" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <Filters isList="true" count="0" />
+          <Guid>9b18f8b5e1c349289b066fa51aec9fa6</Guid>
+          <Name>DataBand6</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+          <Sort isList="true" count="0" />
+        </DataBand6>
+        <DataBand1 Ref="103" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,24.58,19.6,1</ClientRectangle>
+          <Components isList="true" count="7">
+            <Text52 Ref="104" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>9.4,0.02,4.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="2">
+                <value>,EqualTo,,,String,Black,Transparent,Arial_x002C_9_x002C_Bold_x002C_Point_x002C_False_x002C_0,True,False,,,None</value>
+                <value>prReporteSuspensionesAFinanciera.EsSupervision,EqualTo,_x0031_,,String,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+              </Conditions>
+              <Font>Arial,9,Bold</Font>
+              <Guid>d7e6f473ee6144c2aed3d7831a33f5a7</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text52</Name>
+              <Page isRef="8" />
+              <Parent isRef="103" />
+              <Text>PERIODOS A PAGAR:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text52>
+            <Text61 Ref="105" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>13.6,0.02,0.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>3ab7dfd6bb62419cad0895035234a466</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text61</Name>
+              <Page isRef="8" />
+              <Parent isRef="103" />
+              <Text>DEL</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+            </Text61>
+            <Text62 Ref="106" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>13.6,0.4,0.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>1dfccdfcdd5c497f9357785deb05f3d7</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text62</Name>
+              <Page isRef="8" />
+              <Parent isRef="103" />
+              <Text>AL</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+            </Text62>
+            <Text3 Ref="107" type="Text" isKey="true">
+              <Border>None;[165:165:165];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15,0.02,2.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="8" />
+              <Parent isRef="103" />
+              <Text>{prReporteSuspensionesPeriodosEstimaciones.FechaDesde}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="108" type="DateFormat" isKey="true" />
+            </Text3>
+            <Text10 Ref="109" type="Text" isKey="true">
+              <Border>None;[165:165:165];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15,0.4,2.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="8" />
+              <Parent isRef="103" />
+              <Text>{prReporteSuspensionesPeriodosEstimaciones.FechaHasta}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="110" type="DateFormat" isKey="true" />
+            </Text10>
+            <Text58 Ref="111" type="Text" isKey="true">
+              <Border>None;[165:165:165];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.4,0.02,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text58</Name>
+              <Page isRef="8" />
+              <Parent isRef="103" />
+              <Text>{prReporteSuspensionesPeriodosEstimaciones.Dias}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text58>
+            <Text60 Ref="112" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>9.4,0.02,4.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="2">
+                <value>prReporteSuspensionesAFinanciera.EsSupervision,EqualTo,_x0031_,,String,Black,Transparent,Arial_x002C_9_x002C_Bold_x002C_Point_x002C_False_x002C_0,True,False,,,None</value>
+                <value>prReporteSuspensionesAFinanciera.EsSupervision,EqualTo,_x0030_,,String,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+              </Conditions>
+              <Font>Arial,9,Bold</Font>
+              <Guid>7f5c360e52144978bae1c79e2dc16350</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text60</Name>
+              <Page isRef="8" />
+              <Parent isRef="103" />
+              <Text>INFORME FINANCIERO A PAGAR:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text60>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>prReporteSuspensionesPeriodosEstimaciones</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+        <DataBand7 Ref="113" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,26.38,19.6,1.8</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text63 Ref="114" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>10.2,0.42,6.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>4b67a15d184e4ed1a8c3b2c707b3340b</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text63</Name>
+              <Page isRef="8" />
+              <Parent isRef="113" />
+              <Text>Periodo contractual pagado:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+            </Text63>
+            <Text65 Ref="115" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.4,0.42,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>460b6112131248709f190b2aa520af27</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text65</Name>
+              <Page isRef="8" />
+              <Parent isRef="113" />
+              <Text>{prReporteSuspensionesAFinanciera.PeriodoContraactualPagado}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </Text65>
+            <Text64 Ref="116" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>10.2,1.02,6.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>255e1a6c5694474d9201c5e229878f80</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text64</Name>
+              <Page isRef="8" />
+              <Parent isRef="113" />
+              <Text>Período contractual pendiente de pago:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+            </Text64>
+            <Text66 Ref="117" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.4,1.02,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>1d7f179925e540b3992113550895d0f0</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text66</Name>
+              <Page isRef="8" />
+              <Parent isRef="113" />
+              <Text>{prReporteSuspensionesAFinanciera.PeriodoContraactualPendientePago}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </Text66>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <Filters isList="true" count="0" />
+          <Guid>37cb3e4006d942dd86cff1cedfd250b5</Guid>
+          <Name>DataBand7</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+          <Sort isList="true" count="0" />
+        </DataBand7>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>401b0ad72532450ebcf239df2500b144</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>35.6</PageHeight>
+      <PageWidth>21.6</PageWidth>
+      <PaperSize>Legal</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="118" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="119" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Detalle Plazo Contractual</ReportAlias>
+  <ReportChanged>9/20/2022 10:25:07 AM</ReportChanged>
+  <ReportCreated>3/24/2022 6:00:20 PM</ReportCreated>
+  <ReportFile>C:\Repositorio\SICOP-Web\Covialgt\Covialgt\Reportes\rptReporteSuspencionesEstimacion.mrt</ReportFile>
+  <ReportGuid>462265017eb74c5dae5db785806a31f4</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2012.1.1300</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

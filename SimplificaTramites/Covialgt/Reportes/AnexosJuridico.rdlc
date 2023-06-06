@@ -1,0 +1,1839 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="CovialReportes">
+      <rd:DataSourceID>4a73a376-23f8-4a74-a5fb-90108e0b2a79</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>0.5in</RightMargin>
+  <LeftMargin>0.5in</LeftMargin>
+  <PageHeader>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="textbox2">
+        <rd:DefaultName>textbox2</rd:DefaultName>
+        <CanShrink>true</CanShrink>
+        <Top>0.125in</Top>
+        <Width>10.47619cm</Width>
+        <Style>
+          <FontSize>7pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3.49206cm</Left>
+        <Height>0.31746cm</Height>
+        <Value>MINISTERIO DE COMUNICACIONES, INFRAESTRUCTURA Y VIVIENDA</Value>
+      </Textbox>
+      <Textbox Name="textbox5">
+        <CanShrink>true</CanShrink>
+        <Top>0.25in</Top>
+        <Width>10.47619cm</Width>
+        <Style>
+          <FontSize>7pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3.49206cm</Left>
+        <Height>0.31746cm</Height>
+        <Value>UNIDAD EJECUTORA DE CONSERVACION VIAL</Value>
+      </Textbox>
+      <Image Name="image1">
+        <Sizing>Fit</Sizing>
+        <Top>0.125in</Top>
+        <Width>1in</Width>
+        <MIMEType>image/png</MIMEType>
+        <Source>Embedded</Source>
+        <Style />
+        <ZIndex>1</ZIndex>
+        <Left>0.125in</Left>
+        <Height>0.5in</Height>
+        <Value>covial</Value>
+      </Image>
+      <Line Name="line1">
+        <Top>1.5873cm</Top>
+        <Width>8.25in</Width>
+        <Style>
+          <BorderColor>
+            <Default>Silver</Default>
+          </BorderColor>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <Left>1.375in</Left>
+        <Height>0cm</Height>
+      </Line>
+    </ReportItems>
+    <Height>0.75in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <BottomMargin>0.5cm</BottomMargin>
+  <rd:ReportID>a6c4f70b-9b9e-4318-a4c6-1d076978453c</rd:ReportID>
+  <EmbeddedImages>
+    <EmbeddedImage Name="covial">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <PageWidth>11in</PageWidth>
+  <DataSets>
+    <DataSet Name="dsAnexos_Empresa">
+      <Fields>
+        <Field Name="Representante">
+          <DataField>Representante</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Nombre">
+          <DataField>Nombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DireccionPrincipal">
+          <DataField>DireccionPrincipal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TelefonosPrincipales">
+          <DataField>TelefonosPrincipales</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Departamento">
+          <DataField>Departamento</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EmpresaNIT">
+          <DataField>EmpresaNIT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AnioID">
+          <DataField>AnioID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProyectoCodigo">
+          <DataField>ProyectoCodigo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProyectoDescripcion">
+          <DataField>ProyectoDescripcion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FechaInicioFisico">
+          <DataField>FechaInicioFisico</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="FechaFinalOriginal">
+          <DataField>FechaFinalOriginal</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="SupervisoraAnioID">
+          <DataField>SupervisoraAnioID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProyectoSupervisionCodigo">
+          <DataField>ProyectoSupervisionCodigo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>CovialReportes</DataSourceName>
+        <CommandText>SELECT     tblEmpresas.Representante, tblEmpresas.Nombre, tblEmpresas.DireccionPrincipal, tblEmpresas.TelefonosPrincipales, tblEmpresas.Departamento, 
+                      tblEmpresas.EmpresaNIT, tblProyectos.AnioID, tblProyectos.ProyectoCodigo, tblProyectos.ProyectoDescripcion, tblProyectos.FechaInicioFisico, 
+                      tblProyectos.FechaFinalOriginal, tblProyectos.SupervisoraAnioID, tblProyectos.ProyectoSupervisionCodigo
+FROM         tblProyectos INNER JOIN
+                      tblEmpresas ON tblProyectos.EmpresaNIT = tblEmpresas.EmpresaNIT</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsAnexos</rd:DataSetName>
+        <rd:TableName>Empresa</rd:TableName>
+        <rd:TableAdapterName>EmpresaTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsAnexos_Tramos">
+      <Fields>
+        <Field Name="RutaCode">
+          <DataField>RutaCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TramoDesc">
+          <DataField>TramoDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TramoLong">
+          <DataField>TramoLong</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="DepartamentoNombre">
+          <DataField>DepartamentoNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SuperficieClaseNombre">
+          <DataField>SuperficieClaseNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tipo">
+          <DataField>Tipo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>CovialReportes</DataSourceName>
+        <CommandText>SELECT     tblTramos.RutaCode, tblTramos.TramoDesc, tblTramos.TramoLong, tblCatDepartamentos.DepartamentoNombre, 
+                      tblCatSuperficieClases.SuperficieClaseNombre
+FROM         tblProyectos INNER JOIN
+                      tblProyectosTramosBitacora ON tblProyectos.AnioID = tblProyectosTramosBitacora.AnioID AND 
+                      tblProyectos.ProyectoCodigo = tblProyectosTramosBitacora.ProyectoCodigo INNER JOIN
+                      tblTramos ON tblProyectosTramosBitacora.TramoID = tblTramos.TramoID INNER JOIN
+                      tblCatSuperficieClases ON tblTramos.SuperficieClaseID = tblCatSuperficieClases.SuperficieClaseID INNER JOIN
+                      tblCatDepartamentos ON tblTramos.DepartamentoID = tblCatDepartamentos.DepartamentoID</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsAnexos</rd:DataSetName>
+        <rd:TableName>Tramos</rd:TableName>
+        <rd:TableAdapterName>TramosTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsAnexos_Alcance">
+      <Fields>
+        <Field Name="AlcanceDesc">
+          <DataField>AlcanceDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>CovialReportes</DataSourceName>
+        <CommandText>SELECT     tblAlcances.AlcanceDesc
+FROM         tblProyectos INNER JOIN
+                      tblAlcances ON tblProyectos.AnioID = tblAlcances.AnioID AND tblProyectos.ProyectoCodigo = tblAlcances.ProyectoCodigo</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsAnexos</rd:DataSetName>
+        <rd:TableName>Alcance</rd:TableName>
+        <rd:TableAdapterName>AlcanceTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsAnexos_ProyectosSupervision">
+      <Fields>
+        <Field Name="AnioID">
+          <DataField>AnioID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProyectoCodigo">
+          <DataField>ProyectoCodigo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProyectoDescripcion">
+          <DataField>ProyectoDescripcion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>CovialReportes</DataSourceName>
+        <CommandText>SELECT     tblProyectos_1.AnioID, tblProyectos_1.ProyectoCodigo, tblProyectos_1.ProyectoDescripcion
+FROM         tblProyectos INNER JOIN
+                      tblProyectos AS tblProyectos_1 ON tblProyectos.AnioID = tblProyectos_1.SupervisoraAnioID AND 
+                      tblProyectos.ProyectoCodigo = tblProyectos_1.ProyectoSupervisionCodigo</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsAnexos</rd:DataSetName>
+        <rd:TableName>ProyectosSupervision</rd:TableName>
+        <rd:TableAdapterName>ProyectosSupervisionTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsAnexos_ComponentesRenglones">
+      <Fields>
+        <Field Name="RenglonCodCOVIAL">
+          <DataField>RenglonCodCOVIAL</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProyectoRenglonNombre">
+          <DataField>ProyectoRenglonNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RenglonUni">
+          <DataField>RenglonUni</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RenglonPrecioPlan">
+          <DataField>RenglonPrecioPlan</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="RenglonPrecioUnitario">
+          <DataField>RenglonPrecioUnitario</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="RenglonCantidad">
+          <DataField>RenglonCantidad</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="SubTotal">
+          <DataField>SubTotal</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="SubTotalCont">
+          <DataField>SubTotalCont</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="SubTotalPlan">
+          <DataField>SubTotalPlan</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ComponenteDesc">
+          <DataField>ComponenteDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Peones">
+          <DataField>Peones</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>CovialReportes</DataSourceName>
+        <CommandText>SELECT     tblProyectosRenglones.RenglonCodCOVIAL, tblProyectosRenglones.ProyectoRenglonNombre, tblRenglones.RenglonUni, 
+                      tblComponentesRenglones.RenglonPrecioPlan, tblComponentesRenglones.RenglonPrecioUnitario, tblCantidades.RenglonCantidad, 
+                      ISNULL(tblComponentesRenglones.RenglonPrecioUnitario * tblCantidades.RenglonCantidad, 0) AS SubTotalCont, 
+                      ISNULL(tblComponentesRenglones.RenglonPrecioPlan * tblCantidades.RenglonCantidad, 0) AS SubTotalPlan, tblComponentes.ComponenteDesc
+FROM         tblProyectos INNER JOIN
+                      tblProyectosRenglones ON tblProyectos.AnioID = tblProyectosRenglones.AnioID AND 
+                      tblProyectos.ProyectoCodigo = tblProyectosRenglones.ProyectoCodigo INNER JOIN
+                      tblComponentesRenglones ON tblProyectosRenglones.RenglonID = tblComponentesRenglones.RenglonID AND 
+                      tblProyectosRenglones.AnioID = tblComponentesRenglones.AnioID AND 
+                      tblProyectosRenglones.ProyectoCodigo = tblComponentesRenglones.ProyectoCodigo INNER JOIN
+                      tblCantidades ON tblComponentesRenglones.RenglonID = tblCantidades.RenglonID AND 
+                      tblComponentesRenglones.ComponenteCorrel = tblCantidades.ComponenteCorrel AND tblComponentesRenglones.AnioID = tblCantidades.AnioID AND 
+                      tblComponentesRenglones.ProyectoCodigo = tblCantidades.ProyectoCodigo INNER JOIN
+                      tblRenglones ON tblProyectosRenglones.RenglonID = tblRenglones.RenglonID INNER JOIN
+                      tblComponentes ON tblProyectos.AnioID = tblComponentes.AnioID AND tblProyectos.ProyectoCodigo = tblComponentes.ProyectoCodigo AND 
+                      tblComponentesRenglones.AnioID = tblComponentes.AnioID AND tblComponentesRenglones.ProyectoCodigo = tblComponentes.ProyectoCodigo AND 
+                      tblComponentesRenglones.ComponenteCorrel = tblComponentes.ComponenteCorrel</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsAnexos</rd:DataSetName>
+        <rd:TableName>ComponentesRenglones</rd:TableName>
+        <rd:TableAdapterName>ComponentesRenglonesTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsAnexos_Proyectos">
+      <Fields>
+        <Field Name="AnioID">
+          <DataField>AnioID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProyectoCodigo">
+          <DataField>ProyectoCodigo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProyectoDescripcion">
+          <DataField>ProyectoDescripcion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FechaInicioFisico">
+          <DataField>FechaInicioFisico</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="FechaFinalOriginal">
+          <DataField>FechaFinalOriginal</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="SupervisoraAnioID">
+          <DataField>SupervisoraAnioID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProyectoSupervisionCodigo">
+          <DataField>ProyectoSupervisionCodigo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ContratoCodigo">
+          <DataField>ContratoCodigo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProgramaCodigo">
+          <DataField>ProgramaCodigo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ResponsableProyecto">
+          <DataField>ResponsableProyecto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TelefonoFijo">
+          <DataField>TelefonoFijo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Supervisor">
+          <DataField>Supervisor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TelefonosPrincipales">
+          <DataField>TelefonosPrincipales</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Regional">
+          <DataField>Regional</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Telefonos">
+          <DataField>Telefonos</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>CovialReportes</DataSourceName>
+        <CommandText>SELECT     AnioID, ProyectoCodigo, ProyectoDescripcion, RTRIM(LTRIM(ProgramaCodigo)) AS ProgramaCodigo, FechaInicioFisico, FechaFinalOriginal, 
+                      SupervisoraAnioID, ProyectoSupervisionCodigo, ContratoCodigo, ResponsableProyecto, TelefonoFijo
+FROM         tblProyectos</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsAnexos</rd:DataSetName>
+        <rd:TableName>Proyectos</rd:TableName>
+        <rd:TableAdapterName>ProyectosTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Code>    Public Function ObtenerTiempo(ByVal date1 As Date, ByVal date2 As Date) As String
+
+        Dim months As Integer = DateDiff("m", date1, date2)
+
+        Dim days As Integer = DateDiff("d", date1, date2)
+
+        Dim tempdate As Date = DateAdd("m", DateDiff("m", date1, date2), date1)
+
+        Return " " &amp; DateDiff("m", date1, date2) &amp; " meses " &amp; math.abs(DateDiff("d", date2,  tempdate))  &amp; " dias"
+
+    End Function
+
+
+    Public Function ObtenerTiempoDecimales(ByVal date1 As Date, ByVal date2 As Date) As Double
+
+        Dim months As Integer = DateDiff("m", date1, date2)
+
+        Dim days As Integer = DateDiff("d", date1, date2)
+
+        Dim tempdate As Date = DateAdd("m", DateDiff("m", date1, date2), date1)
+
+        Return  DateDiff("m", date1, date2) + (math.abs(DateDiff("d", date2,  tempdate))  / 30)
+
+    End Function
+</Code>
+  <Width>9.875in</Width>
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox23">
+        <Visibility>
+          <Hidden>true</Hidden>
+        </Visibility>
+        <Top>4.625in</Top>
+        <Width>9.75in</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>14</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>="Empresa: "+First(Fields!Nombre.Value, "dsAnexos_Empresa").ToString +" - Representante: "+First(Fields!Representante.Value, "dsAnexos_Empresa").ToString+" - Telefonos: "+First(Fields!TelefonosPrincipales.Value, "dsAnexos_Empresa").ToString</Value>
+      </Textbox>
+      <Textbox Name="textbox22">
+        <Visibility>
+          <Hidden>=IIF(First(Fields!ProgramaCodigo.Value, "dsAnexos_Proyectos")="L" AND First(Fields!Peones.Value, "dsAnexos_ComponentesRenglones")&gt;=12,false,true)</Hidden>
+        </Visibility>
+        <Top>4.25in</Top>
+        <Width>6.5in</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>13</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.31746cm</Left>
+        <Height>0.375in</Height>
+        <Value>="NOTA: El presente proyecto debe contar con 2 frentes de trabajo cada uno con 1 encargado y 5 peones, en forma permanente, se deberá contar con un mínimo de "+ Int((First(Fields!Peones.Value,"dsAnexos_ComponentesRenglones")/3)).ToString +" chapeadoras en las labores de limpieza"</Value>
+      </Textbox>
+      <Textbox Name="textbox21">
+        <Visibility>
+          <Hidden>true</Hidden>
+        </Visibility>
+        <Top>5.125in</Top>
+        <Width>9.75in</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>12</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Value>="Regional: "+First(Fields!Regional.Value , "dsAnexos_Proyectos").ToString+" - Telefonos: "+First(Fields!Telefonos.Value, "dsAnexos_Proyectos").ToString</Value>
+      </Textbox>
+      <Textbox Name="textbox20">
+        <Visibility>
+          <Hidden>true</Hidden>
+        </Visibility>
+        <Top>4.875in</Top>
+        <Width>9.75in</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>11</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>="Supervisor: "+First(Fields!Supervisor.Value, "dsAnexos_Proyectos").ToString+" - Telefonos: "+First(Fields!TelefonosPrincipales.Value, "dsAnexos_Proyectos").ToString</Value>
+      </Textbox>
+      <Textbox Name="textbox19">
+        <Visibility>
+          <Hidden>=IIF(First(Fields!ProgramaCodigo.Value, "dsAnexos_Proyectos")="L" AND First(Fields!Peones.Value, "dsAnexos_ComponentesRenglones")&lt;=11,false,true)</Hidden>
+        </Visibility>
+        <Top>3.875in</Top>
+        <Width>6.5in</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>10</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.375in</Height>
+        <Value>="NOTA: El presente proyecto debe contar con 1 encargado y "+(First(Fields!Peones.Value,"dsAnexos_ComponentesRenglones")-1).ToString +" peones, en forma permanente, se deberá contar con un mínimo de "+ Int((First(Fields!Peones.Value,"dsAnexos_ComponentesRenglones")/3)).ToString +" chapeadoras en las labores de limpieza"</Value>
+      </Textbox>
+      <Textbox Name="textbox17">
+        <rd:DefaultName>textbox17</rd:DefaultName>
+        <Top>0.95238cm</Top>
+        <Width>3.80952cm</Width>
+        <Style>
+          <Color>DimGray</Color>
+          <FontSize>11pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>9</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.31746cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>="ANEXO ACTUAL"</Value>
+      </Textbox>
+      <Textbox Name="textbox7">
+        <rd:DefaultName>textbox7</rd:DefaultName>
+        <Visibility>
+          <Hidden>=IIF(First(Fields!ProgramaCodigo.Value, "dsAnexos_Proyectos")="S",false,true)</Hidden>
+        </Visibility>
+        <Top>3.25in</Top>
+        <Width>4in</Width>
+        <Style>
+          <Color>White</Color>
+          <FontSize>6pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>8</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>="Nota: Se incluye dentro del costo de personal, el equipo necesario para desempeño de su labor."</Value>
+      </Textbox>
+      <Table Name="table3">
+        <ZIndex>7</ZIndex>
+        <DataSetName>dsAnexos_ComponentesRenglones</DataSetName>
+        <Top>2in</Top>
+        <TableGroups>
+          <TableGroup>
+            <Grouping Name="table3_Group1">
+              <GroupExpressions>
+                <GroupExpression>=Fields!ComponenteDesc.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+            <Header>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ColSpan>8</ColSpan>
+                      <ReportItems>
+                        <Textbox Name="ComponenteDesc">
+                          <rd:DefaultName>ComponenteDesc</rd:DefaultName>
+                          <Style>
+                            <FontWeight>700</FontWeight>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>17</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=UCASE(Fields!ComponenteDesc.Value)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.25in</Height>
+                </TableRow>
+              </TableRows>
+            </Header>
+            <Footer>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ColSpan>5</ColSpan>
+                      <ReportItems>
+                        <Textbox Name="textbox40">
+                          <rd:DefaultName>textbox40</rd:DefaultName>
+                          <Style>
+                            <FontWeight>700</FontWeight>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>11</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>="TOTALES " &amp; UCASE(Fields!ComponenteDesc.Value) &amp; ": "</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="SubTotalPlan_2">
+                          <rd:DefaultName>SubTotalPlan_2</rd:DefaultName>
+                          <Style>
+                            <FontWeight>700</FontWeight>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>10</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=FormatCurrency(Sum(Fields!SubTotalPlan.Value),2)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox44">
+                          <rd:DefaultName>textbox44</rd:DefaultName>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>9</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="SubTotalCont_2">
+                          <rd:DefaultName>SubTotalCont_2</rd:DefaultName>
+                          <Style>
+                            <FontWeight>700</FontWeight>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>8</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=FormatCurrency(Sum(Fields!SubTotalCont.Value),2)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.25in</Height>
+                </TableRow>
+              </TableRows>
+            </Footer>
+          </TableGroup>
+        </TableGroups>
+        <Width>9.735in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="RenglonCodCOVIAL">
+                      <rd:DefaultName>RenglonCodCOVIAL</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>7</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!RenglonCodCOVIAL.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ProyectoRenglonNombre">
+                      <rd:DefaultName>ProyectoRenglonNombre</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>6</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ProyectoRenglonNombre.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="RenglonUni">
+                      <rd:DefaultName>RenglonUni</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!RenglonUni.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="RenglonCantidad">
+                      <rd:DefaultName>RenglonCantidad</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatNumber(Fields!RenglonCantidad.Value,2)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="RenglonPrecioPlan">
+                      <rd:DefaultName>RenglonPrecioPlan</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Fields!RenglonPrecioPlan.Value,2)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="SubTotalPlan">
+                      <rd:DefaultName>SubTotalPlan</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Fields!SubTotalPlan.Value,2)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="RenglonPrecioUnitario">
+                      <rd:DefaultName>RenglonPrecioUnitario</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Fields!RenglonPrecioUnitario.Value,2)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="SubTotalCont">
+                      <rd:DefaultName>SubTotalCont</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Fields!SubTotalCont.Value,2)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.2in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <FontSize>8pt</FontSize>
+        </Style>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox36">
+                      <Style>
+                        <BackgroundColor>LightGreen</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>25</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Renglón</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox37">
+                      <Style>
+                        <BackgroundColor>LightGreen</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>24</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Renglón Descripción</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox38">
+                      <Style>
+                        <BackgroundColor>LightGreen</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>23</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>U</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox39">
+                      <Style>
+                        <BackgroundColor>LightGreen</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>22</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Cantidad</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox41">
+                      <Style>
+                        <BackgroundColor>LightGreen</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>21</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Precio</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox42">
+                      <Style>
+                        <BackgroundColor>LightGreen</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>20</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Costo</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox43">
+                      <Style>
+                        <BackgroundColor>LightGreen</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>19</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Precio Cont.</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox45">
+                      <Style>
+                        <BackgroundColor>LightGreen</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>18</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>SubTotal Cont.</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>3in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.75in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.625in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Visibility>
+              <Hidden>true</Hidden>
+            </Visibility>
+            <Width>0.88in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Visibility>
+              <Hidden>true</Hidden>
+            </Visibility>
+            <Width>1.3in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.88in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.3in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>1.15in</Height>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>2</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox25">
+                      <rd:DefaultName>textbox25</rd:DefaultName>
+                      <Style>
+                        <FontSize>6pt</FontSize>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>16</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ColSpan>3</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox27">
+                      <rd:DefaultName>textbox27</rd:DefaultName>
+                      <Style>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>15</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>="TOTALES PROYECTO: "</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="SubTotalPlan_1">
+                      <rd:DefaultName>SubTotalPlan_1</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>LightGreen</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>14</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Sum(Fields!SubTotalPlan.Value),2)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox32">
+                      <rd:DefaultName>textbox32</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>13</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="SubTotalCont_1">
+                      <rd:DefaultName>SubTotalCont_1</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>LightGreen</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>12</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Sum(Fields!SubTotalCont.Value),2)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.2in</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+      </Table>
+      <Textbox Name="ProyectoCodigo_1">
+        <rd:DefaultName>ProyectoCodigo_1</rd:DefaultName>
+        <Top>3.375in</Top>
+        <Width>6.125in</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.2in</Height>
+        <Value>="Proyecto: " &amp; First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos") &amp; "-" &amp; First(Fields!AnioID.Value, "dsAnexos_Proyectos")</Value>
+      </Textbox>
+      <Table Name="table2">
+        <ZIndex>5</ZIndex>
+        <DataSetName>dsAnexos_ProyectosSupervision</DataSetName>
+        <Visibility>
+          <Hidden>true</Hidden>
+        </Visibility>
+        <Top>1.625in</Top>
+        <Width>9.75in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="AnioID">
+                      <rd:DefaultName>AnioID</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!AnioID.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ProyectoCodigo">
+                      <rd:DefaultName>ProyectoCodigo</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ProyectoCodigo.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ProyectoDescripcion">
+                      <rd:DefaultName>ProyectoDescripcion</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ProyectoDescripcion.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.2in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <FontSize>8pt</FontSize>
+        </Style>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox14">
+                      <rd:DefaultName>textbox14</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>LightGreen</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Plan del proyecto</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox15">
+                      <rd:DefaultName>textbox15</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>LightGreen</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Proyecto a supervisar</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox12">
+                      <rd:DefaultName>textbox12</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>LightGreen</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Descripción</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.2in</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>2in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.875in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>5.875in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.4in</Height>
+      </Table>
+      <Textbox Name="AlcanceDesc">
+        <rd:DefaultName>AlcanceDesc</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!AlcanceDesc.Value, "dsAnexos_Alcance") is nothing,True,False)</Hidden>
+        </Visibility>
+        <Top>1.375in</Top>
+        <Width>9.75in</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>4</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=UCASE("Alcance del proyecto: " &amp; First(Fields!AlcanceDesc.Value, "dsAnexos_Alcance"))</Value>
+      </Textbox>
+      <Table Name="table1">
+        <ZIndex>3</ZIndex>
+        <DataSetName>dsAnexos_Tramos</DataSetName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!TramoDesc.Value, "dsAnexos_Tramos") is nothing,True,False)</Hidden>
+        </Visibility>
+        <Top>0.75in</Top>
+        <Width>9.75in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="RutaCode">
+                      <rd:DefaultName>RutaCode</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!RutaCode.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TramoDesc">
+                      <rd:DefaultName>TramoDesc</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!TramoDesc.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="DepartamentoNombre">
+                      <rd:DefaultName>DepartamentoNombre</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!DepartamentoNombre.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TramoLong">
+                      <rd:DefaultName>TramoLong</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=IIF(First(Fields!ProgramaCodigo.Value, "dsAnexos_Proyectos")="P" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,Fields!Tipo.Value,
+IIF(First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos")="S-077" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,Fields!Tipo.Value,
+IIF(First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos")="S-078" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,Fields!Tipo.Value,
+IIF(First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos")="S-079" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,Fields!Tipo.Value,
+IIF(First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos")="S-080" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,Fields!Tipo.Value,
+IIF(First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos")="S-081" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,Fields!Tipo.Value,
+IIF(First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos")="S-082" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,Fields!Tipo.Value,
+Fields!TramoLong.Value &amp; " Kms.")))))))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.2in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <FontSize>8pt</FontSize>
+        </Style>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox1">
+                      <rd:DefaultName>textbox1</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>LightGreen</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>11</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Ruta</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>LightGreen</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>10</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Tramo</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>LightGreen</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>9</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Departamento</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox6">
+                      <rd:DefaultName>textbox6</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>LightGreen</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>8</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=IIF(First(Fields!ProgramaCodigo.Value, "dsAnexos_Proyectos")="P" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,"Tipo",
+IIF(First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos")="S-077" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,"Tipo",
+IIF(First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos")="S-078" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,"Tipo",
+IIF(First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos")="S-079" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,"Tipo",
+IIF(First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos")="S-080" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,"Tipo",
+IIF(First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos")="S-081" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,"Tipo",
+IIF(First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos")="S-082" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,"Tipo","Longitud")))))))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.2in</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>1.5in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>6in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.375in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.875in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.6in</Height>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox9">
+                      <rd:DefaultName>textbox9</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>7</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <rd:DefaultName>textbox10</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>6</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox11">
+                      <rd:DefaultName>textbox11</rd:DefaultName>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TramoLong_1">
+                      <rd:DefaultName>TramoLong_1</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>LightGreen</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=IIF(First(Fields!ProgramaCodigo.Value, "dsAnexos_Proyectos")="P" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,"",
+IIF(First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos")="S-077" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,"",
+IIF(First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos")="S-078" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,"",
+IIF(First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos")="S-079" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,"",
+IIF(First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos")="S-080" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,"",
+IIF(First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos")="S-081" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,"",
+IIF(First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos")="S-082" and First(Fields!AnioID.Value, "dsAnexos_Proyectos")=2013,"",
+Sum(Fields!TramoLong.Value) &amp; " Kms.")))))))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.2in</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+      </Table>
+      <Textbox Name="textbox8">
+        <CanShrink>true</CanShrink>
+        <Width>13.96825cm</Width>
+        <Style>
+          <Color>DimGray</Color>
+          <FontSize>12pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.31746cm</Left>
+        <Height>0.65873cm</Height>
+        <Value>= "ANEXOS PROYECTO: " &amp; First(Fields!ProyectoCodigo.Value, "dsAnexos_Proyectos") &amp; "-" &amp; First(Fields!AnioID.Value, "dsAnexos_Proyectos")</Value>
+      </Textbox>
+      <Textbox Name="textbox13">
+        <Visibility>
+          <Hidden>=true 'IIF(First(Fields!ProgramaCodigo.Value, "dsAnexos_Proyectos")="S",false,true)</Hidden>
+        </Visibility>
+        <Top>3.5in</Top>
+        <Width>3in</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>6.5in</Left>
+        <Height>0.2in</Height>
+        <Value>="Pago mensual: (Incluye IVA) " &amp; FormatCurrency(Round(Sum(Fields!SubTotalPlan.Value, "dsAnexos_ComponentesRenglones"),2) / Code.ObtenerTiempoDecimales(DateValue(First(Fields!FechaInicioFisico.Value, "dsAnexos_Proyectos")),DateValue(First(Fields!FechaFinalOriginal.Value, "dsAnexos_Proyectos"))))</Value>
+      </Textbox>
+      <Textbox Name="textbox18">
+        <Visibility>
+          <Hidden>=IIF(First(Fields!ProgramaCodigo.Value, "dsAnexos_Proyectos")="S",false,true)</Hidden>
+        </Visibility>
+        <Top>3.625in</Top>
+        <Width>6.125in</Width>
+        <Style>
+          <Color>White</Color>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.2in</Height>
+        <Value>="Responsable: " &amp; First(Fields!ResponsableProyecto.Value, "dsAnexos_Proyectos") </Value>
+      </Textbox>
+    </ReportItems>
+    <Height>5.375in</Height>
+  </Body>
+  <Language>es-GT</Language>
+  <PageFooter>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Line Name="line2">
+        <Top>0.125in</Top>
+        <Width>-9.625in</Width>
+        <Style>
+          <BorderColor>
+            <Default>Silver</Default>
+          </BorderColor>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <Left>9.75in</Left>
+        <Height>0in</Height>
+      </Line>
+      <Textbox Name="textbox16">
+        <Top>0.63492cm</Top>
+        <Width>3.12235cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>21.5873cm</Left>
+        <Value>="Página: " &amp; Globals!PageNumber &amp; " de " &amp; Globals!TotalPages</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.4052in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <PageHeight>8.5in</PageHeight>
+</Report>

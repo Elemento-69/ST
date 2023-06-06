@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString>Data Source=rer-laptop;Initial Catalog=aspnetdb;uid=sa;pwd=sqluser</ConnectString>
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>130cc67f-36ef-4c23-a964-1f258db900cf</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Table Name="table1">
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox7">
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <ZIndex>5</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox8">
+                      <rd:DefaultName>textbox8</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox9">
+                      <rd:DefaultName>textbox9</rd:DefaultName>
+                      <ZIndex>3</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+        <DataSetName>dsejemplo_prObtenertblProyectos</DataSetName>
+        <Top>1.25cm</Top>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="AnioID">
+                      <rd:DefaultName>AnioID</rd:DefaultName>
+                      <ZIndex>2</ZIndex>
+                      <Style>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!AnioID.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ProyectoCodigo">
+                      <rd:DefaultName>ProyectoCodigo</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ProyectoCodigo.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox6">
+                      <rd:DefaultName>textbox6</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox1">
+                      <rd:DefaultName>textbox1</rd:DefaultName>
+                      <ZIndex>8</ZIndex>
+                      <Style>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Anio ID</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <ZIndex>7</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Proyecto Codigo</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <ZIndex>6</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>5.33333cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>5.33333cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>5.33333cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>1.90476cm</Height>
+      </Table>
+    </ReportItems>
+    <Height>5cm</Height>
+  </Body>
+  <rd:ReportID>58d86021-af63-4c7e-bb88-45c9372ac385</rd:ReportID>
+  <LeftMargin>2.5cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="dsejemplo_prObtenertblProyectos">
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsejemplo</rd:DataSetName>
+        <rd:TableName>prObtenertblProyectos</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="AnioID">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AnioID</DataField>
+        </Field>
+        <Field Name="ProgramaCodigo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ProgramaCodigo</DataField>
+        </Field>
+        <Field Name="ProyectoCodigo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ProyectoCodigo</DataField>
+        </Field>
+        <Field Name="ProyectoDescripcion">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ProyectoDescripcion</DataField>
+        </Field>
+        <Field Name="Plazo">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>Plazo</DataField>
+        </Field>
+        <Field Name="ProyectoMontoPresupuesto">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ProyectoMontoPresupuesto</DataField>
+        </Field>
+        <Field Name="FechaInicioFisico">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>FechaInicioFisico</DataField>
+        </Field>
+        <Field Name="fechaFinalOriginal">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>fechaFinalOriginal</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>16cm</Width>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <Language>es-ES</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

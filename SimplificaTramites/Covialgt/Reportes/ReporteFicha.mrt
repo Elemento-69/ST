@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <CnxFichasTecnicas Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>CnxFichasTecnicas</Alias>
+        <ConnectionString>Integrated Security=False;Data Source=192.168.1.250\covialapp;Initial Catalog=z_PRODUCCION_sicopDB;Password=Covial2021@***;User ID=jcavero</ConnectionString>
+        <Name>CnxFichasTecnicas</Name>
+      </CnxFichasTecnicas>
+    </Databases>
+    <DataSources isList="true" count="2">
+      <FdInformacionGeneral Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>FdInformacionGeneral</Alias>
+        <Columns isList="true" count="38">
+          <value>ProyectoCodigo,System.String</value>
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoDescripcion,System.String</value>
+          <value>ProyectoEstatusID,System.Int32</value>
+          <value>Plazo,System.Int32</value>
+          <value>ProyectoMontoPresupuesto,System.Decimal</value>
+          <value>ProyectoNOG,System.String</value>
+          <value>ProyectoSupervisionCodigo,System.String</value>
+          <value>SupervisoraAnioID,System.Int32</value>
+          <value>ProgramaCodigo,System.String</value>
+          <value>ContratoCodigo,System.String</value>
+          <value>EmpresaNIT,System.String</value>
+          <value>ResponsableProyecto,System.String</value>
+          <value>DireccionProyecto,System.String</value>
+          <value>TelefonoFijo,System.String</value>
+          <value>TelefonoMovil,System.String</value>
+          <value>FechaInicioFisico,System.DateTime</value>
+          <value>FechaFinalOriginal,System.DateTime</value>
+          <value>FechaFinaModificado,System.DateTime</value>
+          <value>UserName,System.String</value>
+          <value>DateModify,System.DateTime</value>
+          <value>ProyectoEstatusDesc,System.String</value>
+          <value>Expr1,System.String</value>
+          <value>Nombre,System.String</value>
+          <value>Representante,System.String</value>
+          <value>TelefonosPrincipales,System.String</value>
+          <value>CorreoE,System.String</value>
+          <value>DireccionPrincipal,System.String</value>
+          <value>FechaContrato,System.DateTime</value>
+          <value>AvanceFisico,System.Decimal</value>
+          <value>AvanceFinanciero,System.Decimal</value>
+          <value>MontoModificado,System.Decimal</value>
+          <value>MontoOriginal,System.Decimal</value>
+          <value>ProyectoCodigoFinanciero,System.String</value>
+          <value>CDPctoOriginal,System.String</value>
+          <value>Regional,System.String</value>
+          <value>UsuarioID,System.String</value>
+          <value>Telefonos,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>FdInformacionGeneral</Name>
+        <NameInSource>CnxFichasTecnicas</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>exec prObtenerUntblProyectosGerencialV1 2020, 'B-006'</SqlCommand>
+      </FdInformacionGeneral>
+      <FdMostrar Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>FdMostrar</Alias>
+        <Columns isList="true" count="22">
+          <value>MostrarCaratula,System.Boolean</value>
+          <value>PorcentajesAvance,System.Boolean</value>
+          <value>InformacionSupervision,System.Boolean</value>
+          <value>InformacionContratista,System.Boolean</value>
+          <value>MostrarDatosContrato,System.Boolean</value>
+          <value>MostrarDatosRegional,System.Boolean</value>
+          <value>MostrarDatosSuperintendente,System.Boolean</value>
+          <value>GraficaAvanceFisico,System.Boolean</value>
+          <value>GraficaAvanceFinanciero,System.Boolean</value>
+          <value>MostrarTramos,System.Boolean</value>
+          <value>MostrarEstimaciones,System.Boolean</value>
+          <value>MostrarPagos,System.Boolean</value>
+          <value>MostrarSanciones,System.Boolean</value>
+          <value>MostrarEjecucion,System.Boolean</value>
+          <value>MostrarRenglones,System.Boolean</value>
+          <value>MostrarAnalitico,System.Boolean</value>
+          <value>MostrarResumenAnalitico,System.Boolean</value>
+          <value>MostrarDocCambio,System.Boolean</value>
+          <value>MostrarFotografiasEjecucion,System.Boolean</value>
+          <value>MostrarFotografiasAdministrativas,System.Boolean</value>
+          <value>MostrarComentarios,System.Boolean</value>
+          <value>Dirigido,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>FdMostrar</Name>
+        <NameInSource>CnxFichasTecnicas</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>exec prObtenerContenidosMostrarFichaTecnica 1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,'Jemimah'</SqlCommand>
+      </FdMostrar>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="5" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="0" />
+      <Conditions isList="true" count="0" />
+      <Guid>13ef4cf93007491da456562d8886496a</Guid>
+      <Margins>0.39,0.39,0.39,0.39</Margins>
+      <Name>Page1</Name>
+      <PageHeight>11</PageHeight>
+      <PageWidth>8.5</PageWidth>
+      <PaperSize>Letter</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="6" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="7" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>2/15/2022 12:15:55 PM</ReportChanged>
+  <ReportCreated>2/11/2022 3:10:41 PM</ReportCreated>
+  <ReportFile>C:\Github\SICOP-Web\Covialgt\Covialgt\Reportes\ReporteFicha.mrt</ReportFile>
+  <ReportGuid>6b7b2ba6d19e44c0b53af4a8da8ea05c</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Inches</ReportUnit>
+  <ReportVersion>2012.1.1300</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+        #endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

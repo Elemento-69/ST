@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer application="StiReport" version="1.0">
+  <Dictionary isKey="true" type="Dictionary" Ref="1">
+    <Databases count="1" isList="true">
+      <cnxdeclaracionrecepcion isKey="true" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" Ref="2">
+        <Name>cnxdeclaracionrecepcion</Name>
+        <Alias>cnxdeclaracionrecepcion</Alias>
+        <PromptUserNameAndPassword>False</PromptUserNameAndPassword>
+      </cnxdeclaracionrecepcion>
+    </Databases>
+    <DataSources count="1" isList="true">
+      <prObtenerDeclaracionJuradaRecepcion isKey="true" type="Stimulsoft.Report.Dictionary.StiSqlSource" Ref="3">
+        <Dictionary isRef="1"/>
+        <Name>prObtenerDeclaracionJuradaRecepcion</Name>
+        <Parameters count="2" isList="true">
+          <value>_x0040_Anio,,8,8</value>
+          <value>_x0040_Proyecto,,22,12</value>
+        </Parameters>
+        <Alias>prObtenerDeclaracionJuradaRecepcion</Alias>
+        <SqlCommand>execute prObtenerDeclaracionJuradaRecepcion @Anio,  @Proyecto</SqlCommand>
+        <NameInSource>cnxdeclaracionrecepcion</NameInSource>
+        <Columns count="19" isList="true">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>FechaDeclaracion,System.DateTime</value>
+          <value>FechaLetras,System.String</value>
+          <value>HoraRedaccion,System.String</value>
+          <value>Direccion,System.String</value>
+          <value>NombreNotario,System.String</value>
+          <value>NombreSupervisor,System.String</value>
+          <value>NoInforme,System.Int32</value>
+          <value>FechaInicio,System.DateTime</value>
+          <value>FechaFinal,System.DateTime</value>
+          <value>TiempoLectura,System.String</value>
+          <value>Empresa,System.Boolean</value>
+          <value>NombreDelegadoResidente,System.String</value>
+          <value>NombreEmpresa,System.String</value>
+          <value>UsuarioCreo,System.String</value>
+          <value>FechaCreo,System.DateTime</value>
+          <value>UsuarioModifico,System.String</value>
+          <value>FechaModifico,System.DateTime</value>
+        </Columns>
+      </prObtenerDeclaracionJuradaRecepcion>
+    </DataSources>
+    <Relations count="0" isList="true"/>
+    <Variables count="0" isList="true"/>
+    <Report isRef="0"/>
+  </Dictionary>
+  <Pages count="1" isList="true">
+    <Page1 isKey="true" type="Page" Ref="4">
+      <Name>Page1</Name>
+      <PageWidth>21.6</PageWidth>
+      <Brush>Transparent</Brush>
+      <PageHeight>35.6</PageHeight>
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Conditions count="0" isList="true"/>
+      <Watermark isKey="true" type="Stimulsoft.Report.Components.StiWatermark" Ref="5">
+        <Font>Arial,100,Regular,Point</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+      <Margins>1,1,1,1</Margins>
+      <Interaction isKey="true" type="Stimulsoft.Report.Components.StiInteraction" Ref="6">
+        <DrillDownParameter1 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="7"/>
+        <DrillDownParameter2 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="8"/>
+        <DrillDownParameter3 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="9"/>
+      </Interaction>
+      <Report isRef="0"/>
+      <Guid>0286bda83ebd4b59ad926cc0decf4f8f</Guid>
+      <Components count="3" isList="true">
+        <PageHeaderBand1 isKey="true" type="PageHeaderBand" Ref="10">
+          <Name>PageHeaderBand1</Name>
+          <Brush>Transparent</Brush>
+          <Border>None;Black;1;Solid;False;4;Black</Border>
+          <Conditions count="0" isList="true"/>
+          <Interaction isKey="true" type="Stimulsoft.Report.Components.StiInteraction" Ref="11">
+            <DrillDownParameter1 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="12"/>
+            <DrillDownParameter2 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="13"/>
+            <DrillDownParameter3 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="14"/>
+          </Interaction>
+          <MaxHeight>0</MaxHeight>
+          <MinHeight>0</MinHeight>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <Components count="1" isList="true">
+            <Text1 isKey="true" type="Text" Ref="15">
+              <Text>DECLARACION JURADA</Text>
+              <Name>Text1</Name>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Left>0</Left>
+              <Top>0.2</Top>
+              <Font>Arial,12,Regular,Point</Font>
+              <Brush>Transparent</Brush>
+              <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+              <Conditions count="0" isList="true"/>
+              <HorAlignment>Center</HorAlignment>
+              <VertAlignment>Center</VertAlignment>
+              <Margins>0,0,0,0</Margins>
+              <TextFormat isKey="true" type="GeneralFormat" Ref="16"/>
+              <Interaction isKey="true" type="Stimulsoft.Report.Components.StiInteraction" Ref="17">
+                <DrillDownParameter1 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="18"/>
+                <DrillDownParameter2 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="19"/>
+                <DrillDownParameter3 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="20"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>0,0.2000000000000004,19,0.6000000000000008</ClientRectangle>
+              <Parent isRef="10"/>
+              <Page isRef="4"/>
+            </Text1>
+          </Components>
+          <ClientRectangle>0,0.3999999999999999,19.6,2.4</ClientRectangle>
+        </PageHeaderBand1>
+        <PageFooterBand1 isKey="true" type="PageFooterBand" Ref="21">
+          <Name>PageFooterBand1</Name>
+          <Brush>Transparent</Brush>
+          <Border>None;Black;1;Solid;False;4;Black</Border>
+          <Conditions count="0" isList="true"/>
+          <Interaction isKey="true" type="Stimulsoft.Report.Components.StiInteraction" Ref="22">
+            <DrillDownParameter1 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="23"/>
+            <DrillDownParameter2 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="24"/>
+            <DrillDownParameter3 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="25"/>
+          </Interaction>
+          <MaxHeight>0</MaxHeight>
+          <MinHeight>0</MinHeight>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <Components count="0" isList="true"/>
+          <ClientRectangle>0,32.8,19.6,0.7999999999999972</ClientRectangle>
+        </PageFooterBand1>
+        <DataBand1 isKey="true" type="DataBand" Ref="26">
+          <Name>DataBand1</Name>
+          <Brush>Transparent</Brush>
+          <Border>None;Black;1;Solid;False;4;Black</Border>
+          <Conditions count="0" isList="true"/>
+          <СolumnDirection>AcrossThenDown</СolumnDirection>
+          <Filters count="0" isList="true"/>
+          <Sort count="0" isList="true"/>
+          <Interaction isKey="true" type="Stimulsoft.Report.Components.StiBandInteraction" Ref="27">
+            <DrillDownParameter1 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="28"/>
+            <DrillDownParameter2 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="29"/>
+            <DrillDownParameter3 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="30"/>
+          </Interaction>
+          <MaxHeight>0</MaxHeight>
+          <MinHeight>0</MinHeight>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <ClientRectangle>0,3.6000000000000005,19.6,4.200000000000004</ClientRectangle>
+          <FilterMode>And</FilterMode>
+          <Components count="2" isList="true">
+            <Text2 isKey="true" type="Text" Ref="31">
+              <Text>En la ciudad de Guatemala, siendo las {prObtenerDeclaracionJuradaRecepcion.HoraRedaccion} horas, del dia {prObtenerDeclaracionJuradaRecepcion.FechaLetras}, constituido en mi oficina profesional ubicada en {prObtenerDeclaracionJuradaRecepcion.Direccion}. Yo {prObtenerDeclaracionJuradaRecepcion.NombreNotario}, Notario/a, soy requerido por {IIF((prObtenerDeclaracionJuradaRecepcion.Empresa), prObtenerDeclaracionJuradaRecepcion.NombreDelegadoResidente, prObtenerDeclaracionJuradaRecepcion.NombreSupervisor)} persona de mi anterior conocimiento, en su calidad de {IIF((prObtenerDeclaracionJuradaRecepcion.Empresa), "DELEGADO RESIDENTE de la empresa supervisora "+ prObtenerDeclaracionJuradaRecepcion.NombreEmpresa + ", " + prObtenerDeclaracionJuradaRecepcion.ProyectoCodigo+"-"+prObtenerDeclaracionJuradaRecepcion.AnioID, "SUPERVISOR/A " + prObtenerDeclaracionJuradaRecepcion.ProyectoCodigo+"-"+prObtenerDeclaracionJuradaRecepcion.AnioID)} para hacer constar lo siguiente: PRIMERO: se le advierte al requirente sobre las penas de relativas al delito del perjurio, manifestando bajo juramento decir la verdad en lo que declare, SEGUNDO: El (La) requirente manifiesta lo siguiente: A) Que se compromete a continuar con la agilización, tramite, atención de asuntos administrativos y firma de documentos de cada uno de los proyectos a su cargo que así lo requieran, con el fin de poder finalizar el proceso de revisión del ultimo informe Financiero No. {prObtenerDeclaracionJuradaRecepcion.NoInforme} correspondiente al periodo del {Format("{0:dd-MM-yyyy}", prObtenerDeclaracionJuradaRecepcion.FechaInicio)} al {Format("{0:dd-MM-yyyy}", prObtenerDeclaracionJuradaRecepcion.FechaFinal)} del proyecto de Supervisión {prObtenerDeclaracionJuradaRecepcion.ProyectoCodigo}-{prObtenerDeclaracionJuradaRecepcion.AnioID} en el departamento de Visa de la Unidad Ejecutora de Conservación Vial, COVIAL;  B) Por lo descrito en el literal A), y para complementar el expediente de cobro de la Supervisora {prObtenerDeclaracionJuradaRecepcion.ProyectoCodigo}-{prObtenerDeclaracionJuradaRecepcion.AnioID}, adjuntamos los siguientes documentos: 1) fotocopia de la(s) acta(s) de Recepción; 2) fotocopia de las fianzas de saldos deudores. Dichos documentos deberán presentarse por cada proyecto supervisado a nuestro cargo. TERCERO: No habiendo mas que hacer constar se finaliza la presente acta a los {prObtenerDeclaracionJuradaRecepcion.TiempoLectura} después de su inicio, contenida en una hoja de papel bond tamaño oficio, y el requirente bien enterado de su contenido y efectos legales, la ratifica y firma con el infrascrito notario/a.</Text>
+              <Name>Text2</Name>
+              <TextBrush>[0:0:0]</TextBrush>
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Left>0</Left>
+              <Top>0.2</Top>
+              <Font>Arial,12,Regular,Point</Font>
+              <CanGrow>True</CanGrow>
+              <Brush>Transparent</Brush>
+              <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+              <Conditions count="0" isList="true"/>
+              <HorAlignment>Width</HorAlignment>
+              <VertAlignment>Center</VertAlignment>
+              <Margins>0,0,0,0</Margins>
+              <TextFormat isKey="true" type="GeneralFormat" Ref="32"/>
+              <Interaction isKey="true" type="Stimulsoft.Report.Components.StiInteraction" Ref="33">
+                <DrillDownParameter1 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="34"/>
+                <DrillDownParameter2 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="35"/>
+                <DrillDownParameter3 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="36"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextQuality>Wysiwyg</TextQuality>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <WordWrap>True</WordWrap>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>0,0.20000000000000018,19,0.6000000000000005</ClientRectangle>
+              <Parent isRef="26"/>
+              <Page isRef="4"/>
+            </Text2>
+            <Text3 isKey="true" type="Text" Ref="37">
+              <Text>F.
+
+
+
+
+Ante mi.</Text>
+              <Name>Text3</Name>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Left>0</Left>
+              <Top>2.4</Top>
+              <Font>Arial,12,Regular,Point</Font>
+              <CanGrow>True</CanGrow>
+              <Brush>Transparent</Brush>
+              <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+              <Conditions count="0" isList="true"/>
+              <Margins>0,0,0,0</Margins>
+              <TextFormat isKey="true" type="GeneralFormat" Ref="38"/>
+              <Interaction isKey="true" type="Stimulsoft.Report.Components.StiInteraction" Ref="39">
+                <DrillDownParameter1 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="40"/>
+                <DrillDownParameter2 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="41"/>
+                <DrillDownParameter3 isKey="true" type="Stimulsoft.Report.Components.StiDrillDownParameter" Ref="42"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <WordWrap>True</WordWrap>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>0,2.3999999999999995,2.6,0.5999999999999996</ClientRectangle>
+              <Parent isRef="26"/>
+              <Page isRef="4"/>
+            </Text3>
+          </Components>
+        </DataBand1>
+      </Components>
+    </Page1>
+  </Pages>
+  <ReportName>Report</ReportName>
+  <ReportAlias>Report</ReportAlias>
+  <EngineVersion>EngineV2</EngineVersion>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReferencedAssemblies count="8" isList="true">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles count="0" isList="true"/>
+  <PrinterSettings isKey="true" type="Stimulsoft.Report.Print.StiPrinterSettings" Ref="43"/>
+  <ReportGuid>18249ebbb0eb4031bae79547731badcf</ReportGuid>
+  <ReportFile>rptDeclaracionjuradarecepcion.mrt</ReportFile>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+</StiSerializer>

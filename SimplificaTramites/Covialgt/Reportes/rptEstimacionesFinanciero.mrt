@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.0" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <Connection Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>Connection</Alias>
+        <ConnectionString>User ID=etzic;Data Source=192.168.1.90\COVIALAPP;Initial Catalog=z_PRODUCCION_sicopDB;Integrated Security=False;Password=Covi@l2018*.</ConnectionString>
+        <Name>Connection</Name>
+        <PromptUserNameAndPassword>False</PromptUserNameAndPassword>
+      </Connection>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <DataSource3 Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DataSource3</Alias>
+        <Columns isList="true" count="16">
+          <value>Año,System.String</value>
+          <value>Proyecto,System.String</value>
+          <value>Empresa,System.String</value>
+          <value>Representante,System.String</value>
+          <value>No_Estimacion,System.String</value>
+          <value>Periodo_Ejecucion,System.String</value>
+          <value>Monto_Ejecutado,System.Decimal</value>
+          <value>Monto_Estimacion,System.Decimal</value>
+          <value>Pagado,System.Decimal</value>
+          <value>Pendiente,System.Decimal</value>
+          <value>Deuda_Contractual,System.Decimal</value>
+          <value>Saldo_Real,System.Decimal</value>
+          <value>Monto_Proyecto,System.Decimal</value>
+          <value>Estado_EstimacMonto_Proyectoion,System.String</value>
+          <value>Fecha_Estado,System.String</value>
+          <value>ProgramaNombre,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DataSource3</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_anio,,8,0</value>
+          <value>_x0040_programa,,22,10</value>
+        </Parameters>
+        <SqlCommand>exec SpRptEstimacionesFinancieroJE @anio,@programa</SqlCommand>
+      </DataSource3>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <HeaderBand1 Ref="5" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,33.6,3.4</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>HeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </HeaderBand1>
+        <GroupHeaderBand1 Ref="6" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,4.6,33.6,4</ClientRectangle>
+          <Components isList="true" count="16">
+            <Text2 Ref="7" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>0,2.8,2,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Microsoft Sans Serif,11</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>AÑO</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text4 Ref="8" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>4.4,2.8,5.6,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Microsoft Sans Serif,11</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>EMPRESA</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text3 Ref="9" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>2,2.8,2.4,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Microsoft Sans Serif,11</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>PROYECTO</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+            <Text1 Ref="10" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>10,2.8,5.6,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Microsoft Sans Serif,11</Font>
+              <Guid>7e035bb6545244a488bdc97c58755376</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>REPRESENTANTE</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text5 Ref="11" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>15.6,2.8,2.6,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Microsoft Sans Serif,11</Font>
+              <Guid>31e593fc31cb4a13b2b544732f04fca3</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>NO. ESTIMACION</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text6 Ref="12" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>18.2,2.8,5,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Microsoft Sans Serif,11</Font>
+              <Guid>40dc79cdd81f43b8b48b2c17e9fcf660</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>PERIODO EJECUCION</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text7 Ref="13" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>23.2,2.8,2.6,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Microsoft Sans Serif,11</Font>
+              <Guid>1665642f33d6456aad07a4b04657cb8c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>MONTO EJECUTADO</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text8 Ref="14" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>25.8,2.8,2.6,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Microsoft Sans Serif,11</Font>
+              <Guid>58e184315ac0440bbdbc3f042e3dd77a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>MONTO ESTIMACION</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text9 Ref="15" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>28.4,2.8,2.6,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Microsoft Sans Serif,11</Font>
+              <Guid>e5eb1f4802334543ac6980b4b1a1b863</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>PAGADO</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <Text10 Ref="16" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>31,2.8,2.6,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Microsoft Sans Serif,9</Font>
+              <Guid>0f4347e876df49eab1553003acde44f9</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>DEUDA CONTRACTUAL</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text21 Ref="17" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.4,1,11.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Microsoft Sans Serif,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>{DataSource3.Empresa}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+            <Text22 Ref="18" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>0,1,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Microsoft Sans Serif,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>EMPRESA</Text>
+              <TextBrush>White</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text22>
+            <Text23 Ref="19" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.4,1.6,11.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Microsoft Sans Serif,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>{DataSource3.Representante}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text23>
+            <Text24 Ref="20" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>0,1.6,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Microsoft Sans Serif,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>REPRESENTANTE</Text>
+              <TextBrush>White</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+            <Text25 Ref="21" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.4,2.2,11.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Microsoft Sans Serif,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>{DataSource3.Monto_Proyecto}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="22" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <Symbol>€</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+            <Text26 Ref="23" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>SteelBlue</Brush>
+              <ClientRectangle>0,2.2,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Microsoft Sans Serif,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="4" />
+              <Parent isRef="6" />
+              <Text>MONTO PROYECTO</Text>
+              <TextBrush>White</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+          </Components>
+          <Condition>{DataSource3.Proyecto}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </GroupHeaderBand1>
+        <DataBand2 Ref="24" type="DataBand" isKey="true">
+          <Border>All;Black;1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,9.4,33.6,1</ClientRectangle>
+          <Components isList="true" count="10">
+            <Text11 Ref="25" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <Guid>aac0b7ac44754e21a128d2de7a925033</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{DataSource3.Año}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+            <Text12 Ref="26" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.4,0,5.6,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Guid>b487d484f3834f6ab34af6f7e09fa5f1</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{DataSource3.Empresa}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text13 Ref="27" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,0,2.4,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <Guid>72422b46c70548e3bda6567364f21ac9</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{DataSource3.Proyecto}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text13>
+            <Text14 Ref="28" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,0,5.6,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Guid>fd50a05b6dd445de9438113715a7ee55</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{DataSource3.Representante}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <Text16 Ref="29" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>18.2,0,5,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Guid>5cfcbf0a05ba4c678e7bb9af5d682ba2</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{DataSource3.Periodo_Ejecucion}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text16>
+            <Text17 Ref="30" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>23.2,0,2.6,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Guid>3bb5b4fcae024b5c97c26af8490f2772</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{DataSource3.Monto_Ejecutado}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="31" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <Symbol>€</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text17>
+            <Text18 Ref="32" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>25.8,0,2.6,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Guid>626d002b2aa64a6cbcd414bfc36c1a99</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{DataSource3.Pagado}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="33" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <Symbol>€</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text18>
+            <Text19 Ref="34" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>28.4,0,2.6,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Guid>4a10b3d46d32471c97eba5d684dcce0e</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{DataSource3.Monto_Estimacion}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="35" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <Symbol>€</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text19>
+            <Text20 Ref="36" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>31,0,2.6,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Guid>62b2b28e94b54abfae9ee9cd4e6c643b</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{DataSource3.Pendiente}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="37" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <Symbol>€</Symbol>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text20>
+            <Text15 Ref="38" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.6,0,2.6,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Guid>252ad07a1b4a4145868512a0f6dc6008</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{DataSource3.No_Estimacion}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text15>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>DataSource3</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataBand2</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="2">
+            <value>ASC</value>
+            <value>No_Estimacion</value>
+          </Sort>
+        </DataBand2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>5023fe55d0194bd0b7065a8aed241fb5</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>21.6</PageHeight>
+      <PageWidth>35.6</PageWidth>
+      <PaperSize>Legal</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="39" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="40" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>12/13/2018 10:04:04 AM</ReportChanged>
+  <ReportCreated>12/10/2018 2:35:48 PM</ReportCreated>
+  <ReportFile>C:\Users\etzic\Documents\Project\Reportes SICOP\rptEstimacionesFinanciero.mrt</ReportFile>
+  <ReportGuid>bf7554da2b30400484873529b7625700</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2010.1.700</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        
+        public Report()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

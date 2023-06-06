@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <SIAP_EV1 Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>SIAP_EV1</Alias>
+        <ConnectionStringEncrypted />
+        <Name>SIAP_EV1</Name>
+      </SIAP_EV1>
+    </Databases>
+    <DataSources isList="true" count="2">
+      <spObtenerSAFDetalle Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>spObtenerSAFDetalle</Alias>
+        <Columns isList="true" count="9">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>ProyectoCodigoFinanciero,System.String</value>
+          <value>EstimacionCorr,System.Int32</value>
+          <value>FechaDesde,System.DateTime</value>
+          <value>FechaHasta,System.DateTime</value>
+          <value>MontoPendientePago,System.Decimal</value>
+          <value>NoSAF,System.String</value>
+          <value>DateModify,System.DateTime</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>spObtenerSAFDetalle</Name>
+        <NameInSource>SIAP_EV1</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>_x0040_Anio,,8,4</value>
+          <value>_x0040_Proyecto,,22,10</value>
+          <value>_x0040_NoSAF,,22,10</value>
+        </Parameters>
+        <SqlCommand>Exec "dbo"."prObtenerConstanciaSAFDetalle" @Anio, @Proyecto, @NoSAF, 2</SqlCommand>
+      </spObtenerSAFDetalle>
+      <spObtenerSAF Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>spObtenerSAF</Alias>
+        <Columns isList="true" count="17">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>ProyectoCodigoFinanciero,System.String</value>
+          <value>Nombre,System.String</value>
+          <value>Representante,System.String</value>
+          <value>ContratoCodigo,System.String</value>
+          <value>NoEstimaciones,System.String</value>
+          <value>FechaDesde,System.DateTime</value>
+          <value>FechaHasta,System.DateTime</value>
+          <value>Monto,System.Decimal</value>
+          <value>NoSAF,System.String</value>
+          <value>MontoLetras,System.String</value>
+          <value>DiaLetras,System.String</value>
+          <value>MesLetras,System.String</value>
+          <value>AnioLetras,System.String</value>
+          <value>Mes,System.String</value>
+          <value>AnioActual,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>spObtenerSAF</Name>
+        <NameInSource>SIAP_EV1</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>_x0040_Anio,,8,4</value>
+          <value>_x0040_Proyecto,,22,10</value>
+          <value>_x0040_NoSAF,,22,6</value>
+        </Parameters>
+        <SqlCommand>Exec "dbo"."prObtenerConstanciaSAFDetalle" @Anio, @Proyecto, @NoSAF, 1</SqlCommand>
+      </spObtenerSAF>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="5" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="7">
+        <PageFooterBand1 Ref="6" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,30.26,19.59,0.87</ClientRectangle>
+          <Components isList="true" count="7">
+            <Text5 Ref="7" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.2,0.13,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{Format("{0:dd/MM/yyyy}",Today)}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text5>
+            <Text6 Ref="8" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16.4,0.13,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>Página:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text6>
+            <Text7 Ref="9" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.6,0.13,0.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{PageNumber}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text7>
+            <Text8 Ref="10" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>18.4,0.13,0.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>De</Text>
+              <TextBrush>Black</TextBrush>
+            </Text8>
+            <Text9 Ref="11" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>19,0.13,0.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{TotalPageCount}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text9>
+            <Text4 Ref="12" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.13,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>Fecha:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text4>
+            <HorizontalLinePrimitive1 Ref="13" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0,0.13,19.6,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="14" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>C44C06B3C095C98409CE0F4D6D386574</Guid>
+              <Name>HorizontalLinePrimitive1</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <StartCap Ref="15" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </PageFooterBand1>
+        <Text17 Ref="16" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.4,22.4,9.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,11,Italic</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text17</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+          <Text>cc. Subdirector Administrativo Financiero COVIAL</Text>
+          <TextBrush>Black</TextBrush>
+        </Text17>
+        <Data2 Ref="17" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,0.4,19.59,9.87</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text1 Ref="18" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.2,4.2,19.12,0.71</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,18,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="5" />
+              <Parent isRef="17" />
+              <Text>CONSTANCIA SAF/F-0{spObtenerSAF.NoSAF}-{spObtenerSAF.AnioActual}-COV</Text>
+              <TextBrush>Black</TextBrush>
+            </Text1>
+            <Text2 Ref="19" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.2,5.2,19.12,4.11</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11,Italic</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="5" />
+              <Parent isRef="17" />
+              <Text>El infrascrito Contador de la Unidad Ejecutora de Conservación Vial - C O V I A L -, Hace Constar: Que a la empresa {spObtenerSAF.Nombre}, Representante Legal: {spObtenerSAF.Representante}, suscribió el contrato en la Escritura Pública No.{spObtenerSAF.ContratoCodigo} con el Banco Industrial, S.A., por medio del cual se formalizó la ejecución del Proyecto: {spObtenerSAF.ProyectoCodigoFinanciero} y según Sistema Integral de Control de Proyectos - SICOP -   se encuentran pendientes las estimaciones No. {spObtenerSAF.NoEstimaciones} que asciende a un monto de: {spObtenerSAF.MontoLetras} (Q.{Format("{0:###,###.#0}",spObtenerSAF.Monto)}), las cuales se detallan a continuación:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+            </Text2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>spObtenerSAF</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>Data2</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+          <Sort isList="true" count="0" />
+        </Data2>
+        <GroupHeaderBand1 Ref="20" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,11.07,19.59,0.67</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text14 Ref="21" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.2,0,4.8,0.71</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="5" />
+              <Parent isRef="20" />
+              <Text>Monto Total de Estimaciones</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <Text13 Ref="22" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.4,0,3.8,0.71</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="5" />
+              <Parent isRef="20" />
+              <Text>Estimaciones</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text13>
+            <Text12 Ref="23" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.6,0,2.8,0.71</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="5" />
+              <Parent isRef="20" />
+              <Text>Proyecto</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text3 Ref="24" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,0,6.8,0.71</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="5" />
+              <Parent isRef="20" />
+              <Text>Nombre de la Empresa</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+          </Components>
+          <Condition>{spObtenerSAFDetalle.AnioID}{spObtenerSAFDetalle.ProyectoCodigo}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </GroupHeaderBand1>
+        <Data1 Ref="25" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,12.54,19.59,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>spObtenerSAFDetalle</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>Data1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+          <Sort isList="true" count="2">
+            <value>ASC</value>
+            <value>EstimacionCorr</value>
+          </Sort>
+        </Data1>
+        <GroupFooterBand1 Ref="26" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,13.34,19.59,1.87</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text19 Ref="27" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.2,0.8,4.8,0.67</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>2,2,2,2</Margins>
+              <Name>Text19</Name>
+              <Page isRef="5" />
+              <Parent isRef="26" />
+              <Text>Q.{Format("{0:###,###.#0}",Sum(spObtenerSAFDetalle.MontoPendientePago))}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="28" type="NumberFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text19>
+            <Text18 Ref="29" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7,0.8,7.2,0.67</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="5" />
+              <Parent isRef="26" />
+              <Text>Total por pagar.........................................&gt;</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text18>
+            <Text20 Ref="30" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.4,-0.01,3.8,0.67</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Guid>5233e50e6a9845c4a43621e5712d87a6</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="5" />
+              <Parent isRef="26" />
+              <Text>{Count(GroupHeaderBand1)}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text20>
+            <Text21 Ref="31" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,-0.01,6.8,0.67</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Guid>6558df28d3b74543a4543450e63259c1</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="5" />
+              <Parent isRef="26" />
+              <Text>{spObtenerSAF.Nombre}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+            <Text22 Ref="32" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.2,-0.01,4.8,0.67</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Guid>6fb6ccb4403a4398b84128ea733766f0</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>2,2,2,2</Margins>
+              <Name>Text22</Name>
+              <Page isRef="5" />
+              <Parent isRef="26" />
+              <Text>{Sum(GroupHeaderBand1,spObtenerSAFDetalle.MontoPendientePago)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="33" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <Symbol>€</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text22>
+            <Text10 Ref="34" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.6,0,2.8,0.66</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Guid>496f8d3adadb45389387600d55bcf9e2</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="5" />
+              <Parent isRef="26" />
+              <Text>{spObtenerSAFDetalle.ProyectoCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </GroupFooterBand1>
+        <Data3 Ref="35" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,16.01,19.59,2.47</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text16 Ref="36" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.2,0.79,19.2,1.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11,Italic</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="5" />
+              <Parent isRef="35" />
+              <Text>Y a solicitud del interesado se extiende la presente Constancia, en una hoja de papel bond tamaño carta, con membrete de la Unidad Ejecutora de Conservación Vial, en la ciudad de Guatemala, a {spObtenerSAF.DiaLetras} dias del mes de {spObtenerSAF.Mes} de {spObtenerSAF.AnioLetras}. La presente tiene una validez de Dos años a partir de la presente fecha.</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+            </Text16>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>spObtenerSAF</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>Data3</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+          <Sort isList="true" count="0" />
+        </Data3>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>ef9998433af44273946864f1e60ccccc</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>27.94</PageHeight>
+      <PageWidth>21.59</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="37" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="38" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>7/6/2017 9:46:59 AM</ReportChanged>
+  <ReportCreated>6/29/2017 9:38:01 AM</ReportCreated>
+  <ReportFile>C:\Users\etzic\Documents\Team Foundation Project\Project\Reportes SICOP\SAFResumen.mrt</ReportFile>
+  <ReportGuid>aee5d9352bd94e93901e6bfab14966af</ReportGuid>
+  <ReportImage isNull="true" />
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2016.3.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        
+        public Report()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="3">
+    <Style1 Ref="39" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Brush>White</Brush>
+      <Conditions isList="true" count="0" />
+      <Font>Arial,8</Font>
+      <Name>Style1</Name>
+      <TextBrush>Black</TextBrush>
+    </Style1>
+    <Style2 Ref="40" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Brush>White</Brush>
+      <Conditions isList="true" count="0" />
+      <Font>Arial,8</Font>
+      <Name>Style2</Name>
+      <TextBrush>Black</TextBrush>
+    </Style2>
+    <Style3 Ref="41" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Brush>White</Brush>
+      <Conditions isList="true" count="0" />
+      <Font>Arial,8</Font>
+      <Name>Style3</Name>
+      <TextBrush>Black</TextBrush>
+    </Style3>
+  </Styles>
+</StiSerializer>

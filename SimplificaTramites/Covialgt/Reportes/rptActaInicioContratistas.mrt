@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <cnactacontratista Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>cnactacontratista</Alias>
+        <ConnectionString>Data Source=192.168.1.9\covialapp;Initial Catalog=z_PRODUCCION_sicopDB;uid=UsuarioExterno1;password=Us3r00@dm1n</ConnectionString>
+        <Name>cnactacontratista</Name>
+      </cnactacontratista>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <prObtenerDatosActaContratista Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>prObtenerDatosActaContratista</Alias>
+        <Columns isList="true" count="37">
+          <value>idActaInicio,System.Int32</value>
+          <value>CodigoActa,System.String</value>
+          <value>AnioID,System.Int32</value>
+          <value>ProgramaCodigo,System.String</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>TramoID,System.String</value>
+          <value>EmpresaProyecto,System.String</value>
+          <value>Regional,System.String</value>
+          <value>Superintendente,System.String</value>
+          <value>DelegadoResidente,System.String</value>
+          <value>Tiempo,System.Int32</value>
+          <value>EmpresaSuper,System.String</value>
+          <value>CodigoSuper,System.String</value>
+          <value>AnioSuper,System.Int32</value>
+          <value>Representante,System.String</value>
+          <value>Id_Cargo,System.String</value>
+          <value>NoActa,System.Int32</value>
+          <value>AnioActa,System.Int32</value>
+          <value>HoraActa,System.String</value>
+          <value>FechaActa,System.String</value>
+          <value>Clausula,System.String</value>
+          <value>CedulaNotificacion,System.String</value>
+          <value>FechaCedula,System.String</value>
+          <value>NoContrato,System.Int32</value>
+          <value>AnioContrato,System.Int32</value>
+          <value>FechaContrato,System.String</value>
+          <value>NoAcuerdo,System.Int32</value>
+          <value>AnioAcuerdo,System.Int32</value>
+          <value>FechaAcuerdo,System.String</value>
+          <value>UsaurioCreo,System.String</value>
+          <value>FechaCreo,System.DateTime</value>
+          <value>UsaurioModifico,System.String</value>
+          <value>FechaModifico,System.DateTime</value>
+          <value>UsuarioElimino,System.String</value>
+          <value>FechaElimino,System.DateTime</value>
+          <value>Eliminada,System.Boolean</value>
+          <value>Id_Estado,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>prObtenerDatosActaContratista</Name>
+        <NameInSource>cnactacontratista</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>_x0040_Codigo,,22,20</value>
+          <value>_x0040_AnioID,,8,4</value>
+          <value>_x0040_ProyectoCodigo,,22,10</value>
+        </Parameters>
+        <SqlCommand>EXEC prObtenerDatosActaContratista @Codigo, @AnioID, @ProyectoCodigo</SqlCommand>
+      </prObtenerDatosActaContratista>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="2">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <DataBand1 Ref="5" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19.6,1.6</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text9 Ref="6" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.7,19.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <Guid>d9dcf3f8d6ea44b290c7b5ee8bb49608</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>ACTA DE INICIO CONTRATISTA</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+        <DataBand2 Ref="7" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.8,19.6,2</ClientRectangle>
+          <Components isList="true" count="2">
+            <SubReport1 Ref="8" type="SubReport" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,19.6,1.6</ClientRectangle>
+              <Components isList="true" count="0" />
+              <Name>SubReport1</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <SubReportPageGuid>38202aa5011347ebb6f98d078cee9a13</SubReportPageGuid>
+            </SubReport1>
+            <Text2 Ref="9" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1.2,0.2,17.7,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>9f8a92ab35c34b3c9e626c19841aabad</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>&lt;line-height="1.5"&gt;ACTA {prObtenerDatosActaContratista.NoActa}-{prObtenerDatosActaContratista.AnioActa}. Siendo las {prObtenerDatosActaContratista.HoraActa} horas del día  {prObtenerDatosActaContratista.FechaActa}, nos encontramos constituidos en {prObtenerDatosActaContratista.TramoID} las siguientes personas: Ingeniero  {prObtenerDatosActaContratista.Superintendente}  -  Superintendente de la Empresa {prObtenerDatosActaContratista.EmpresaProyecto} del proyecto identificado  {prObtenerDatosActaContratista.ProyectoCodigo}-{prObtenerDatosActaContratista.AnioID} - {prObtenerDatosActaContratista.ProgramaCodigo} y el Ingeniero {prObtenerDatosActaContratista.DelegadoResidente} - Delegado Residente de la empresa {prObtenerDatosActaContratista.EmpresaSuper} del proyecto de supervisión {prObtenerDatosActaContratista.CodigoSuper}-{prObtenerDatosActaContratista.AnioSuper}, para hacer constar lo siguiente: &lt;br&gt;&lt;br&gt;&lt;b&gt;PRIMERO:&lt;/b&gt; Se tiene a la vista el Contrato Administrativo No.{prObtenerDatosActaContratista.NoContrato}-{prObtenerDatosActaContratista.AnioContrato}-COV de fecha {prObtenerDatosActaContratista.FechaContrato}, y acuerdo Ministerial {prObtenerDatosActaContratista.NoAcuerdo}-{prObtenerDatosActaContratista.AnioAcuerdo} de fecha {prObtenerDatosActaContratista.FechaAcuerdo}, &lt;/b&gt; contrato suscrito entre el Ingeniero Mario Gustavo Aguilar Alemán en delegación del señor Ministro del Ministerio de Comunicaciones, Infraestructura y Vivienda y el señor {prObtenerDatosActaContratista.Representante} -  {prObtenerDatosActaContratista.Id_Cargo} de la empresa {prObtenerDatosActaContratista.EmpresaSuper}
+. &lt;br&gt;&lt;br&gt;&lt;b&gt;SEGUNDO:&lt;/b&gt; Según lo establecido en la cláusula {prObtenerDatosActaContratista.Clausula} del referido  contrato administrativo, se deja constancia que se da inicio al plazo contractual de {prObtenerDatosActaContratista.Tiempo} MESES, apartir del día de hoy.&lt;br&gt;&lt;br&gt; &lt;b&gt;TERCERO:&lt;/b&gt; No habiendo más que hacer constar, se da por finalizada en el mismo lugar y fecha, la que es leída por cada una de las partes y quedando enterados de la misma, de su objeto, validez y demás alcances y efectos legales, la ractifican, aceptan y firman de entera conformudad. &lt;/line-height&gt;</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Name>DataBand2</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </DataBand2>
+        <ReportSummaryBand1 Ref="10" type="ReportSummaryBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,5.6,19.6,7.6</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text10 Ref="11" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>5.4,5.4,9.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>ffcd20c8068644a59d353074ae8edbb7</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="4" />
+              <Parent isRef="10" />
+              <Text>(FIRMAS DE LOS COMPADECIENTES EN EL ACTA)</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+            </Text10>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportSummaryBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </ReportSummaryBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>3d3e980fba974b548b0148a102b01525</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>35.6</PageHeight>
+      <PageWidth>21.6</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="12" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+    <subReport_1 Ref="13" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="0" />
+      <Conditions isList="true" count="0" />
+      <Guid>38202aa5011347ebb6f98d078cee9a13</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>subReport_1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21.6</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="14" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </subReport_1>
+  </Pages>
+  <PrinterSettings Ref="15" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>9/19/2022 10:51:39 PM</ReportChanged>
+  <ReportCreated>9/12/2022 9:22:01 PM</ReportCreated>
+  <ReportFile>C:\Users\Usuario\Desktop\SICOP-Web\Covialgt\Covialgt\Reportes\rptActaInicioContratistas.mrt</ReportFile>
+  <ReportGuid>3d3653b5431c45188dee86d66c351e83</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2012.1.1300</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

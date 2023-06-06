@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString>Data Source=kike\sqlexpress;Initial Catalog=aspnetdb;Integrated Security=True</ConnectString>
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>fcdbd3bc-6ce3-4594-9301-bc3a60fcbcb1</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1cm</BottomMargin>
+  <RightMargin>1.5cm</RightMargin>
+  <PageWidth>21.59cm</PageWidth>
+  <ReportParameters>
+    <ReportParameter Name="AnioID">
+      <DataType>Integer</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_0</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ProyectoCodigo">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PeriodoCorrel">
+      <DataType>Integer</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_2</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21.59cm</InteractiveWidth>
+  <rd:GridSpacing>0.1cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Table Name="table1">
+        <DataSetName>dsS_HojaDeMedicion_Tramos_ObtenerReporte_S_HojaDeMedicion_Tramos</DataSetName>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="DepartamentoNombre">
+                      <rd:DefaultName>DepartamentoNombre</rd:DefaultName>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>7pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!TramoDesc.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.4cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>7pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>TRAMO</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.1575in</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>17.2cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.8cm</Height>
+      </Table>
+    </ReportItems>
+    <Height>0.9cm</Height>
+  </Body>
+  <rd:ReportID>2912eb40-1568-4914-a489-7432ddbe35e2</rd:ReportID>
+  <LeftMargin>1.5cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="dsS_HojaDeMedicion_Tramos_ObtenerReporte_S_HojaDeMedicion_Tramos">
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsS_HojaDeMedicion_Tramos</rd:DataSetName>
+        <rd:TableName>ObtenerReporte_S_HojaDeMedicion_Tramos</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="ProyectoSupervisionCodigo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ProyectoSupervisionCodigo</DataField>
+        </Field>
+        <Field Name="SupervisoraAnioID">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>SupervisoraAnioID</DataField>
+        </Field>
+        <Field Name="ProyectoCodigo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ProyectoCodigo</DataField>
+        </Field>
+        <Field Name="AnioID">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AnioID</DataField>
+        </Field>
+        <Field Name="PeriodoCorrel">
+          <rd:TypeName>System.Byte</rd:TypeName>
+          <DataField>PeriodoCorrel</DataField>
+        </Field>
+        <Field Name="PeriodoDesde">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>PeriodoDesde</DataField>
+        </Field>
+        <Field Name="PeriodoHasta">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>PeriodoHasta</DataField>
+        </Field>
+        <Field Name="TramoID">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>TramoID</DataField>
+        </Field>
+        <Field Name="TramoCodigo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TramoCodigo</DataField>
+        </Field>
+        <Field Name="TramoDesc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TramoDesc</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>17.2cm</Width>
+  <InteractiveHeight>35.56cm</InteractiveHeight>
+  <Language>es-GT</Language>
+  <TopMargin>1.5cm</TopMargin>
+  <PageHeight>10cm</PageHeight>
+</Report>

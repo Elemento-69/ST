@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="covialConnectionString">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>954447b8-5a11-43e0-ab17-0a2b1c1379a2</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString>Data Source=kike\sqlexpress;Initial Catalog=aspnetdb;Integrated Security=True</ConnectString>
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>1978388f-452b-4895-a4e3-b4bacf1010f8</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1cm</BottomMargin>
+  <RightMargin>1.5cm</RightMargin>
+  <ReportParameters>
+    <ReportParameter Name="AnioID">
+      <DataType>Integer</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_0</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ProyectoCodigo">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.125cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Table Name="table1">
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox37">
+                      <rd:DefaultName>textbox37</rd:DefaultName>
+                      <ZIndex>7</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Top>0.5pt</Top>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Top>Black</Top>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox38">
+                      <rd:DefaultName>textbox38</rd:DefaultName>
+                      <ZIndex>6</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Top>0.5pt</Top>
+                          <Right>0.5pt</Right>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Top>Black</Top>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox39">
+                      <rd:DefaultName>textbox39</rd:DefaultName>
+                      <ZIndex>5</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Default>0.5pt</Default>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>TOTAL </Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox42">
+                      <rd:DefaultName>textbox42</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Default>0.5pt</Default>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=IIF(Sum(Fields!TramoLong.Value) = 0,"",FormatNumber(Sum(Fields!TramoLong.Value),2))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.2in</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+        <Top>0.24609in</Top>
+        <ZIndex>1</ZIndex>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox34">
+                      <rd:DefaultName>textbox34</rd:DefaultName>
+                      <ZIndex>3</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Default>0.5pt</Default>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!TramoCodigo.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox35">
+                      <rd:DefaultName>textbox35</rd:DefaultName>
+                      <ZIndex>2</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Default>0.5pt</Default>
+                          <Right>0.5pt</Right>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!DepartamentoNombre.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox36">
+                      <rd:DefaultName>textbox36</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Default>0.5pt</Default>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!TramoDesc.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox41">
+                      <rd:DefaultName>textbox41</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Default>0.5pt</Default>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=IIF(Fields!TramoLong.Value = 0,"",FormatNumber(Fields!TramoLong.Value,2))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.2in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <FontSize>8pt</FontSize>
+        </Style>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox31">
+                      <rd:DefaultName>textbox31</rd:DefaultName>
+                      <ZIndex>11</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Default>0.5pt</Default>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>TRAMO  CODIGO</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox32">
+                      <rd:DefaultName>textbox32</rd:DefaultName>
+                      <ZIndex>10</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Default>0.5pt</Default>
+                          <Right>0.5pt</Right>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>DEPARTAMENTO</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox33">
+                      <rd:DefaultName>textbox33</rd:DefaultName>
+                      <ZIndex>9</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Default>0.5pt</Default>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>DESCRIPCIÓN DEL TRAMO</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox40">
+                      <rd:DefaultName>textbox40</rd:DefaultName>
+                      <ZIndex>8</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Default>0.5pt</Default>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>LONGITUD (KMS)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.2in</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>1.3in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.3in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>3in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.2in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.6in</Height>
+      </Table>
+      <Textbox Name="textbox43">
+        <Width>3.69141in</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <FontSize>12pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.2in</Height>
+        <Value>2. COMPONENTES DEL PROYECTO</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>2.25cm</Height>
+  </Body>
+  <rd:ReportID>9a86bc94-770f-4870-b439-81b8ebc93ac5</rd:ReportID>
+  <LeftMargin>2cm</LeftMargin>
+  <EmbeddedImages>
+    <EmbeddedImage Name="covial">
+      <ImageData>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</ImageData>
+      <MIMEType>image/png</MIMEType>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <DataSets>
+    <DataSet Name="dsS_ComponentesDatosAdministrativos_ObtenerReporte_S_ComponentesDatosAdministrativos">
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsS_ComponentesDatosAdministrativos</rd:DataSetName>
+        <rd:TableName>ObtenerReporte_S_ComponentesDatosAdministrativos</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="TramoCodigo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TramoCodigo</DataField>
+        </Field>
+        <Field Name="DepartamentoNombre">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DepartamentoNombre</DataField>
+        </Field>
+        <Field Name="TramoDesc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TramoDesc</DataField>
+        </Field>
+        <Field Name="TramoLong">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TramoLong</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>6.8in</Width>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <Language>es-GT</Language>
+  <TopMargin>1cm</TopMargin>
+</Report>

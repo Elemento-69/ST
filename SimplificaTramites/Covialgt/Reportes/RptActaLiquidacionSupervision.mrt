@@ -1,0 +1,809 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.0" application="StiReport">
+  <AutoLocalizeReportOnRun>True</AutoLocalizeReportOnRun>
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <Connection1 Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>Connection1</Alias>
+        <ConnectionString>User ID=etzic;Data Source=10.0.10.206\covial2;Initial Catalog=z_PRODUCCION_sicopDB;Integrated Security=False;Password=Covial2016</ConnectionString>
+        <Name>Connection1</Name>
+        <PromptUserNameAndPassword>False</PromptUserNameAndPassword>
+      </Connection1>
+    </Databases>
+    <DataSources isList="true" count="4">
+      <DtActaLiquidacion Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DtActaLiquidacion</Alias>
+        <Columns isList="true" count="67">
+          <value>NumeroActa,System.String</value>
+          <value>NumeroActaLetras,System.String</value>
+          <value>FechaActa,System.String</value>
+          <value>FechaActaLetras,System.String</value>
+          <value>HoraActa,System.String</value>
+          <value>HoraActaLetras,System.String</value>
+          <value>Nombramiento,System.String</value>
+          <value>NombramientoLetras,System.String</value>
+          <value>DatosComision,System.String</value>
+          <value>FechaNombramiento,System.String</value>
+          <value>FechaNombramientoEnLetras,System.String</value>
+          <value>HoraNombramiento,System.String</value>
+          <value>MinutosNoombramientominutos,System.String</value>
+          <value>ContratoAdministrativo,System.String</value>
+          <value>ContratoAdminLetras,System.String</value>
+          <value>FechaContratoAdminL,System.String</value>
+          <value>Director,System.String</value>
+          <value>Representante,System.String</value>
+          <value>NombreComercial,System.String</value>
+          <value>PatenteRegistro,System.String</value>
+          <value>PatenteRegL,System.String</value>
+          <value>PatenteFolio,System.String</value>
+          <value>PatenteFolL,System.String</value>
+          <value>PatenteLibro,System.String</value>
+          <value>PatenteLibL,System.String</value>
+          <value>FechaPatente,System.String</value>
+          <value>AcuerdoMinisterial,System.String</value>
+          <value>NumeroPrograma,System.String</value>
+          <value>ProyectoLetras,System.String</value>
+          <value>ProgramaNombre,System.String</value>
+          <value>TramoLetras,System.String</value>
+          <value>TramoNumeros,System.String</value>
+          <value>DiasProyecto,System.String</value>
+          <value>MOntoProyectoL,System.String</value>
+          <value>MontoProyecto,System.String</value>
+          <value>DiasPrL,System.String</value>
+          <value>FechaInicioFisico,System.String</value>
+          <value>FechaInicioL,System.String</value>
+          <value>MOntoProyectoCambioL,System.String</value>
+          <value>MontoProyectoCambio,System.String</value>
+          <value>PendientePagoProy,System.String</value>
+          <value>ContratoDirector,System.String</value>
+          <value>FechaContraDirector,System.String</value>
+          <value>AcuerdoDirector,System.String</value>
+          <value>FechaAcuerdoDirector,System.String</value>
+          <value>FolioDirector,System.String</value>
+          <value>LibroDirector,System.String</value>
+          <value>HoraContratoDirector,System.String</value>
+          <value>LFechaContraDirector,System.String</value>
+          <value>LHoraContratoDirector,System.String</value>
+          <value>LFechaAcuerdoDirector,System.String</value>
+          <value>LContratoDirector,System.String</value>
+          <value>LFechaInforme,System.String</value>
+          <value>FechaInforme,System.String</value>
+          <value>NumeroInforme,System.String</value>
+          <value>FechaContratoAdmin,System.String</value>
+          <value>ResolucionNombramiento,System.String</value>
+          <value>ContratoAdmnistrativoEmp,System.String</value>
+          <value>LFechaContratoAdmin,System.String</value>
+          <value>FechaAcuerdoEmp,System.String</value>
+          <value>LFechaAcuerdoEmp,System.String</value>
+          <value>ActaRecepcion,System.String</value>
+          <value>LFechaActaRecepcion,System.String</value>
+          <value>ProyectosSupervision,System.String</value>
+          <value>ResolucionL,System.String</value>
+          <value>ActaRecepcionL,System.String</value>
+          <value>FechaActaRecepcionL,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DtActaLiquidacion</Name>
+        <NameInSource>Connection1</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>ANIOID,,8,0</value>
+          <value>PROYECTO,,12,75</value>
+        </Parameters>
+        <SqlCommand>exec PrActaLiquidacion @ANIOID,@PROYECTO,0</SqlCommand>
+      </DtActaLiquidacion>
+      <PrActaLiquidacion1 Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>PrActaLiquidacion1</Alias>
+        <Columns isList="true" count="6">
+          <value>NoFactura,System.String</value>
+          <value>MontoFactura,System.String</value>
+          <value>MontoModificado,System.String</value>
+          <value>MontoOriginal,System.String</value>
+          <value>MontoAnticipo,System.String</value>
+          <value>PendientePago,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>PrActaLiquidacion1</Name>
+        <NameInSource>Connection1</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_ANIOID,,8,0</value>
+          <value>_x0040_PROYECTO,,12,20</value>
+        </Parameters>
+        <SqlCommand>exec PrActaLiquidacion @ANIOID,@PROYECTO,1</SqlCommand>
+      </PrActaLiquidacion1>
+      <prTotalFacturas Ref="5" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>prTotalFacturas</Alias>
+        <Columns isList="true" count="1">
+          <value>TotalFacturas,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>prTotalFacturas</Name>
+        <NameInSource>Connection1</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_ANIOID,,8,0</value>
+          <value>_x0040_PROYECTO,,22,75</value>
+        </Parameters>
+        <SqlCommand>exec PrActaLiquidacion @ANIOID,@PROYECTO,2</SqlCommand>
+      </prTotalFacturas>
+      <FirmaComision Ref="6" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>FirmaComision</Alias>
+        <Columns isList="true" count="3">
+          <value>Uno,System.String</value>
+          <value>Dos,System.String</value>
+          <value>Tres,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>FirmaComision</Name>
+        <NameInSource>Connection1</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_ANIOID,,8,0</value>
+          <value>_x0040_PROYECTO,,22,75</value>
+        </Parameters>
+        <SqlCommand>exec PrActaLiquidacion @ANIOID,@PROYECTO,3</SqlCommand>
+      </FirmaComision>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="7" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="7">
+        <PageHeaderBand1 Ref="8" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <CanGrow>False</CanGrow>
+          <ClientRectangle>0,0.4,26.7,0.4</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Linked>True</Linked>
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+        </PageHeaderBand1>
+        <PageFooterBand1 Ref="9" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,37.9,26.7,0.1</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+        </PageFooterBand1>
+        <Text8 Ref="10" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>29.4,5.8,3.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,15</Font>
+          <HorAlignment>Width</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text8</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+          <Text>{PrActaLiquidacion1.MontoOriginal}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text8>
+        <DataBand4 Ref="11" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,1.6,26.7,0.8</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text6 Ref="12" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <AutoWidth>True</AutoWidth>
+              <Brush>Transparent</Brush>
+              <CanBreak>True</CanBreak>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.6,0,25.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,15</Font>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="7" />
+              <Parent isRef="11" />
+              <Text>&lt;line-height="2"&gt;
+&lt;b&gt;ACTA NÚMERO {DtActaLiquidacion.NumeroActaLetras} ({DtActaLiquidacion.NumeroActa}).&lt;/b&gt; 
+En la ciudad de Guatemala, siendo las {DtActaLiquidacion.HoraActaLetras} horas en punto ({DtActaLiquidacion.HoraActa})
+del {DtActaLiquidacion.FechaActaLetras} ({DtActaLiquidacion.FechaActa}), reunidos en las oficinas de la 
+Comisión Receptora y  Liquidadora de Contratos de la Unidad Ejecutora 
+de Conservación Vial -COVIAL-, ubicada en la Finca Nacional La Aurora, Salón siete(7), Módulo cinco(5), 
+zona trece(13), las personas siguientes:&lt;b&gt; 
+{DtActaLiquidacion.DatosComision}&lt;/b&gt;, empleados de la Unidad Ejecutora de Conservación Vial -COVIAL- 
+y Miembros de la COMISION RECEPTORA Y LIQUIDADORA DE CONTRATOS, calidad que acreditan con su nombramiento,
+ según &lt;b&gt;No. {DtActaLiquidacion.NombramientoLetras} ({DtActaLiquidacion.Nombramiento}) &lt;/b&gt; 
+del {DtActaLiquidacion.FechaNombramientoEnLetras} ({DtActaLiquidacion.FechaNombramiento}). 
+Se suscribe la presente Acta con la finalidad de hacer constar la liquidación técnica y financiera de acuerdo 
+a las especificaciones de las bases contratación e informe final pormenorizado, según se detallan los siguientes 
+puntos.
+&lt;/line-height&gt;
+&lt;br&gt;
+&lt;line-height="2"&gt;&lt;br&gt;&lt;b&gt;&lt;u&gt;PRIMERO:&lt;/u&gt;&lt;/b&gt; Se tiene a la vista el Contrato Administrativo número 
+&lt;b&gt;{DtActaLiquidacion.LContratoDirector} ({DtActaLiquidacion.ContratoDirector})&lt;/b&gt; del 
+{DtActaLiquidacion.LFechaContraDirector} ({DtActaLiquidacion.FechaContraDirector}); celebrado entre el 
+ {DtActaLiquidacion.Director} quien actúo en representación del ESTADO DE GUATEMALA, por delegación conferida 
+
+por el  Ministro de Comunicaciones Infraestructura y Vivienda, contenida  en resolución número 
+{DtActaLiquidacion.AcuerdoDirector} de fecha {DtActaLiquidacion.LFechaAcuerdoDirector}  
+ ({DtActaLiquidacion.FechaAcuerdoDirector}) en calidad de Director de la Unidad Ejecutora de Conservación Vial 
+-COVIAL-  y el/la señor/a &lt;b&gt;{DtActaLiquidacion.Representante}&lt;/b&gt; quien comparece en calidad propietaria/o de la 
+empresa &lt;b&gt;{DtActaLiquidacion.NombreComercial}&lt;/b&gt;,   extremo que acredita con la patente de Comercio de Empresa, 
+inscrita en el Registro Mercantil General de la República al número  {DtActaLiquidacion.PatenteRegL} 
+ ({DtActaLiquidacion.PatenteRegistro})  
+folio {DtActaLiquidacion.PatenteFolL} ({DtActaLiquidacion.PatenteFolio}) del libro 
+{DtActaLiquidacion.PatenteLibL} ({DtActaLiquidacion.PatenteLibro})  de Empresas Mercantiles, 
+emitida el {DtActaLiquidacion.FechaPatente}, aprobado por Acuerdo Ministerial No.
+ {DtActaLiquidacion.AcuerdoMinisterial} del {DtActaLiquidacion.FechaAcuerdoEmp},  para la supervisión  número 
+&lt;b&gt;{DtActaLiquidacion.ProyectoLetras} ({DtActaLiquidacion.NumeroPrograma}).&lt;/b&gt; 
+&lt;br&gt;
+&lt;b&gt;&lt;u&gt;SEGUNDO:&lt;/u&gt;&lt;/b&gt;  &lt;b&gt;OBJETO:&lt;/b&gt; prestar servicios de supervisión para La Unidad Ejecutora de Conservación
+ Vial - COVIAL -  el proyecto  {DtActaLiquidacion.ProyectoLetras}  
+ ({DtActaLiquidacion.NumeroPrograma}), 
+teniendo a su cargo los proyectos de mantenimiento {DtActaLiquidacion.ProyectosSupervision} con una longitud de
+ &lt;b&gt;{DtActaLiquidacion.TramoLetras} ({DtActaLiquidacion.TramoNumeros} Kms.)&lt;/b&gt;, 
+conforme a los 
+trabajos que se encuentran descritos en el Anexo que incluye con un valor de 
+&lt;b&gt;{DtActaLiquidacion.MOntoProyectoL} ({DtActaLiquidacion.MontoProyecto})&lt;/b&gt; incluyendo el Impuesto al Valor
+ Agregado (IVA). 
+&lt;/line-height&gt;
+</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=True, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+            </Text6>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>DtActaLiquidacion</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataBand4</Name>
+          <NewPageAfter>True</NewPageAfter>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+          <Sort isList="true" count="0" />
+        </DataBand4>
+        <DataBand5 Ref="13" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <CanBreak>True</CanBreak>
+          <ClientRectangle>0,3.2,26.7,5.6</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text7 Ref="14" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <CanBreak>True</CanBreak>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.6,0,25.9,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,15</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>bef58744f56743518f482ca54d1fb536</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="7" />
+              <Parent isRef="13" />
+              <Text>
+&lt;line-height="2"&gt;  
+&lt;text-align="justify"&gt;
+&lt;b&gt; PLAZO CONTRACTUAL:&lt;/b&gt; inicio y ejecución de los trabajos fue  de &lt;b&gt;{DtActaLiquidacion.DiasPrL} 
+ ({DtActaLiquidacion.DiasProyecto})&lt;/b&gt;  días calendario contados  a partir del {DtActaLiquidacion.FechaInicioL} 
+ ({DtActaLiquidacion.FechaInicioFisico}). 
+el DIRECTOR, previo la presentación de facturas originales extendidas conforme  a la ley y según estimaciones
+aprobadas que detallan los avances físicos y financieros.
+
+&lt;br&gt;&lt;b&gt;&lt;u&gt;TERCERO:&lt;/u&gt;&lt;/b&gt; Según acta de recepción número {DtActaLiquidacion.ActaRecepcionL} ({DtActaLiquidacion.ActaRecepcion}) de fecha 
+ {DtActaLiquidacion.FechaActaRecepcionL} ({DtActaLiquidacion.LFechaActaRecepcion}), se comprueba que los trabajos de supervisión fueron ejecutados
+satisfactoriamente, comprobado por la COMISIÓN RECEPTORA Y LIQUIDADORA DE CONTRATOS que el valor original
+del contrato 
+&lt;b&gt;{IIF(DtActaLiquidacion.MontoProyecto==DtActaLiquidacion.MontoProyectoCambio,"no tuvo modificaciones", 
+"si tuvo modificaciones quedando en un valor modificado del contrato de "+DtActaLiquidacion.MOntoProyectoCambioL+" ("+DtActaLiquidacion.MontoProyectoCambio+")")}&lt;/b&gt;  
+ y que &lt;b&gt;{IIF(DtActaLiquidacion.PendientePagoProy=="0","no", "si")}&lt;/b&gt; existe un saldo pendiente
+ en la presente &lt;b&gt;liquidación&lt;/b&gt; a favor de la empresa {DtActaLiquidacion.NombreComercial} de parte de la 
+Unidad Ejecutora de Conservación Vial.
+&lt;/text-align&gt;
+&lt;/line-height&gt;
+</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=True, RightToLeft=False, Trimming=Character, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+            </Text7>
+            <Text1 Ref="15" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>19,3.6,4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="7" />
+              <Parent isRef="13" />
+              <Text>{prTotalFacturas.TotalFacturas}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text1>
+            <CrossTab1 Ref="16" type="Stimulsoft.Report.CrossTab.StiCrossTab" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,0.8,19.6,2.8</ClientRectangle>
+              <Components isList="true" count="14">
+                <CrossTab1_SummaryTitle Ref="17" type="CrossTitle" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>14.85,0.05,3.8,2</ClientRectangle>
+                  <Font>Arial,12,Bold,Point,False,0</Font>
+                  <Guid>bbbd318415a74bcf987ead971b38ab41</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>5,2</MaxSize>
+                  <MinSize>2,2</MinSize>
+                  <Name>CrossTab1_SummaryTitle</Name>
+                  <Page isRef="7" />
+                  <Parent isRef="16" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Monto de Facturas Pagadas</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TypeOfComponent>SummaryTitle</TypeOfComponent>
+                </CrossTab1_SummaryTitle>
+                <CrossTab1_RowTotal1 Ref="18" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>0,2.1,7.8,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>306d9501593d446fbf19f770d1d84e21</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal1</Name>
+                  <Page isRef="7" />
+                  <Parent isRef="16" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal1>
+                <CrossTab1_Row1_Title Ref="19" type="CrossTitle" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,0.05,3.6,2</ClientRectangle>
+                  <Font>Arial,12,Bold,Point,False,0</Font>
+                  <Guid>6613109ff04e492baa110519c99c440a</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>5,2</MaxSize>
+                  <MinSize>2,2</MinSize>
+                  <Name>CrossTab1_Row1_Title</Name>
+                  <Page isRef="7" />
+                  <Parent isRef="16" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Monto Original del Contrato</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TypeOfComponent>Row:CrossTab1_Row1</TypeOfComponent>
+                </CrossTab1_Row1_Title>
+                <CrossTab1_RowTotal2 Ref="20" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>2,1.7,5.8,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>fc0bf1e774854876abba65d0f738e520</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal2</Name>
+                  <Page isRef="7" />
+                  <Parent isRef="16" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal2>
+                <CrossTab1_Row2_Title Ref="21" type="CrossTitle" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>3.6,0.05,3.6,2</ClientRectangle>
+                  <Font>Arial,12,Bold,Point,False,0</Font>
+                  <Guid>05f1bf3e4ced4f08a730613a9a3a2cd2</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>5,2</MaxSize>
+                  <MinSize>2,2</MinSize>
+                  <Name>CrossTab1_Row2_Title</Name>
+                  <Page isRef="7" />
+                  <Parent isRef="16" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Monto Modificado</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TypeOfComponent>Row:CrossTab1_Row2</TypeOfComponent>
+                </CrossTab1_Row2_Title>
+                <CrossTab1_RowTotal3 Ref="22" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>4.4,1.3,3.4,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>598601482dcc4a6f9b67f98f5c601e80</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal3</Name>
+                  <Page isRef="7" />
+                  <Parent isRef="16" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal3>
+                <CrossTab1_Row3_Title Ref="23" type="CrossTitle" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>7.2,0.05,3.8,2</ClientRectangle>
+                  <Font>Arial,12,Bold,Point,False,0</Font>
+                  <Guid>3941ec0f78514b339edfe04701d94629</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>5,2</MaxSize>
+                  <MinSize>2,2</MinSize>
+                  <Name>CrossTab1_Row3_Title</Name>
+                  <Page isRef="7" />
+                  <Parent isRef="16" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Pendiente de Pago</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TypeOfComponent>Row:CrossTab1_Row3</TypeOfComponent>
+                </CrossTab1_Row3_Title>
+                <CrossTab1_RowTotal4 Ref="24" type="CrossRowTotal" isKey="true">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>6.4,0.9,1.4,0</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <Guid>569207d21686461cb1ffedb8bf57b718</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal4</Name>
+                  <Page isRef="7" />
+                  <Parent isRef="16" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_RowTotal4>
+                <CrossTab1_Row1 Ref="25" type="CrossRow" isKey="true">
+                  <Alias>MontoOriginal</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,2.1,3.6,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{PrActaLiquidacion1.MontoOriginal}</DisplayValue>
+                  <Font>Arial,12,Regular,Point,False,0</Font>
+                  <Guid>25190655b9b9492ebd3fa8fe7805fb93</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_Row1</Name>
+                  <Page isRef="7" />
+                  <Parent isRef="16" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>MontoOriginal</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TotalGuid>306d9501593d446fbf19f770d1d84e21</TotalGuid>
+                  <Value>{PrActaLiquidacion1.MontoOriginal}</Value>
+                </CrossTab1_Row1>
+                <CrossTab1_Row2 Ref="26" type="CrossRow" isKey="true">
+                  <Alias>MontoModificado</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>3.6,2.1,3.6,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{PrActaLiquidacion1.MontoModificado}</DisplayValue>
+                  <Font>Arial,12,Regular,Point,False,0</Font>
+                  <Guid>df0c196f0af24f73adc59ee7fa41726c</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_Row2</Name>
+                  <Page isRef="7" />
+                  <Parent isRef="16" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>MontoModificado</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TotalGuid>fc0bf1e774854876abba65d0f738e520</TotalGuid>
+                  <Value>{PrActaLiquidacion1.MontoModificado}</Value>
+                </CrossTab1_Row2>
+                <CrossTab1_Row3 Ref="27" type="CrossRow" isKey="true">
+                  <Alias>PendientePago</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>7.2,2.1,3.8,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{PrActaLiquidacion1.PendientePago}</DisplayValue>
+                  <Font>Arial,12,Regular,Point,False,0</Font>
+                  <Guid>1111180a422647d5b7535e734f4b9405</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_Row3</Name>
+                  <Page isRef="7" />
+                  <Parent isRef="16" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>PendientePago</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TotalGuid>598601482dcc4a6f9b67f98f5c601e80</TotalGuid>
+                  <Value>{PrActaLiquidacion1.PendientePago}</Value>
+                </CrossTab1_Row3>
+                <CrossTab1_Row4 Ref="28" type="CrossRow" isKey="true">
+                  <Alias>NoFactura</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>11,2.1,3.8,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <DisplayValue>{PrActaLiquidacion1.NoFactura}</DisplayValue>
+                  <Font>Arial,12,Regular,Point,False,0</Font>
+                  <Guid>7546e0f57f054615bfdd447eb6014185</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_Row4</Name>
+                  <Page isRef="7" />
+                  <Parent isRef="16" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <ShowTotal>False</ShowTotal>
+                  <Text>NoFactura</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TotalGuid>569207d21686461cb1ffedb8bf57b718</TotalGuid>
+                  <Value>{PrActaLiquidacion1.NoFactura}</Value>
+                </CrossTab1_Row4>
+                <CrossTab1_Sum1 Ref="29" type="CrossSummary" isKey="true">
+                  <Alias>MontoFactura</Alias>
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>14.85,2.1,3.8,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,12,Regular,Point,False,0</Font>
+                  <Guid>194aada9a6374c078b0cf96ef25b1d54</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_Sum1</Name>
+                  <Page isRef="7" />
+                  <Parent isRef="16" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>0</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextFormat Ref="30" type="CurrencyFormat" isKey="true">
+                    <GroupSeparator>,</GroupSeparator>
+                    <NegativePattern>1</NegativePattern>
+                    <PositivePattern>0</PositivePattern>
+                    <Symbol>Q</Symbol>
+                  </TextFormat>
+                  <Value>{PrActaLiquidacion1.MontoFactura}</Value>
+                </CrossTab1_Sum1>
+                <CrossTab1_Row4_Title Ref="31" type="CrossTitle" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>11,0.05,3.8,2</ClientRectangle>
+                  <Font>Arial,12,Bold,Point,False,0</Font>
+                  <Guid>6d1d979eb957424bb0f41ebb6412e9de</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <MaxSize>5,2</MaxSize>
+                  <MinSize>2,2</MinSize>
+                  <Name>CrossTab1_Row4_Title</Name>
+                  <Page isRef="7" />
+                  <Parent isRef="16" />
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Número de Factura</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <TypeOfComponent>Row:CrossTab1_Row4</TypeOfComponent>
+                </CrossTab1_Row4_Title>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <DataRelationName />
+              <DataSourceName>PrActaLiquidacion1</DataSourceName>
+              <EmptyValue />
+              <Filters isList="true" count="0" />
+              <Name>CrossTab1</Name>
+              <Page isRef="7" />
+              <Parent isRef="13" />
+              <Sort isList="true" count="0" />
+            </CrossTab1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <Filters isList="true" count="0" />
+          <Guid>8de843501e2f43478903d95240489c51</Guid>
+          <Name>DataBand5</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+          <Sort isList="true" count="0" />
+        </DataBand5>
+        <DataBand6 Ref="32" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,9.6,26.7,1.2</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text9 Ref="33" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <CanBreak>True</CanBreak>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.6,0,25.8,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,15</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>32460f9a595c4249801ff9fe05acbc58</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="7" />
+              <Parent isRef="32" />
+              <Text>&lt;br&gt;
+&lt;line-height="2"&gt;
+&lt;text-align="justify"&gt;
+&lt;b&gt;&lt;u&gt;CUARTO:&lt;/u&gt;&lt;/b&gt;
+ No habiendo más que hacer constar se da por finalizada la presente acta en el mismo lugar y fecha una hora 
+después de su inicio, acordándose compulsar las certificaciones para adjuntarlas a los expedientes respectivos,
+se lee la presente a las personas que en ella intervinieron, enterados de su contenido, objeto, validez y
+efectos legales, la ratifican, aceptan y firman de entera conformidad.
+&lt;/text-align&gt;
+&lt;/line-height&gt;&lt;/br&gt;</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=True, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+            </Text9>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Guid>1d394566d37b40a38b5fa4b1714c5c76</Guid>
+          <Name>DataBand6</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+          <Sort isList="true" count="0" />
+        </DataBand6>
+        <DataBand2 Ref="34" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,11.6,26.7,8.8</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text3 Ref="35" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.6,4.4,6.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14</Font>
+              <Guid>9356b1aea4db4b969cf027a1bf500ee2</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="7" />
+              <Parent isRef="34" />
+              <Text>{FirmaComision.Uno}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text3>
+            <Text5 Ref="36" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.6,8,6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14</Font>
+              <Guid>54c4ac9c3a90428292e3c6b15998889d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="7" />
+              <Parent isRef="34" />
+              <Text>{FirmaComision.Tres}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text5>
+            <Text4 Ref="37" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.2,4.4,5.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14</Font>
+              <Guid>64264e741ca947318e611da19dd20c30</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="7" />
+              <Parent isRef="34" />
+              <Text>{FirmaComision.Dos}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text4>
+            <HorizontalLinePrimitive1 Ref="38" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>3.8,4.2,5.8,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="39" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>d167c405ed9d4cf9bb7c5d8e1c518d04</Guid>
+              <Name>HorizontalLinePrimitive1</Name>
+              <Page isRef="7" />
+              <Parent isRef="34" />
+              <StartCap Ref="40" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive1>
+            <HorizontalLinePrimitive3 Ref="41" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>10.6,7.8,6.2,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="42" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>ba3b20e6d86d439a82c5e557612db3f5</Guid>
+              <Name>HorizontalLinePrimitive3</Name>
+              <Page isRef="7" />
+              <Parent isRef="34" />
+              <StartCap Ref="43" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive3>
+            <HorizontalLinePrimitive2 Ref="44" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>17.2,4.2,5.8,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="45" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>2f9fbc0a8a584545afaa96b059951a0e</Guid>
+              <Name>HorizontalLinePrimitive2</Name>
+              <Page isRef="7" />
+              <Parent isRef="34" />
+              <StartCap Ref="46" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Guid>2e4df20b08954a6086f9aecc187c0080</Guid>
+          <Name>DataBand2</Name>
+          <Page isRef="7" />
+          <Parent isRef="7" />
+          <Sort isList="true" count="0" />
+        </DataBand2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>e454bcfa19eb4dac80a7b2dce39da87f</Guid>
+      <Margins>2,1,4,0</Margins>
+      <Name>Page1</Name>
+      <PageHeight>42</PageHeight>
+      <PageWidth>29.7</PageWidth>
+      <PaperSize>A3</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="47" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="48" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Acta Liquidacion Supervision</ReportAlias>
+  <ReportChanged>12/5/2017 5:04:31 PM</ReportChanged>
+  <ReportCreated>9/7/2017 2:41:27 PM</ReportCreated>
+  <ReportFile>C:\Users\etzic\Documents\Sys Project\Reportes SICOP\RptActaLiquidacionSupervision.mrt</ReportFile>
+  <ReportGuid>72a227da2d31473ea08befdf583f8bd0</ReportGuid>
+  <ReportName>Acta Liquidacion Supervision</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2010.1.700</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Acta_Liquidacion_Supervision : Stimulsoft.Report.StiReport
+    {
+        
+        public Acta_Liquidacion_Supervision()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

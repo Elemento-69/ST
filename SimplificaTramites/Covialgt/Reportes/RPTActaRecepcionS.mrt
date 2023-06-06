@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.0" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <Connection Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>Connection</Alias>
+        <ConnectionString>User ID=etzic;Data Source=192.168.1.90\COVIALAPP;Initial Catalog=z_PRODUCCION_sicopDB;Integrated Security=False;Password=Covi@l2018*.</ConnectionString>
+        <Name>Connection</Name>
+        <PromptUserNameAndPassword>False</PromptUserNameAndPassword>
+      </Connection>
+    </Databases>
+    <DataSources isList="true" count="6">
+      <DataSource1 Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DataSource1</Alias>
+        <Columns isList="true" count="51">
+          <value>NumeroActa,System.String</value>
+          <value>HoraActa,System.String</value>
+          <value>HoraActaL,System.String</value>
+          <value>FechaActa,System.String</value>
+          <value>Comision,System.String</value>
+          <value>OficioComision,System.String</value>
+          <value>OficioComisionL,System.String</value>
+          <value>FechaOficioL,System.String</value>
+          <value>NomSupervisor,System.String</value>
+          <value>Tiposupervisor,System.String</value>
+          <value>EmpresaSupervisora,System.String</value>
+          <value>EmpresaSupervisoraL,System.String</value>
+          <value>ProyectoSupervisionL,System.String</value>
+          <value>ProySuypervision,System.String</value>
+          <value>ProyectoContratistaLetras,System.String</value>
+          <value>ContratoAdmnistrativoEmp,System.String</value>
+          <value>ContratoAdminEmpLetras,System.String</value>
+          <value>FechaContrato,System.String</value>
+          <value>CedulaNotiLetras,System.String</value>
+          <value>CedulaNotificacion,System.String</value>
+          <value>HoraGuaC,System.String</value>
+          <value>FechaGuateC,System.String</value>
+          <value>AcuerdoMinLetras,System.String</value>
+          <value>AcuerdoMinisterial,System.String</value>
+          <value>FechaAcuerdo,System.String</value>
+          <value>FechaIniPro,System.String</value>
+          <value>FechaFinPro,System.String</value>
+          <value>FechaFinalOriginal,System.String</value>
+          <value>DepartamentoTramo,System.String</value>
+          <value>Tramos,System.String</value>
+          <value>tiporep,System.String</value>
+          <value>NombrRepresentante,System.String</value>
+          <value>Contratista,System.String</value>
+          <value>FechaActaIns,System.String</value>
+          <value>NumeroActaInsL,System.String</value>
+          <value>NumeroActaIns,System.String</value>
+          <value>LibroActaInspeL,System.String</value>
+          <value>LibroActaInspe,System.String</value>
+          <value>FolioInspeL,System.String</value>
+          <value>FolioInspe,System.String</value>
+          <value>TieneCO,System.String</value>
+          <value>proyectoaño,System.String</value>
+          <value>EmpresaSupervisoraFirma,System.String</value>
+          <value>Departamento,System.String</value>
+          <value>Municipio,System.String</value>
+          <value>SuperIntendente,System.String</value>
+          <value>MinutosFinal,System.String</value>
+          <value>MinutosFinalL,System.String</value>
+          <value>ProyectosS,System.String</value>
+          <value>AnioL,System.String</value>
+          <value>NombrRepresentante1,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DataSource1</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>ANIOID,,8,0</value>
+          <value>PROYECTO,,22,25</value>
+          <value>PROYECTOL,,22,250</value>
+        </Parameters>
+        <SqlCommand>exec PRActaRecepcionRegionales @ANIOID,@PROYECTO,0</SqlCommand>
+      </DataSource1>
+      <SaldoDeudores Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>SaldoDeudores</Alias>
+        <Columns isList="true" count="7">
+          <value>MontoSaldoDeud,System.String</value>
+          <value>MontoSaldoDeudL,System.String</value>
+          <value>ClaseFianDeul,System.String</value>
+          <value>ClaseFianDeu,System.String</value>
+          <value>Poliza,System.String</value>
+          <value>FianzaDeudores,System.String</value>
+          <value>BancoSaldoDeud,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>SaldoDeudores</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>ANIOID,,8,0</value>
+          <value>PROYECTO,,12,25</value>
+          <value>PROYECTOL,,22,250</value>
+        </Parameters>
+        <SqlCommand>exec PRActaRecepcionRegionales @ANIOID, @PROYECTO,1</SqlCommand>
+      </SaldoDeudores>
+      <ConservacionObra Ref="5" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>ConservacionObra</Alias>
+        <Columns isList="true" count="7">
+          <value>MontoSaldoDeud,System.String</value>
+          <value>MontoSaldoDeudL,System.String</value>
+          <value>ClaseFianDeul,System.String</value>
+          <value>ClaseFianDeu,System.String</value>
+          <value>Poliza,System.String</value>
+          <value>FianzaDeudores,System.String</value>
+          <value>BancoSaldoDeud,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>ConservacionObra</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>ANIOID,,8,0</value>
+          <value>PROYECTO,,22,25</value>
+          <value>PROYECTOL,,22,250</value>
+        </Parameters>
+        <SqlCommand>exec PRActaRecepcionRegionales @ANIOID,@PROYECTO,2</SqlCommand>
+      </ConservacionObra>
+      <Comision Ref="6" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Comision</Alias>
+        <Columns isList="true" count="12">
+          <value>Uno,System.String</value>
+          <value>CargoUno,System.String</value>
+          <value>covialuno,System.String</value>
+          <value>Dos,System.String</value>
+          <value>CargoDos,System.String</value>
+          <value>covialDos,System.String</value>
+          <value>Tres,System.String</value>
+          <value>CargoTres,System.String</value>
+          <value>covialTres,System.String</value>
+          <value>SUPERINTENDENTE,System.String</value>
+          <value>EmpresaContratista,System.String</value>
+          <value>AnioID,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>Comision</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>ANIOID,,8,0</value>
+          <value>PROYECTO,,22,25</value>
+          <value>PROYECTOL,,22,250</value>
+        </Parameters>
+        <SqlCommand>exec PRActaRecepcionRegionales @ANIOID,@PROYECTO,3</SqlCommand>
+      </Comision>
+      <DataSource2 Ref="7" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DataSource2</Alias>
+        <Columns isList="true" count="2">
+          <value>PROYECTOSSUP,System.String</value>
+          <value>descripcion,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DataSource2</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>ANIOID,,8,0</value>
+          <value>PROYECTO,,22,50</value>
+          <value>PROYECTOL,,22,600</value>
+        </Parameters>
+        <SqlCommand>exec PRActaRecepcionRegionales @ANIOID, @PROYECTO,5</SqlCommand>
+      </DataSource2>
+      <DataSource3 Ref="8" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DataSource3</Alias>
+        <Columns isList="true" count="4">
+          <value>ClaseFianza,System.String</value>
+          <value>SaldosDeudoresL,System.String</value>
+          <value>LetraPoliza,System.String</value>
+          <value>Poliza,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DataSource3</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>ANIOID,,8,0</value>
+          <value>PROYECTO,,22,35</value>
+          <value>PROYECTOL,,22,300</value>
+        </Parameters>
+        <SqlCommand>exec PRActaRecepcionRegionales @ANIOID, @PROYECTO,4</SqlCommand>
+      </DataSource3>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="9" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="2">
+        <PageHeaderBand1 Ref="10" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19.6,3</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="9" />
+          <Parent isRef="9" />
+        </PageHeaderBand1>
+        <DataBand1 Ref="11" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <CanBreak>True</CanBreak>
+          <ClientRectangle>0,4.2,19.6,17.2</ClientRectangle>
+          <Components isList="true" count="12">
+            <Text1 Ref="12" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <CanBreak>True</CanBreak>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1.4,0,18.2,1.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="9" />
+              <Parent isRef="11" />
+              <Text>&lt;line-height="2"&gt;
+&lt;text-align="justify"&gt;
+&lt;font-size="11"&gt;
+&lt;b&gt;ACTA No. {DataSource1.NumeroActa}&lt;/b&gt; En el municipio de {DataSource1.Municipio}, del Departamento 
+de {DataSource1.Departamento}, 
+siendo las {DataSource1.HoraActaL} ({DataSource1.HoraActa}) del día {DataSource1.FechaActa}, nos encontramos 
+constituidos las siguientes personas; {DataSource1.Comision}, de la Unidad Ejecutora de 
+Conservación Vial -COVIAL-, quienes conforman la COMISION RECEPTORA Y LIQUIDADORA, según el oficio 
+No. {DataSource1.OficioComisionL}({DataSource1.OficioComision}), de fecha {DataSource1.FechaOficioL}, 
+que en lo sucesivo se denominará LA COMISIÓN RECEPTORA Y LIQUIDADORA, {DataSource1.NombrRepresentante}, 
+Delegado Residente,  de la  empresa {DataSource1.Contratista}, 
+ {DataSource1.Parameters["PROYECTOL"].ParameterValue} ({DataSource1.Parameters["PROYECTO"].ParameterValue}-
+{DataSource1.Parameters["ANIOID"].ParameterValue}), que tiene a su cargo la supervisión de los proyectos:
+{DataSource1.ProyectosS} en lo sucesivo se denominará DELEGADO RESIDENTE, de conformidad con el contrato 
+administrativo número {DataSource1.ContratoAdminEmpLetras}({DataSource1.ContratoAdmnistrativoEmp}) de fecha 
+{DataSource1.FechaContrato}, con fecha de inicio {DataSource1.FechaIniPro}, y finalizando el día  
+{DataSource1.FechaFinPro} el proyecto {DataSource1.Parameters["PROYECTOL"].ParameterValue} 
+({DataSource1.Parameters["PROYECTO"].ParameterValue}-{DataSource1.Parameters["ANIOID"].ParameterValue})
+tiene como fin la supervisión de los proyectos: {DataSource2.PROYECTOSSUP} los cuales se ejecutaron en 
+el  DEPARTAMENTO de {DataSource1.DepartamentoTramo}, en los tramos: {DataSource1.Tramos} 
+  para hacer constar lo siguiente: &lt;b&gt;PRIMERO:&lt;/b&gt; Se tiene a la vista fotocopia simple del contrato 
+administrativo  número &lt;b&gt;{DataSource1.ContratoAdminEmpLetras} ({DataSource1.ContratoAdmnistrativoEmp})&lt;/b&gt;
+ de fecha &lt;b&gt;{DataSource1.FechaContrato}&lt;/b&gt;, en el cual se establece lo siguiente: Clausula 
+&lt;b&gt;DECIMA QUINTA: INSPECCIONES, TERMINACION DE OBRA, RECEPCIÓN Y LIQUIDACIÓN. Literales:  B) TERMINACION 
+DE LOS SERVICIOS DE SUPERVISION: &lt;/b&gt;Cuando los servicios de supervisión estén finalizados, 
+&lt;b&gt;“LA SUPERVISORA”&lt;/b&gt; deberá presentar la Garantía de Saldos Deudores y dar aviso por escrito a 
+&lt;b&gt;“COVIAL”&lt;/b&gt; de la conclusión de la supervisión y con esta diligencia se interrumpirá el plazo de 
+ejecución, siempre que ésta compruebe que &lt;b&gt;“EL PROYECTO”&lt;/b&gt; está terminado. &lt;b&gt;“LA SUPERVISORA”&lt;/b&gt; 
+presentará el informe pormenorizado dentro de los veinte (20) días hábiles de haber finalizada la 
+supervisión. &lt;b&gt;C) RECEPCIÓN:&lt;/b&gt; La Comisión Receptora y Liquidadora, sí comprueba que la supervisión 
+ está ejecutada satisfactoriamente, suscribirá el acta de recepción final dentro de los diez (10) días
+ hábiles siguientes a la fecha de notificación de su nombramiento. La fecha de recepción definitiva 
+será la del cierre de la última acta. &lt;b&gt;D) LIQUIDACIÓN:&lt;/b&gt; La Comisión Receptora y Liquidadora, dentro 
+de los noventa (90) días hábiles siguientes a la fecha del acta de recepción definitiva, procederá a 
+efectuar la liquidación del presente contrato y a establecer el importe de los pagos y cobros  que 
+deban hacerse  a &lt;b&gt;“LA SUPERVISORA”.&lt;/b&gt; Igual procedimiento se observará en caso de  rescisión o 
+terminación del presente contrato. Si transcurrido dicho plazo la Comisión no  ha suscrito el acta 
+correspondiente, &lt;b&gt;“LA SUPERVISORA”&lt;/b&gt; debe presentar a &lt;b&gt;“COVIAL”&lt;/b&gt; un proyecto de liquidación. 
+&lt;b&gt;“COVIAL”&lt;/b&gt; deberá aprobar o improbar la liquidación elaborada por la Comisión o el proyecto de 
+liquidación presentado por &lt;b&gt;“LA SUPERVISORA”&lt;/b&gt; dentro del mes siguiente de recibida la respectiva 
+documentación. Si vencido este plazo no se produce ninguna resolución, con la petición de aprobación 
+presentada por &lt;b&gt;“LA SUPERVISORA”,&lt;/b&gt; se tendrá por resuelta favorablemente. &lt;b&gt;SEGUNDO:&lt;/b&gt; El 
+supervisor da fe de que los trabajos fueron efectivamente ejecutados y supervisados de acuerdo 
+con los términos   del contrato, especificaciones Generales y Especiales {DataSource1.AnioL} 
+({DataSource1.Parameters["ANIOID"].ParameterValue}), aplicables en la Unidad Ejecutora de Conservación 
+Vial –COVIAL- y demás normas contractuales, se procede a llevar a cabo la recepción del proyecto a entera 
+conformidad de la comisión receptora y liquidadora. &lt;b&gt;TERCERO:&lt;/b&gt; {DataSource2.descripcion} La comisión receptora y 
+liquidadora  deja constancia que los trabajos fueron  ejecutados  conforme el tiempo contractual.  
+&lt;b&gt; CUARTO:&lt;/b&gt; Se tuvo a la vista, la fianza de Saldos Deudores {DataSource3.SaldosDeudoresL}
+ ({DataSource3.ClaseFianza}), póliza número {DataSource3.LetraPoliza} ({DataSource3.Poliza}),
+  emitida por la entidad {ConservacionObra.BancoSaldoDeud}, por un valor de {ConservacionObra.MontoSaldoDeudL}
+ ({ConservacionObra.MontoSaldoDeud}). Para dar cumplimiento al artículo sesenta y ocho (68), 
+Decreto numero cincuenta y siete guión noventa y dos (57-92), Ley de Contrataciones del Estado.
+&lt;b&gt; QUINTO:&lt;/b&gt; los miembros de la Comisión Receptora y Liquidadora y El Delegado Residente, 
+dejan constancia que al momento de  la  recepción del proyecto, {Comision.Parameters["PROYECTOL"].ParameterValue}
+ ({Comision.Parameters["PROYECTO"].ParameterValue}-{Comision.Parameters["ANIOID"].ParameterValue}), 
+tuvieron  a la vista las Bitácoras autorizadas por la Contraloría General de Cuentas, de 
+los proyectos, en los cuales tienen detallados los trabajos ejecutados durante el plazo establecido 
+según los contratos. &lt;b&gt;SEXTO: &lt;/b&gt; No habiendo más que hacer constar, se da por finalizada la presente acta, 
+en el mismo lugar y fecha de su inicio, {DataSource1.MinutosFinalL} ({DataSource1.MinutosFinal})
+minutos después, la que leída por los comparecientes quienes enterados de su contenido, objeto y validez, 
+la ratificamos, aceptamos y firmamos.---------------
+ 
+
+&lt;/font-size&gt;
+&lt;/text-align&gt;
+&lt;/line-height&gt;
+</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+            </Text1>
+            <Text2 Ref="13" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,2.4,8.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Guid>061cee8c0ec745e9b7f51453b149aeba</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="9" />
+              <Parent isRef="11" />
+              <Text>{Comision.Uno}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Text2>
+            <Text4 Ref="14" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,2.4,8.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Guid>96c1207ba86e418ea9001fcef66951e7</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="9" />
+              <Parent isRef="11" />
+              <Text>{Comision.Dos}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text3 Ref="15" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,6.4,8.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Guid>31942d0ac7234323b81e96de72d7b2d1</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="9" />
+              <Parent isRef="11" />
+              <Text>{Comision.Tres}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+            <Text6 Ref="16" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,6.4,8.4,2.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Guid>9bc9035d574547a68c8270452c9f16de</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="9" />
+              <Parent isRef="11" />
+              <Text>&lt;text-align="center"&gt;
+	{DataSource1.NombrRepresentante1}
+&lt;br&gt;
+{DataSource1.tiporep}, {Comision.EmpresaContratista}
+&lt;br&gt;Proyecto {DataSource1.Parameters["PROYECTO"].ParameterValue}-{DataSource1.Parameters["ANIOID"].ParameterValue}
+&lt;/text-align&gt;</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text5 Ref="17" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,3,8.4,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Guid>f3c7c3b600274352b26ec22b00317fc7</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="9" />
+              <Parent isRef="11" />
+              <Text>{Comision.CargoUno}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text7 Ref="18" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,4,8.4,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Guid>62d9940b858147109ded9cf8a169c584</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="9" />
+              <Parent isRef="11" />
+              <Text>{Comision.covialuno}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text8 Ref="19" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,3,8.4,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Guid>43d2dca1f84f4b288335670104394c7f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="9" />
+              <Parent isRef="11" />
+              <Text>{Comision.CargoDos}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text9 Ref="20" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,4,8.4,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Guid>98791a6930b847a4893f24ee37f7b4c1</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="9" />
+              <Parent isRef="11" />
+              <Text>{Comision.covialDos}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <Text11 Ref="21" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,7,8.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Guid>24b86163c329495db4c71fd204629a48</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="9" />
+              <Parent isRef="11" />
+              <Text>{Comision.CargoTres}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+            <Text12 Ref="22" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,7.8,8.4,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Guid>667b2b9c04974ba3b9aeba4158065369</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="9" />
+              <Parent isRef="11" />
+              <Text>{Comision.covialTres}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text10 Ref="23" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,10.2,8.4,2.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Guid>f0d771feaf194586809e0de31569bd98</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="9" />
+              <Parent isRef="11" />
+              <Text>
+&lt;text-align="center"&gt;
+Ing. {DataSource1.NomSupervisor}
+&lt;br&gt;
+{DataSource1.Tiposupervisor}
+&lt;br&gt;
+Supervisora {DataSource1.ProySuypervision}
+&lt;br&gt;
+{DataSource1.EmpresaSupervisoraFirma}
+&lt;/text-align&gt;</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+            </Text10>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>DataSource1</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <NewPageAfter>True</NewPageAfter>
+          <Page isRef="9" />
+          <Parent isRef="9" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>e99c43bd33334e44b57ef08fe4d877f8</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>35.6</PageHeight>
+      <PageWidth>21.6</PageWidth>
+      <PaperSize>Legal</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="24" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="25" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Acta_Recepcion</ReportAlias>
+  <ReportChanged>12/6/2018 3:23:55 PM</ReportChanged>
+  <ReportCreated>2/22/2018 2:41:22 PM</ReportCreated>
+  <ReportFile>\\192.168.1.90\g$\SRV2\wwwroot\SICOP\Reportes\RPTActaRecepcionS.mrt</ReportFile>
+  <ReportGuid>e17c0ae5a3c0414da8485d13074e4f9a</ReportGuid>
+  <ReportName>Acta_Recepcion</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2010.1.700</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Acta_Recepcion : Stimulsoft.Report.StiReport
+    {
+        
+        public Acta_Recepcion()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

@@ -1,0 +1,280 @@
+﻿<!-- modal reportes-->
+<div class="modal" tabindex="-1" id="reporteEstimaciones">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="estimacionesTitle">Reporte de Estimaciones</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mt-3">
+                <div class="container">
+                    <div class="row py-3 align-items-center">
+                        <div class="col-md-10">
+                            <p class="mb-0"><b>Seleccione el reporte de estimaciones que desea generar para el proyecto: B-001, estimación: 1</b></p>
+                        </div>
+                        <div class="col-md-2 text-right">
+                            <div class="d-inline-block h-100 text-center px-4 mx-4">
+                                <button type="button" id="btn-print-reporte" class="btn btn-light bg-white">
+                                    <i class="fas fa-print fa-2x"></i><br />
+                                    <span class="font-weight-bold text-center">Imprimir</span>
+                                </button>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="card border-secondary mb-3 card-custom" style="max-width: 18rem;">
+                                <div class="card-header text-center bg-white">
+                                    <div class="custom-control custom-radio mt-4 mb-4">
+                                        <input type="radio" class="custom-control-input" id="customRadio1" name="tipoFiltro"
+                                               value="customRadio1">
+                                        <label class="custom-control-label" for="customRadio1">Estimacion Caratula</label>
+                                    </div>
+                                </div>
+                                <div class="card-body text-secondary mt-5 mb-5 hidden-div" id="estimacion-caratura">
+                                    <p class="card-text text-blue mt-5 mb-5">
+                                        <label for="Descripcion">Nombre de empresa</label>
+                                        <input type="text" class="form-control" id="nombreEmpresa" name="nombreEmpresa">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card border-secondary mb-3 card-custom" style="max-width: 18rem;">
+                                <div class="card-header text-center bg-white">
+                                    <div class="custom-control custom-radio mt-2 mb-3">
+                                        <input type="radio" class="custom-control-input" id="caratulaFinanciera" name="tipoFiltro"
+                                               value="proyXfecha">
+                                        <label class="custom-control-label" for="caratulaFinanciera">Caratula Financiera</label>
+                                    </div>
+                                    <div class="custom-checkbox mr-4">
+                                        <input type="checkbox" class="custom-control-input" id="empresa-check">
+                                        <label class="custom-control-label mr-2" for="empresa-check">Empresa</label>
+                                    </div>
+                                </div>
+                                <div class="card-body text-secondary mb-5 mt-5 hidden-div" id="body-caratula-financiera">
+                                    <div class="card-text text-blue mt-3 mb-4">
+                                        <label for="Descripcion">Nombre Completo Delegado Residente</label>
+                                        <input type="text" class="form-control" id="nombreDelegado" name="nombreDelegado">
+                                    </div>
+                                    <div class="card-text text-blue mt-3 mb-4">
+                                        <label for="Descripcion">Nombre de Empresa</label>
+                                        <input type="text" class="form-control" id="nombreEmpresa2" name="nombreEmpresa2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card border-secondary mb-3 card-custom" style="max-width: 18rem;">
+                                <div class="card-header text-center">
+                                    <div class="custom-control custom-radio mt-2 mb-3 pl-3">
+                                        <input type="radio" class="custom-control-input" id="constanciaTrabajo2" name="tipoFiltro"
+                                               value="constanciaTrabajo2">
+                                        <label class="custom-control-label" for="constanciaTrabajo2">Constancia de Trabajo</label>
+                                    </div>
+                                    <div class="custom-checkbox mr-4 pr-5">
+                                        <input type="checkbox" class="custom-control-input" id="empresa-check2">
+                                        <label class="custom-control-label mr-2" for="empresa-check2">Empresa</label>
+                                    </div>
+                                </div>
+                                <div class="card-body text-secondary hidden-div" id="constanciaTrabajo-body-card">
+                                    <div class="form-group text-blue mt-3 mb-4">
+                                        <label for="FechaPresentacion">Ingresar Fecha</label>
+                                        <div class="input-group date" id="FechaPresentacion-dp" data-target-input="nearest">
+                                            <input id="FechaPresentacion" data-target="#FechaPresentacion-dp" type="text"
+                                                   class="form-control datetimepicker-input">
+                                            <div class="input-group-append" data-target="#FechaPresentacion-dp" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fas fa-calendar"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-text text-blue mt-3 mb-4">
+                                        <label for="Descripcion">Nombre Completo Delegado Residente</label>
+                                        <input type="text" class="form-control" id="nombreDelegado2" name="nombreDelegado2">
+                                    </div>
+                                    <div class="card-text text-blue mt-3 mb-4">
+                                        <label for="Descripcion">Nombre de Empresa</label>
+                                        <input type="text" class="form-control" id="nombreEmpresa3" name="nombreEmpresa3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card border-secondary mb-3 card-custom" style="max-width: 18rem;">
+                                <div class="card-header">
+                                    <div class="custom-control custom-radio mt-2 mb-3 pl-4">
+                                        <input type="radio" class="custom-control-input" id="avanceGrafica" name="tipoFiltro"
+                                               value="avanceGrafica">
+                                        <label class="custom-control-label" for="avanceGrafica">Control Avance Financiero Grafica</label>
+                                    </div>
+                                    <div class="custom-checkbox mr-4 pr-5 pl-4">
+                                        <input type="checkbox" class="custom-control-input" id="empresa-check3">
+                                        <label class="custom-control-label mr-2" for="empresa-check3">Empresa</label>
+                                    </div>
+                                </div>
+                                <div class="card-body text-secondary hidden-div" id="controlAvanceFinanciero-body-card">
+                                    <div class="card-text text-blue mt-2">
+                                        <label for="nombreDelegado4">Nombre Completo Delegado Residente</label>
+                                        <input type="text" class="form-control" id="nombreDelegado4" name="nombreDelegado4">
+                                    </div>
+                                    <div class="card-text text-blue mt-2">
+                                        <label for="nombreEmpresa1">Nombre de Empresa</label>
+                                        <input type="text" class="form-control" id="nombreEmpresa1" name="nombreEmpresa1">
+                                    </div>
+                                    <div class="card-text text-blue mt-2">
+                                        <label for="empresaContratista">Empresa Contratista</label>
+                                        <input type="text" class="form-control" id="empresaContratista" name="empresaContratista">
+                                    </div>
+                                    <div class="form-group text-blue mt-2">
+                                        <label for="periodos">Periodos</label>
+                                        <select class="form-control" id="periodos" name="periodos">
+                                        </select>
+                                    </div>
+                                    <div class="form-group mt-2">
+                                        <p>Periodo del Supervisor</p>
+                                    </div>
+                                    <div class="form-group mt-2">
+                                        <label for="desde" class="text-blue">Fecha Inicial</label>
+                                        <div class="input-group date" id="fecha-inicial" data-target-input="nearest">
+                                            <input type="text" name="desde" autocomplete="off" class="form-control datetimepicker-input" data-target="#fecha-inicial">
+                                            <div class="input-group-append" data-target="#fecha-inicial" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fas fa-calendar"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mt-2">
+                                        <label for="desde" class="text-blue">Fecha Final</label>
+                                        <div class="input-group date" id="fecha-final" data-target-input="nearest">
+                                            <input type="text" name="desde" autocomplete="off" class="form-control datetimepicker-input" data-target="#fecha-final">
+                                            <div class="input-group-append" data-target="#fecha-final" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fas fa-calendar"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="card border-secondary mb-3 card-custom" style="max-width: 18rem;">
+                                <div class="card-header">
+                                    <div class="custom-control custom-radio mt-2 mb-3 pl-4">
+                                        <input type="radio" class="custom-control-input" id="avanceFinanciero" name="tipoFiltro"
+                                               value="avanceFinanciero">
+                                        <label class="custom-control-label" for="avanceFinanciero">Control Avance Financiero</label>
+                                    </div>
+                                    <div class="custom-checkbox mr-4 pr-5 pl-4">
+                                        <input type="checkbox" class="custom-control-input" id="empresa-check4">
+                                        <label class="custom-control-label mr-2" for="empresa-check4">Empresa</label>
+                                    </div>
+                                </div>
+                                <div class="card-body text-secondary hidden-div" id="AvanceFinancieroBody-card">
+                                    <div class="card-text text-blue mt-2">
+                                        <label for="nombreDelegado5">Nombre Completo Delegado Residente</label>
+                                        <input type="text" class="form-control" id="nombreDelegado5" name="nombreDelegado4">
+                                    </div>
+                                    <div class="card-text text-blue mt-2">
+                                        <label for="nombreEmpresa4">Nombre de Empresa</label>
+                                        <input type="text" class="form-control" id="nombreEmpresa4" name="nombreEmpresa4">
+                                    </div>
+                                    <div class="card-text text-blue mt-2">
+                                        <label for="empresaContratista">Empresa Contratista</label>
+                                        <input type="text" class="form-control" id="empresaContratista2" name="empresaContratista2">
+                                    </div>
+                                    <div class="form-group text-blue mt-2">
+                                        <label for="periodos2">Periodos</label>
+                                        <select class="form-control" id="periodos2" name="periodos2">
+                                        </select>
+                                    </div>
+                                    <div class="form-group mt-2">
+                                        <p>Periodo del Supervisor</p>
+                                    </div>
+                                    <div class="form-group mt-2">
+                                        <label for="desde" class="text-blue">Fecha Inicial</label>
+                                        <div class="input-group date" id="fecha-inicial2" data-target-input="nearest">
+                                            <input type="text" name="desde" autocomplete="off" class="form-control datetimepicker-input" data-target="#fecha-inicial2">
+                                            <div class="input-group-append" data-target="#fecha-inicial2" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fas fa-calendar"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mt-2">
+                                        <label for="desde" class="text-blue">Fecha Final</label>
+                                        <div class="input-group date" id="fecha-final2" data-target-input="nearest">
+                                            <input type="text" name="desde" autocomplete="off" class="form-control datetimepicker-input" data-target="#fecha-final2">
+                                            <div class="input-group-append" data-target="#fecha-final2" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fas fa-calendar"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card border-secondary mb-3 card-custom" style="max-width: 18rem;">
+                                <div class="card-header text-center">
+                                    <div class="custom-control custom-radio mt-4 mb-4 pl-3">
+                                        <input type="radio" class="custom-control-input" id="ejecucionRenglones" name="tipoFiltro"
+                                               value="ejecucionRenglones">
+                                        <label class="custom-control-label" for="ejecucionRenglones">Ejecución de renglones de trabajo</label>
+                                    </div>
+                                </div>
+                                <div class="card-body text-secondary hidden-div" id="ejecuccionRenglonesTrabajo-body-card">
+                                    <div class="form-group text-blue mt-2">
+                                        <label for="periodos">Periodos</label>
+                                        <select class="form-control" id="periodos" name="periodos">
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card border-secondary mb-3 card-custom" style="max-width: 18rem;">
+                                <div class="card-header text-center">
+                                    <div class="custom-control custom-radio mt-4 mb-4 pl-3">
+                                        <input type="radio" class="custom-control-input" id="cuadroEstimacion" name="tipoFiltro"
+                                               value="cuadroEstimacion">
+                                        <label class="custom-control-label" for="cuadroEstimacion">Cuadro de  Estimación(Sábana)</label>
+                                    </div>
+                                </div>
+                                <div class="card-body text-secondary hidden-div" id="periodoCardbody">
+                                    <div class="form-group text-blue mt-2">
+                                        <label for="periodos4">Periodos</label>
+                                        <select class="form-control" id="periodos4" name="periodos4">
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card border-secondary mb-3 card-custom" style="max-width: 18rem;">
+                                <div class="card-header">
+                                    <div class="custom-control custom-radio mt-2 mb-3 pl-3">
+                                        <input type="radio" class="custom-control-input" id="recomendacionPago" name="tipoFiltro"
+                                               value="recomendacionPago">
+                                        <label class="custom-control-label" for="recomendacionPago">Recomendacion de Pago</label>
+                                    </div>
+                                    <div class="custom-checkbox mr-4 pl-3">
+                                        <input type="checkbox" class="custom-control-input" id="empresa-check7">
+                                        <label class="custom-control-label mr-2" for="empresa-check7">Empresa</label>
+                                    </div>
+                                </div>
+                                <div class="card-body text-secondary hidden-div" id="periodoCardbody1">
+                                    <div class="form-group text-blue">
+                                        <label for="periodos7">Periodos</label>
+                                        <select class="form-control" id="periodos7" name="periodos7">
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- fin de modal de reportes -->

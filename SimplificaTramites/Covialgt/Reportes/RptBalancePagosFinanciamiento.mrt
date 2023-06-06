@@ -1,0 +1,1621 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.0" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <Connection Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>Connection</Alias>
+        <ConnectionString>Persist Security Info=True;User ID=sa;Data Source=SRVBK-250\COVIALAPP;Initial Catalog=z_PRODUCCION_SicopDB_Pruebas;Integrated Security=False;Password=00@dminSupport</ConnectionString>
+        <Name>Connection</Name>
+        <PromptUserNameAndPassword>False</PromptUserNameAndPassword>
+      </Connection>
+    </Databases>
+    <DataSources isList="true" count="7">
+      <ResumenCostoProyecto Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>ResumenCostoProyecto</Alias>
+        <Columns isList="true" count="14">
+          <value>Proyecto,System.String</value>
+          <value>Contrato,System.String</value>
+          <value>Acuerdo,System.String</value>
+          <value>EmpresaContratista,System.String</value>
+          <value>FechaInicio,System.String</value>
+          <value>FechaOriginalFinalizacion,System.String</value>
+          <value>FechaIContractual,System.String</value>
+          <value>FechaFContractual,System.String</value>
+          <value>Supervisora,System.String</value>
+          <value>Incrementos,System.String</value>
+          <value>Decrementos,System.Decimal</value>
+          <value>MontoModificado,System.Decimal</value>
+          <value>MontoOriginal,System.Decimal</value>
+          <value>diferencia,System.Decimal</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>ResumenCostoProyecto</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_anioid,,8,10</value>
+          <value>_x0040_proyecto,,22,50</value>
+        </Parameters>
+        <SqlCommand>exec SPCuadrosLiquidacion @anioid,@proyecto,0</SqlCommand>
+      </ResumenCostoProyecto>
+      <DetalleDocumentos Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DetalleDocumentos</Alias>
+        <Columns isList="true" count="3">
+          <value>DocCambioTipoId,System.String</value>
+          <value>MontoDocCambio,System.Decimal</value>
+          <value>DocCambioDesc,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DetalleDocumentos</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_anioid,,8,0</value>
+          <value>_x0040_proyecto,,22,50</value>
+        </Parameters>
+        <SqlCommand>exec ObtenerDocumentosCambioLiquidacion @anioid,@proyecto,0
+</SqlCommand>
+      </DetalleDocumentos>
+      <Estimaciones Ref="5" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Estimaciones</Alias>
+        <Columns isList="true" count="3">
+          <value>estimacion,System.String</value>
+          <value>periodo,System.String</value>
+          <value>monto,System.Decimal</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>Estimaciones</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_anioId,,8,0</value>
+          <value>_x0040_proyecto,,22,25</value>
+        </Parameters>
+        <SqlCommand>exec ObtenerEstimaciones @anioId,@proyecto</SqlCommand>
+      </Estimaciones>
+      <DocumentosPagados Ref="6" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DocumentosPagados</Alias>
+        <Columns isList="true" count="2">
+          <value>estimacion,System.String</value>
+          <value>MontoPagado,System.Decimal</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DocumentosPagados</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="4">
+          <value>_x0040_anioId,,8,0</value>
+          <value>_x0040_proyecto,,22,25</value>
+          <value>_x0040_fechaIni,,31,0</value>
+          <value>_x0040_fechaFin,,31,0</value>
+        </Parameters>
+        <SqlCommand>exec ObtenerDocumentosPagados @anioId,@proyecto,@fechaIni,@fechaFin</SqlCommand>
+      </DocumentosPagados>
+      <DocumentosPendientes Ref="7" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DocumentosPendientes</Alias>
+        <Columns isList="true" count="3">
+          <value>estimacion,System.String</value>
+          <value>periodo,System.String</value>
+          <value>MontoPendientePago,System.Decimal</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DocumentosPendientes</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="4">
+          <value>_x0040_anioId,,8,0</value>
+          <value>_x0040_proyecto,,22,25</value>
+          <value>_x0040_fechaIni,,31,0</value>
+          <value>_x0040_fechaFin,,31,0</value>
+        </Parameters>
+        <SqlCommand>exec ObtenerDocumentosPedientesPago @anioId,@proyecto,@fechaIni,@fechaFin</SqlCommand>
+      </DocumentosPendientes>
+      <Montos Ref="8" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Montos</Alias>
+        <Columns isList="true" count="2">
+          <value>MontoModificado,System.Decimal</value>
+          <value>MontoOriginal,System.Decimal</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>Montos</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_anioid,,8,0</value>
+          <value>_x0040_proyecto,,22,25</value>
+        </Parameters>
+        <SqlCommand>select (SELECT isnull(SUM(MontoDocCambio),0) FROM tblDumentosCambio WHERE AnioID = @anioid AND 
+		ProyectoCodigo = @proyecto AND DocCambioAprobado = 1 AND EstadoID = 8) MontoModificado,MontoOriginal from tblProyectos
+		where AnioID=@anioid and ProyectoCodigo=@proyecto</SqlCommand>
+      </Montos>
+      <totalesPagado Ref="9" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>totalesPagado</Alias>
+        <Columns isList="true" count="1">
+          <value>MontoPendientePago,System.Decimal</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>totalesPagado</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="4">
+          <value>_x0040_anioId,,8,0</value>
+          <value>_x0040_proyecto,,22,90</value>
+          <value>_x0040_fechaIni,,31,0</value>
+          <value>_x0040_fechaFin,,31,0</value>
+        </Parameters>
+        <SqlCommand>exec ObtenerDocumentosPedientesPagoTotales @anioId,@proyecto,@fechaIni,@fechaFin</SqlCommand>
+      </totalesPagado>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="6">
+    <Page1 Ref="10" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="12">
+        <PageFooterBand1 Ref="11" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,28.2,17.6,0.8</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text28 Ref="12" type="Text" isKey="true">
+              <Border>All;Black;1;None;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.2,0,17.4,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14,Bold</Font>
+              <Guid>43387b05d027428da0e3725f8530d680</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="10" />
+              <Parent isRef="11" />
+              <Text>COMISION RECEPTORA Y LIQUIDADORA</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text28>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+        </PageFooterBand1>
+        <Text38 Ref="13" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>21.2,2.8,2.4,18</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,8,Bold</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text38</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+          <Text>{ResumenCostoProyecto.Incrementos}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text38>
+        <Text42 Ref="14" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>21.2,2.8,2.4,15.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,8,Bold</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text42</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+          <Text>{ResumenCostoProyecto.Incrementos}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text42>
+        <Text43 Ref="15" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>23.6,2.8,2.4,15.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,8,Bold</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text43</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+          <Text>{ResumenCostoProyecto.Incrementos}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text43>
+        <Text39 Ref="16" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>21.2,2.8,2.4,15.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,8,Bold</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text39</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+          <Text>{ResumenCostoProyecto.Incrementos}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text39>
+        <Text40 Ref="17" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>21.2,2.8,2.4,15.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,8,Bold</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text40</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+          <Text>{ResumenCostoProyecto.Incrementos}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text40>
+        <Text37 Ref="18" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>21.2,2.8,2.4,15.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,8,Bold</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text37</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+          <Text>{ResumenCostoProyecto.Incrementos}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text37>
+        <Text47 Ref="19" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>21.2,2.8,2.4,15.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,8,Bold</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text47</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+          <Text>{ResumenCostoProyecto.MontoModificado}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text47>
+        <Text48 Ref="20" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>21.2,2.8,2.4,15.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,8,Bold</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text48</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+          <Text>{ResumenCostoProyecto.Incrementos}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text48>
+        <ReportTitleBand1 Ref="21" type="ReportTitleBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,17.6,1.6</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text1 Ref="22" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,17.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="10" />
+              <Parent isRef="21" />
+              <Text>MINISTERIO DE COMUNICACIONES, INFRAESTRUCTURA Y VIVIENDA</Text>
+              <TextBrush>Black</TextBrush>
+            </Text1>
+            <Text2 Ref="23" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.6,17.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="10" />
+              <Parent isRef="21" />
+              <Text>UNIDAD EJECUTORA DE CONSERVACION VIAL -COVIAL-</Text>
+              <TextBrush>Black</TextBrush>
+            </Text2>
+            <Text3 Ref="24" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.2,17.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="10" />
+              <Parent isRef="21" />
+              <Text>BALANCE DE PAGOS Y FINANCIAMIENTO</Text>
+              <TextBrush>Black</TextBrush>
+            </Text3>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportTitleBand1</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+        </ReportTitleBand1>
+        <DataBand2 Ref="25" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,2.8,17.6,4</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text41 Ref="26" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3,0.2,6.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>a4df2f994f064a98bbd5679c3898a6c8</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text41</Name>
+              <Page isRef="10" />
+              <Parent isRef="25" />
+              <Text>{ResumenCostoProyecto.Proyecto}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text41>
+            <Text57 Ref="27" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.2,3,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>cd47cb3d548d4f45a82a76a13e6b561d</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text57</Name>
+              <Page isRef="10" />
+              <Parent isRef="25" />
+              <Text>Proyecto: </Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text57>
+            <DEstimaciones Ref="28" type="SubReport" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.4,17.6,2.6</ClientRectangle>
+              <Components isList="true" count="0" />
+              <Name>DEstimaciones</Name>
+              <Page isRef="10" />
+              <Parent isRef="25" />
+              <SubReportPageGuid>9891a4c91a4348a9a84193fff054eafb</SubReportPageGuid>
+            </DEstimaciones>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <Filters isList="true" count="0" />
+          <Guid>f19570c6a0824e30946c09f514e50dab</Guid>
+          <Name>DataBand2</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+          <Sort isList="true" count="0" />
+        </DataBand2>
+        <DataBand1 Ref="29" type="DataBand" isKey="true">
+          <Border>None;Transparent;1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,7.6,17.6,10</ClientRectangle>
+          <Components isList="true" count="10">
+            <Text4 Ref="30" type="Text" isKey="true">
+              <Border>All;Transparent;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>0,0.2,7.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>5914ef2fed1844b5b6baf71a8d9beabf</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="10" />
+              <Parent isRef="29" />
+              <Text>RESUMEN FINANCIERO DEL PROYECTO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text53 Ref="31" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1,0.6,3.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>0910a32afeab41ee9061e0f81f18a5ff</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text53</Name>
+              <Page isRef="10" />
+              <Parent isRef="29" />
+              <Text>Monto original del contrato:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text53>
+            <DDetalleDocumentos Ref="32" type="SubReport" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.2,17.6,2.2</ClientRectangle>
+              <Components isList="true" count="0" />
+              <Name>DDetalleDocumentos</Name>
+              <Page isRef="10" />
+              <Parent isRef="29" />
+              <SubReportPageGuid>0ab12011e7554faa8b294e2992b91ce6</SubReportPageGuid>
+            </DDetalleDocumentos>
+            <DDocumentosPagados Ref="33" type="SubReport" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,4,17.6,2.2</ClientRectangle>
+              <Components isList="true" count="0" />
+              <Name>DDocumentosPagados</Name>
+              <Page isRef="10" />
+              <Parent isRef="29" />
+              <SubReportPageGuid>5478c9c8fc0d4a91b8d5c1f48045e088</SubReportPageGuid>
+            </DDocumentosPagados>
+            <Text11 Ref="34" type="Text" isKey="true">
+              <Border>All;Transparent;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>0,3.6,7.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>2d566e6e7b6f4cac84386ea91096e6f2</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="10" />
+              <Parent isRef="29" />
+              <Text>PAGOS EFECTUADOS</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+            <Text14 Ref="35" type="Text" isKey="true">
+              <Border>All;Transparent;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>0,6.4,7.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>1cf934f68efc4b1db5a165bef897455b</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="10" />
+              <Parent isRef="29" />
+              <Text>PAGOS PENDIENTES</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <DDocumentosPendientes Ref="36" type="SubReport" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,6.8,17.6,2.4</ClientRectangle>
+              <Components isList="true" count="0" />
+              <Name>DDocumentosPendientes</Name>
+              <Page isRef="10" />
+              <Parent isRef="29" />
+              <SubReportPageGuid>89f49563b72d45649d8e64b6fee8c11b</SubReportPageGuid>
+            </DDocumentosPendientes>
+            <Text21 Ref="37" type="Text" isKey="true">
+              <Border>All;Transparent;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>0,9.4,7.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>61a93ad0a65b4c62908fb71f7336174f</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="10" />
+              <Parent isRef="29" />
+              <Text>RESUMEN</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+            <Resumen Ref="38" type="SubReport" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,10,17.6,3.8</ClientRectangle>
+              <Components isList="true" count="0" />
+              <Guid>b8372442e9c040ca9992aa4e167a388c</Guid>
+              <Name>Resumen</Name>
+              <Page isRef="10" />
+              <Parent isRef="29" />
+              <SubReportPageGuid>23265f60c97944008af29cea99cc6fbc</SubReportPageGuid>
+            </Resumen>
+            <Text26 Ref="39" type="Text" isKey="true">
+              <Border>All;Black;1;None;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.4,0.6,3.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Enabled>False</Enabled>
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="10" />
+              <Parent isRef="29" />
+              <Printable>False</Printable>
+              <Text>{Trim(Montos.MontoOriginal)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="40" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <Filters isList="true" count="0" />
+          <Guid>cbfad450f4074a148d98d3aff15da8d3</Guid>
+          <Name>DataBand1</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>a616b0eca61b489e907e71977192b22c</Guid>
+      <Margins>3,1,2,2</Margins>
+      <Name>Page1</Name>
+      <PageHeight>33</PageHeight>
+      <PageWidth>21.6</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="41" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+    <subEstimaciones Ref="42" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <Table2 Ref="43" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,17.6,0.4</ClientRectangle>
+          <ColumnCount>3</ColumnCount>
+          <Components isList="true" count="3">
+            <Table2_Cell1 Ref="44" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>1eb53172f2424732a90b125f3fc93a54</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>2</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell1</Name>
+              <Page isRef="42" />
+              <Parent isRef="43" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>No. de Estimación</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table2_Cell1>
+            <Table2_Cell2 Ref="45" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,0,6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>12f6132e850947398d7e18a44033f271</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>3</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell2</Name>
+              <Page isRef="42" />
+              <Parent isRef="43" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Periodo</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table2_Cell2>
+            <Table2_Cell3 Ref="46" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,0,5.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>6abb34c690084e5995547e0ebcb97059</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>4</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell3</Name>
+              <Page isRef="42" />
+              <Parent isRef="43" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Monto</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table2_Cell3>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <Filters isList="true" count="0" />
+          <Guid>340b55c251e741cab914f77ecbf3ebc3</Guid>
+          <Name>Table2</Name>
+          <NumberID>25</NumberID>
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <RowCount>1</RowCount>
+          <Sort isList="true" count="0" />
+        </Table2>
+        <Table1 Ref="47" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,1.6,17.6,0.8</ClientRectangle>
+          <ColumnCount>3</ColumnCount>
+          <Components isList="true" count="3">
+            <Table1_Cell1 Ref="48" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>2b5ed6dc82a7459b85ca57ea09fd29ae</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>5</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell1</Name>
+              <Page isRef="42" />
+              <Parent isRef="47" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{Estimaciones.estimacion}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell1>
+            <Table1_Cell2 Ref="49" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,0,6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>e805f8ae90d24405b9f74360e8d5ca0a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>6</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell2</Name>
+              <Page isRef="42" />
+              <Parent isRef="47" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{Estimaciones.periodo}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell2>
+            <Table1_Cell3 Ref="50" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,0,5.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>55270abf38d142c6b46ea270a2763466</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>7</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell3</Name>
+              <Page isRef="42" />
+              <Parent isRef="47" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{Estimaciones.monto}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="51" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <Symbol>€</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell3>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>Estimaciones</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>1edaec6595c249d4a6a95d69e622f1bd</Guid>
+          <Name>Table1</Name>
+          <NumberID>28</NumberID>
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <RowCount>1</RowCount>
+          <Sort isList="true" count="0" />
+        </Table1>
+        <ReportSummaryBand1 Ref="52" type="ReportSummaryBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,3.2,17.6,1</ClientRectangle>
+          <Components isList="true" count="5">
+            <Text5 Ref="53" type="Text" isKey="true">
+              <Border>All;Transparent;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14,0,2.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="42" />
+              <Parent isRef="52" />
+              <Text>{SumRunning(Table1,Estimaciones.monto)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="54" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <Symbol>€</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text6 Ref="55" type="Text" isKey="true">
+              <Border>All;Transparent;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.2,0.2,6.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="42" />
+              <Parent isRef="52" />
+              <Text>TOTAL DE ESTIMACIONES</Text>
+              <TextBrush>Black</TextBrush>
+            </Text6>
+            <HorizontalLinePrimitive1 Ref="56" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>14.2,0.6,1.8,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="57" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>f74670c885574f679cc92227e2a2616b</Guid>
+              <Name>HorizontalLinePrimitive1</Name>
+              <Page isRef="42" />
+              <Parent isRef="52" />
+              <StartCap Ref="58" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive1>
+            <HorizontalLinePrimitive2 Ref="59" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>14.2,0.8,1.8,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="60" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>771d3906a354429993c49569fa97c790</Guid>
+              <Name>HorizontalLinePrimitive2</Name>
+              <Page isRef="42" />
+              <Parent isRef="52" />
+              <StartCap Ref="61" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive2>
+            <HorizontalLinePrimitive9 Ref="62" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>11.2,0,7.8,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="63" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>HorizontalLinePrimitive9</Name>
+              <Page isRef="42" />
+              <Parent isRef="52" />
+              <StartCap Ref="64" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive9>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportSummaryBand1</Name>
+          <Page isRef="42" />
+          <Parent isRef="42" />
+        </ReportSummaryBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>9891a4c91a4348a9a84193fff054eafb</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>subEstimaciones</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>19.6</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="65" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </subEstimaciones>
+    <subDetalleDocumentos Ref="66" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="2">
+        <DataBand3 Ref="67" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,0.4,17.6,0.6</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text7 Ref="68" type="Text" isKey="true">
+              <Border>All;Black;1;None;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,0,6.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="66" />
+              <Parent isRef="67" />
+              <Text>{DetalleDocumentos.DocCambioDesc}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text7>
+            <Text8 Ref="69" type="Text" isKey="true">
+              <Border>All;Black;1;None;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11,0,4.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="66" />
+              <Parent isRef="67" />
+              <Text>{DetalleDocumentos.MontoDocCambio}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="70" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <Symbol>€</Symbol>
+              </TextFormat>
+            </Text8>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>DetalleDocumentos</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataBand3</Name>
+          <Page isRef="66" />
+          <Parent isRef="66" />
+          <Sort isList="true" count="0" />
+        </DataBand3>
+        <ReportSummaryBand2 Ref="71" type="ReportSummaryBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,1.8,17.6,0.8</ClientRectangle>
+          <Components isList="true" count="5">
+            <Text9 Ref="72" type="Text" isKey="true">
+              <Border>All;Transparent;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>0.8,0,9.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>28efb83723704f2bb840b1965a454561</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="66" />
+              <Parent isRef="71" />
+              <Text>VALOR TOTAL EJECUTADO DEL CONTRATO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <Text10 Ref="73" type="Text" isKey="true">
+              <Border>All;Black;1;None;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.8,0.2,3,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="66" />
+              <Parent isRef="71" />
+              <Text>{SumRunning(DataBand3,DetalleDocumentos.MontoDocCambio)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="74" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <Symbol>€</Symbol>
+              </TextFormat>
+            </Text10>
+            <Text24 Ref="75" type="Text" isKey="true">
+              <Border>All;Black;1;None;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13.6,0.2,2,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>3dd368c0b9d84acc8d329ae4e1e8b253</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="66" />
+              <Parent isRef="71" />
+              <Text>{SumRunning(DataBand3,DetalleDocumentos.MontoDocCambio)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="76" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <Symbol>€</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+            <HorizontalLinePrimitive12 Ref="77" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>13.6,0,2,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="78" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>HorizontalLinePrimitive12</Name>
+              <Page isRef="66" />
+              <Parent isRef="71" />
+              <StartCap Ref="79" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive12>
+            <HorizontalLinePrimitive3 Ref="80" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>13.6,0.6,2,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="81" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>fdf0730f58bb40e484586911f6bee1a6</Guid>
+              <Name>HorizontalLinePrimitive3</Name>
+              <Page isRef="66" />
+              <Parent isRef="71" />
+              <StartCap Ref="82" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive3>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportSummaryBand2</Name>
+          <Page isRef="66" />
+          <Parent isRef="66" />
+        </ReportSummaryBand2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>0ab12011e7554faa8b294e2992b91ce6</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>subDetalleDocumentos</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>19.6</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="83" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </subDetalleDocumentos>
+    <subDocumentosPagados Ref="84" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="2">
+        <DataBand4 Ref="85" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,0.4,17.6,0.6</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text12 Ref="86" type="Text" isKey="true">
+              <Border>All;Black;1;None;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.2,0.2,2.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="84" />
+              <Parent isRef="85" />
+              <Text>{DocumentosPagados.estimacion}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text12>
+            <Text13 Ref="87" type="Text" isKey="true">
+              <Border>All;Black;1;None;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,0.2,3.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="84" />
+              <Parent isRef="85" />
+              <Text>{DocumentosPagados.MontoPagado}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="88" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <Symbol>€</Symbol>
+              </TextFormat>
+            </Text13>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>DocumentosPagados</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataBand4</Name>
+          <Page isRef="84" />
+          <Parent isRef="84" />
+          <Sort isList="true" count="0" />
+        </DataBand4>
+        <ReportSummaryBand3 Ref="89" type="ReportSummaryBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,1.8,17.6,0.8</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text17 Ref="90" type="Text" isKey="true">
+              <Border>All;Transparent;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.2,0.2,5,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>ab35e5abd0fb4239b774550a6203aea7</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="84" />
+              <Parent isRef="89" />
+              <Text>TOTAL PAGOS EFECTUADOS</Text>
+              <TextBrush>Black</TextBrush>
+            </Text17>
+            <Text18 Ref="91" type="Text" isKey="true">
+              <Border>All;Black;1;None;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.8,0,3,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="84" />
+              <Parent isRef="89" />
+              <Text>{SumRunning(DataBand4,DocumentosPagados.MontoPagado)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="92" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <Symbol>€</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text18>
+            <Text22 Ref="93" type="Text" isKey="true">
+              <Border>All;Black;1;None;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13.6,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>058e5496faf0461a92dc1d1c31b25056</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="84" />
+              <Parent isRef="89" />
+              <Text>{SumRunning(DataBand4,DocumentosPagados.MontoPagado)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="94" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <Symbol>€</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text22>
+            <Text25 Ref="95" type="Text" isKey="true">
+              <Border>All;Black;1;None;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.6,0,0.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="84" />
+              <Parent isRef="89" />
+              <Text>-</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+            <HorizontalLinePrimitive10 Ref="96" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>13.6,0,2,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="97" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>HorizontalLinePrimitive10</Name>
+              <Page isRef="84" />
+              <Parent isRef="89" />
+              <StartCap Ref="98" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive10>
+            <HorizontalLinePrimitive4 Ref="99" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>13.6,0.6,2,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="100" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>eeb0af3cbea943b4a5288d750f30c6e7</Guid>
+              <Name>HorizontalLinePrimitive4</Name>
+              <Page isRef="84" />
+              <Parent isRef="89" />
+              <StartCap Ref="101" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive4>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportSummaryBand3</Name>
+          <Page isRef="84" />
+          <Parent isRef="84" />
+        </ReportSummaryBand3>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>5478c9c8fc0d4a91b8d5c1f48045e088</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>subDocumentosPagados</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>19.6</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="102" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </subDocumentosPagados>
+    <subDocumentosPendientes Ref="103" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="2">
+        <DataBand5 Ref="104" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,0.4,17.6,0.6</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text15 Ref="105" type="Text" isKey="true">
+              <Border>All;Black;1;None;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.2,0.2,3.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="103" />
+              <Parent isRef="104" />
+              <Text>{DocumentosPendientes.estimacion}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text15>
+            <Text16 Ref="106" type="Text" isKey="true">
+              <Border>All;Black;1;None;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,0.2,3.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="103" />
+              <Parent isRef="104" />
+              <Text>{DocumentosPendientes.MontoPendientePago}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="107" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <Symbol>€</Symbol>
+              </TextFormat>
+            </Text16>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>DocumentosPendientes</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>90c60cf79f3843daa2d81d785ada17e6</Guid>
+          <Name>DataBand5</Name>
+          <Page isRef="103" />
+          <Parent isRef="103" />
+          <Sort isList="true" count="0" />
+        </DataBand5>
+        <ReportSummaryBand4 Ref="108" type="ReportSummaryBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,1.8,17.6,1</ClientRectangle>
+          <Components isList="true" count="5">
+            <Text19 Ref="109" type="Text" isKey="true">
+              <Border>All;Transparent;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.2,0.2,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>1d7879c47e0f4bd8a683d7fc7fb4e264</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="103" />
+              <Parent isRef="108" />
+              <Text>TOTAL</Text>
+              <TextBrush>Black</TextBrush>
+            </Text19>
+            <Text20 Ref="110" type="Text" isKey="true">
+              <Border>All;Black;1;None;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.8,0.2,3.2,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>9f3b657641be4055abe011d79b9b4916</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="103" />
+              <Parent isRef="108" />
+              <Text>{SumRunning(DataBand5,DocumentosPendientes.MontoPendientePago)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="111" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <Symbol>€</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text20>
+            <Text23 Ref="112" type="Text" isKey="true">
+              <Border>All;Black;1;None;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.8,0,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>ff12386272944a4b9c56bafd2819cd1a</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="103" />
+              <Parent isRef="108" />
+              <Text>{SumRunning(DataBand5,DocumentosPendientes.MontoPendientePago)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="113" type="CurrencyFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <Symbol>€</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text23>
+            <HorizontalLinePrimitive5 Ref="114" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>13.6,0.6,5.6,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="115" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>bcc60fba0325427a8ef3fa121e6b7613</Guid>
+              <Name>HorizontalLinePrimitive5</Name>
+              <Page isRef="103" />
+              <Parent isRef="108" />
+              <StartCap Ref="116" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive5>
+            <HorizontalLinePrimitive6 Ref="117" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>13.6,0.8,5.6,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="118" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>a735382ff5c9459ea2d2685917f5fadc</Guid>
+              <Name>HorizontalLinePrimitive6</Name>
+              <Page isRef="103" />
+              <Parent isRef="108" />
+              <StartCap Ref="119" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive6>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>ad1e669acf9540ac84e4d9a0efda7aeb</Guid>
+          <Name>ReportSummaryBand4</Name>
+          <Page isRef="103" />
+          <Parent isRef="103" />
+        </ReportSummaryBand4>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>89f49563b72d45649d8e64b6fee8c11b</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>subDocumentosPendientes</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>19.6</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="120" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </subDocumentosPendientes>
+    <subResumen Ref="121" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="1">
+        <Table3 Ref="122" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,0.4,17.6,3.2</ClientRectangle>
+          <ColumnCount>3</ColumnCount>
+          <Components isList="true" count="12">
+            <Table3_Cell1 Ref="123" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>30</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table3_Cell1</Name>
+              <Page isRef="121" />
+              <Parent isRef="122" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>MONTO ORIGINAL</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table3_Cell1>
+            <Table3_Cell2 Ref="124" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,0,6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <ID>31</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table3_Cell2</Name>
+              <Page isRef="121" />
+              <Parent isRef="122" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table3_Cell2>
+            <Table3_Cell3 Ref="125" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,0,5.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>32</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table3_Cell3</Name>
+              <Page isRef="121" />
+              <Parent isRef="122" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{Montos.MontoOriginal}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="126" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Table3_Cell3>
+            <Table3_Cell4 Ref="127" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.8,6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>0</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table3_Cell4</Name>
+              <Page isRef="121" />
+              <Parent isRef="122" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>MONTO MODIFICADO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table3_Cell4>
+            <Table3_Cell5 Ref="128" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,0.8,6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <ID>27</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table3_Cell5</Name>
+              <Page isRef="121" />
+              <Parent isRef="122" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>MONTO MODIFICADO</Text>
+              <TextBrush>EmptyBrush</TextBrush>
+            </Table3_Cell5>
+            <Table3_Cell6 Ref="129" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,0.8,5.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>4</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table3_Cell6</Name>
+              <Page isRef="121" />
+              <Parent isRef="122" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{IIF(Montos.MontoModificado==0,Montos.MontoOriginal,Montos.MontoModificado)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="130" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Table3_Cell6>
+            <Table3_Cell7 Ref="131" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.6,6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>5</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table3_Cell7</Name>
+              <Page isRef="121" />
+              <Parent isRef="122" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>PAGADO</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table3_Cell7>
+            <Table3_Cell8 Ref="132" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,1.6,6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <ID>28</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table3_Cell8</Name>
+              <Page isRef="121" />
+              <Parent isRef="122" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>EmptyBrush</TextBrush>
+            </Table3_Cell8>
+            <Table3_Cell9 Ref="133" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,1.6,5.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>9</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table3_Cell9</Name>
+              <Page isRef="121" />
+              <Parent isRef="122" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{SumRunning(DataBand4,DocumentosPagados.MontoPagado)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="134" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Table3_Cell9>
+            <Table3_Cell10 Ref="135" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.4,6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>25</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table3_Cell10</Name>
+              <Page isRef="121" />
+              <Parent isRef="122" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>SALDO A FAVOR DEL CONTRATISTA</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table3_Cell10>
+            <Table3_Cell11 Ref="136" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,2.4,6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <ID>29</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table3_Cell11</Name>
+              <Page isRef="121" />
+              <Parent isRef="122" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>EmptyBrush</TextBrush>
+            </Table3_Cell11>
+            <Table3_Cell12 Ref="137" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,2.4,5.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>26</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table3_Cell12</Name>
+              <Page isRef="121" />
+              <Parent isRef="122" />
+              <ProcessAtEnd>True</ProcessAtEnd>
+              <ProcessingDuplicates>Merge</ProcessingDuplicates>
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{totalesPagado.MontoPendientePago}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="138" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <Symbol>Q</Symbol>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Table3_Cell12>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <Filters isList="true" count="0" />
+          <Name>Table3</Name>
+          <NumberID>33</NumberID>
+          <Page isRef="121" />
+          <Parent isRef="121" />
+          <RowCount>4</RowCount>
+          <Sort isList="true" count="0" />
+        </Table3>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>23265f60c97944008af29cea99cc6fbc</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>subResumen</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>19.6</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="139" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </subResumen>
+  </Pages>
+  <PrinterSettings Ref="140" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>8/8/2019 10:08:01 AM</ReportChanged>
+  <ReportCreated>12/12/2017 11:57:02 AM</ReportCreated>
+  <ReportFile>F:\Documents\Repositorios\Reportes\RptBalancePagosFinanciamiento.mrt</ReportFile>
+  <ReportGuid>cebc56275f154bcba3dbd829d7992a6d</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2010.1.700</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        
+        public Report()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

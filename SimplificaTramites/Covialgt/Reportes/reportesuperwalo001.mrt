@@ -1,0 +1,2280 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <Connection Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>Connection</Alias>
+        <ConnectionString>User ID=wlopez;Persist Security Info=False;Initial Catalog=z_PRODUCCION_sicopDB;Connect Timeout=5000;Data Source=192.168.1.9\covialapp;Integrated Security=False;Password=PaWa27+31</ConnectionString>
+        <Name>Connection</Name>
+      </Connection>
+    </Databases>
+    <DataSources isList="true" count="7">
+      <opcion8 Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>opcion8</Alias>
+        <Columns isList="true" count="4">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>EmpresaNIT,System.String</value>
+          <value>Nombre,System.String</value>
+        </Columns>
+        <CommandTimeout>5000</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>opcion8</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="4">
+          <value>_x0040_AnioID,,8,4</value>
+          <value>_x0040_ProyectoCodigo,,22,15</value>
+          <value>_x0040_fechaini,,31,0</value>
+          <value>_x0040_fechafin,,31,0</value>
+        </Parameters>
+        <SqlCommand>EXEC ConsultarTramosEstim3 
+     @AnioID, 
+     @ProyectoCodigo, 
+     @fechaini, 
+	 @fechafin,
+ 8;</SqlCommand>
+      </opcion8>
+      <opcion2 Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>opcion2</Alias>
+        <Columns isList="true" count="3">
+          <value>id,System.Int32</value>
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+        </Columns>
+        <CommandTimeout>5000</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>opcion2</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="4">
+          <value>_x0040_AnioID,,8,4</value>
+          <value>_x0040_ProyectoCodigo,,22,15</value>
+          <value>_x0040_fechaini,,31,0</value>
+          <value>_x0040_fechafin,,31,0</value>
+        </Parameters>
+        <SqlCommand>EXEC ConsultarTramosEstim3
+     @AnioID, 
+     @ProyectoCodigo, 
+     @fechaini, 
+	 @fechafin,
+ 2;</SqlCommand>
+      </opcion2>
+      <opcion9 Ref="5" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>opcion9</Alias>
+        <Columns isList="true" count="5">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>EstimacionCorr,System.Int32</value>
+          <value>Pago,System.String</value>
+          <value>EstadoDesc,System.String</value>
+        </Columns>
+        <CommandTimeout>5000</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>opcion9</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="4">
+          <value>_x0040_AnioID,,8,4</value>
+          <value>_x0040_ProyectoCodigo,,22,15</value>
+          <value>_x0040_fechaini,,31,0</value>
+          <value>_x0040_fechafin,,31,0</value>
+        </Parameters>
+        <SqlCommand>EXEC ConsultarTramosEstim3 
+     @AnioID, 
+     @ProyectoCodigo, 
+     @fechaini, 
+	 @fechafin,
+ 9;</SqlCommand>
+      </opcion9>
+      <opcion5 Ref="6" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>opcion5</Alias>
+        <Columns isList="true" count="4">
+          <value>EstimacionCorr,System.Int32</value>
+          <value>MontoEjecutado,System.String</value>
+          <value>FechaHasta,System.DateTime</value>
+          <value>EstadoDesc,System.String</value>
+        </Columns>
+        <CommandTimeout>5000</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>opcion5</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="4">
+          <value>_x0040_AnioID,,8,4</value>
+          <value>_x0040_ProyectoCodigo,,22,15</value>
+          <value>_x0040_fechaini,,31,0</value>
+          <value>_x0040_fechafin,,31,0</value>
+        </Parameters>
+        <SqlCommand>EXEC ConsultarTramosEstim3 
+     @AnioID, 
+     @ProyectoCodigo, 
+     @fechaini, 
+	 @fechafin, 5;</SqlCommand>
+      </opcion5>
+      <opcion4 Ref="7" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>opcion4</Alias>
+        <Columns isList="true" count="15">
+          <value>AnioID,System.Int32</value>
+          <value>ProyectoCodigo,System.String</value>
+          <value>AnioSupervisor,System.Int32</value>
+          <value>ProyectoSupervisor,System.String</value>
+          <value>TramoID,System.Int32</value>
+          <value>RutaCode,System.String</value>
+          <value>TramoDesc,System.String</value>
+          <value>CostoTramo,System.String</value>
+          <value>PagoTramo,System.String</value>
+          <value>DeudaEjecutor,System.String</value>
+          <value>FactorDeudaSuper,System.Double</value>
+          <value>DeudaSupervisor,System.String</value>
+          <value>PagoEjecutor,System.String</value>
+          <value>Porcentaje,System.Double</value>
+          <value>AspiracionPago,System.String</value>
+        </Columns>
+        <CommandTimeout>5000</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>opcion4</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="4">
+          <value>_x0040_AnioID,,8,4</value>
+          <value>_x0040_ProyectoCodigo,,22,15</value>
+          <value>_x0040_fechaini,,31,0</value>
+          <value>_x0040_fechafin,,31,0</value>
+        </Parameters>
+        <SqlCommand>EXEC ConsultarTramosEstim3 
+     @AnioID, 
+     @ProyectoCodigo, 
+     @fechaini, 
+	 @fechafin,
+ 1;</SqlCommand>
+      </opcion4>
+      <opcion6 Ref="8" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>opcion6</Alias>
+        <Columns isList="true" count="8">
+          <value>CostoTramo,System.String</value>
+          <value>PagoTramo,System.String</value>
+          <value>DeudaEjecutor,System.String</value>
+          <value>FactorDeudaSuper,System.Double</value>
+          <value>DeudaSupervisor,System.String</value>
+          <value>PagoEjecutor,System.String</value>
+          <value>Porcentaje,System.Double</value>
+          <value>AspiracionPago,System.String</value>
+        </Columns>
+        <CommandTimeout>5000</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>opcion6</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="4">
+          <value>_x0040_AnioID,,8,4</value>
+          <value>_x0040_ProyectoCodigo,,22,15</value>
+          <value>_x0040_fechaini,,31,0</value>
+          <value>_x0040_fechafin,,31,0</value>
+        </Parameters>
+        <SqlCommand>EXEC ConsultarTramosEstim3 
+     @AnioID, 
+     @ProyectoCodigo, 
+     @fechaini, 
+	 @fechafin, 6;</SqlCommand>
+      </opcion6>
+      <opcion10 Ref="9" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>opcion10</Alias>
+        <Columns isList="true" count="2">
+          <value>nombreReg,System.String</value>
+          <value>nombreSuper,System.String</value>
+        </Columns>
+        <CommandTimeout>5000</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>opcion10</Name>
+        <NameInSource>Connection</NameInSource>
+        <Parameters isList="true" count="4">
+          <value>_x0040_AnioID,,8,4</value>
+          <value>_x0040_ProyectoCodigo,,22,15</value>
+          <value>_x0040_fechaini,,31,0</value>
+          <value>_x0040_fechafin,,31,0</value>
+        </Parameters>
+        <SqlCommand>EXEC ConsultarTramosEstim3
+     @AnioID, 
+     @ProyectoCodigo, 
+     @fechaini, 
+	 @fechafin, 10;</SqlCommand>
+      </opcion10>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="4">
+    <Page1 Ref="10" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="8">
+        <PageHeaderBand1 Ref="11" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,25.9,1.2</ClientRectangle>
+          <Components isList="true" count="4">
+            <Image1 Ref="12" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,2.2,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Guid>f9fa6869978947c397ec2153fac1c2b2</Guid>
+              <Image>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</Image>
+              <Name>Image1</Name>
+              <Page isRef="10" />
+              <Parent isRef="11" />
+              <Stretch>True</Stretch>
+            </Image1>
+            <Text1 Ref="13" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3,0,19.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,9,Bold</Font>
+              <Guid>1aedff869b3d429a818ff738d1cfda5f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="10" />
+              <Parent isRef="11" />
+              <Text>UNIDAD EJECUTORA DE CONSERVACIÓN VIAL
+COVIAL</Text>
+              <TextBrush>Black</TextBrush>
+            </Text1>
+            <Text2 Ref="14" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3,0.8,19.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,9,Bold</Font>
+              <Guid>5d3c6fbc6ca74e46816f1f4e40372c07</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="10" />
+              <Parent isRef="11" />
+              <Text>INFORME DE PAGO POR TRAMO DE SUPERVISIÓN.</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Image2 Ref="15" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>22.6,-0.2,3.4,1.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Image>iVBORw0KGgoAAAANSUhEUgAAAIEAAAA8CAYAAABB9Nn7AAAABGdBTUEAALGPC/xhBQAAHMNJREFUeF7tXQdglWWW/WeLZWZ2dmadWRV1dBQV24wFFRdHUYogTcUGAooiggiDShNUBEEkdBCkg6GDEDqhJCEBUiG9ENJ77z0Bzp7z/e8lQaM4O4phNtf5eXl/+do9995z7/feGwst8v9eWkDQIi0gaJGLCIJzjv+cklZajcj8SlTWnnWcaZGfSy6iJ7ABoH9D8yrR2T0e4/zTkV1eY863yM8nFzUclNScgXtyEawtkbA+8sKzHgnIqah1XG2Rn0suCgjO0fzzKmvxSVA6rIV+sD49Yo63fFJ4vs5xV4v8XPITgaAh9ktC8spxw+5TsGYeg/X5UViz+DrtCIYcbQFBc5AfDQTnZO46vgGApZE5sFxDYc2g8qf72ECYfbwFBM1IfkQQiOU3ACCmsAqDjyTDWhQIa6o3PQABMIfKn+3bAoJmJj9iOLBTvaq6s9ibXIird9L9y/qneNH6qfS5VP4cBwBaQNCs5EcBgfL/swwFmWU1cAnJhLU0CNZkT1if0QPI+o3ynUdLOGhu0gQIHLHdxHdbas+eQ1F1HSpqzxhlNyUVtWcxMTDDdvtTZf0OZX/X0QKCZiNNg6BRbJfO/bPK0ME9DvtSilB9pukKX2FVHf6yhyFA1j+LSjbx/3uOFhA0G/necBCSW45nDsfDWkJyN8sXW+PyjVdoSuQpOuw7zQyAPOBCXkBHCwiajViNjL5e/HPK8aZPCqzVIfU5vTXjGLbHF+DM94CgM72FSQP1TIsnuEjSWB/23+Zf/tPo3ffKeZ7gBC1/jH86rA0RtGaSuClUvtw7ASBy55ZQ+L0gUMhoAcHFlqb10bBh9wNAoJQuPL8Sc8OyYW2NguVCBX0i5VOZUpZSOxfbvbvFt4DgUpEGEFxYLLn+K3fEUNGM5ZOkfL4qpZPyjcKaNwiq686gsqaW42qasNbyfAWv15w54zhji7Kc6ro6VNXWoYaHXhu3oQqoztXyHv2ta7pPzzgPXa9ju7quV2dbOr45nlqOU2NtLLrH2UZjkfI0J137oaIxlFVUITmnALlFpeb9DxVrQXiOXdSZSgCI1dfn840U1gxBoIVOzMnHtuOhWOsZAM+wGOQVl9Yv6BlmMZlFJTgQHA3XQ/7YExCBtPwiowxJDhfqUHAUtvmchNvxMHx9LARHwk4hr6QUZznHorIK7GLbniHRKK2sRGJ2HnYc1b0h2OEbiu08NnufwMm4ZJRUVMIvKh7bj4bA7RivHQ2GR2gMMgqLbTBQIT4RcdjBftILiusVlJCVZ/oPTUg173W+oqoagbGJWO8ZiK3ewTiVmo1qAuKHSERKJsaucsO6w372CXbzQ7yBtSwqF9Y8Pzu/b0pZOpoZCCpra7HS/Rj+rfcoWG162cd9L+D2wZNwNPy0ucc/NgntRn0O6+5nYbXuDuuePrhx4ETsDYww1/efjMJ/9h0N647esB5+Bdb9L8Nq3x+Pj56JxMw8BMWnwuo4GNe+NhGRXNzFuzxhPch72I/1QF++vgTrT0/j5SlfIiwpA4++P5t9PcdrvOfPz8Nq+zLaD5+O4NO2gh8Yw+u398Y7CzagsLzSnJvndoj9vojBs9eY91kE5iCXVbD++iqs23rAuoVHj+GY8/VB1NZb9jfXv+G9V8Rp9Jm6DN6ONTAAMJf5F583h33iPLFWCATzLy0QrD3sD+uRgVyoXujAxX199le4os97sLoMwYlTiYjPyseTb0+DdW1HWM+NwhtzvsI9b0+FdVM3WL3eQURyBg6GnoL1xOsGAB/Qej7ffAC/6zeez3TCFNfd8GU7VrsBsPq8i1CCwGXTPiqlO/71lfGYv8MTU9fvxZSV27HrWDBiMnIIqHEEW090GDcXk1x34Y43JxNgz6HLxwuN17rr3RmwrnmSAHkB6w76m3nM236YQOqOV6evZMiqQ78ZBMDNHOMTb+ClqUvQefw8WHf1IaD6YRb7vJCsdvfFs1OX05t8+4M6tvqb1t0lB4Lk3AJ0GqUF7UjUL0VMejYy6PZDYpMRFB3PMHAGk9fuNQr5/TMjqewYhoVS4xnajpwO66rHMY1K2s7wcMXTb8N66i2GglB4ERT3DSVQ6DHWEWSBbM96bBCsvmMRkZqFmZvd6XGewQPvz0RwQho8QmIZTqJN2Ein27/sGXql9gOxhaFAcjCIGdaD/dj+UIaeMjwydo4BgHXlw7i8n93m1z7Bxmu8RRAHnEqy76cHWbHXh/MsRGxmLkbOWwvrj0+hFcGn8PZNKS6tQCLDih/nPmHNTkzbvN+cT+Hz4fRQOgp5T0Ol95/AExwIIYntNMQs2JHoBMdZMG5XGXd4OisXHUfT9d7YFSOWbXVctWUDY7h19ZPoRYWs8PDHtf1ovVR6q+HT0HrYp7AeHYg/vPYhMvKKEBiXYrtl3qNYO38brfZOhhZaaRt6lZsGfYxbX//YxO+ckjJc3XcMrIf6Yfr6fQwByZi7ja6eCrWovCK6/ztGfAar81Dexz7vfwF9Jn+JCfQmVoc3CII1htcIoA+/74JS8gKn+J4mOBiWNE5v8g6JU58igbL+gJhErPMKxKD56+HLvzPIfeStDp6IwfBFGw0fMdyE8k8RDjypaEsWzLi8j5N0ylaSNuvpYZi30wO9PlzI+NsLb8xfd96UV5BHyCW/wOurSbyufWksrHufR2tyh/8ZR0ul67d6jcAWryD4Ubm2J2gEgrtsENxNwNwyaCJuG/QR/GMSkFtchtZvfsLw1BMWPcLdr39EAL1mntd4JNeTr1jd3saaA/7oob4eJK/o/TeGsGEYNtcVm30IUHq3BwgWeQGn7D/BtJ19imv40ltIBILK6hpMWr+HoWc3Mkk2V7gfxzuLtxiv47L1AMat2gGfsFie24Tj9BJOT9CU9i45EKTmF+O5sXNNvO/50RdIpTVkFpQwrm/nIj6BGVyY6VwEq21fXNZtGHb7RyCrsATB8SloM4SKatUJc7e4Y0dQFP6FHuUPVEQ4OYJyhomM8dZv2tPSp8EnkmB7jJzhxTEIo+uesZGcgAT0KfZZRgWkMCwlZeejSn/Tc7R6daJN5HqPoLKHGf5xNb1FebVt1Te88bEBrh+t8ij5xmXkKtaVD5lzwxesR0hiGr0CQcfwsICAkzWnEQziC9aNXXAbQZZfWm7aknjTGNqPn4tAtqXsRFnBgp1eSMjIxYMEmV9UormWmlfYCAB6/bb+LkliKNdntaervq4zfjdwAjp/QALV6U1jSYt2eCAurwBPk6DJvcqVPjlhHi5/iZmAiBmt/XRGNvYzrFxp3OxzeGLSIrw0c7Vtmdd3xiufr6Tr5VyUNTw7CiEpGXARJ7j5aSp4KF4mgeszZQl6T5hPwrgXwQTRdcpU7n0BXzOtjEnnmj5PonrXcyallPxm0IfMHp6Bm3eQeT+TjN+6mVkL+3uV4aCG7nrIog2GKFr39cWDJJKtBByR2UcGYKn7UfOcUyau3YURX25BHi1fXnAgye9hzsmLaW6vacuNtzjLNlUj+ScBwfl9amJbjgTh9tfpYg2Z4sFQ8CLTtYjEdDPGUFrWK9OW2S5d6RxfO703C8cj7fh4iISxlRTDOK6swnqSgHh6KJ6fuNBYUwjJn9XjHdw6ZDKi07NI1o7a2UQHHl3eYnzn0e4Vhp4FJIqpuFecgunc/sBIU2dw2bTfWLkIYSHJ46MKAd2HwY3ZhCSD3qn/Z8vN+Ecs3mjOydKNNyLwzJiZPt7CkLPhkJ9x/7bYa7HBM8iEgjhmJgpzQ+hNxAfCktIwlm0cp8cJ4xqovuGsjVzCKaL6+3afSruiyHx3+oYaQPjHxBtGrEqeRE+k0qX6kPVvZvw/SPev/N9ZqMkvKTWx0p3n3am4PX7hpliUQhcvKa+sNgUffy5sJV263LNHcAwOnYzCXjJ/KXuPXxiCmHWoUifXa4pN5AeS3OJSHDgRaYpVel7hSBlIrmH49hiSsgtw8GQkTqVl1Z/LI8lUpvC190nspleJ5BwbANAgYvxScjYzn9ScQoTEpZpClO6NJzkOJ4jFFVR8MnPW/y5dEPwU0vQcLpY01fs58/G87xtX09caUj+grtFnPaT8puXb7VwyICimtXmR7S7b7Y0ZWw5g1cHjCGIq5twTUK7s5nPSWLQYslnWc2fpLrNNefcALb6YqZrtCew5hNJa1nsEwJPWXUKXLVHZWVa9jd5lB3P+XbT23f7hxuNs5bm9fB+bno1oZgw7j4WY89uY76tkrKxiJ59JZH6vlFV97qE1FzYidE4pq6ox7N2NY9PYnfFa/xaT6HnTC63j2BSWbLHHrFDmz9RY3k2v3/YS9n0S7T8cYHahOSo82l6y4bpTLgkQyK1PZfz7zbMjYd2hMrBdJv7LgAn4YpcnJ1uDZXvZ76Mki4zjBxypY1VtLWZuYWxmbLVeGI3wpMx6y1HG8AzjuRj9lSSEG7lQEoWBF8UlRAqV5in+i+2LN6gk3GMkpmzahzErttn9iZCKT4hkMiMRV/iSQI1KzcZ/vDTOlKJnMVuprD6//q8wdMNzJI+PDsD8XV6Os7ao4PQHjte6uQd6TliAJGYiTimn0ruSyKpE3Y3ZQRxDnC2aV4O71zwVsgzZveMZdCU5jmKW05Q0YxDY/WjzZOAcV5tJX93BXvT+E6ggEr6rnjCTTGEaNMfNwzBtsf3ttFCJCOR4Ea3f/dUUgk4wboq0SVYd9IX1OJV8WVtTkev08QJDoFRyHTz7K1vpndnXPX14nQxdBJTk8tZXPsDn2w5hgAuziavZ/595XeB8kUojYG7oOw7rDgeYvgw4mHJa3d/GybiUej6i4tELUwm0Kx+GdWdvfLRxrzkvkSfq9slie77//oApXS8kqJxSTg/TevhUWL98GPcN/gSRBNv5YvdRyXl0VzvKLn71iClQLdvnUz+GxtIsQeBEswa82zfM3idgevfYmNnwjYqnK63G/oBIDHJZg9VUpu6evZ0gIOKlbLlviTaaPlm7mwvR1ShVrtW5CN2Z7yulszpS0VIwrf14pF2RSy8oMhmCvwpGqipS2V3pNUKZeagEfTorHy+J2bfqiJtf/5DtpqKQLjw1r4gEsoQh6qxpy+r5jtlvsFr3wNvzN5CM2mHBALAjQXYVQU1gfbbF3ZyXnNTGlZ4zoCNI75IVLzBtSgSCh0bPMnWSdu9MZzqaY843FnkBkUZjMNr/ULHJbHYtqa81NAZDsw4HstphizZRiczPOwzCNsZfJ/mp4yQqmCE4JzNr+yF7R5Ag2OVv7xQ2BQKJf2yKvTBUwDjXXeg2lot6XWf8baldZlabalUL9humaNZ/PYb+01cyvNj8I5ec4/lPl9pWxtS0/8w1GLlkM/rNWInle3zMGENUdu7xtl1AuqmLGVcAOUwVvU03bQypZvFHei6OYdrmBhCMX7PTtPvU+7MwfNlWPvcqfvH4GzgUEWuui/C1vQAIFDKmrt9j5tRulAveX7ODqTDDG0Gh3dNvSvP0BA7FCgRdJtFiGQa0gaLyrVNEzIbOX4dh89Yay52zw9MGAa1nH1MzSTVd63Tl63+isrq8Wb9v/57iOUNHx5GfI7mw1BSY9P7yfuORQUt3itK8X70mEDyOV2j5zg95qECjzSuVpu2tZXIOhYVrn8T/jPochWWViOH4VBew7iGH6UXLvrELBsz9CqNWu5lNJatdf7vu8FDfehAUlpXDGvABx/IUVu/xRiK50GPa/eTYhjpqCSKCtid4Eg8P/8xsoH1TxCGuUAXzxq6Yv+MwMkvL0E7ttOqEEYs3Oe6Sx7X/bfaeoL8qedd3JIoH4zDZtFNUDDGL/3A/hCWlYzEt0IQDkre9JF0SjXTSV7Qsum3Fa7F2Wfdv6cINv+jzHgYvWI97tc0roPDZxVx8p6igc8WrvPeqx/EyY7hzi1aewIBAHoqu+29c2Cn0KGMXrsfXXoFmjU5qF1LKvu95jJV19xxODkIeQ86iYlC/ua64V/sNbXrhs60HTbuunv42iaXy2o+djbcWbuC978L6/eO4esB4pOUXmvpI29EzTYh68v2ZZgezsYhTrD1Efd7Fflp3J2BczCaS9jSs3z6Km+jZ9PkIySUBAnmEjUzLTFXvmifMzptfbBISiPSlygb0YRIqTm7+oHYXH6J1teqMtxduRFRaNjwj4/DA8GnGnf964ETjJldqgdrRNbbpabZ+6w8B6vYeuOudafU5tgoxBgRUwrdBQGJHd3v96x8jmFlHEZ9JIWhUsFG66aONri4EAYnl4eBoZhT0SLewz1/cicGzVpuxPf7WFEMAXbZ7GuXer7BE/mCA0J6xnCHEZCjyOMw8ZrsdNv0/MIb3Edh38fl9TAHF+k8w/CTlFCAxOx/dJy406yADMe3I6yiTET8h15jMsTSWZh0OJNpW7foxUyLt0NGl/rr/ePRhivTLF8cYsiNCF5VMJZBxtx3pYlyptnAfZSxsM2SyPfE/P49xdMO6p81QLjzj6eUkfG/Rckcv2YIxX25BF+08Chi8V7m/vJA+gvYLEcNfPYznPvmyHgSqQ/Tie+u6TkZJ7UfPRs+PFqLLey54iq5aH3rxjUmwSSfHqDpFbmkF7mFKK2V4EBT6IMpve40wfGXa14dMOduEFgK7K8fyHr3LaPKM4V9sxGX9GSKu6Yg/vTkZ2SWleIB8Qd5C+ye3DfsU7RnWbqH7f41ZzdydXnaYuY3p5ZTFGEVOpbbe4xy1IypA3zl4EgmuXdnUSjdPT/CNLlRefdmZu2vh/5upmRaBufmQWWvMVq7EI+QU7nhzkrFok75x4bRl+/z05caqjzCcGLZ889NY6NjidUpYcgZjN3PqG7vx/hUm9uYzlt7+msJBB/SdttzsHkr0Qc4XlB1oa1kZhgAqsKm/P3Y1IeYE+YdqFgpRa5kySvb7h2Gb1wlUVdeaj6/dqk2mu5/FR+QEH64iV7iOzxMY4QR1Y5llPoFEwJPMbj52Ep0JOPNxOLl8zVUEVeBnyLuRgFAIsnqOPG9LWjJFm2AiqvQMi/Ydc5xt5tmBU5TylFRU4SBd33TXPZi4ZCu+oGs8ynRR1un0HIqH8Yz7ru7H8AGZ/uRVO0z9vbiiwnzwVHsNrvuPYSMtVaBoLCoSqba/htxCVcKqOn3SuNYUdZbvPoLA6ATzyWVJdU0N/KIS4MpUb6NHINZ7BphX14N+WMcjJD4FBeQeO3yCse7AcbOJoznUMTNwbuYIYPtVhWQboUlp8AqOwTr24xESbVLgxpKRX4wtHgFsyxcn41JxjKFmPftTgUuHPgmlMWzyDsImhs+17PPwyej68TpFn8oSCFdzjt5sw1k4uyRA4BSlXvo4V35JmSnLOichaRxCjBXzHpVrnRtKci8qPCneq5zqONVwUAQigcredNEC2h87V4lXHz3Xe53XFq3eqx+15TxUnNKhdjQ2c573CIB2e7ZoqFpHjUefRxAwTFvsV8+auZj/Of7j36Z9XtcztRyT+mnct9JhtSEA6VWAs/vS5NTGORPiNB8BXvc45ZICQdPS9Hj+cfmp2m1+0mxBYPdyznwBNr64BjmN7sutrEV2/a+e8c76Idl/6JvTNY5xarzldWf5at6aH9HIqKhBcU0dSnlklNNrVDW0rXslshznN7D1t7OdxNJqjsXuW+ez+Ly+ke0UjSuhuJE7N5ZojyOqqMo8q6FpfPaXe+1+VPySVDr6l8ibaLyN17yK99JX8C96Gse9Glc6x6FDvwYnXaSV1SCZY1UfZbVnzDw1Z1UeqxyeyinNGwQc6OH0EowJysTHwVmILapGdGEVJp3MxPjADATmNdqdM5Oyx7Y9qRCLOK9cti2lrD6dX/+jmWvj8jHEL8W0KwUujcnFvIgcLugZs4jjgjKQVGK7yhWxedicUAC3pCKE5FXAM6MUb/qmYiHbTuQ9p6jUUf5pHFsmEkqqqPwaLIzIxUS24ZFR4lCsrYTN8QV4PyADPlllBtR7U4sRXlhp1k3970mx8/0N8fk4wLH5ZJZid3Kx+XLwUT6zLbEIpzn/+ZE5pl2N8ROuSTTP5VbVYlpoFt7yTYMHn9V3Sl/j2rqEZSOzohqLOKYx7FvnT3LNticVoLjaDheSZhwO7Fg40CcZln75bGM4lkRLYRzvV6GwVgXj3YB0WhFJY40jjlJKueCX7WYWsDwYWxMLOelKWNtjEMkF19gt/YzO0iAs4GIWcCFe9Gb7PBeWX2GAY831wwdUoizI2hZt+rHcTmFOeA4+5aJba8Nwv3u8AeLKU3mwlp2AtdLuS0ppsz8O1+w9jfaH4o2nkcSwb8stBn/hczsJqM0JhejtlYTFnI9XZhmsJWyDYxZY7jsQb8+XY75xb5yZ8yh9SfirCAzwTmH/4VzrM5gRmg3riwCMPpGJLHqX7ocTzbr4sD1fKlvjHno8lUBl3+sjYLmGwz2tlADOwSMH4+klLglOYINghF8q2h1gu25RtOI8rKJ1mm9NUxnzOPbwgiospzJUIpbIci03Ko8geNdYXqlRgKxElt6WStKirDtdgNN02y/7JKGHVyItsQh3UHmWa5hRfjytvJMHF3Yj+2J7C6NzsIALaH0dhe6eibSyLGyKY1/6+r5Z/FKCKAePHUrAXw8moM+RZJI3e0xxbKs1FXo/12dmeDZWUrFjA9PxWUgWwURgrWAbmyOppGJMoFKtXRwH+23LecuDTKGVS4kCR5v98cYr3byHQF+vc7HGGwhcL3slk1ieM+GtK0FxjGPKKq/lfGLMuOXJlp/K5diSTLhwSrMEgWHE/E9ygu5LVvclF1jxTm5QEz6QVoIAIl4ueR9dabUjHfLNLoc3J384vdS43mhed2U4mMwF18TlLqdw4QWOsIIKEw7kitPKqulyC0zcXk8gKfZ7sh3/3DLj2mN4Xv2NY2haw5Aij6O+9awUlcLnC7gGX8Xm02NkI4JhSyB28gkvtqVQo/5TOAcp8jjHJ8vVONWXzgXmVBivFUrPpOsR/DuSbQVwXknsQ2Eslv3uJmgjaeWau0KTQpGULA9WVXeOgCpBWqm+iHuOYC3knDMRxLloHuqz3AFQyQ8EwVHz+qOBQF98neaNwUeTCYLv/7KlCJTiutqXiNCISJnJGpJz1g4H5qr920m6pmGKVOm6FJZBixAp0rMCnlyvDlmNnrF3Je2FKSc/UJhxEkO15+xPYyl0uHknuVM/epUo1uoex9t60b0iZ+pTc9B7ETsdulX9629nnxK16ZyrU/Reh5MUqm+N1Tk+3cmmzHXnc5qfyLTm52xT9zjlwiCQMuUJqNxNRHnjATWW/wsI3mC8vxAIWuSnlwuDQF9b/9Qb1gJ/uKcWnZdaNJYfBALnOf207UceGEBy1AKCn1++GwTO3yFWKCADHuGXZlKq75ILgkDnBCj1o7YX+mN+WA4ZdENsapGfR2wQ0MqtGVTOHCrHAICH3sttb41ivlrkuJ1yQU9ARZtfL3P82MUsHnovMCmsLAjADUzJNpKdtwCgeQhBwJRrfoBt9bJe/UiV3D9z0HH+aSiku67XO1+bhsA3PIGUrp+8EaBk+fpp+7m+aM0URz9+JdLyHdSiRX4GcXgCBwj0a2UkbMqL3VOLyXSd6Zs0przdPpqSehCoHYFgOtuZ7GG8y+17TmEX07rsihrDTJ3yHU21yEUWGwRy1R9SYYuDMJqxP5q5aYM0aMoA4DsUJxA8tC/WED5rkpf5CZzWu2OwNjbPFGW+rXCd+I7GWuSiijWX5MyaS7e9OdworMxRY2+QH6YobaLcTqVbswmoHTFYHJmD00VVjqsNcr4naQFBcxBrb1Ih3vVNMRWqf0RUBJkdko3PTmYgvvEuWos0e7HO/32/xgXbv0Mc1n1+NdHxtwkhf3eLLXIR5Uf5/ztokUtZgP8Fx1lDupiJ3KAAAAAASUVORK5CYII=</Image>
+              <Name>Image2</Name>
+              <Page isRef="10" />
+              <Parent isRef="11" />
+            </Image2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>26f0977cbe0a4b6d9478d85d272cc61c</Guid>
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+        </PageHeaderBand1>
+        <PageFooterBand1 Ref="16" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,19,25.9,0.6</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text12 Ref="17" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>19.8,0,6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7</Font>
+              <Guid>d2f25b8b980f49b9b8ca25440b3be5ca</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="10" />
+              <Parent isRef="16" />
+              <Text>Página {PageNumber} de {TotalPageCountThrough}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text12>
+            <Text22 Ref="18" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7</Font>
+              <Guid>04e3bf5276d042fc97a1016f963148f7</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="10" />
+              <Parent isRef="16" />
+              <Text>{Day(Today)}/{Month(Today)}/{Year(Today)} {Hour(Time)}:{Minute(Time)}:{Second(Time)}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text22>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>e9ff123cc7e045ab874240815b9aba9f</Guid>
+          <Name>PageFooterBand1</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+        </PageFooterBand1>
+        <ReportTitleBand1 Ref="19" type="ReportTitleBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.4,25.9,3.8</ClientRectangle>
+          <Components isList="true" count="12">
+            <Text3 Ref="20" type="Text" isKey="true">
+              <Brush>EmptyBrush</Brush>
+              <ClientRectangle>0,0,6.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <Guid>c3b101a3d4884c599fade4014285ee9a</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="10" />
+              <Parent isRef="19" />
+              <Text>Datos del proyecto de supervisión</Text>
+              <TextBrush>Black</TextBrush>
+            </Text3>
+            <txtProy Ref="21" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,0.4,4.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7</Font>
+              <Guid>f0218145642d41119a79963dd3a08001</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>txtProy</Name>
+              <Page isRef="10" />
+              <Parent isRef="19" />
+              <Text>Proyecto: {opcion8.ProyectoCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+            </txtProy>
+            <txtanioid Ref="22" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,0.8,4.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7</Font>
+              <Guid>adf4a0c0fb984dc195ce29c2c8ac7b7a</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>txtanioid</Name>
+              <Page isRef="10" />
+              <Parent isRef="19" />
+              <Text>Año: {opcion8.AnioID}</Text>
+              <TextBrush>Black</TextBrush>
+            </txtanioid>
+            <Text4 Ref="23" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,0.4,10.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7</Font>
+              <Guid>6a48576aad6c4ded8ba84bbd32fbd07f</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="10" />
+              <Parent isRef="19" />
+              <Text>Empresa: {opcion8.Nombre}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text4>
+            <Text5 Ref="24" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,0.8,10.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7</Font>
+              <Guid>54625d1c302245a480c0c86b2de18e07</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="10" />
+              <Parent isRef="19" />
+              <Text>Número de identificación tributaria (NIT): {opcion8.EmpresaNIT}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text5>
+            <Text6 Ref="25" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.3,4.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <Guid>6e48e586bd5c4f5bba72148f44526ffc</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="10" />
+              <Parent isRef="19" />
+              <Text>Proyectos asignados:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text6>
+            <Text7 Ref="26" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.2,1.8,5.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7</Font>
+              <Guid>8cbbfcf3ba194c0db3f331bc4fdd9b85</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="10" />
+              <Parent isRef="19" />
+              <Text>Listado de proyectos supervisados</Text>
+              <TextBrush>Black</TextBrush>
+            </Text7>
+            <Text8 Ref="27" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.2,1.8,7.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7</Font>
+              <Guid>7acf1f96d68642cfba79cbbf8958de38</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="10" />
+              <Parent isRef="19" />
+              <Text>Listado de estimaciones de proyectos supervisados</Text>
+              <TextBrush>Black</TextBrush>
+            </Text8>
+            <Text10 Ref="28" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.2,0,4.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <Guid>4405e514207b4aa5b50c4e6d29b04989</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="10" />
+              <Parent isRef="19" />
+              <Text>Estimación Supervisión:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text10>
+            <SubReport1 Ref="29" type="SubReport" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,2.6,4.6,0.8</ClientRectangle>
+              <Components isList="true" count="0" />
+              <Name>SubReport1</Name>
+              <Page isRef="10" />
+              <Parent isRef="19" />
+              <SubReportPageGuid>2cdc4c4a006240088ff52c5007f8c783</SubReportPageGuid>
+            </SubReport1>
+            <SubReport2 Ref="30" type="SubReport" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.4,2.6,10.6,0.6</ClientRectangle>
+              <Components isList="true" count="0" />
+              <Name>SubReport2</Name>
+              <Page isRef="10" />
+              <Parent isRef="19" />
+              <SubReportPageGuid>deabf37ffbff4417863844a3ebb215b0</SubReportPageGuid>
+            </SubReport2>
+            <SubReport3 Ref="31" type="SubReport" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.4,0.4,4.4,0.6</ClientRectangle>
+              <Components isList="true" count="0" />
+              <Name>SubReport3</Name>
+              <Page isRef="10" />
+              <Parent isRef="19" />
+              <SubReportPageGuid>9545d079210c4d9ebcf095b1d0ed91f9</SubReportPageGuid>
+            </SubReport3>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>3f3ac94a18614465875bd0398668768e</Guid>
+          <Name>ReportTitleBand1</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+        </ReportTitleBand1>
+        <GroupHeaderBand1 Ref="32" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,7,25.9,0.6</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text9 Ref="33" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.2,0,7.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,11,Bold</Font>
+              <Guid>1a624dcfb4624f8e92d2a638b4dde1b2</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="10" />
+              <Parent isRef="32" />
+              <Text>Distribución de cobro por tramo</Text>
+              <TextBrush>Black</TextBrush>
+            </Text9>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>4967ec1d8f6f4c76acde6f2881f95395</Guid>
+          <Name>GroupHeaderBand1</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+        </GroupHeaderBand1>
+        <Table3 Ref="34" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,8.4,25.9,0.2</ClientRectangle>
+          <ColumnCount>7</ColumnCount>
+          <Components isList="true" count="8">
+            <Table3_Cell1 Ref="35" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,0.8,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>72a7b6e3346d4b18b7c36b5b90000bb7</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>0</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table3_Cell1</Name>
+              <Page isRef="10" />
+              <Parent isRef="34" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Año</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table3_Cell1>
+            <Table3_Cell2 Ref="36" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,0,1.2,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>b5a88aa1a66f4b34a92fc4aa5b9a25ab</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>1</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table3_Cell2</Name>
+              <Page isRef="10" />
+              <Parent isRef="34" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Proyecto</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table3_Cell2>
+            <Table3_Cell3 Ref="37" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,0,1.8,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>985a83c5bcf4457e86fea3377429aa39</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>2</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table3_Cell3</Name>
+              <Page isRef="10" />
+              <Parent isRef="34" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>ID del Tramo</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table3_Cell3>
+            <Table3_Cell4 Ref="38" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.8,0,2.6,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>c658eaeac20d4005845113da0d7a11db</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>3</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table3_Cell4</Name>
+              <Page isRef="10" />
+              <Parent isRef="34" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Ruta</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table3_Cell4>
+            <Table3_Cell5 Ref="39" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>6.4,0,14.6,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>3302dad5e7cc4096938326b42cf3c0b1</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>4</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table3_Cell5</Name>
+              <Page isRef="10" />
+              <Parent isRef="34" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Tramo</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Table3_Cell5>
+            <Table3_Cell6 Ref="40" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>21,0,2.4,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>d8393545643a4aa893733454e6f2173b</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>25</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table3_Cell6</Name>
+              <Page isRef="10" />
+              <Parent isRef="34" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Pago a Ejecutor</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table3_Cell6>
+            <Table3_Cell7 Ref="41" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>23.4,0,2.4,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>c7ba8486374d4eddac685d4b7a4b1573</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>26</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table3_Cell7</Name>
+              <Page isRef="10" />
+              <Parent isRef="34" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Aspiración de Pago</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table3_Cell7>
+            <Text14 Ref="42" type="Text" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>25.8,0,3.4,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="10" />
+              <Parent isRef="34" />
+              <Text>{opcion8.AnioID}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <Filters isList="true" count="0" />
+          <Guid>682ddbffb1764e6698b8083e57b7c153</Guid>
+          <MinHeight>0.2</MinHeight>
+          <Name>Table3</Name>
+          <NumberID>28</NumberID>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+          <RowCount>1</RowCount>
+          <Sort isList="true" count="0" />
+        </Table3>
+        <Table4 Ref="43" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <CanBreak>True</CanBreak>
+          <CanShrink>True</CanShrink>
+          <ClientRectangle>0,9.4,25.9,0.2</ClientRectangle>
+          <ColumnCount>7</ColumnCount>
+          <Components isList="true" count="7">
+            <TableCell1 Ref="44" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,0.8,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,6</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>baede2eabd5744f48d544bbbc5be9efd</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>0</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableCell1</Name>
+              <Page isRef="10" />
+              <Parent isRef="43" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{opcion4.AnioID}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Bottom</VertAlignment>
+            </TableCell1>
+            <TableCell2 Ref="45" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,0,1.2,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,6</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>81e01a82f47c4dc88c09c91b71b8cf25</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>1</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableCell2</Name>
+              <Page isRef="10" />
+              <Parent isRef="43" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{opcion4.ProyectoCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Bottom</VertAlignment>
+            </TableCell2>
+            <TableCell3 Ref="46" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,0,1.8,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,6</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>1794ac51466c4d2886376056fd17cc9e</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>2</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableCell3</Name>
+              <Page isRef="10" />
+              <Parent isRef="43" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{opcion4.TramoID}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Bottom</VertAlignment>
+            </TableCell3>
+            <TableCell4 Ref="47" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanBreak>True</CanBreak>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>3.8,0,2.6,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,6</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>5a9aa83c757a4445adc29956342d582b</Guid>
+              <ID>3</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableCell4</Name>
+              <Page isRef="10" />
+              <Parent isRef="43" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{opcion4.RutaCode}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Bottom</VertAlignment>
+            </TableCell4>
+            <TableCell5 Ref="48" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>6.4,0,14.6,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,6</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>879e7c9ccf6d40a7adb2af1846941c39</Guid>
+              <ID>4</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableCell5</Name>
+              <Page isRef="10" />
+              <Parent isRef="43" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{opcion4.TramoDesc}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Bottom</VertAlignment>
+            </TableCell5>
+            <TableCell6 Ref="49" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>21,0,2.4,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,6</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>6b616c991c40469b9323c759adb89972</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <ID>25</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableCell6</Name>
+              <Page isRef="10" />
+              <Parent isRef="43" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{opcion4.PagoEjecutor}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Bottom</VertAlignment>
+            </TableCell6>
+            <TableCell7 Ref="50" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>23.4,0,2.4,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,6</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>6cf1e947bcf64df3bdd6aa0bc1951e3e</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <ID>26</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableCell7</Name>
+              <Page isRef="10" />
+              <Parent isRef="43" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{opcion4.AspiracionPago}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Bottom</VertAlignment>
+            </TableCell7>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>opcion4</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>93ae0d40d40f4b2690673c7d0feb340a</Guid>
+          <MinHeight>0.2</MinHeight>
+          <Name>Table4</Name>
+          <NumberID>28</NumberID>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+          <RowCount>1</RowCount>
+          <Sort isList="true" count="0" />
+        </Table4>
+        <Table6 Ref="51" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <CanBreak>True</CanBreak>
+          <CanShrink>True</CanShrink>
+          <ClientRectangle>0,10.4,25.9,0.4</ClientRectangle>
+          <ColumnCount>7</ColumnCount>
+          <Components isList="true" count="7">
+            <TableCell8 Ref="52" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>50cc48bcd9fc4ffc9955414a719f550e</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <ID>0</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableCell8</Name>
+              <Page isRef="10" />
+              <Parent isRef="51" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableCell8>
+            <TableCell9 Ref="53" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,0,2.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>d616afcddf494d4ea307cbc235484bcd</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <ID>1</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableCell9</Name>
+              <Page isRef="10" />
+              <Parent isRef="51" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableCell9>
+            <TableCell10 Ref="54" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.2,0,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>1fbe7dcdab9a4156acfc62107a00eaf7</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <ID>2</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableCell10</Name>
+              <Page isRef="10" />
+              <Parent isRef="51" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableCell10>
+            <TableCell11 Ref="55" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanBreak>True</CanBreak>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>6.2,0,3.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>ab1c07126df94e808774934134c9d1b1</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <ID>3</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableCell11</Name>
+              <Page isRef="10" />
+              <Parent isRef="51" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </TableCell11>
+            <TableCell12 Ref="56" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>10,0,11,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>ef480e270c354b33a74d1e38c253ffed</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <ID>4</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableCell12</Name>
+              <Page isRef="10" />
+              <Parent isRef="51" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </TableCell12>
+            <TableCell13 Ref="57" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>21,0,2.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>a581a08f31664c0d8367fc688c893d29</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <ID>25</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableCell13</Name>
+              <Page isRef="10" />
+              <Parent isRef="51" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{opcion6.PagoEjecutor}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableCell13>
+            <TableCell14 Ref="58" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>23.4,0,2.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>606dbfea7cd746809be7cee189095796</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <ID>26</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableCell14</Name>
+              <Page isRef="10" />
+              <Parent isRef="51" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{opcion6.AspiracionPago}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableCell14>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>opcion6</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>3037b862022c40d686e809d376f0bbe5</Guid>
+          <MinHeight>0.2</MinHeight>
+          <Name>Table6</Name>
+          <NumberID>28</NumberID>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+          <RowCount>1</RowCount>
+          <Sort isList="true" count="0" />
+        </Table6>
+        <DataBand2 Ref="59" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,11.6,25.9,1.6</ClientRectangle>
+          <Components isList="true" count="8">
+            <Text13 Ref="60" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,10.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,6,Bold</Font>
+              <Guid>7368c2def7cf4c87a80dcc63cf1158d5</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="10" />
+              <Parent isRef="59" />
+              <Text>                                        F.</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text13>
+            <Text15 Ref="61" type="Text" isKey="true">
+              <Border>Bottom;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.4,0.6,5,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,6,Bold</Font>
+              <Guid>167d847e44f34312b0d78bf3b3170ac4</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="10" />
+              <Parent isRef="59" />
+              <TextBrush>Black</TextBrush>
+            </Text15>
+            <Text18 Ref="62" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.8,10.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,6,Bold</Font>
+              <Guid>0ec1573d5381493ea1120df074a9bb85</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="10" />
+              <Parent isRef="59" />
+              <Text>{opcion10.nombreReg}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text18>
+            <Text19 Ref="63" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.4,0.8,10.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,6,Bold</Font>
+              <Guid>610442f11bad42069099faae0a824bcd</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="10" />
+              <Parent isRef="59" />
+              <Text>{opcion10.nombreSuper}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text19>
+            <Text20 Ref="64" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.2,10.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,6,Bold</Font>
+              <Guid>42a9e0afcbae4569b881191664092126</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="10" />
+              <Parent isRef="59" />
+              <Text>Regional</Text>
+              <TextBrush>Black</TextBrush>
+            </Text20>
+            <Text21 Ref="65" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.4,1.2,10.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,6,Bold</Font>
+              <Guid>aa259ab9927d4352a3aaed6d57c98269</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="10" />
+              <Parent isRef="59" />
+              <Text>Supervisor</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+            <Text11 Ref="66" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.4,0.4,10.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,6,Bold</Font>
+              <Guid>dd91a527bbae45ebb391f517a73f3734</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="10" />
+              <Parent isRef="59" />
+              <Text>                                        F.</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text11>
+            <Text17 Ref="67" type="Text" isKey="true">
+              <Border>Bottom;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.8,0.6,5,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,6,Bold</Font>
+              <Guid>75da0ff21a9d44b3a6b46548996d44d9</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="10" />
+              <Parent isRef="59" />
+              <TextBrush>Black</TextBrush>
+            </Text17>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>opcion10</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>f9a6ffa5a3664baba4a28c731d2489ae</Guid>
+          <Name>DataBand2</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+          <Sort isList="true" count="0" />
+        </DataBand2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>979fb88037a64f4aa361048ccfc1e228</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>21.6</PageHeight>
+      <PageWidth>27.9</PageWidth>
+      <PaperSize>Letter</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="68" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+    <projeje Ref="69" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="1">
+        <Table1 Ref="70" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,0.4,4.6,0.4</ClientRectangle>
+          <Components isList="true" count="25">
+            <Table1_Cell1 Ref="71" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7</Font>
+              <Guid>4c90a42bed02488094d3a5adf3f15717</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>0</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell1</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{opcion2.AnioID}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell1>
+            <Table1_Cell2 Ref="72" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,0,3.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7</Font>
+              <Guid>d2dc1d28017a460e97c6cc912265c79e</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>1</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell2</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{opcion2.ProyectoCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell2>
+            <Table1_Cell3 Ref="73" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,0,0,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>6e831aaf60e24375a8afbd52d3813bde</Guid>
+              <ID>2</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell3</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell3>
+            <Table1_Cell4 Ref="74" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,0,0,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>311e84be2bf64c399a6ddc75a86845eb</Guid>
+              <ID>3</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell4</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell4>
+            <Table1_Cell5 Ref="75" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,0,0,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>fc2f92a485e74842a089112705c63ab3</Guid>
+              <ID>4</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell5</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell5>
+            <Table1_Cell6 Ref="76" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,1.4,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>010fa727dfc040289bf6c7739a2d94d7</Guid>
+              <ID>5</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell6</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell6>
+            <Table1_Cell7 Ref="77" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,0.4,3.2,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>73129d61a60747f1ba03c497d97276a6</Guid>
+              <ID>6</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell7</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell7>
+            <Table1_Cell8 Ref="78" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,0.4,0,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>647b36a4213140529e86b4936ad4731a</Guid>
+              <ID>7</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell8</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell8>
+            <Table1_Cell9 Ref="79" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,0.4,0,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>9d4b682cafb2440eaec6700e7472a2e5</Guid>
+              <ID>8</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell9</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell9>
+            <Table1_Cell10 Ref="80" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,0.4,0,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>155abceacb184b31a9fda9a4e622d95d</Guid>
+              <ID>9</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell10</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell10>
+            <Table1_Cell11 Ref="81" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,1.4,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>970ea70125e747f79b06cea61dd6e06d</Guid>
+              <ID>10</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell11</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell11>
+            <Table1_Cell12 Ref="82" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,0.4,3.2,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>d8177cd126604605bb75a8236c81b0f9</Guid>
+              <ID>11</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell12</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell12>
+            <Table1_Cell13 Ref="83" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,0.4,0,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>dfb8b3f42ecf4a51a932ffc82daa3d0e</Guid>
+              <ID>12</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell13</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell13>
+            <Table1_Cell14 Ref="84" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,0.4,0,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>5a6650f6c82c4c4f88a5ab394aae0ecd</Guid>
+              <ID>13</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell14</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell14>
+            <Table1_Cell15 Ref="85" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,0.4,0,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>a864f019bd1244eb85733c1a7df8dfa6</Guid>
+              <ID>14</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell15</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell15>
+            <Table1_Cell16 Ref="86" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,1.4,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>262ff3f6db49485daa310b09b678098b</Guid>
+              <ID>15</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell16</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell16>
+            <Table1_Cell17 Ref="87" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,0.4,3.2,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>1a49f2447b78493a981c2f4b445b406a</Guid>
+              <ID>16</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell17</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell17>
+            <Table1_Cell18 Ref="88" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,0.4,0,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>3ac33987c8fb483eab4f247f78102f04</Guid>
+              <ID>17</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell18</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell18>
+            <Table1_Cell19 Ref="89" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,0.4,0,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>896c330d989949368a7848c64d3960ac</Guid>
+              <ID>18</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell19</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell19>
+            <Table1_Cell20 Ref="90" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,0.4,0,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>cbc11a62440e425ab9a0d55c7fceedd4</Guid>
+              <ID>19</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell20</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell20>
+            <Table1_Cell21 Ref="91" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,1.4,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>f6489acd8de6479ebc70afb4c6d5741f</Guid>
+              <ID>20</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell21</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell21>
+            <Table1_Cell22 Ref="92" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,0.4,3.2,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>71830323b7594240b2a7839f4c8d6a2c</Guid>
+              <ID>21</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell22</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell22>
+            <Table1_Cell23 Ref="93" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,0.4,0,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>890c0e5637f342b4a953cd371b86ec15</Guid>
+              <ID>22</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell23</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell23>
+            <Table1_Cell24 Ref="94" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,0.4,0,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>c7cd07c60cc048e1b23e8a17ae0d2673</Guid>
+              <ID>23</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell24</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell24>
+            <Table1_Cell25 Ref="95" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,0.4,0,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>f5ea304b7f294a389332caab06996852</Guid>
+              <ID>24</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell25</Name>
+              <Page isRef="69" />
+              <Parent isRef="70" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table1_Cell25>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>opcion2</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>b282ba04e1c5432c91ad149f670f000e</Guid>
+          <Name>Table1</Name>
+          <NumberID>25</NumberID>
+          <Page isRef="69" />
+          <Parent isRef="69" />
+          <Sort isList="true" count="0" />
+        </Table1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>2cdc4c4a006240088ff52c5007f8c783</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>projeje</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>6.6</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="96" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </projeje>
+    <EstimEje Ref="97" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="1">
+        <Table2 Ref="98" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,0.4,10.6,0.4</ClientRectangle>
+          <Components isList="true" count="25">
+            <Table2_Cell1 Ref="99" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,0.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7</Font>
+              <Guid>ae0b2cd3a50140da87d7ed9aa4357a8f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>0</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell1</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{opcion9.AnioID}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table2_Cell1>
+            <Table2_Cell2 Ref="100" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,0,1.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7</Font>
+              <Guid>7236239f77d44c899b3aa34a1d5ecc83</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>1</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell2</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{opcion9.ProyectoCodigo}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table2_Cell2>
+            <Table2_Cell3 Ref="101" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,0,0.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7</Font>
+              <Guid>fe455ee1d99445e7aadd1e559917e979</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>2</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell3</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{opcion9.EstimacionCorr}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table2_Cell3>
+            <Table2_Cell4 Ref="102" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.6,0,4.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7</Font>
+              <Guid>5c730a9202d14a258aae679408bf99e5</Guid>
+              <ID>30</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell4</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{opcion9.EstadoDesc}</Text>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell4>
+            <Table2_Cell5 Ref="103" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.4,0,3.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7,Bold</Font>
+              <Guid>5f30a2e70c714e1180fc49edd8066ad8</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <ID>35</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell5</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{opcion9.Pago}</Text>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell5>
+            <Table2_Cell6 Ref="104" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,0.8,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>c2f16855494945138f39c772923d7656</Guid>
+              <ID>5</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell6</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell6>
+            <Table2_Cell7 Ref="105" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,0.4,1.2,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>ebbc262f1f1f4583be09b93124640dda</Guid>
+              <ID>6</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell7</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell7>
+            <Table2_Cell8 Ref="106" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,0.4,0.6,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>b754298c6ebd4bfbb29df05209296df4</Guid>
+              <ID>7</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell8</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell8>
+            <Table2_Cell9 Ref="107" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.6,0.4,4.8,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>088b38c8d4a64e9f9022a40dd2fb7a2b</Guid>
+              <ID>31</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell9</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell9>
+            <Table2_Cell10 Ref="108" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.4,0.4,3.2,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>02aaf857c46147049919eebdaf8a77c1</Guid>
+              <ID>36</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell10</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell10>
+            <Table2_Cell11 Ref="109" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,0.8,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>91bda920788f4e95a84dbd49844e5bf8</Guid>
+              <ID>10</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell11</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell11>
+            <Table2_Cell12 Ref="110" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,0.4,1.2,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>b3e72178f9de471ebdc98e414fdd8066</Guid>
+              <ID>11</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell12</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell12>
+            <Table2_Cell13 Ref="111" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,0.4,0.6,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>cbc5f32e50ad4b25b335e5c4c4c5ac59</Guid>
+              <ID>12</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell13</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell13>
+            <Table2_Cell14 Ref="112" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.6,0.4,4.8,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>da5c12be12734f3f9be937977f1c3aaa</Guid>
+              <ID>32</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell14</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell14>
+            <Table2_Cell15 Ref="113" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.4,0.4,3.2,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>355ebab7e338472c8dba27ce4146ac71</Guid>
+              <ID>37</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell15</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell15>
+            <Table2_Cell16 Ref="114" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,0.8,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>40eacf0b391c4cd085f56dc59b4dc057</Guid>
+              <ID>15</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell16</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell16>
+            <Table2_Cell17 Ref="115" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,0.4,1.2,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>d4e09d568b8c41f591e7688f6601424c</Guid>
+              <ID>16</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell17</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell17>
+            <Table2_Cell18 Ref="116" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,0.4,0.6,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>60592215d8674d99b1190a6ddd20ba01</Guid>
+              <ID>17</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell18</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell18>
+            <Table2_Cell19 Ref="117" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.6,0.4,4.8,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>bbbf3011d0c049f6b3812e2e721f4cda</Guid>
+              <ID>33</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell19</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell19>
+            <Table2_Cell20 Ref="118" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.4,0.4,3.2,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>1915b466f6574ebdada0acfa9b7bf415</Guid>
+              <ID>38</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell20</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell20>
+            <Table2_Cell21 Ref="119" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,0.8,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>6e308d49e3004d6ba32ad378dc8cc2eb</Guid>
+              <ID>20</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell21</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell21>
+            <Table2_Cell22 Ref="120" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,0.4,1.2,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>be9e7bd30c9f43be90eb76e9208cdae5</Guid>
+              <ID>21</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell22</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell22>
+            <Table2_Cell23 Ref="121" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,0.4,0.6,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>352e73f1189e46ba9bd0e2a54a9bf972</Guid>
+              <ID>22</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell23</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell23>
+            <Table2_Cell24 Ref="122" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.6,0.4,4.8,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>18081709841b472f80b715639b59c323</Guid>
+              <ID>34</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell24</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell24>
+            <Table2_Cell25 Ref="123" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.4,0.4,3.2,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>14bb6fd884294615bbb519458bc62f49</Guid>
+              <ID>39</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table2_Cell25</Name>
+              <Page isRef="97" />
+              <Parent isRef="98" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table2_Cell25>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>opcion9</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>1a18826d3ac04588aae94e81ff564532</Guid>
+          <Name>Table2</Name>
+          <NumberID>40</NumberID>
+          <Page isRef="97" />
+          <Parent isRef="97" />
+          <Sort isList="true" count="0" />
+        </Table2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>deabf37ffbff4417863844a3ebb215b0</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>EstimEje</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>12.6</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="124" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </EstimEje>
+    <subReport_1 Ref="125" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="1">
+        <Table5 Ref="126" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,0.4,4.4,0.4</ClientRectangle>
+          <ColumnCount>2</ColumnCount>
+          <Components isList="true" count="10">
+            <Table5_Cell1 Ref="127" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,1,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7</Font>
+              <Guid>5b6e94f6d55449389429b684b77956d5</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>0</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table5_Cell1</Name>
+              <Page isRef="125" />
+              <Parent isRef="126" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{opcion5.EstimacionCorr}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table5_Cell1>
+            <Table5_Cell2 Ref="128" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1,0,3.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,7,Bold</Font>
+              <Guid>833294b4363a48b88f5b85e1d3a960be</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <ID>1</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table5_Cell2</Name>
+              <Page isRef="125" />
+              <Parent isRef="126" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{opcion5.MontoEjecutado}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Table5_Cell2>
+            <Table5_Cell3 Ref="129" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,1,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>9cc97d9caad4431387186b1586be6cad</Guid>
+              <ID>5</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table5_Cell3</Name>
+              <Page isRef="125" />
+              <Parent isRef="126" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table5_Cell3>
+            <Table5_Cell4 Ref="130" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1,0.4,3.4,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>558a41ade1394910a04af7145b2d022b</Guid>
+              <ID>6</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table5_Cell4</Name>
+              <Page isRef="125" />
+              <Parent isRef="126" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table5_Cell4>
+            <Table5_Cell5 Ref="131" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,1,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>9ebb5781b3684736b07eb25894ad9353</Guid>
+              <ID>10</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table5_Cell5</Name>
+              <Page isRef="125" />
+              <Parent isRef="126" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table5_Cell5>
+            <Table5_Cell6 Ref="132" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1,0.4,3.4,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>c40cfd7cc94446f39199d025b3b4cf29</Guid>
+              <ID>11</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table5_Cell6</Name>
+              <Page isRef="125" />
+              <Parent isRef="126" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table5_Cell6>
+            <Table5_Cell7 Ref="133" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,1,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>b6429389eb324e0b946558a10b64fba6</Guid>
+              <ID>15</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table5_Cell7</Name>
+              <Page isRef="125" />
+              <Parent isRef="126" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table5_Cell7>
+            <Table5_Cell8 Ref="134" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1,0.4,3.4,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>eeb0e39605ab4119a9bd9cb2102c86be</Guid>
+              <ID>16</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table5_Cell8</Name>
+              <Page isRef="125" />
+              <Parent isRef="126" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table5_Cell8>
+            <Table5_Cell9 Ref="135" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,1,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>babcd5a464d6417a9de3a118df8944a8</Guid>
+              <ID>20</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table5_Cell9</Name>
+              <Page isRef="125" />
+              <Parent isRef="126" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table5_Cell9>
+            <Table5_Cell10 Ref="136" type="Stimulsoft.Report.Components.Table.StiTableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1,0.4,3.4,0</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>3bc721c8f18d46a2892061f9fd13885d</Guid>
+              <ID>21</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table5_Cell10</Name>
+              <Page isRef="125" />
+              <Parent isRef="126" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </Table5_Cell10>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>opcion5</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>1c44fad1b2de4315b1fede285663bc87</Guid>
+          <Name>Table5</Name>
+          <NumberID>30</NumberID>
+          <Page isRef="125" />
+          <Parent isRef="125" />
+          <Sort isList="true" count="0" />
+        </Table5>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>9545d079210c4d9ebcf095b1d0ed91f9</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>subReport_1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>6.4</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="137" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </subReport_1>
+  </Pages>
+  <PrinterSettings Ref="138" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>11/29/2022 12:09:01 PM</ReportChanged>
+  <ReportCreated>10/24/2019 3:39:40 PM</ReportCreated>
+  <ReportFile>C:\Users\tony\Documents\GitHub\SICOP-Web\Covialgt\Covialgt\Reportes\reportesuperwalo001.mrt</ReportFile>
+  <ReportGuid>cce6b66ece394ec88c6a47a8c7cd1267</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2012.1.1300</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        
+        public Report()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>
