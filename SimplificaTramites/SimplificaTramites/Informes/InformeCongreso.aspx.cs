@@ -1,0 +1,26 @@
+﻿using SimplificaTramites.Utils;
+using System;
+using System.Configuration;
+using System.Web;
+
+namespace SimplificaTramites.Informes
+{
+    public partial class InformeCongreso : BasePage
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            HttpContext ctx = HttpContext.Current;
+            if (ctx.Session.Count < 1)
+            {
+                Response.Redirect("~/Auth/Login.aspx");
+            }
+
+            ViewState["baseurl"] = ConfigurationManager.AppSettings["baseURL"];
+            ViewState["usuario"] = HttpContext.Current.Session["Usuario"]?.ToString();
+            ViewState["tipoReporte"] = Request.QueryString["var"];
+            baseUrl = ConfigurationManager.AppSettings["baseURL"];
+            token = HttpContext.Current.Session["token"]?.ToString();
+            httpClient = new BaseClient(baseUrl, token);
+        }
+    }
+}

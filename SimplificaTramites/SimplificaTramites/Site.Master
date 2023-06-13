@@ -1,0 +1,1179 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SimplificaTramites.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+    <style>
+        .date {
+            float: right;
+            color: white;
+            font-weight: bold;
+        }
+
+        .title .name {
+            float: left;
+            color: white;
+        }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title><%: Page.Title %> - COVIAL</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/Scripts/fontawesome/js/all.min.js") %>
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <asp:ContentPlaceHolder ID="CustomStyles" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form runat="server">
+        <asp:ScriptManager runat="server" EnablePageMethods="true">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Path="~/Scripts/umd/popper.js" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Path="~/Scripts/moment-with-locales.min.js" />
+                <asp:ScriptReference Path="~/Scripts/covial/sidebar.js" />
+                <asp:ScriptReference Path="~/Scripts/covial/main.js" />
+                <asp:ScriptReference Path="~/js/ActaInicio/jsMenuActaInicio.js" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" runat="server" href="~/">
+                    <img src="~/Images/covial-logo.png" width="71" height="44" alt="" runat="server">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain"
+                    aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarMain">
+                    <ul class="navbar-nav mr-auto"></ul>
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="navbar-nav navbar-right">
+                                <li class="nav-item">
+                                    <a href="<%= Page.ResolveUrl("~/Ayuda/DocumentoDeAyuda") %>" class="nav-link">
+                                        <i class="far fa-question-circle fa-2x text-white"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="far fa-user-circle fa-2x text-white"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="/Perfil/BandejaDeEntrada" runat="server">Mensajeria </a>
+                                        <a class="dropdown-item" href="#">Configuración</a>
+                                        <a class="dropdown-item" href="#">Cambio de Contraseña</a>
+                                        <a class="dropdown-item close-session" href="#">Cerrar Sesi&oacute;n</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="navbar-nav navbar-right">
+
+                                <span id="userslogin" runat="server" class="date">Usuario: <%=HttpContext.Current.User.Identity.Name %> | Usuarios en línea: <%= usuariosEnLinea %></span>
+                                <li class="nav-item">
+                                    <a href="<%= Page.ResolveUrl("~/Ayuda/DocumentoDeAyuda") %>" class="nav-link">
+                                        <i class="far fa-question-circle fa-2x text-white"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="far fa-user-circle fa-2x text-white"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="<%= Page.ResolveUrl("~/Perfil/BandejaDeEntrada")%>">Mensajeria </a>
+                                        <a class="dropdown-item" href="<%= Page.ResolveUrl("~/Configuracion/CambiarPassword")%>">Cambio de Contraseña</a>
+                                        <a class="dropdown-item close-session" href="#">Cerrar Sesión</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+            </div>
+        </div>
+        <div id="container" class="container-fluid collapsed">
+            <asp:Button ID="Button1" runat="server" class="mt-3" OnClick="CerrarSesion" Text="Cerrar Sesión" />
+            <%if (Convert.ToInt32(HttpContext.Current.Session["ActaInicioAprobada"]) > 0)
+                { %>
+            <nav id="sidebarMenu" class="d-block bg-light sidebar">
+                <div class="sidebar-sticky pt-3">
+
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link nav-title active" data-toggle="collapse" href="#collapseStart" role="button"
+                                aria-expanded="false" aria-controls="collapseStart">
+                                <img src="~/Images/sidebar/dashboard-icon.svg" width="30" height="30" alt="Inicio" runat="server" />
+                                <span class="nav-link-text">Inicio</span>
+                            </a>
+                            <ul class="list-unstyled collapse collapsed-list show" id="collapseStart">
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Default" runat="server" class="nav-link">Dashboard
+                                    </a>
+                                    <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("DIRECTOR"))
+                                        {%>
+                                    <a href="~/DashboardGerencial" runat="server" class="nav-link">Dashboard gerencial
+                                    </a>
+                                    <%} %>
+                                    <a href="~/FichaTEcnica.aspx" runat="server" class="nav-link">Imprimir Ficha T&eacute;cnica
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapseReportesViales" role="button"
+                                aria-expanded="false" aria-controls="collapseStart">
+                                <img src="~/Images/sidebar/execution-icon.svg" width="30" height="30" alt="Inicio" runat="server" />
+                                <span class="nav-link-text">Constancias</span>
+                            </a>
+                            <ul id="collapseReportesViales" class="list-unstyled collapse pl-2">
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/SolicitudConstanciaLS/frmSolicitudConstanciaLS" runat="server" class="nav-link">Laborales y/o Servicios Prestados
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </li>
+                       <!--<li class="nav-item">
+                            <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapseSuspensiones" role="button"
+                                aria-expanded="false" aria-controls="collapseStart">
+                                <img src="~/Images/sidebar/execution-icon.svg" width="30" height="30" alt="Inicio" runat="server" />
+                                <span class="nav-link-text">Suspensiones</span>
+                            </a>
+                            <ul id="collapseSuspensiones" class="list-unstyled collapse pl-2">
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Suspensiones/frmSuspensiones" runat="server" class="nav-link">Suspensiones
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </li>-->
+                        <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("DIRECTOR"))
+                            { %>
+                        <li class="nav-item">
+                            <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapseRedVial" role="button"
+                                aria-expanded="false" aria-controls="collapseStart">
+                                <img src="~/Images/sidebar/execution-icon.svg" width="30" height="30" alt="Inicio" runat="server" />
+                                <span class="nav-link-text">Red Vial</span>
+                            </a>
+                            <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("DIRECTOR"))
+                                { %>
+                            <ul id="collapseRedVial" class="list-unstyled collapse pl-2">
+                                <%-- <li class="nav-item collapsed-item">
+                                    <a href="" runat="server" class="nav-link">Rutas Viales
+                                    </a>
+                                </li>--%>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/RedVial/frmTramosViales" runat="server" class="nav-link">Tramos Viales
+                                    </a>
+                                </li>
+                            </ul>
+                            <%} %>
+                        </li>
+
+
+
+
+
+
+
+                        <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES"))
+                            { %>
+                        <li class="nav-item">
+                            <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapseRenglones" role="button"
+                                aria-expanded="false" aria-controls="collapseStart">
+                                <img src="~/Images/sidebar/execution-icon.svg" width="30" height="30" alt="Inicio" runat="server" />
+                                <span class="nav-link-text">Renglones</span>
+                            </a>
+                            <ul id="collapseRenglones" class="list-unstyled collapse pl-2">
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Renglones/frmRenglones" runat="server" class="nav-link">Renglones
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <%} %>
+                        <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("Director") || HttpContext.Current.User.IsInRole("Coordinador de Planificacion") || HttpContext.Current.User.IsInRole("Planificador") || HttpContext.Current.User.IsInRole("Auxiliar Tecnico") || HttpContext.Current.User.IsInRole("Coordinador de Visa"))
+                            { %>
+                        <li class="nav-item">
+                            <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapseEmpresas" role="button"
+                                aria-expanded="false" aria-controls="collapseStart">
+                                <img src="~/Images/sidebar/menu-empresa.svg" width="30" height="30" alt="Inicio" runat="server" />
+                                <span class="nav-link-text">Empresas</span>
+                            </a>
+                            <ul id="collapseEmpresas" class="list-unstyled collapse pl-2">
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Empresas/frmMaestroDeEmpresas" runat="server" class="nav-link">Maestro de Empresas
+                                    </a>
+                                </li>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Ejecucion/ProyectoPorEmpresa" runat="server" class="nav-link">Proyectos por empresa
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <%} %>
+                        <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("COORDINADOR DE PLANIFICACION") || HttpContext.Current.User.IsInRole("COORDINADOR DE SEGUIMIENTO") || HttpContext.Current.User.IsInRole("DIRECTOR") || HttpContext.Current.User.IsInRole("INGENIERO DE CONTROL Y SEGUIMIENTO"))
+                            { %>
+                        <li class="nav-item">
+                            <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapseDiseno" role="button"
+                                aria-expanded="false" aria-controls="collapseStart">
+                                <img src="~/Images/sidebar/menu-disenio.svg" width="30" height="30" alt="Inicio" runat="server" />
+                                <span class="nav-link-text">Diseño</span>
+                            </a>
+                            <ul id="collapseDiseno" class="list-unstyled collapse pl-2">
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("COORDINADOR DE PLANIFICACION"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/DisenosProyectos/frmPlanesAnuales" runat="server" class="nav-link">Planes Anuales
+                                    </a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("COORDINADOR DE PLANIFICACION"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a class="nav-link" data-toggle="collapse" href="#programas" role="button"
+                                        aria-expanded="false" aria-controls="collapseStart">Programas <i class="fas fa-caret-right fa-lg fa-fw float-right"></i>
+                                    </a>
+                                    <ul id="programas" class="list-unstyled collapse pl-2">
+                                        <li class="nav-item">
+                                            <a href="~/DisenosProyectos/frmProgramas?AnioID=0" runat="server" class="nav-link">Programas
+                                            </a>
+                                        </li>
+                                        <li class="nav-item collapsed-item">
+                                            <a class="nav-link" data-toggle="collapse" href="#sanciones" role="button"
+                                                aria-expanded="false" aria-controls="collapseStart">Sanciones <i class="fas fa-caret-right fa-lg fa-fw float-right"></i>
+                                            </a>
+                                            <ul id="sanciones" class="list-unstyled collapse pl-2">
+                                                <li class="nav-item">
+                                                    <a href="~/DisenosProyectos/frmProgramasSanciones?AnioID=0&Programa=0" runat="server" class="nav-link">Sanciones
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="~/DisenosProyectos/frmProgramasSancionesRecurrencia?AnioID=0&Programa=0&SancionCodigo=0" runat="server" class="nav-link">Recurrencias de Sanciones
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("Colaborador Planificacion") || HttpContext.Current.User.IsInRole("Director") || HttpContext.Current.User.IsInRole("Liquidacion") || HttpContext.Current.User.IsInRole("URLC"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Ejecucion/ActualizacionNOG" runat="server" class="nav-link">Actualización NOG
+                                    </a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/DisenosProyectos/frmEstadoProyecto" runat="server" class="nav-link">Estados de Proyectos
+                                    </a>
+                                </li>
+                                <%} %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Informes/InformeCongreso" runat="server" class="nav-link">Informe Congreso - Transparencia
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <%} %>
+                        <%} %>
+                       <!-- <li class="nav-item">
+                                    <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapseActaInicio" role="button"
+                                        aria-expanded="false" aria-controls="collapseStart">
+                                        <img src="~/Images/sidebar/menu-ejecucion.svg" width="30" height="30" alt="Inicio" runat="server" />
+                                        <span class="nav-link-text">Acta de Inicio</span>
+                                    </a>
+                            <ul class="list-unstyled collapse collapsed-list" id="collapseActaInicio">
+                                 <li class="nav-item collapsed-item">
+                                    <a href="~/ActaInicio/frmActaInicio" runat="server" class="nav-link">Acta de Inicio
+                                    </a>
+                                </li>
+                                <li id="ValidarActaInicio" class="nav-item collapsed-item">
+                                    <a href="~/ActaInicio/frmValidarActaInicio" runat="server" class="nav-link">Validar Acta                                    </a>
+                                </li>
+                                </ul>
+                         </li>-->
+
+                        <!--<li class="nav-item">
+                            <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapseExecution" role="button"
+                                aria-expanded="false" aria-controls="collapseStart">
+                                <img src="~/Images/sidebar/menu-ejecucion.svg" width="30" height="30" alt="Inicio" runat="server" />
+                                <span class="nav-link-text">Ejecución</span>
+                            </a>
+                            <ul class="list-unstyled collapse collapsed-list" id="collapseExecution">
+                                 <li class="nav-item collapsed-item">
+                                    <a href="~/ActaInicio/frmActaInicio" runat="server" class="nav-link">Acta de Inicio
+                                    </a>
+                                </li>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("SUPERVISOR") || HttpContext.Current.User.IsInRole("Director") || HttpContext.Current.User.IsInRole("Coordinador de Planificacion") || HttpContext.Current.User.IsInRole("COORDINADOR DE SEGUIMIENTO") || HttpContext.Current.User.IsInRole("Auxiliar Tecnico"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Ejecucion/RegistroDatos" runat="server" class="nav-link">Registro de Datos
+                                    </a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("SUPERVISOR") || HttpContext.Current.User.IsInRole("Director") || HttpContext.Current.User.IsInRole("Coordinador de Planificacion") || HttpContext.Current.User.IsInRole("COORDINADOR DE SEGUIMIENTO") || HttpContext.Current.User.IsInRole("Auxiliar Tecnico"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Estimaciones/frmEstimacionReprogramaciones" runat="server" class="nav-link">Estimaciones supervisión
+                                    </a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("Supervisor") || HttpContext.Current.User.IsInRole("Director") || HttpContext.Current.User.IsInRole("Coordinador de Planificacion") || HttpContext.Current.User.IsInRole("COORDINADOR DE SEGUIMIENTO") || HttpContext.Current.User.IsInRole("Auxiliar Tecnico"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Emergencias/frmEmergenciasPantallaPrincipal.aspx" runat="server" class="nav-link">Emergencias
+                                    </a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("SUPERVISOR") || HttpContext.Current.User.IsInRole("Director") || HttpContext.Current.User.IsInRole("Coordinador de Planificacion") || HttpContext.Current.User.IsInRole("COORDINADOR DE SEGUIMIENTO") || HttpContext.Current.User.IsInRole("Auxiliar Tecnico"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Incidencias/frmIncidenciasPantallaPrincipal.aspx" runat="server" class="nav-link">Incidencias
+                                    </a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("SUPERVISOR") || HttpContext.Current.User.IsInRole("Director") || HttpContext.Current.User.IsInRole("Coordinador de Planificacion") || HttpContext.Current.User.IsInRole("COORDINADOR DE SEGUIMIENTO") || HttpContext.Current.User.IsInRole("Auxiliar Tecnico"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Ejecucion/InformacionDeRotulos" runat="server" class="nav-link">Información Rotulos
+                                    </a>
+                                </li>
+                                <%} %>
+                                <%if ((HttpContext.Current.User.IsInRole("Administradores")) || HttpContext.Current.User.IsInRole("DIRECTOR") || HttpContext.Current.User.IsInRole("SUPERVISOR"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Ejecucion/ConsultaDeSanciones?VieneRegistro=0" runat="server" class="nav-link">Consulta de Sanciones
+                                    </a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("DIRECTOR") || HttpContext.Current.User.IsInRole("RECEPTOR DE VISA") || HttpContext.Current.User.IsInRole("Coordinador de Visa") || HttpContext.Current.User.IsInRole("VISOR") || HttpContext.Current.User.IsInRole("Coordinador de Planificacion"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Ejecucion/ConsultaEstimacionesDetallada" runat="server" class="nav-link">Consulta de estimaciones detallada
+                                    </a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("SUPERVISOR") || HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("DIRECTOR") || HttpContext.Current.User.IsInRole("RECEPTOR DE VISA") || HttpContext.Current.User.IsInRole("Coordinador de Visa") || HttpContext.Current.User.IsInRole("VISOR") || HttpContext.Current.User.IsInRole("Coordinador de Planificacion"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Ejecucion/ConsultaEstimaciones" runat="server" class="nav-link">Consulta de estimaciones
+                                    </a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("SUPERVISOR") || HttpContext.Current.User.IsInRole("SUPERVISOR CONSULTA") || HttpContext.Current.User.IsInRole("DIRECTOR") || HttpContext.Current.User.IsInRole("Coordinador de Visa") || HttpContext.Current.User.IsInRole("Receptor de Visa") || HttpContext.Current.User.IsInRole("Visor") || HttpContext.Current.User.IsInRole("Contratista"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a class="nav-link" data-toggle="collapse" href="#informes-tecnicos" role="button"
+                                        aria-expanded="false" aria-controls="informes-tecnicos">Informes Técnicos <i class="fas fa-caret-right fa-lg fa-fw float-right"></i>
+                                    </a>
+                                    <ul id="informes-tecnicos" class="list-unstyled collapse pl-2">
+                                        <li class="nav-item">
+                                            <a href="~/InformesTecnicos/InformeTecnicoMensual" runat="server" class="nav-link">Informes Técnicos Mensuales
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="~/InformesTecnicos/InformesTecnicosPorPeriodo" runat="server" class="nav-link">Informes Técnicos por Período
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("SUPERVISOR") || HttpContext.Current.User.IsInRole("SUPERVISOR CONSULTA") || HttpContext.Current.User.IsInRole("DIRECTOR") || HttpContext.Current.User.IsInRole("Coordinador de Visa") || HttpContext.Current.User.IsInRole("Receptor de Visa") || HttpContext.Current.User.IsInRole("Visor") || HttpContext.Current.User.IsInRole("Contratista"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Ejecucion/DescripcionActualProyecto" runat="server" class="nav-link">Descripción Actual de Proyectos
+                                    </a>
+                                </li>
+                                <%} %>
+
+                                <%-- ingreso nueva opcion menu  --%>
+                                 
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("SUPERVISOR") || HttpContext.Current.User.IsInRole("SUPERVISOR CONSULTA") || HttpContext.Current.User.IsInRole("DIRECTOR") || HttpContext.Current.User.IsInRole("Coordinador de Visa") || HttpContext.Current.User.IsInRole("Receptor de Visa") || HttpContext.Current.User.IsInRole("Visor") || HttpContext.Current.User.IsInRole("Contratista"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Ejecucion/SaldosDeEstimacionesSuper" runat="server" class="nav-link"> Saldos de estimacion super </a>
+                                  
+                                </li>
+                                 <%}%>
+                            </ul>
+                        </li> <%--temina seccion ejecucion --%>
+                            -->
+
+                        <!--<li class="nav-item">
+                                    <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapsepartidas" role="button"
+                                        aria-expanded="false" aria-controls="collapseStart">
+                                       
+                                        <span class="nav-link-text">Partidas Pres.</span>
+                                    </a>
+                            <ul class="list-unstyled collapse collapsed-list" id="collapsepartidas">
+                                 <li class="nav-item collapsed-item">
+                                    <a href="~/Partidas/frmPartidasPresupuestarias" runat="server" class="nav-link">Cargar Partidas Presupuestarias
+                                    </a>
+                                </li>
+                                <li id="partidaList" class="nav-item collapsed-item">
+                                    <a href="~/Partidas/frmPartidasPresupuestariasList" runat="server" class="nav-link">Cargar Partidas Presupuestarias                                   </a>
+                                </li>
+                                </ul>
+                         </li>-->
+
+                        <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("DIRECTOR") || HttpContext.Current.User.IsInRole("VISOR"))
+                            { %>
+                        <li class="nav-item">
+                            <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapseVisa" role="button"
+                                aria-expanded="false" aria-controls="collapseStart">
+                                <img src="~/Images/sidebar/execution-icon.svg" width="30" height="30" alt="Inicio" runat="server" />
+                                <span class="nav-link-text">Visa</span>
+                            </a>
+                            <ul id="collapseVisa" class="list-unstyled collapse pl-2">
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("Receptor de Visa"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Visado/frmRequisitosVisado.aspx" runat="server" class="nav-link">Guias de Visado</a>
+                                </li>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Estimaciones/RecepcionDocumentos" runat="server" class="nav-link">Gestión de Estimaciones</a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("Coordinador de Visa"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Administracion/AsignacionEstimaciones" runat="server" class="nav-link">Asignación de Estimaciones</a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("Coordinador de Visa"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Administracion/ReAsignacionEstimaciones" runat="server" class="nav-link">Reasignación de Estimaciones</a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("Coordinador de Visa") || HttpContext.Current.User.IsInRole("VISOR"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Administracion/RevisionEstimaciones" runat="server" class="nav-link">Revisión de Estimaciones</a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("Receptor de Visa") || HttpContext.Current.User.IsInRole("Auxiliar Tecnico"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Administracion/TrasladoEstimaciones" runat="server" class="nav-link">Traslado de Estimaciones</a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("Coordinador de Visa") || HttpContext.Current.User.IsInRole("Director"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Administracion/ReporteVisa" runat="server" class="nav-link">Reporte de Visa</a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("SUPERVISOR") || HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("DIRECTOR") || HttpContext.Current.User.IsInRole("RECEPTOR DE VISA") || HttpContext.Current.User.IsInRole("Coordinador de Visa") || HttpContext.Current.User.IsInRole("VISOR") || HttpContext.Current.User.IsInRole("Coordinador de Planificacion"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Ejecucion/ConsultaEstimaciones" runat="server" class="nav-link">Consulta de estimaciones
+                                    </a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("Visor"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Ejecucion/DocumentosDeCambioConsulta" runat="server" class="nav-link">Documentos de Cambio</a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("Visor"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Catalogos/TrabajosAdmon" runat="server" class="nav-link">Trabajos por administración</a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("Visor"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Ejecucion/ConsultaDeSanciones?VieneRegistro=0" runat="server" class="nav-link">Consulta de Sanciones</a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("COORDINADOR DE VISA"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Estimaciones/EstimacionesFacturas" runat="server" class="nav-link">Ingreso de Facturas</a>
+                                </li>
+                                <%} %>
+                            </ul>
+                        </li>
+                        <%} %>
+                      <!--  <li class="nav-item">
+                                    <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapseSolicitudes" role="button"
+                                    aria-expanded="false" aria-controls="collapseStart">
+                                    <img src="~/Images/sidebar/execution-icon.svg" width="30" height="30" alt="Inicio" runat="server" />
+                                    <span class="nav-link-text">Solicitudes</span>
+                                </a>
+                                <ul id="collapseSolicitudes" class="list-unstyled collapse pl-2">
+                                    <li class="nav-item collapsed-item">
+                                        <a href="~/Solicitudes/frmSolicitudes.aspx" runat="server" class="nav-link">Solicitudes
+                                        </a>
+                                    </li>
+                                </ul>
+                                </li>-->
+                        <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("AUXILIAR TECNICO") || HttpContext.Current.User.IsInRole("INGENIERO DE CONTROL Y SEGUIMIENTO") || HttpContext.Current.User.IsInRole("COORDINADOR DE SEGUIMIENTO") || HttpContext.Current.User.IsInRole("COORDINADOR DE PLANIFICACION") || HttpContext.Current.User.IsInRole("DIRECTOR") || HttpContext.Current.User.IsInRole("URLC"))
+                            { %>
+                        <li class="nav-item">
+                            <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapseTecnico" role="button"
+                                aria-expanded="false" aria-controls="collapseStart">
+                                <img src="~/Images/sidebar/execution-icon.svg" width="30" height="30" alt="Inicio" runat="server" />
+                                <span class="nav-link-text">Área Técnica</span>
+                            </a>
+                            <ul class="list-unstyled collapse collapsed-list" id="collapseTecnico">
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("INGENIERO DE CONTROL Y SEGUIMIENTO") || HttpContext.Current.User.IsInRole("COORDINADOR DE SEGUIMIENTO") || HttpContext.Current.User.IsInRole("URLC"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a class="nav-link" data-toggle="collapse" href="#AsigEncargado" role="button"
+                                        aria-expanded="false" aria-controls="informes-tecnicos">Asignaciones <i class="fas fa-caret-right fa-lg fa-fw float-right"></i>
+                                    </a>
+                                    <ul id="AsigEncargado" class="list-unstyled collapse pl-2">
+                                        <li class="nav-item">
+                                            <a href="~/Ejecucion/AsignacionEncargadoProyecto" runat="server" class="nav-link">Asignar Encargado
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="~/Ejecucion/AsignacionesEmpresas" runat="server" class="nav-link">Asignar Empresa
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="~/Ejecucion/AsignacionesRegionales" runat="server" class="nav-link">Asignar Regional
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="~/Ejecucion/AsignacionesSupervisores" runat="server" class="nav-link">Asignar Supervisor
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <%} %>
+
+                                
+
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("AUXILIAR TECNICO") || HttpContext.Current.User.IsInRole("COORDINADOR DE SEGUIMIENTO") || HttpContext.Current.User.IsInRole("URLC"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Estimaciones/RecepcionDocumentos" runat="server" class="nav-link">Gestión de Estimaciones</a>
+                                </li>
+                                <%} %>
+                                <li class="nav-item collapsed-item">
+                                    <a class="nav-link" data-toggle="collapse" href="#TrabajoAdministracion" role="button"
+                                        aria-expanded="false" aria-controls="informes-tecnicos">Trabajos por Administración
+                                        <i class="fas fa-caret-right fa-lg fa-fw float-right"></i>
+                                    </a>
+                                    <ul id="TrabajoAdministracion" class="list-unstyled collapse pl-2">
+                                        <li class="nav-item">
+                                            <a href="~/Administracion/TrabajosAdministracion" runat="server" class="nav-link">Gestión del Estado de Trabajos por Admon.
+                                            </a>
+                                        </li>
+                                        <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("AUXILIAR TECNICO") || HttpContext.Current.User.IsInRole("COORDINADOR DE SEGUIMIENTO") || HttpContext.Current.User.IsInRole("INGENIERO DE CONTROL Y SEGUIMIENTO") || HttpContext.Current.User.IsInRole("URLC"))
+                                            { %>
+                                        <li class="nav-item collapsed-item">
+                                            <a href="~/Catalogos/TrabajosAdmon" runat="server" class="nav-link">Consulta Trabajos por administración</a>
+                                        </li>
+                                        <%} %>
+                                    </ul>
+                                </li>
+                                <li class="nav-item collapsed-item">
+                                    <a class="nav-link" data-toggle="collapse" href="#GestionEstimaciones" role="button"
+                                        aria-expanded="false" aria-controls="informes-tecnicos">Revisión de Estimaciones
+                                        <i class="fas fa-caret-right fa-lg fa-fw float-right"></i>
+                                    </a>
+                                    <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("AUXILIAR TECNICO") || HttpContext.Current.User.IsInRole("COORDINADOR DE SEGUIMIENTO") || HttpContext.Current.User.IsInRole("INGENIERO DE CONTROL Y SEGUIMIENTO") || HttpContext.Current.User.IsInRole("URLC"))
+                                        { %>
+                                    <ul id="GestionEstimaciones" class="list-unstyled collapse pl-2">
+                                        <li class="nav-item">
+                                            <a href="~/Estimaciones/frmreparostecnicosver" runat="server" class="nav-link">Ver Reparo Técnico
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="~/Estimaciones/frmreparostecnicoscrear" runat="server" class="nav-link">Crear Reparo Técnico
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <%} %>
+                                    <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("AUXILIAR TECNICO") || HttpContext.Current.User.IsInRole("COORDINADOR DE SEGUIMIENTO") || HttpContext.Current.User.IsInRole("INGENIERO DE CONTROL Y SEGUIMIENTO") || HttpContext.Current.User.IsInRole("URLC"))
+                                        { %>
+                                    <li class="nav-item collapsed-item">
+                                        <a href="~/Administracion/TrasladoEstimaciones" runat="server" class="nav-link">Traslado de Estimaciones</a>
+                                    </li>
+                                    <%} %>
+                                </li>
+                                <%if (HttpContext.Current.User.IsInRole("SUPERVISOR") || HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("DIRECTOR") || HttpContext.Current.User.IsInRole("RECEPTOR DE VISA") || HttpContext.Current.User.IsInRole("Coordinador de Visa") || HttpContext.Current.User.IsInRole("VISOR") || HttpContext.Current.User.IsInRole("Coordinador de Planificacion"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Ejecucion/ConsultaEstimaciones" runat="server" class="nav-link">Consulta de estimaciones
+                                    </a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("AUXILIAR TECNICO") || HttpContext.Current.User.IsInRole("COORDINADOR DE SEGUIMIENTO") || HttpContext.Current.User.IsInRole("INGENIERO DE CONTROL Y SEGUIMIENTO") || HttpContext.Current.User.IsInRole("URLC"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Ejecucion/DocumentosDeCambioConsulta" runat="server" class="nav-link">Documentos de Cambio
+                                    </a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("AUXILIAR TECNICO") || HttpContext.Current.User.IsInRole("COORDINADOR DE SEGUIMIENTO") || HttpContext.Current.User.IsInRole("URLC"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Ejecucion/GestionDeDocumentosDeCambio.aspx" runat="server" class="nav-link">Estado de Documentos de Cambio
+                                    </a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("AUXILIAR TECNICO") || HttpContext.Current.User.IsInRole("COORDINADOR DE SEGUIMIENTO") || HttpContext.Current.User.IsInRole("URLC"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Ejecucion/ConsultaDeSanciones?VieneRegistro=0" runat="server" class="nav-link">Consulta de Sanciones</a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("DIRECTOR") || HttpContext.Current.User.IsInRole("INGENIERO DE CONTROL Y SEGUIMIENTO"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Fotografias/frmfotospresenciales" runat="server" class="nav-link">Fotografías presenciales
+                                    </a>
+                                </li>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Financiera/Proyectossinfotospresenciales" runat="server" class="nav-link">Proyectos sin Fotografías presenciales
+                                    </a>
+                                </li>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/informes/informegeneraldocscambio" runat="server" class="nav-link">Información general documentos de cambio
+                                    </a>
+                                </li>
+                                <%} %>
+                            </ul>
+
+                        </li>
+
+                        <%} %>
+                        <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("Colaborador Financiero") || HttpContext.Current.User.IsInRole("DIRECTOR") || HttpContext.Current.User.IsInRole("URLC"))
+                            { %>
+               <!--         <li class="nav-item">
+                            <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapseFinanciero" role="button"
+                                aria-expanded="false" aria-controls="collapseStart">
+                                <img src="~/Images/sidebar/menu-financiero.svg" width="30" height="30" alt="Inicio" runat="server" />
+                                <span class="nav-link-text">Financiero</span>
+                            </a>
+                            <ul class="list-unstyled collapse collapsed-list" id="collapseFinanciero">
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("NOMINA") || HttpContext.Current.User.IsInRole("Receptor Financiero") || HttpContext.Current.User.IsInRole("Colaborador Financiero") || HttpContext.Current.User.IsInRole("DIRECTOR"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Ejecucion/ConsultaEstimacionesDetallada" runat="server" class="nav-link">Consulta de estimaciones detallada
+                                    </a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("NOMINA") || HttpContext.Current.User.IsInRole("Receptor Financiero"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Estimaciones/RecepcionDocumentos" runat="server" class="nav-link">Gestión de Estimaciones</a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("Receptor Financiero") || HttpContext.Current.User.IsInRole("Coordinador Financiero") || HttpContext.Current.User.IsInRole("Colaborador Financiero") || HttpContext.Current.User.IsInRole("Director"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Estimaciones/frmEstimacionesEstructuraRenglones" runat="server" class="nav-link">Estructura Renglones
+                                    </a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("Receptor Financiero") || HttpContext.Current.User.IsInRole("Coordinador Financiero") || HttpContext.Current.User.IsInRole("Colaborador Financiero") || HttpContext.Current.User.IsInRole("Director"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Estimaciones/frmEstimacionesEstructuraTramos" runat="server" class="nav-link">Estructura Tramos
+                                    </a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("ASIGNA DEVENGADO"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Financiera/TrasladoDevengado" runat="server" class="nav-link">Traslado Devengado
+                                    </a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("COLABORADOR FINANCIERO"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Catalogos/EstructuraPago" runat="server" class="nav-link">Estructura de Pagos
+                                    </a>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("COLABORADOR FINANCIERO") || HttpContext.Current.User.IsInRole("COORDINADOR FINANCIERO") || HttpContext.Current.User.IsInRole("DIRECTOR"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Financiera/ConstanciaSAF" runat="server" class="nav-link">Constancia SAF </a>
+                                </li>
+                                <%} %>
+                            </ul>
+                        </li>-->
+                        <%} %>
+                        <%if (HttpContext.Current.User.IsInRole("JURIDICO") || HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("DIRECTOR") || HttpContext.Current.User.IsInRole("INGENIERO DE CONTROL Y SEGUIMIENTO") || HttpContext.Current.User.IsInRole("COORDINADOR FINANCIERO") || HttpContext.Current.User.IsInRole("Auxiliar Tecnico") || HttpContext.Current.User.IsInRole("urlc"))
+                            { %>
+
+                        <!--<li class="nav-item">
+                            <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapseReportes" role="button"
+                                aria-expanded="false" aria-controls="collapseStart">
+                                <img src="~/Images/sidebar/reports-icon.svg" width="30" height="30" alt="Inicio" runat="server" />
+                                <span class="nav-link-text">Reportes</span>
+                            </a>
+                            <ul class="list-unstyled collapse pl-2" id="collapseReportes">
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("DIRECTOR") || HttpContext.Current.User.IsInRole("REPORTES GERENCIALES") || HttpContext.Current.User.IsInRole("COORDINADOR FINANCIERO") || HttpContext.Current.User.IsInRole("URLC"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a class="nav-link" data-toggle="collapse" href="#ReportesDeuda" role="button"
+                                        aria-expanded="false" aria-controls="informes-tecnicos">Reportes Deuda<i class="fas fa-caret-right fa-lg fa-fw float-right"></i>
+                                    </a>
+                                    <ul id="ReportesDeuda" class="list-unstyled collapse pl-2">
+                                        <li class="nav-item">
+                                            <a href="~/Ejecucion/ReportesDeuda" runat="server" class="nav-link">Reporte de Deuda por Proyectos
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="~/Ejecucion/InformeDeuda" runat="server" class="nav-link">Reporte de Deuda
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="~/Ejecucion/InformeGeneralDeudaModificado" runat="server" class="nav-link">Reporte de Deuda Modificado
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="~/Ejecucion/InformeGeneralDeuda" runat="server" class="nav-link">Reporte de Deuda General
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="~/Ejecucion/InformeGeneralDeudaBanco" runat="server" class="nav-link">Reporte de Deuda General Banco
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="~/Ejecucion/InformeGeneralDeudaContraloria" runat="server" class="nav-link">Reporte de Deuda Contralor&iacute;a General
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="~/Ejecucion/InformeDeudaAgatha" runat="server" class="nav-link">Reporte de Deuda Emergencias Agatha
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("DIRECTOR") || HttpContext.Current.User.IsInRole("REPORTES GERENCIALES") || HttpContext.Current.User.IsInRole("COORDINADOR FINANCIERO") || HttpContext.Current.User.IsInRole("URLC"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a class="nav-link" data-toggle="collapse" href="#ReportesEjecutivos" role="button"
+                                        aria-expanded="false" aria-controls="informes-tecnicos">Reportes Ejecutivos<i class="fas fa-caret-right fa-lg fa-fw float-right"></i>
+                                    </a>
+                                    <ul id="ReportesEjecutivos" class="list-unstyled collapse pl-2">
+                                        <li class="nav-item">
+                                            <a href="~/Informes/ReportesGenerales" runat="server" class="nav-link">Reportes Generales
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="~/Informes/ProyectosPorDepto" runat="server" class="nav-link">Proyectos por Departamento
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="~/Informes/ProyectosXRegionalXDepto" runat="server" class="nav-link">Informes por Regional
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="~/Informes/AvanceFinancieroXDepto" runat="server" class="nav-link">Informes y Anexos* por Departamento
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="~/Informes/GobernandoConLaGente" runat="server" class="nav-link">Inversion Proyectos por Depto
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <%} %>
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("Cuenta Corriente Financiero") || HttpContext.Current.User.IsInRole("Cuenta Corriente Tecnico") || HttpContext.Current.User.IsInRole("Cuenta Corriente"))
+                                    { %>
+                                <li class="nav-item collapsed-item">
+                                    <a class="nav-link" data-toggle="collapse" href="#ReportesCuentaCorriente" role="button"
+                                        aria-expanded="false" aria-controls="informes-tecnicos">Reportes Cuenta corriente <i class="fas fa-caret-right fa-lg fa-fw float-right"></i>
+                                    </a>
+                                    <ul id="ReportesCuentaCorriente" class="list-unstyled collapse pl-2">
+                                        <li class="nav-item">
+                                            <a href="~/Informes/ReporteProyectoCtaCorriente?var=0" runat="server" class="nav-link">Proyectos
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="~/Informes/ReporteBancoCtaCorriente" runat="server" class="nav-link">Bancos
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="~/Informes/ReporteProyectoCtaCorriente?var=1" runat="server" class="nav-link">Proyectos Contaduría
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="~/Informes/InformeContratadoSaldoPresupuesto" runat="server" class="nav-link">Saldo Cuenta Corriente Por Año
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <%} %>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Administracion/ReporteVisa" runat="server" class="nav-link">Reporte de Visa</a>
+                                </li>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Informes/DocumentosCambio" runat="server" class="nav-link">Reporte de Documentos de Cambio</a>
+                                </li>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Informes/InformeDeuda" runat="server" class="nav-link">Reporte Ejecucion Presupuestario Financiero
+                                    </a>
+                                </li>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Informes/SancionesGenerales" runat="server" class="nav-link">Reporte de Sanciones Generales
+                                    </a>
+                                </li>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Sanciones/Sancionesxanio" runat="server" class="nav-link">Reporte de Sanciones por año
+                                    </a>
+                                </li>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Informes/ReportesSupervisora" runat="server" class="nav-link">Reportes Supervisor
+                                    </a>
+                                </li>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Informes/OtrosReportes" runat="server" class="nav-link">Reportes Financieros
+                                    </a>
+                                </li>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Informes/PendientePagoDireccion" runat="server" class="nav-link">Pendiente de Pago Dirección
+                                    </a>
+                                </li>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Informes/PendientePagoNomina" runat="server" class="nav-link">Informe Nómina Pendiente de Pago
+                                    </a>
+                                </li>
+                                <li class="nav-item collapsed-item">
+                                    <a href="~/Informes/MontosPagadosXPrograma" runat="server" class="nav-link">Reporte de Montos Devengados por programa
+                                    </a>
+                                </li>
+                        </li>-->
+                    </ul>
+                    <%} %>
+                    <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("Supervisor") || HttpContext.Current.User.IsInRole("contratista") || HttpContext.Current.User.IsInRole("Liquidacion") || HttpContext.Current.User.IsInRole("URLC") || HttpContext.Current.User.IsInRole("ESPECIAL"))
+                        { %>
+                    <li class="nav-item">
+                        <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapseLiquidacion" role="button"
+                            aria-expanded="false" aria-controls="collapseStart">
+                            <img src="~/Images/sidebar/reports-icon.svg" width="30" height="30" alt="Inicio" runat="server" />
+                            <span class="nav-link-text">Liquidación</span>
+                        </a>
+                        <ul class="list-unstyled collapse collapsed-list" id="collapseLiquidacion">
+                            <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("Supervisor") || HttpContext.Current.User.IsInRole("contratista") || HttpContext.Current.User.IsInRole("Liquidacion") || HttpContext.Current.User.IsInRole("URLC") || HttpContext.Current.User.IsInRole("ESPECIAL"))
+                                { %>
+                            <li class="nav-item collapsed-item">
+                                <a href="~/Liquidacion/LiquidacionProyectos" runat="server" class="nav-link">Liquidación de Proyectos
+                                </a>
+                            </li>
+                            <%} %>
+                            <%-- <li class="nav-item collapsed-item">
+                                    <a href="~/Liquidacion/frmCuadrosDescriptivos" runat="server" class="nav-link">Cuadros Descriptivos
+                                    </a>
+                                </li>--%>
+                        </ul>
+                    </li>
+                    <%} %>
+                  <!--  <li class="nav-item">
+                        <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapseEnlaces" role="button"
+                            aria-expanded="false" aria-controls="collapseStart">
+                            <img src="~/Images/sidebar/reports-icon.svg" width="30" height="30" alt="Inicio" runat="server" />
+                            <span class="nav-link-text">Enlaces</span>
+                        </a>
+                        <ul class="list-unstyled collapse collapsed-list" id="collapseEnlaces">
+                            <li class="nav-item collapsed-item">
+                                <a href="~/Enlaces/frmAccesos" runat="server" class="nav-link">Sistemas de apoyo
+                                </a>
+                            </li>
+                        </ul>
+                    </li>-->
+                    <%if (HttpContext.Current.User.IsInRole("NOMINA"))
+                        { %>
+                    <li class="nav-item">
+                        <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapseNomina" role="button"
+                            aria-expanded="false" aria-controls="collapseStart">
+                            <img src="~/Images/sidebar/reports-icon.svg" width="30" height="30" alt="Inicio" runat="server" />
+                            <span class="nav-link-text">Nómina</span>
+                        </a>
+                        <ul class="list-unstyled collapse collapsed-list" id="collapseNomina">
+                            <li class="nav-item collapsed-item">
+                                <a href="~/Nominas/frmNominas" runat="server" class="nav-link">Nóminas de Pago
+                                </a>
+                            </li>
+                            <li class="nav-item collapsed-item">
+                                <a href="~/Nominas/frmConsolidadoNomina" runat="server" class="nav-link">Consolidado de Nómina
+                                </a>
+                            </li>
+                            <li class="nav-item collapsed-item">
+                                <a href="~/Nominas/frmVistaGralEstimaciones" runat="server" class="nav-link">Vista General de Estimaciones
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <%} %>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapseConfig" role="button"
+                            aria-expanded="false" aria-controls="collapseStart">
+                            <img src="~/Images/sidebar/execution-icon.svg" width="30" height="30" alt="Inicio" runat="server" />
+                            <span class="nav-link-text">Configurar</span>
+                        </a>
+                        <ul class="list-unstyled collapse collapsed-list" id="collapseConfig">
+                            <li class="nav-item collapsed-item">
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("Supervisor") || HttpContext.Current.User.IsInRole("ADMINISTRADOR") || HttpContext.Current.User.IsInRole("COORDINADOR DE SEGUIMIENTO") || HttpContext.Current.User.IsInRole("REGIONALES"))
+                                    { %>
+                                <a class="nav-link" data-toggle="collapse" href="#Auxiliares" role="button"
+                                    aria-expanded="false" aria-controls="informes-tecnicos">Auxiliares <i class="fas fa-caret-right fa-lg fa-fw float-right"></i>
+                                </a>
+                                <ul id="Auxiliares" class="list-unstyled collapse pl-2">
+                                    <li class="nav-item">
+                                        <a href="~/Auxiliares/frmAuxiliares" runat="server" class="nav-link">Gestion de Auxiliares
+                                        </a>
+                                    </li>
+                                </ul>
+                                <%} %>
+                                <a class="nav-link" data-toggle="collapse" href="#Mensajeria" role="button"
+                                    aria-expanded="false" aria-controls="informes-tecnicos">Mensajeria <i class="fas fa-caret-right fa-lg fa-fw float-right"></i>
+                                </a>
+                                <ul id="Mensajeria" class="list-unstyled collapse pl-2">
+                                    <li class="nav-item">
+                                        <a href="~/Perfil/BandejaDeEntrada" runat="server" class="nav-link">Bandeja de entrada
+                                        </a>
+                                    </li>
+                                    <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("MENSAJERIA") || HttpContext.Current.User.IsInRole("Liquidacion") || HttpContext.Current.User.IsInRole("URLC"))
+                                        { %>
+                                    <li class="nav-item">
+                                        <a href="~/Mensajeria/Enviomensajes" runat="server" class="nav-link">Envío de Mensajes
+                                        </a>
+                                    </li>
+                                    <%} %>
+                                </ul>
+
+                                
+
+
+                                <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES"))
+                                    { %>
+                                <a class="nav-link" data-toggle="collapse" href="#Usuarios" role="button"
+                                    aria-expanded="false" aria-controls="informes-tecnicos">Usuarios <i class="fas fa-caret-right fa-lg fa-fw float-right"></i>
+                                </a>
+                                <ul id="Usuarios" class="list-unstyled collapse pl-2">
+
+                                    <li class="nav-item collapsed-item">
+                                        <a href="~/Usuarios/AgregarEmpleado" runat="server" class="nav-link">Agregar Empleados
+                                        </a>
+                                    </li>
+                                    <li class="nav-item collapsed-item">
+                                        <a href="~/Usuarios/CrearUsuario" runat="server" class="nav-link">Usuarios
+                                        </a>
+                                    </li>
+                                    <li class="nav-item collapsed-item">
+                                        <a href="~/Usuarios/GestionUsuario" runat="server" class="nav-link">Gestión de Usuarios
+                                        </a>
+                                    </li>
+                                    <li class="nav-item collapsed-item">
+                                        <a href="~/Usuarios/frmMnttoUsuarios" runat="server" class="nav-link">Mantenimiento de Usuarios
+                                        </a>
+                                    </li>
+                                    <li class="nav-item collapsed-item">
+                                        <a href="~/Configuracion/CambiarPassword" runat="server" class="nav-link">Cambiar Contraseña
+                                        </a>
+                                    </li>
+                                    <li class="nav-item collapsed-item">
+                                        <a href="~/UsuariosProy/frmAgregarUsuario" runat="server" class="nav-link">Gestión Usuarios de Proyectos
+                                        </a>
+                                    </li>
+                                </ul>
+                                <%} %>
+                        </ul>
+
+                    </li>
+                    <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("DIRECTOR"))
+                        { %>
+                    <li class="nav-item">
+                        <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapseSanciones" role="button"
+                            aria-expanded="false" aria-controls="collapseStart">
+                            <img src="~/Images/sidebar/menu-busqueda.svg" width="30" height="30" alt="Inicio" runat="server" />
+                            <span class="nav-link-text">Sanciones</span>
+                        </a>
+                        <ul class="list-unstyled collapse collapsed-list" id="collapseSanciones">
+                            <li class="nav-item collapsed-item">
+                                <a href="~/Sanciones/ConstanciaSanciones" runat="server" class="nav-link">Constancia de Sanciones
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+                    <%} %>
+
+
+
+
+                    <%if (HttpContext.Current.User.IsInRole("ADMINISTRADORES") || HttpContext.Current.User.IsInRole("DIRECTOR"))
+                        { %>
+                    <li class="nav-item">
+                        <a class="nav-link nav-title collapsed" data-toggle="collapse" href="#collapseBusqueda" role="button"
+                            aria-expanded="false" aria-controls="collapseStart">
+                            <img src="~/Images/sidebar/menu-busqueda.svg" width="30" height="30" alt="Inicio" runat="server" />
+                            <span class="nav-link-text">Busqueda</span>
+                        </a>
+                        <ul class="list-unstyled collapse collapsed-list" id="collapseBusqueda">
+                            <li class="nav-item collapsed-item">
+                                <a href="~/Busqueda/frmBusquedaGeneral" runat="server" class="nav-link">Busqueda General
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+
+
+
+
+                    <%} %>
+                </div>
+                <ul id="toggler-wrapper" class="nav position-sticky flex-column">
+                    <li class="nav-item">
+                        <a id="toggler" href="#" class="nav-link text-center">
+                            <i class="fas fa-chevron-circle-left fa-2x"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <% } %>
+            <main id="main" role="main" class="body-content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </main>
+        </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
+    <%: Scripts.Render("~/Scripts/sweetalert2/dist/sweetalert2.all.min.js") %>
+    <%: Scripts.Render("~/js/jsRefreshToken.js") %>
+    <script>
+        let ajaxWorking = 0
+        $(document).ajaxSend(function () {
+            if (ajaxWorking === 0)
+                $.LoadingOverlay("show");
+            ajaxWorking += 1
+        });
+        $(document).ajaxComplete(function () {
+            ajaxWorking -= 1
+            if (ajaxWorking === 0) $.LoadingOverlay("hide")
+        });
+
+
+        function fnRefrescarToken(vTokenVencido) {
+            // const proxyurl = "https://cors-anywhere.herokuapp.com/";
+
+            const url = baseURL + "api/login/refreshtoken"
+            //const proxyurl = "";
+
+            //const url = "http://localhost:62555/api/login/refreshtoken"
+
+            var dataJSON = JSON.stringify({
+                TokenVencido: vTokenVencido
+            });
+            vToken = '';
+            fetch(proxyurl + url, {
+                mode: 'cors',
+                method: 'POST',
+                headers: {
+
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+
+                },
+                body: dataJSON
+
+            })
+                .then(response => {
+                    var estadoRespuesta = response.status;
+
+                    if (estadoRespuesta == 200) return response.json();
+
+                    if (estadoRespuesta == 404) {
+                        $.LoadingOverlay("hide");
+                    }
+                    else {
+                        Swal.fire("", "error: " + estadoRespuesta + ", " + response.statusText, "error");
+                    }
+                })
+                .then(data => {
+                    var datos = data;
+
+                    if (datos.length > 0) {
+
+                        fnActualizarToken(datos);
+
+
+                        $.LoadingOverlay("hide");
+
+                    }
+
+
+
+                })
+                .catch(function (error) {
+                    $.LoadingOverlay("hide");
+                    Swal.fire("", error.message + " " + vUsuario, "success");
+
+                });
+        }
+
+        $(".close-session").on("click", e => {
+            Swal.fire({
+                title: 'Cerrar Sesión',
+                text: '¿Esta seguro de cerrar sesión?',
+                icon: 'warning',
+                confirmButtonText: 'Si, deseo cerrar sesión',
+                showDenyButton: true,
+                denyButtonText: "No"
+            }).then(result => {
+                if (result.isConfirmed) {
+                    $("#Button1").click();
+                }
+            });
+        })
+        $('input').keypress(function (e) {
+            if (e.which == 13) {
+                return false;
+            }
+        });
+        usuario = "<%= Session["usuario"] %>"
+    </script>
+    <asp:ContentPlaceHolder ID="CustomScripts" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>
