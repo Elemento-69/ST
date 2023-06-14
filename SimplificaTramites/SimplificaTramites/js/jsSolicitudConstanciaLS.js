@@ -7,6 +7,20 @@ $(document).ready(function () {
     fnCargarEstados();
     fnCargarSolicitudes(0);
 
+    $("#tblSolicitudesRecibidas").on("click", "tr", function ()  {
+        var vid= $("#tblSolicitudesRecibidas").DataTable().row(this).id();
+        alert('click on  ' + vid)
+
+    });
+
+    $("#tblSolicitudesRecibidas").on("hover", "tr", function () {
+        var vid = $("#tblSolicitudesRecibidas").DataTable().row(this).id();
+
+        alert('hover ' + vid)
+
+    });
+
+
     $("#cmbEstadoSolicitud").on("change", ({ currentTarget }) => {
         vidEstado = currentTarget.value;
 
@@ -64,7 +78,7 @@ function fnCargarSolicitudes(idEstado) {
                 $('#tblSolicitudesRecibidas').dataTable().fnDestroy();
                 let cols = val.map((item) => `                    
                             ${pC1 = item.Codigo}                            
-                            <tr>
+                            <tr id=${item.ID}>
                                 <td class="spacer bg-light" ></td >                             
                                 <td  style="width:100px">
                                     ${item.Codigo}
