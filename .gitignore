@@ -1,0 +1,8 @@
+#Ignorar archivos de vs
+SimplificaTramites/.vs/*
+
+#Ignorar archivos binarios
+SimplificaTramites/SimplificaTramites/bin/*
+
+#Ignorar archivos de debug
+SimplificaTramites/SimplificaTramites/obj/*

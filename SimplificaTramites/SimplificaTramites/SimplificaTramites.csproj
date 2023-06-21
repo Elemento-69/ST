@@ -399,6 +399,7 @@
     <Content Include="js\jsAsignacionesRegionales.js" />
     <Content Include="js\jsAsignacionesSupervisores.js" />
     <Content Include="js\jsAsociacionCantidadTramo.js" />
+    <Content Include="js\jsAtencionSolicitudConstancias.js" />
     <Content Include="js\jsAuxiliares.js" />
     <Content Include="js\jsAvanceFinancieroXDepto.js" />
     <Content Include="js\jsBandejaDeEntrada.js" />
@@ -880,6 +881,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="SolicitudConstanciaLS\frmSolicitudConstanciaLS.aspx" />
+    <Content Include="SolicitudConstanciaLS\frmAtencionSolicitud.aspx" />
     <Content Include="UsuariosProy\frmAgregarUsuario.aspx" />
     <Content Include="Usuarios\AgregarEmpleado.aspx" />
     <Content Include="Usuarios\CrearUsuario.aspx" />
@@ -1466,6 +1468,13 @@
     <Compile Include="SolicitudConstanciaLS\frmSolicitudConstanciaLS.aspx.designer.cs">
       <DependentUpon>frmSolicitudConstanciaLS.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SolicitudConstanciaLS\frmAtencionSolicitud.aspx.cs">
+      <DependentUpon>frmAtencionSolicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SolicitudConstanciaLS\frmAtencionSolicitud.aspx.designer.cs">
+      <DependentUpon>frmAtencionSolicitud.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UsuariosProy\frmAgregarUsuario.aspx.cs">
       <DependentUpon>frmAgregarUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1930,6 +1939,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
+      <UserProperties scripts_4bootstrap_1css_1map__JsonSchema="" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />

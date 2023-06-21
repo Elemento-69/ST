@@ -108,7 +108,7 @@ $(document).ready(function () {
     })
 
     $("#btnNuevaSuspension").click(function () {
-        fnAbrirModalSuspension();
+        fnAbrirModalSolicitud();
 
     })
 
@@ -333,7 +333,7 @@ function fnMostrarModal(nombreDoc, proyectoCodigo) {
     $('#exampleModal').modal('show')
 }
 
-function fnAbrirModalSuspension() {
+function fnAbrirModalSolicitud() {
     //$('#cmbPlanAnualW').val($("#cmbPlanAnualW option:first").val());
 
     const createPromise = () =>
@@ -353,11 +353,8 @@ function fnAbrirModalSuspension() {
                 //  $('#cmbProyectoW').val(ProyectoCodigo);
             }
 
-
-
             $('#cmbPlanAnualW').prop('disabled', false);
             $('#cmbProyectoW').prop('disabled', false);
-
             $('#desde').val('');
             $('#hasta').val('');
             $('#lblDiasAfectadas').val('');

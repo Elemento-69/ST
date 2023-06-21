@@ -52,9 +52,7 @@
         
 
     </div>
-    <div class="text-right pt-2">
-        <button type="button" id="btnNuevaSuspension" class="btn btn-outline-primary btn-form">Nueva suspensión</button>
-    </div>
+    
     <h2 class="mt-5"><span class="title-bg">Solicitudes recibidas</span></h2>
     <hr />
     <div class="table-responsive mt-5">         
@@ -93,36 +91,125 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="winSuspension"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="winSolicitudConstancia"  aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-transparent">
-            <div style="height: 750px" class="modal-content">
+            <div style="height: 1050px" class="modal-content">
                 <div class="modal-header">
                     <h3>
-                        <label id="lblTituloSuspension"></label>
+                        <label id="lblTituloSolicitudConstancia"></label>
                     </h3>
                     <button class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div id="dModalBodySuspension" style="height: 600px" class="modal-body">
+                <div id="dModalBodySolicitudConstancias" style="height: 600px" class="modal-body">
                     <div class="row">
-                        <div class="form-group col-md-2 col-lg-4">
-                            <label for="cmbPlanAnualW">Plan</label>
-                            <select class="form-control" id="cmbPlanAnualW">
-                            </select>
+                        <div class="form-group col-md-10 col-lg-7">
+                            <label for="txtNombre">Nombre</label>
+                            <input type="text" class="form-control" id="txtNombre">   
                         </div>
-                        <div class="form-group col-md-8 col-lg-8">
-                            <label for="cmbProyectoW">Proyecto</label>
-                            <select class="form-control" id="cmbProyectoW"></select>
+                        <div class="col-md-4 col-lg-3">
+                            <label for="txtDPI">DPI:</label>
+                            <input id="txtDPI" type="text" class="form-control">
+                        </div>
+                        
+                    </div>
+                    
+                
+
+                    <div class="row">
+                        <div class="col-md-4 col-lg-3">
+                            <label for="txtNIT">NIT:</label>
+                            <input id="txtNIT" type="text" class="form-control">
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <label for="txtCorreoElectronico">Correo Electrónico:</label>
+                            <input id="txtCorreoElectronico" type="text" class="form-control">
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <label for="txtTelefono">Teléfono:</label>
+                            <input id="txtTelefono" type="text" class="form-control">
+                        </div>
+                       
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-5">
+                            <label for="txtUltimoSueldo">Ultimo Sueldo/Honorarios:</label>
+                            <input id="txtUltimoSueldo" type="text" class="form-control"/>
+                        </div>
+                        <div class="col-md-6 col-lg-5">
+                            <label for="txtEstado">Estado</label>
+                            <input id="txtEstado" type="text" class="form-control"/>
                         </div>
                     </div>
+                    <br/>
+                    
+                    
+
+                    <div class="row col-md-10 col-lg-10">
+                            <div class="col-md-2 col-lg-2" id="lblRenglonPresupuestario">
+                                <label for="chk21">Renglon Presupuestario</label>
+                            </div>
+                            <div class="row col-md-8 col-lg-8">
+                                <div class="col-md-2 col-lg-2" id="div21">
+                                    <label for="chk021">21</label>
+                                    <input type="checkbox" id="chk021" class="form-control">
+                                </div>
+                                <div class="col-md-2 col-lg-2" id="div22">
+                                    <label for="chk022">22</label>
+                                    <input type="checkbox" id="chk022" class="form-control">
+                                </div>
+                                <div class="col-md-2 col-lg-2" id="div29">
+                                    <label for="chk029">29</label>
+                                    <input type="checkbox" id="chk029" class="form-control">
+                                </div>
+                                <div class="col-md-3 col-lg-3" id="divSubgrupo18">
+                                    <label for="chkSubgrupo18">Subgrupo 18</label>
+                                    <input type="checkbox" id="chkSubgrupo18" class="form-control">
+                                </div>
+                            </div>
+                    </div>
+                   
+                   
+                    <br />
+                    <div class="row justify-content-center mt-6">
+            <div class="col-md-6 mb-3">
+                <label class="fw-medium">¿Se encuentra laborando o prestando servicios actualmente en COVIAL?</label>
+                <div class="d-flex justify-content-between flex-wrap fw-medium bg-white pt-2 pb-3 border-custom rounded-lg">
+                    <div class="custom-control custom-radio mr-2">
+                        <input type="radio" class="custom-control-input" id="radioActivo" name="optActivo"
+                            value="1">
+                        <label class="custom-control-label" for="radioActivo">Si</label>
+                    </div>
+                    <div class="custom-control custom-radio mr-2">
+                        <input type="radio" class="custom-control-input" id="radioInactivo" name="optActivo"
+                            value="2" >
+                        <label class="custom-control-label" for="radioInactivo">No</label>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+                    <br />
+                    <div class="row ">
+                        <div class="form-group col-md-5 col-lg-5">
+                            <label for="cmbTipoServicio">Tipo de servicio prestado</label>
+                            <select id="cmbTipoServicio" class="form-control"></select>
+                        </div>
+                        <div class="form-group col-md-5 col-lg-5">
+                            <label for="txtPuesto">Puesto</label>
+                            <input id="txtPuesto" type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    
                     <div class="row align-items-end">
-                        <div class="col-md-4 col-lg-3">
+                        <div class="col-md-6 col-lg-6">
                             <div class="form-group">
-                                <label for="desde">Del:</label>
-                                <div class="input-group date" id="desde-dp" data-target-input="nearest">
-                                    <input id="desde" type="text" data-target="#desde-dp" name="desde" autocomplete="off" class="form-control datetimepicker-input">
-                                    <div class="input-group-append" data-target="#desde-dp" data-toggle="datetimepicker">
+                                <label for="dpInicio">Fecha de inicio laboral y/o prestación de servicios</label>
+                                <div class="input-group date" id="inicio-dp" data-target-input="nearest">
+                                    <input id="dpInicio" type="text" data-target="#inicio-dp" name="dpInicio" autocomplete="off" class="form-control datetimepicker-input">
+                                    <div class="input-group-append" data-target="#inicio-dp" data-toggle="datetimepicker">
                                         <div class="input-group-text"><i class="fas fa-calendar"></i></div>
                                     </div>
                                 </div>
@@ -130,86 +217,31 @@
                             </div>
 
                         </div>
-                        <div class="col-md-4 col-lg-3">
+                        <div class="col-md-6 col-lg-6">
                             <div class="form-group">
-                                <label for="desde">Al:</label>
-                                <div class="input-group date" id="hasta-dp" data-target-input="nearest">
-                                    <input id="hasta" type="text" name="hasta" autocomplete="off" class="form-control datetimepicker-input">
-                                    <div class="input-group-append" data-target="#hasta-dp" data-toggle="datetimepicker">
+                                <label for="dpFin">Fecha de finalización laboral y/o de prestación de servicios </label>
+                                <div class="input-group date" id="fin-dp" data-target-input="nearest">
+                                    <input id="dpFin" type="text" name="dpFin" autocomplete="off" class="form-control datetimepicker-input">
+                                    <div class="input-group-append" data-target="#fin-dp" data-toggle="datetimepicker">
                                         <div class="input-group-text"><i class="fas fa-calendar"></i></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-lg-3">
-                            <label for="lblDiasAfectadas">Días Afectados</label>
-                            <input class="form-control" id="lblDiasAfectadas" disabled />
-                        </div>
-                        <div class="col-md-2 col-lg-2" id="divAprobar">
-                            <label for="checkAprobada">Aprobada</label>
-                            <input type="checkbox" id="checkAprobada" class="form-control">
-                        </div>
+                     
                     </div>
-                    <br />
-                    <div class="row">
-                        <div class="col-md-4 col-lg-3">
-                            <label for="txtActaSuspension">Acta de suspensión:</label>
-                            <input id="txtActaSuspension" type="text" class="form-control">
-                        </div>
-                        <div class="col-md-4 col-lg-3">
-                            <div class="form-group">
-                                <label for="factasuspension">Fecha acta suspensión:</label>
-                                <div class="input-group date" id="factasuspension-dp" data-target-input="nearest">
-                                    <input id="factasuspension" type="text" data-target="#factasuspension-dp" name="factasuspension" autocomplete="off" class="form-control datetimepicker-input">
-                                    <div class="input-group-append" data-target="#factasuspension-dp" data-toggle="datetimepicker">
-                                        <div class="input-group-text"><i class="fas fa-calendar"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-6 col-lg-5">
-                            <label for="fileActaSuspension">Subir acta de suspensión:</label>
-                            <input id="fileActaSuspension" type="file" accept="application/pdf" name="fileActaSuspension" />
-                            <label id="factasuspensionLoad" style="font-weight:bold; font-size:80%; color:darkblue"></label>
-
-                        </div>
-                    </div>
-                    <br />
-                    <div class="row">
-                        <div class="col-md-4 col-lg-3">
-                            <label for="txtActaReactivacion">Acta de reactivación:</label>
-                            <input id="txtActaReactivacion" type="text" class="form-control">
-                        </div>
-                        <div class="col-md-4 col-lg-3">
-                            <div class="form-group">
-                                <label for="factasuspension" >Fecha acta reactivación:</label>
-                                <div class="input-group date" id="factareactivacion-dp" data-target-input="nearest">
-                                    <input id="factareactivacion" type="text" data-target="#factareactivacion-dp" name="factareactivacion" autocomplete="off" class="form-control datetimepicker-input">
-                                    <div class="input-group-append" data-target="#factareactivacion-dp" data-toggle="datetimepicker">
-                                        <div class="input-group-text"><i class="fas fa-calendar"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-5">
-                            <label for="fileActaReactivacion">Subir acta de reactivación:</label>
-                            <input id="fileActaReactivacion" type="file" accept="application/pdf" name="fileActaReactivacion" />
-                            <label id="factareactivacionLoad" style="font-weight:bold; font-size:80%; color:darkblue"></label>
-                        </div>
-                    </div>
+                   
                     <br />
                     <div class="row">
                         <div class="form-group col-md-12 col-lg-12">
-                            <label for="txtComentarioArchivoAdjuntar">Comentario</label>
-                            <textarea class="form-control" id="txtComentarioArchivoAdjuntar" name="txtComentarioArchivoAdjuntar" rows="3"></textarea>
+                            <label for="txtObservaciones">Observaciones</label>
+                            <textarea class="form-control" id="txtObservaciones" name="txtObservaciones" rows="3"></textarea>
                         </div>
                     </div>
 
                     <div class="text-right pt-2">
-                        <button type="button" id="btnGuardarSuspension" class="btn btn-outline-secondary btn-form">Guardar</button>
-                        <button type="button" id="btnEditarSuspension" class="btn btn-outline-secondary btn-form">Guardar</button>
+                        <button type="button" id="btnAtenderSolicitud" class="btn btn-outline-secondary btn-form">Atender Solicitud</button>
+                        <button type="button" id="btnRechazar" class="btn btn-outline-secondary btn-form">Rechazar</button>
                     </div>
                 </div>
             </div>
