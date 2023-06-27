@@ -14,8 +14,11 @@
 </asp:Content>
 
     <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-            HOLA A TODOS 
-   <div class="row">
+    <h1 class="mb-0">Atención de Solicitudes</h1>
+    <hr class="thick" />
+    <br />
+             
+    <div class="row">
                     <div class="col-md-12">
                         <div class="row">
                             <div class="col">
@@ -66,7 +69,7 @@
                                             <option value="021">Renglón 021</option>
                                             <option value="022">Renglón 022</option>
                                             <option value="029">Renglón 029</option>
-                                            <option value="Subrenglón 18">Subrenglón 18</option>
+                                            <option value="Subrenglon 18">Subrenglón 18</option>
                                         </select>
                                     </td>
                                     <td><input type="text" class="form-control" id="txtTipoServicio_1" runat="server" /></td>
@@ -88,13 +91,39 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td><button type="button" class="btn btn-danger btnDeleteRow"><i class="fas fa-trash"></i></button></td>
+                                    <td><button type="button" class="btn btn-danger btnDeleteRow"><i class="fas fa-trash"></i></button><button type="button" class="btn btn-danger btnUpdateRow"><i class="fas fa-save"></i></button></td>
+                                    
                                 </tr>
                             </tbody>
                         </table>
                         <button type="button" class="btn btn-primary" id="btnAgregarFila">Agregar Fila</button>
+                        <button type="button" class="btn btn-primary" id="btnCancelarAtencion">Cancelar</button>
+                        <button type="button" class="btn btn-primary" id="btnGenerarConstancia">Generar Constancia</button>
+                        <button type="button" class="btn btn-primary" id="btnSolicitudArchivo">Solicitud Archivo</button>
                     </div>
                 </div>
+
+        <div class="modal fade" id="winSolicitudArchivo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-transparent" role="document">
+            <div style="height: 500px" class="modal-content">
+                <div class="modal-header">
+                    <h3>
+                        <label id="lblTitulo">Solicitar información a Archivo</label>
+                    </h3>
+                    
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="dModalBody" style="height: 400px" class="modal-body">
+                    <textarea class="form-control" rows="10" maxlength="1000">
+                    </textarea>
+                    <br/>
+                    <button class="btn btn-form btn-primary" id="btnEnviarSolicitud" type="button">Enviar solicitud</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="CustomScripts" runat="server">

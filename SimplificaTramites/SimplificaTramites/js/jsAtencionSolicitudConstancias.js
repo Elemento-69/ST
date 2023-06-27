@@ -1,7 +1,13 @@
 ﻿$(document).ready(function () {
     var contadorFilas = 1;
     
-
+    $("#btnCancelarAtencion").on("click", function () {
+        
+        window.location.href = `../SolicitudConstanciaLS/frmSolicitudConstanciaLS.aspx`
+    })
+    $("#btnSolicitudArchivo").on("click", function () {
+        $("#winSolicitudArchivo").modal("show");
+    })
     $("#btnAgregarFila").on("click",function () {
         contadorFilas++;
         alert("clic")
@@ -48,24 +54,51 @@
         columnas += '<div class="input-group-text"><i class="fas fa-calendar"></i></div>';
         columnas += '</div>';
         columnas += '</div>';
-
         columnas += '</td>';
-        columnas += '<td><button type="button" class="btn btn-danger btnDeleteRow"><i class="fas fa-trash"></i></button></td>';
-
+        columnas += '<td><button type="button" class="btn btn-danger btnDeleteRow"><i class="fas fa-trash"></i>'
+        columnas += '</button> <button type="button" class="btn btn-danger btnUpdateRow"><i class="fas fa-save"></i></button> </td > ';
+        
         fila.html(columnas);
 
         $("#tblContratos tbody").append(fila);
 
-        // Inicializar datepicker
-        /*$('.datepicker').datepicker({
-            format: 'yyyy-mm-dd',
-            autoclose: true,
-            todayHighlight: true
-        });*/
-        $("#tblContratos").on("click", ".btnDeleteRow", function () {
-            $(this).closest("tr").remove();
-        });
+        
+        
+
+
+
     });
 
+    // Inicializar datepicker
+    $('.datepicker').datetimepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        todayHighlight: true
+    });
+
+    $("#tblContratos").on("click", ".btnDeleteRow", function () {
+        var eliminar = confirm("Desea eliminar el registro ")
+        if (eliminar == true) {
+            $(this).closest("tr").remove();
+        } else {
+
+        }
+    });
+
+    $("#tblContratos").on("click", ".btnUpdateRow", function () {
+        
+        var fila = $(this).closest("tr");
+        var vContrato = fila.find('.form-control:eq(0)').val();
+        var vRenglon = fila.find('.form-control:eq(1)').val();
+        var vTipoServicio = fila.find('.form-control:eq(2)').val();
+        var vPuesto = fila.find('.form-control:eq(3)').val();
+        var vSueldo = fila.find('.form-control:eq(4)').val();
+        var vInicio = fila.find('.form-control:eq(5)').val();
+        var vFin = fila.find('.form-control:eq(6)').val();
+        
+        
+        alert("Almacenado con exito " + vContrato + "\n"+vRenglon+"\n"+vTipoServicio +"\n"+vPuesto + "\n"+vInicio+"\n"+vFin)
+
+    });
    
 });

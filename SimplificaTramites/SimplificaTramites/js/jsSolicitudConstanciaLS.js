@@ -277,7 +277,8 @@ function fnConsultarToken() {
 
 
 function fObtenerDatosUsuarioSupervisor(vUsuario) {
-alert("Logueado Correcto")
+    alert("Logueado Correcto")
+
 }
 
 
